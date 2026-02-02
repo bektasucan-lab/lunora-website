@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Lunora</title>
+    <meta name="description" content="Lunora Privacy Policy. Learn how we protect your data and respect your privacy.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --cream: #FDF8F0;
+            --cream-dark: #F5EDE0;
+            --gold: #C9A962;
+            --gold-light: #E8D5A3;
+            --gold-dark: #A88B45;
+            --teal: #5B9A8B;
+            --teal-dark: #4A7F72;
+            --rose: #B08080;
+            --text-dark: #2C3E50;
+            --text-medium: #5A6B7D;
+            --text-light: #8899AA;
+            --white: #FFFFFF;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        h1, h2, h3 { font-family: 'Playfair Display', serif; line-height: 1.4; }
+        a { color: var(--teal-dark); text-decoration: none; transition: color 0.3s; }
+        a:hover { color: var(--gold-dark); }
+
+        /* Nav */
+        nav {
+            background: rgba(253, 248, 240, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(201, 169, 98, 0.12);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 0 24px;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-logo .moon {
+            width: 28px; height: 28px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .nav-logo .moon::after {
+            content: '';
+            position: absolute;
+            top: 3px; right: 2px;
+            width: 19px; height: 19px;
+            background: rgba(253, 248, 240, 0.9);
+            border-radius: 50%;
+        }
+
+        .nav-links { display: flex; gap: 28px; }
+        .nav-links a { font-size: 0.9rem; font-weight: 600; color: var(--text-medium); }
+        .nav-links a:hover { color: var(--text-dark); }
+
+        /* Content */
+        .page-header {
+            text-align: center;
+            padding: 80px 24px 48px;
+            background: linear-gradient(180deg, var(--cream), var(--white));
+        }
+
+        .page-header h1 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            margin-bottom: 12px;
+        }
+
+        .page-header .subtitle {
+            font-size: 1rem;
+            color: var(--text-light);
+        }
+
+        .content {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 48px 24px 100px;
+        }
+
+        .content h2 {
+            font-size: 1.5rem;
+            margin-top: 48px;
+            margin-bottom: 16px;
+            color: var(--text-dark);
+        }
+
+        .content h3 {
+            font-size: 1.15rem;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .content p {
+            margin-bottom: 16px;
+            color: var(--text-medium);
+            font-size: 0.95rem;
+        }
+
+        .content ul {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        .content ul li {
+            margin-bottom: 8px;
+            color: var(--text-medium);
+            font-size: 0.95rem;
+        }
+
+        .content .highlight-box {
+            background: var(--white);
+            border-left: 4px solid var(--teal);
+            padding: 20px 24px;
+            border-radius: 0 12px 12px 0;
+            margin: 24px 0;
+        }
+
+        .content .highlight-box p { margin-bottom: 0; }
+
+        .content .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        .content .info-card {
+            background: var(--white);
+            border: 1px solid rgba(201,169,98,0.12);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .content .info-card h4 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+
+        .content .info-card p {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            padding: 32px 24px;
+            border-top: 1px solid rgba(201, 169, 98, 0.1);
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        footer a { color: var(--gold-dark); }
+
+        @media (max-width: 640px) {
+            .nav-links { gap: 16px; }
+            .nav-links a { font-size: 0.8rem; }
+            .content .info-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+            <div class="moon"></div>
+            Lunora
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="terms.html">Terms</a>
+            <a href="support.html">Support</a>
+        </div>
+    </div>
+</nav>
+
+<div class="page-header">
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Effective date: February 2, 2026</p>
+</div>
+
+<div class="content">
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h4>App</h4>
+            <p>Lunora</p>
+        </div>
+        <div class="info-card">
+            <h4>Developer</h4>
+            <p>Beck (Turkey)</p>
+        </div>
+        <div class="info-card">
+            <h4>Contact</h4>
+            <p><a href="mailto:support@mylunora.app">support@mylunora.app</a></p>
+        </div>
+        <div class="info-card">
+            <h4>Last Updated</h4>
+            <p>February 2, 2026</p>
+        </div>
+    </div>
+
+    <p>Your privacy is fundamentally important to us. Lunora is designed with a privacy-first philosophy — your personal data stays on your device and is never shared with third parties. This Privacy Policy explains how we collect, use, and protect your information.</p>
+
+    <div class="highlight-box">
+        <p><strong>In short:</strong> Your data stays on your device. We do not collect analytics, do not share data with third parties, and sensitive health data is encrypted on-device.</p>
+    </div>
+
+    <h2>1. Information We Collect</h2>
+
+    <h3>1.1 Information You Provide</h3>
+    <p>When you set up Lunora, you may provide the following information to personalize your experience:</p>
+    <ul>
+        <li><strong>Name</strong> — Used to personalize greetings within the app</li>
+        <li><strong>City and Country</strong> — Used to calculate accurate prayer times for your location</li>
+    </ul>
+
+    <h3>1.2 Data Stored Locally on Your Device</h3>
+    <p>The following data is created and stored exclusively on your device:</p>
+    <ul>
+        <li><strong>Period tracking data</strong> — Cycle dates, mood entries, and symptom records</li>
+        <li><strong>Personal notes</strong> — Any notes you create within the app</li>
+        <li><strong>Gratitude notes</strong> — Entries in your gratitude journal</li>
+        <li><strong>Custom duas</strong> — Personal duas you save</li>
+        <li><strong>App preferences</strong> — Your settings and customizations</li>
+        <li><strong>Reading progress</strong> — Quran bookmarks and reading history</li>
+    </ul>
+
+    <h3>1.3 Information We Do NOT Collect</h3>
+    <ul>
+        <li>We do <strong>not</strong> collect analytics or usage data</li>
+        <li>We do <strong>not</strong> collect device identifiers or advertising IDs</li>
+        <li>We do <strong>not</strong> track your location in the background</li>
+        <li>We do <strong>not</strong> collect crash reports automatically</li>
+    </ul>
+
+    <h2>2. How We Use Your Information</h2>
+    <p>The information you provide is used solely to deliver the app's core functionality:</p>
+    <ul>
+        <li><strong>Name</strong> — Displayed in personalized greetings (e.g., "Assalamu Alaikum, [Name]")</li>
+        <li><strong>City and Country</strong> — Sent to the Aladhan API to calculate accurate prayer times for your location. The CountryStateCity API is used to provide location selection options</li>
+    </ul>
+
+    <h2>3. Third-Party Services</h2>
+    <p>Lunora uses the following third-party APIs for core functionality only:</p>
+    <ul>
+        <li><strong>Aladhan API</strong> (<a href="https://aladhan.com/prayer-times-api" target="_blank" rel="noopener">aladhan.com</a>) — To fetch accurate prayer times based on your city and country. Only your city and country are sent to this service.</li>
+        <li><strong>CountryStateCity API</strong> — To provide a comprehensive list of countries and cities for location selection. No personal data is sent to this service.</li>
+    </ul>
+    <p>We do <strong>not</strong> use any analytics services, advertising SDKs, or tracking tools.</p>
+
+    <h2>4. Data Security</h2>
+    <p>We take the security of your data seriously, especially sensitive health information:</p>
+    <ul>
+        <li><strong>Encrypted storage</strong> — Period tracking data and other sensitive health information is stored using encrypted local storage on your device</li>
+        <li><strong>On-device only</strong> — All personal data (notes, duas, period data, gratitude entries) is stored exclusively on your device using SharedPreferences with encryption for sensitive data</li>
+        <li><strong>No cloud sync</strong> — Your data is not synced to any cloud service or remote server</li>
+        <li><strong>No backups to our servers</strong> — We never receive or store copies of your personal data</li>
+    </ul>
+
+    <div class="highlight-box">
+        <p><strong>Important:</strong> Since all data is stored locally on your device, uninstalling the app will permanently delete all your personal data. We recommend backing up any important notes before uninstalling.</p>
+    </div>
+
+    <h2>5. Data Sharing</h2>
+    <p>We do <strong>not</strong> share, sell, rent, or trade your personal data with any third parties. Period. Your data stays on your device.</p>
+
+    <h2>6. Children's Privacy</h2>
+    <p>Lunora does not knowingly collect personal information from children under the age of 13. The app is intended for use by individuals who can independently manage their spiritual practices.</p>
+
+    <h2>7. Your Rights (GDPR Compliance)</h2>
+    <p>Since your data is stored locally on your device, you have full control over it at all times. You can:</p>
+    <ul>
+        <li><strong>Access</strong> — View all your data directly within the app</li>
+        <li><strong>Modify</strong> — Edit or update any information at any time</li>
+        <li><strong>Delete</strong> — Remove any or all data through the app's settings, or by uninstalling the app</li>
+        <li><strong>Portability</strong> — Your data resides on your device and is under your control</li>
+    </ul>
+    <p>If you have questions about your data rights, contact us at <a href="mailto:support@mylunora.app">support@mylunora.app</a>.</p>
+
+    <h2>8. App Store Compliance</h2>
+    <p>Lunora complies with Apple's App Store Guidelines and Google's Play Store policies regarding user privacy and data handling. The app's privacy nutrition label accurately reflects our data practices.</p>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Any changes will be reflected with a new "Effective date" at the top of this page. We encourage you to review this policy periodically. Continued use of Lunora after changes constitutes acceptance of the updated policy.</p>
+
+    <h2>10. Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
+    <ul>
+        <li><strong>Email:</strong> <a href="mailto:support@mylunora.app">support@mylunora.app</a></li>
+        <li><strong>Developer:</strong> Beck, Turkey</li>
+    </ul>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Lunora. <a href="index.html">Home</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="support.html">Support</a></p>
+</footer>
+
+</body>
+</html>

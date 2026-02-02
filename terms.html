@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service — Lunora</title>
+    <meta name="description" content="Lunora Terms of Service. Read the terms governing your use of the Lunora app.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --cream: #FDF8F0;
+            --cream-dark: #F5EDE0;
+            --gold: #C9A962;
+            --gold-light: #E8D5A3;
+            --gold-dark: #A88B45;
+            --teal: #5B9A8B;
+            --teal-dark: #4A7F72;
+            --rose: #B08080;
+            --text-dark: #2C3E50;
+            --text-medium: #5A6B7D;
+            --text-light: #8899AA;
+            --white: #FFFFFF;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        h1, h2, h3 { font-family: 'Playfair Display', serif; line-height: 1.4; }
+        a { color: var(--teal-dark); text-decoration: none; transition: color 0.3s; }
+        a:hover { color: var(--gold-dark); }
+
+        nav {
+            background: rgba(253, 248, 240, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(201, 169, 98, 0.12);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 0 24px;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-logo .moon {
+            width: 28px; height: 28px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .nav-logo .moon::after {
+            content: '';
+            position: absolute;
+            top: 3px; right: 2px;
+            width: 19px; height: 19px;
+            background: rgba(253, 248, 240, 0.9);
+            border-radius: 50%;
+        }
+
+        .nav-links { display: flex; gap: 28px; }
+        .nav-links a { font-size: 0.9rem; font-weight: 600; color: var(--text-medium); }
+        .nav-links a:hover { color: var(--text-dark); }
+
+        .page-header {
+            text-align: center;
+            padding: 80px 24px 48px;
+            background: linear-gradient(180deg, var(--cream), var(--white));
+        }
+
+        .page-header h1 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            margin-bottom: 12px;
+        }
+
+        .page-header .subtitle {
+            font-size: 1rem;
+            color: var(--text-light);
+        }
+
+        .content {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 48px 24px 100px;
+        }
+
+        .content h2 {
+            font-size: 1.5rem;
+            margin-top: 48px;
+            margin-bottom: 16px;
+            color: var(--text-dark);
+        }
+
+        .content p {
+            margin-bottom: 16px;
+            color: var(--text-medium);
+            font-size: 0.95rem;
+        }
+
+        .content ul {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        .content ul li {
+            margin-bottom: 8px;
+            color: var(--text-medium);
+            font-size: 0.95rem;
+        }
+
+        .content .highlight-box {
+            background: var(--white);
+            border-left: 4px solid var(--gold);
+            padding: 20px 24px;
+            border-radius: 0 12px 12px 0;
+            margin: 24px 0;
+        }
+
+        .content .highlight-box p { margin-bottom: 0; }
+
+        footer {
+            padding: 32px 24px;
+            border-top: 1px solid rgba(201, 169, 98, 0.1);
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        footer a { color: var(--gold-dark); }
+
+        @media (max-width: 640px) {
+            .nav-links { gap: 16px; }
+            .nav-links a { font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+            <div class="moon"></div>
+            Lunora
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="support.html">Support</a>
+        </div>
+    </div>
+</nav>
+
+<div class="page-header">
+    <h1>Terms of Service</h1>
+    <p class="subtitle">Effective date: February 2, 2026</p>
+</div>
+
+<div class="content">
+
+    <p>Welcome to Lunora. By downloading, installing, or using the Lunora application ("the App"), you agree to be bound by these Terms of Service ("Terms"). Please read them carefully before using the App.</p>
+
+    <h2>1. Acceptance of Terms</h2>
+    <p>By accessing or using Lunora, you confirm that you have read, understood, and agree to these Terms. If you do not agree to these Terms, please do not use the App.</p>
+
+    <h2>2. Description of Service</h2>
+    <p>Lunora is a mobile application designed for Muslim women that provides the following features:</p>
+    <ul>
+        <li>Prayer times based on your selected location</li>
+        <li>Quran reading and browsing</li>
+        <li>Daily duas and dhikr</li>
+        <li>Period tracking with mood and symptom logging</li>
+        <li>Gratitude journal</li>
+        <li>Ramadan-specific tools and content</li>
+    </ul>
+
+    <h2>3. Personal Spiritual Guidance</h2>
+    <div class="highlight-box">
+        <p><strong>Important:</strong> Lunora is designed as a personal spiritual aid and informational tool. The App is <strong>not</strong> a substitute for qualified religious authority, scholarly guidance, or professional medical advice. Users should consult qualified Islamic scholars for religious rulings and healthcare professionals for medical concerns.</p>
+    </div>
+    <p>The Quran text, prayer times, and duas provided in the App are sourced from widely accepted and reputable sources. However, we do not guarantee the accuracy of prayer time calculations for every location and recommend verifying with local mosque timings when possible.</p>
+
+    <h2>4. User Responsibility</h2>
+    <p>By using Lunora, you agree that:</p>
+    <ul>
+        <li>You are responsible for the accuracy of the location information you provide for prayer time calculations</li>
+        <li>You are responsible for maintaining the security of your device, as all app data is stored locally</li>
+        <li>You will use the App in a manner consistent with its intended purpose</li>
+        <li>You will not attempt to reverse-engineer, decompile, or extract source code from the App</li>
+        <li>You will not use the App for any unlawful purpose</li>
+    </ul>
+
+    <h2>5. Health Information Disclaimer</h2>
+    <p>The Period Mode feature in Lunora is a personal tracking tool. It is <strong>not</strong> a medical device and should not be used as a substitute for professional medical advice, diagnosis, or treatment. The mood and symptom tracking features are for personal reference only. Always consult a qualified healthcare provider for medical concerns.</p>
+
+    <h2>6. Intellectual Property</h2>
+    <p>The Lunora name, logo, design, and original content are the intellectual property of the developer. Quranic text is in the public domain. Third-party content used in the App is credited accordingly. You may not reproduce, distribute, or create derivative works from the App without express written permission.</p>
+
+    <h2>7. No Warranty</h2>
+    <p>Lunora is provided on an <strong>"as is"</strong> and <strong>"as available"</strong> basis without warranties of any kind, whether express or implied, including but not limited to:</p>
+    <ul>
+        <li>Implied warranties of merchantability or fitness for a particular purpose</li>
+        <li>Accuracy, reliability, or completeness of prayer times or any content</li>
+        <li>Uninterrupted or error-free operation</li>
+        <li>Compatibility with all devices or operating system versions</li>
+    </ul>
+
+    <h2>8. Limitation of Liability</h2>
+    <p>To the fullest extent permitted by applicable law, the developer of Lunora shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:</p>
+    <ul>
+        <li>Loss of data stored on your device</li>
+        <li>Inaccurate prayer time calculations</li>
+        <li>Any decisions made based on information provided by the App</li>
+        <li>Inability to access or use the App</li>
+    </ul>
+    <p>The developer's total liability to you for all claims arising from or related to the use of the App shall not exceed the amount you paid for the App (which is zero, as Lunora is free).</p>
+
+    <h2>9. Data Loss</h2>
+    <p>Since all data is stored locally on your device, the developer is not responsible for any data loss resulting from device failure, app uninstallation, operating system updates, or any other cause. You are encouraged to note down any important information outside the App.</p>
+
+    <h2>10. Third-Party Services</h2>
+    <p>The App uses third-party APIs (Aladhan API for prayer times, CountryStateCity API for location data). We are not responsible for the availability, accuracy, or performance of these third-party services. These services have their own terms and privacy policies.</p>
+
+    <h2>11. Changes to Terms</h2>
+    <p>We reserve the right to modify these Terms at any time. Updated Terms will be posted with a revised effective date. Your continued use of Lunora after changes are posted constitutes acceptance of the modified Terms.</p>
+
+    <h2>12. Termination</h2>
+    <p>You may stop using Lunora at any time by uninstalling the App. We reserve the right to discontinue the App or any feature at any time without notice.</p>
+
+    <h2>13. Governing Law</h2>
+    <p>These Terms shall be governed by and construed in accordance with the laws of the Republic of Turkey, without regard to its conflict of law provisions.</p>
+
+    <h2>14. Contact</h2>
+    <p>If you have any questions or concerns about these Terms, please contact us:</p>
+    <ul>
+        <li><strong>Email:</strong> <a href="mailto:support@mylunora.app">support@mylunora.app</a></li>
+        <li><strong>Developer:</strong> Beck, Turkey</li>
+    </ul>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Lunora. <a href="index.html">Home</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="support.html">Support</a></p>
+</footer>
+
+</body>
+</html>

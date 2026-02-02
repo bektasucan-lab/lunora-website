@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunora — Your Personal Spiritual Companion for Muslim Women</title>
+    <meta name="description" content="Lunora is a beautifully crafted Quran and prayer app designed for Muslim women. Features include Prayer Times, Quran, Duas, Period Mode, and Ramadan tools.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Nunito:wght@300;400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --cream: #FDF8F0;
+            --cream-dark: #F5EDE0;
+            --gold: #C9A962;
+            --gold-light: #E8D5A3;
+            --gold-dark: #A88B45;
+            --teal: #5B9A8B;
+            --teal-light: #7CB8AA;
+            --teal-dark: #4A7F72;
+            --rose: #B08080;
+            --rose-light: #D4A5A5;
+            --rose-dark: #8E6060;
+            --text-dark: #2C3E50;
+            --text-medium: #5A6B7D;
+            --text-light: #8899AA;
+            --white: #FFFFFF;
+            --shadow-sm: 0 2px 8px rgba(44, 62, 80, 0.06);
+            --shadow-md: 0 8px 32px rgba(44, 62, 80, 0.08);
+            --shadow-lg: 0 16px 48px rgba(44, 62, 80, 0.12);
+            --radius-sm: 12px;
+            --radius-md: 20px;
+            --radius-lg: 32px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; line-height: 1.3; }
+
+        a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
+
+        /* --- NAV --- */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 0 24px;
+            transition: all 0.4s ease;
+        }
+
+        nav.scrolled {
+            background: rgba(253, 248, 240, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(201, 169, 98, 0.15);
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-logo .moon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0 2px 12px rgba(201, 169, 98, 0.3);
+        }
+
+        .nav-logo .moon::after {
+            content: '';
+            position: absolute;
+            top: 3px; right: 2px;
+            width: 22px; height: 22px;
+            background: var(--cream);
+            border-radius: 50%;
+            transition: background 0.4s ease;
+        }
+
+        nav.scrolled .nav-logo .moon::after {
+            background: rgba(253, 248, 240, 0.85);
+        }
+
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-medium);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            border-radius: 1px;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover { color: var(--text-dark); }
+        .nav-links a:hover::after { width: 100%; }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+            color: var(--white) !important;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 16px rgba(91, 154, 139, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(91, 154, 139, 0.4); }
+        .nav-cta::after { display: none !important; }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-toggle span {
+            width: 24px;
+            height: 2px;
+            background: var(--text-dark);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        /* --- HERO --- */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 24px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero-bg .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.4;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .hero-bg .orb-1 {
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, var(--gold-light), transparent);
+            top: -200px; right: -100px;
+            animation-delay: 0s;
+        }
+
+        .hero-bg .orb-2 {
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, var(--teal-light), transparent);
+            bottom: -150px; left: -100px;
+            animation-delay: -7s;
+        }
+
+        .hero-bg .orb-3 {
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, var(--rose-light), transparent);
+            top: 40%; left: 50%;
+            animation-delay: -14s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -30px) scale(1.05); }
+            66% { transform: translate(-20px, 20px) scale(0.95); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text { max-width: 560px; }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(201, 169, 98, 0.12);
+            border: 1px solid rgba(201, 169, 98, 0.25);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--gold-dark);
+            margin-bottom: 28px;
+            animation: fadeInUp 0.8s ease forwards;
+            opacity: 0;
+        }
+
+        .hero-badge .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--gold);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease 0.15s forwards;
+            opacity: 0;
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-medium);
+            margin-bottom: 40px;
+            max-width: 480px;
+            animation: fadeInUp 0.8s ease 0.3s forwards;
+            opacity: 0;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.45s forwards;
+            opacity: 0;
+        }
+
+        .store-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 28px;
+            border-radius: 16px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .store-btn.primary {
+            background: var(--text-dark);
+            color: var(--white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .store-btn.primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .store-btn.secondary {
+            background: var(--white);
+            color: var(--text-dark);
+            border: 2px solid var(--cream-dark);
+        }
+
+        .store-btn.secondary:hover {
+            border-color: var(--gold-light);
+            transform: translateY(-3px);
+        }
+
+        .store-btn svg { width: 24px; height: 24px; }
+
+        .store-btn .store-label small {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 400;
+            opacity: 0.7;
+            line-height: 1;
+        }
+
+        .store-btn .store-label span {
+            display: block;
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        /* Phone Mockup */
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeInUp 1s ease 0.5s forwards;
+            opacity: 0;
+        }
+
+        .phone-mockup {
+            width: 280px;
+            height: 580px;
+            background: linear-gradient(145deg, var(--white), var(--cream-dark));
+            border-radius: 44px;
+            padding: 12px;
+            box-shadow:
+                0 24px 80px rgba(44, 62, 80, 0.15),
+                0 8px 24px rgba(44, 62, 80, 0.08),
+                inset 0 1px 0 rgba(255,255,255,0.8);
+            position: relative;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(165deg, #FFF5F7, #FDF8F0, #F0F7F5);
+            border-radius: 34px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px 20px;
+        }
+
+        .phone-notch {
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 28px;
+            background: var(--text-dark);
+            border-radius: 0 0 18px 18px;
+            z-index: 2;
+        }
+
+        .screen-greeting {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            margin-top: 20px;
+            margin-bottom: 4px;
+        }
+
+        .screen-bismillah {
+            font-family: 'Amiri', serif;
+            font-size: 1.8rem;
+            color: var(--gold-dark);
+            margin-bottom: 20px;
+            direction: rtl;
+        }
+
+        .screen-card {
+            width: 100%;
+            background: rgba(255,255,255,0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(201, 169, 98, 0.15);
+        }
+
+        .screen-card-title {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-light);
+            margin-bottom: 6px;
+        }
+
+        .screen-card-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--teal-dark);
+        }
+
+        .screen-card-sub {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-top: 2px;
+        }
+
+        .screen-nav {
+            margin-top: auto;
+            display: flex;
+            gap: 24px;
+            padding: 12px 0;
+        }
+
+        .screen-nav-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--cream-dark);
+        }
+
+        .screen-nav-dot.active {
+            background: var(--teal);
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- FEATURES --- */
+        .features {
+            padding: 120px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 72px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--teal);
+            margin-bottom: 16px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-medium);
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: 36px 28px;
+            border: 1px solid rgba(201, 169, 98, 0.1);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--teal));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(201, 169, 98, 0.2);
+        }
+
+        .feature-card:hover::before { opacity: 1; }
+
+        .feature-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: var(--text-medium);
+            line-height: 1.6;
+        }
+
+        .fi-prayer { background: linear-gradient(135deg, rgba(91,154,139,0.12), rgba(91,154,139,0.05)); }
+        .fi-quran { background: linear-gradient(135deg, rgba(201,169,98,0.15), rgba(201,169,98,0.05)); }
+        .fi-dua { background: linear-gradient(135deg, rgba(176,128,128,0.15), rgba(176,128,128,0.05)); }
+        .fi-period { background: linear-gradient(135deg, rgba(176,128,128,0.2), rgba(176,128,128,0.05)); }
+        .fi-ramadan { background: linear-gradient(135deg, rgba(91,154,139,0.15), rgba(91,154,139,0.05)); }
+        .fi-gratitude { background: linear-gradient(135deg, rgba(201,169,98,0.12), rgba(201,169,98,0.05)); }
+
+        /* --- HIGHLIGHT (Period Mode) --- */
+        .highlight-section {
+            padding: 120px 24px;
+            background: linear-gradient(180deg, var(--cream) 0%, #FFF5F7 50%, var(--cream) 100%);
+        }
+
+        .highlight-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .highlight-visual {
+            display: flex;
+            justify-content: center;
+        }
+
+        .highlight-card {
+            width: 320px;
+            background: rgba(255,255,255,0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-radius: var(--radius-lg);
+            padding: 40px 32px;
+            border: 1px solid rgba(176, 128, 128, 0.15);
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+        }
+
+        .highlight-card .hc-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            background: linear-gradient(135deg, #FFE4E9, #E6E6FA);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+        }
+
+        .highlight-card h4 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: var(--rose-dark);
+        }
+
+        .highlight-card p {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            margin-bottom: 20px;
+        }
+
+        .hc-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .hc-features span {
+            background: rgba(176,128,128,0.1);
+            color: var(--rose-dark);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .highlight-text h2 {
+            font-size: clamp(2rem, 3.5vw, 2.6rem);
+            margin-bottom: 20px;
+        }
+
+        .highlight-text h2 .rose { color: var(--rose); }
+
+        .highlight-text > p {
+            font-size: 1.05rem;
+            color: var(--text-medium);
+            margin-bottom: 32px;
+            max-width: 480px;
+        }
+
+        .highlight-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .highlight-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            font-size: 0.95rem;
+            color: var(--text-medium);
+        }
+
+        .highlight-list .li-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            background: rgba(176,128,128,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 0.85rem;
+        }
+
+        /* --- TESTIMONIAL / QUOTE --- */
+        .quote-section {
+            padding: 100px 24px;
+            text-align: center;
+        }
+
+        .quote-inner {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .quote-mark {
+            font-family: 'Amiri', serif;
+            font-size: 4rem;
+            color: var(--gold-light);
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        .quote-inner blockquote {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+            font-style: italic;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .quote-inner cite {
+            font-family: 'Nunito', sans-serif;
+            font-style: normal;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* --- CTA --- */
+        .cta-section {
+            padding: 120px 24px;
+        }
+
+        .cta-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, var(--text-dark), #3D5167);
+            border-radius: var(--radius-lg);
+            padding: 72px 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-inner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(201,169,98,0.15), transparent);
+            border-radius: 50%;
+        }
+
+        .cta-inner::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(91,154,139,0.15), transparent);
+            border-radius: 50%;
+        }
+
+        .cta-inner > * { position: relative; z-index: 1; }
+
+        .cta-inner h2 {
+            color: var(--white);
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            margin-bottom: 16px;
+        }
+
+        .cta-inner p {
+            color: rgba(255,255,255,0.7);
+            font-size: 1.05rem;
+            margin-bottom: 36px;
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            border-radius: 16px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn.gold {
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: var(--white);
+            box-shadow: 0 8px 24px rgba(201, 169, 98, 0.3);
+        }
+
+        .cta-btn.gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(201, 169, 98, 0.4);
+        }
+
+        .cta-btn.outline {
+            border: 2px solid rgba(255,255,255,0.25);
+            color: var(--white);
+        }
+
+        .cta-btn.outline:hover {
+            border-color: rgba(255,255,255,0.5);
+            transform: translateY(-3px);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 60px 24px 32px;
+            border-top: 1px solid rgba(201, 169, 98, 0.1);
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand .nav-logo { margin-bottom: 16px; }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            max-width: 280px;
+            line-height: 1.7;
+        }
+
+        .footer-col h4 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul { list-style: none; }
+
+        .footer-col ul li { margin-bottom: 12px; }
+
+        .footer-col ul a {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            transition: color 0.3s ease;
+        }
+
+        .footer-col ul a:hover { color: var(--gold-dark); }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(201, 169, 98, 0.08);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-bottom p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .footer-bottom p a { color: var(--gold-dark); }
+
+        /* --- SCROLL ANIMATIONS --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 968px) {
+            .hero-content { grid-template-columns: 1fr; text-align: center; }
+            .hero-text { max-width: 100%; }
+            .hero-subtitle { margin-left: auto; margin-right: auto; }
+            .hero-actions { justify-content: center; }
+            .hero-visual { order: -1; }
+            .phone-mockup { width: 240px; height: 500px; }
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .highlight-inner { grid-template-columns: 1fr; text-align: center; }
+            .highlight-text > p { margin-left: auto; margin-right: auto; }
+            .highlight-list { align-items: center; }
+            .highlight-list li { text-align: left; }
+            .footer-top { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 640px) {
+            .nav-links { display: none; }
+            .mobile-toggle { display: flex; }
+
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 72px;
+                left: 0; right: 0;
+                background: rgba(253, 248, 240, 0.97);
+                backdrop-filter: blur(20px);
+                padding: 24px;
+                gap: 20px;
+                border-bottom: 1px solid rgba(201,169,98,0.15);
+            }
+
+            .features-grid { grid-template-columns: 1fr; }
+            .cta-inner { padding: 48px 24px; }
+            .footer-top { grid-template-columns: 1fr; gap: 32px; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+            .phone-mockup { width: 220px; height: 460px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">
+            <div class="moon"></div>
+            Lunora
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="#features">Features</a>
+            <a href="#period-mode">Period Mode</a>
+            <a href="support.html">Support</a>
+            <a href="#download" class="nav-cta">Download</a>
+        </div>
+        <div class="mobile-toggle" id="mobileToggle" role="button" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+    <div class="hero-content">
+        <div class="hero-text">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                Available for Ramadan 2026
+            </div>
+            <h1>Your Personal <span class="highlight">Spiritual Companion</span></h1>
+            <p class="hero-subtitle">A beautifully crafted app designed for Muslim women — with prayer times, Quran, duas, and a thoughtful Period Mode built with care and understanding.</p>
+            <div class="hero-actions">
+                <a href="#" class="store-btn primary">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                    <div class="store-label">
+                        <small>Download on the</small>
+                        <span>App Store</span>
+                    </div>
+                </a>
+                <a href="#" class="store-btn secondary">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                    <div class="store-label">
+                        <small>Get it on</small>
+                        <span>Google Play</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="phone-mockup">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                    <p class="screen-greeting">Assalamu Alaikum</p>
+                    <p class="screen-bismillah">بسم الله الرحمن الرحيم</p>
+                    <div class="screen-card">
+                        <div class="screen-card-title">Next Prayer</div>
+                        <div class="screen-card-value">Asr — 15:42</div>
+                        <div class="screen-card-sub">2h 15m remaining</div>
+                    </div>
+                    <div class="screen-card">
+                        <div class="screen-card-title">Daily Verse</div>
+                        <div class="screen-card-value" style="font-size: 1rem;">Surah Al-Baqarah</div>
+                        <div class="screen-card-sub">Continue reading</div>
+                    </div>
+                    <div class="screen-nav">
+                        <div class="screen-nav-dot active"></div>
+                        <div class="screen-nav-dot"></div>
+                        <div class="screen-nav-dot"></div>
+                        <div class="screen-nav-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+    <div class="section-header reveal">
+        <span class="section-tag">Features</span>
+        <h2>Everything You Need, Beautifully Designed</h2>
+        <p>Carefully crafted tools to support your spiritual journey throughout every day and every season of life.</p>
+    </div>
+    <div class="features-grid">
+        <div class="feature-card reveal">
+            <div class="feature-icon fi-prayer">🕌</div>
+            <h3>Prayer Times</h3>
+            <p>Accurate prayer times for 70+ countries with beautiful notifications and countdown timers tailored to your location.</p>
+        </div>
+        <div class="feature-card reveal">
+            <div class="feature-icon fi-quran">📖</div>
+            <h3>Quran</h3>
+            <p>Read the complete Quran with Arabic text in the elegant Amiri font. Track your progress with bookmarks and history.</p>
+        </div>
+        <div class="feature-card reveal">
+            <div class="feature-icon fi-dua">🤲</div>
+            <h3>Duas & Dhikr</h3>
+            <p>A curated collection of daily duas and dhikr. Save your personal duas and access them any time.</p>
+        </div>
+        <div class="feature-card reveal">
+            <div class="feature-icon fi-period">🌸</div>
+            <h3>Period Mode</h3>
+            <p>A unique, understanding feature that adapts your spiritual practice during your cycle with mood and symptom tracking.</p>
+        </div>
+        <div class="feature-card reveal">
+            <div class="feature-icon fi-ramadan">🌙</div>
+            <h3>Ramadan Tools</h3>
+            <p>Suhoor and iftar times, daily Ramadan duas, fasting tracker, and a guided journey through the blessed month.</p>
+        </div>
+        <div class="feature-card reveal">
+            <div class="feature-icon fi-gratitude">✨</div>
+            <h3>Gratitude Journal</h3>
+            <p>Reflect on your blessings with a private gratitude journal. Build a mindful habit with daily prompts.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PERIOD MODE HIGHLIGHT -->
+<section class="highlight-section" id="period-mode">
+    <div class="highlight-inner">
+        <div class="highlight-visual reveal">
+            <div class="highlight-card">
+                <div class="hc-icon">🌷</div>
+                <h4>Period Mode</h4>
+                <p>Your spiritual companion adapts with care and understanding during your cycle.</p>
+                <div class="hc-features">
+                    <span>Mood Tracking</span>
+                    <span>Symptoms</span>
+                    <span>Adapted Duas</span>
+                    <span>Self-Care</span>
+                    <span>Dhikr</span>
+                </div>
+            </div>
+        </div>
+        <div class="highlight-text reveal">
+            <h2>Designed with <span class="rose">Understanding</span></h2>
+            <p>Lunora is the first Quran app that truly understands the unique needs of Muslim women — with a thoughtful Period Mode that adapts your spiritual journey.</p>
+            <ul class="highlight-list">
+                <li>
+                    <span class="li-icon">🌸</span>
+                    <span>Automatically adjusts available prayers and practices with gentle, respectful guidance</span>
+                </li>
+                <li>
+                    <span class="li-icon">💜</span>
+                    <span>Track your mood and symptoms privately with encrypted, on-device storage</span>
+                </li>
+                <li>
+                    <span class="li-icon">📿</span>
+                    <span>Access curated dhikr, duas, and spiritual content specially selected for this time</span>
+                </li>
+                <li>
+                    <span class="li-icon">🔒</span>
+                    <span>Your health data never leaves your device — complete privacy guaranteed</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote-section">
+    <div class="quote-inner reveal">
+        <div class="quote-mark">&#8220;</div>
+        <blockquote>Verily, in the remembrance of Allah do hearts find rest.</blockquote>
+        <cite>— Surah Ar-Ra'd (13:28)</cite>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="download">
+    <div class="cta-inner reveal">
+        <h2>Begin Your Spiritual Journey</h2>
+        <p>Download Lunora today and experience a Quran app designed with the care and understanding you deserve.</p>
+        <div class="cta-buttons">
+            <a href="#" class="cta-btn gold">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                App Store
+            </a>
+            <a href="#" class="cta-btn outline">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                Google Play
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="/" class="nav-logo">
+                    <div class="moon"></div>
+                    Lunora
+                </a>
+                <p>A beautifully crafted spiritual companion designed for Muslim women, with care and understanding at its heart.</p>
+            </div>
+            <div class="footer-col">
+                <h4>App</h4>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#period-mode">Period Mode</a></li>
+                    <li><a href="#download">Download</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="support.html">Help & FAQ</a></li>
+                    <li><a href="mailto:support@mylunora.app">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Lunora. Made with care by <a href="#">Beck</a> in Turkey.</p>
+            <p>Your spiritual companion, designed with love.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Mobile menu toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    mobileToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+
+    // Scroll reveal
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, index * 100);
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Close mobile menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+</script>
+
+</body>
+</html>
