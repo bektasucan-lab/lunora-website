@@ -32,7 +32,14 @@
         .nav-links a{text-decoration:none;color:rgba(45,42,38,.7);font-size:.9rem;transition:color .3s}
         .nav-links a:hover{color:var(--gold)}
         .nav-cta{background:var(--gold)!important;color:#fff!important;padding:.6rem 1.2rem;border-radius:50px}
-        @media(max-width:768px){.nav-links{display:none}}
+        .hamburger{display:none;background:none;border:none;cursor:pointer;padding:.5rem;flex-direction:column;gap:5px}
+        .hamburger span{display:block;width:22px;height:2px;background:var(--dark);border-radius:2px;transition:all .3s}
+        @media(max-width:768px){
+            .hamburger{display:flex}
+            .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(255,255,255,.98);backdrop-filter:blur(20px);flex-direction:column;padding:1.5rem 2rem;gap:1rem;box-shadow:0 10px 30px rgba(0,0,0,.1)}
+            .nav-links.open{display:flex}
+            .nav-cta{text-align:center}
+        }
         
         /* Hero */
         .hero{min-height:100vh;display:flex;align-items:center;padding:8rem 2rem 4rem;position:relative;overflow:hidden}
@@ -181,6 +188,9 @@
                 <a href="blog.html">Blog</a>
                 <a href="#download" class="nav-cta">Download</a>
             </div>
+            <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
