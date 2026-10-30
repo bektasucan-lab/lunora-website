@@ -5,6 +5,8 @@
     <lastmod>2026-10-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://mylunora.app/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://mylunora.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mylunora.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mylunora.app/de/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mylunora.app/"/>
   </url>
   <url>
@@ -12,6 +14,26 @@
     <lastmod>2026-10-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://mylunora.app/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://mylunora.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mylunora.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mylunora.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mylunora.app/"/>
+  </url>
+  <url>
+    <loc>https://mylunora.app/fr/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mylunora.app/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://mylunora.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mylunora.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mylunora.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mylunora.app/"/>
+  </url>
+  <url>
+    <loc>https://mylunora.app/de/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mylunora.app/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://mylunora.app/tr/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mylunora.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mylunora.app/de/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mylunora.app/"/>
   </url>
   <url>

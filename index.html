@@ -11,6 +11,8 @@
     <meta name="theme-color" content="#5B9A8B">
     <link rel="alternate" hreflang="en" href="https://mylunora.app/">
     <link rel="alternate" hreflang="tr" href="https://mylunora.app/tr/">
+    <link rel="alternate" hreflang="fr" href="https://mylunora.app/fr/">
+    <link rel="alternate" hreflang="de" href="https://mylunora.app/de/">
     <link rel="alternate" hreflang="x-default" href="https://mylunora.app/">
     <meta name="description" content="Lunora is an Islamic app for Muslim women, free on iPhone and Android: prayer times, Quran, duas, dhikr counter and widgets, and a Period Mode with fiqh guidance from the four madhhabs. 9 languages, no ads.">
     <link rel="canonical" href="https://mylunora.app/">
@@ -197,6 +199,8 @@
         .faq-item.open .faq-q::after{transform:rotate(45deg)}
         .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
         .faq-a p{padding:0 1.5rem 1.25rem;color:rgba(45,42,38,.6);font-size:.95rem;line-height:1.7}
+        .phone-screen.phone-shot{padding:0;width:260px;height:auto;aspect-ratio:540/1219;overflow:hidden;background:#fff}
+        .phone-shot img{width:100%;height:100%;object-fit:cover;display:block}
     </style>
     <script type="application/ld+json">
 {
@@ -224,7 +228,7 @@
             "name": "Is Lunora available on iPhone and Android?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. Lunora is available on the App Store for iPhone and on Google Play for Android phones, in 200+ countries."
+                "text": "Yes. Lunora is available on the App Store for iPhone and on Google Play for Android phones."
             }
         },
         {
@@ -316,6 +320,8 @@
                 <div class="lang-switch">
                     <a href="/" class="active">EN</a>
                     <a href="/tr/">TR</a>
+                    <a href="/fr/">FR</a>
+                    <a href="/de/">DE</a>
                 </div>
             </div>
             <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
@@ -331,7 +337,7 @@
             <div>
                 <span class="hero-badge">✨ Lunora 2.0 · Free on iPhone &amp; Android</span>
                 <h1 class="serif">A gentle pause<br><span class="gradient-text">for your soul</span></h1>
-                <p>The first Islamic app designed for <em style="color:var(--rose);font-style:normal;font-weight:500">her</em>. Prayer times, the Quran, duas and dhikr, and a thoughtful Period Mode built with care. Free on iPhone and Android, with no ads.</p>
+                <p>An Islamic app designed for <em style="color:var(--rose);font-style:normal;font-weight:500">her</em>. Prayer times, the Quran, duas and dhikr, and a thoughtful Period Mode built with care. Free on iPhone and Android, with no ads.</p>
                 <div class="btns">
                     <a href="https://apps.apple.com/app/apple-store/id6758765933?pt=128518745&amp;ct=web-home-en-1&amp;mt=8" class="btn btn-dark">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
@@ -351,26 +357,7 @@
             <div class="phone-wrap">
                 <div class="phone-glow"></div>
                 <div class="phone">
-                    <div class="phone-notch"></div>
-                    <div class="phone-screen">
-                        <div class="phone-status"><span>9:41</span><span>📶 🔋</span></div>
-                        <div class="phone-title"><h3>A gentle pause for today</h3><p>A calm, non-judgmental space</p></div>
-                        <div class="phone-card">
-                            <div class="lbl">Verse of the Day</div>
-                            <div class="arabic">لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا</div>
-                            <div class="eng">"Allah does not burden a soul beyond that it can bear."</div>
-                            <div class="ref">— Al-Baqarah 2:286</div>
-                        </div>
-                        <div class="phone-card phone-prayer">
-                            <div><div class="lbl">Next Prayer</div><div class="time">Asr — 15:42</div></div>
-                            <div style="text-align:right"><div class="icn">🕌</div><div class="lbl">2h 15m</div></div>
-                        </div>
-                        <div class="phone-actions">
-                            <div class="phone-act"><div class="icn">📖</div><div class="lbl">Quran</div></div>
-                            <div class="phone-act"><div class="icn">🤲</div><div class="lbl">Duas</div></div>
-                            <div class="phone-act"><div class="icn">🌙</div><div class="lbl">Ramadan</div></div>
-                        </div>
-                    </div>
+                    <div class="phone-screen phone-shot"><img src="/img/app/en-namaz.webp" alt="Lunora’s Protect My Prayer screen at prayer time" width="540" height="1219"></div>
                 </div>
             </div>
         </div>
@@ -379,7 +366,7 @@
     <section class="period" id="period-mode">
         <div class="container">
             <div class="section-head reveal">
-                <span class="badge badge-rose">🌸 A First in Islamic Apps</span>
+                <span class="badge badge-rose">🌸 Designed for Women</span>
                 <h2 class="serif">Period Mode</h2>
                 <p>Your spiritual companion adapts with <em style="color:var(--rose);font-style:normal;font-weight:500">care and understanding</em> during your cycle.</p>
             </div>
@@ -387,28 +374,7 @@
                 <div class="phone-wrap period-phone reveal">
                     <div class="phone-glow"></div>
                     <div class="phone" style="box-shadow:0 0 60px rgba(176,128,128,.3)">
-                        <div class="phone-notch"></div>
-                        <div class="phone-screen">
-                            <div class="phone-status" style="color:var(--rose)"><span>9:41</span><span>📶 🔋</span></div>
-                            <div style="text-align:center;margin-bottom:.75rem">
-                                <span class="period-badge">🌸 Period Mode</span>
-                                <p class="serif" style="font-size:1.1rem;font-style:italic;color:#9A6B6B">Day 1 of your cycle</p>
-                            </div>
-                            <div class="period-msg"><p>"While your body rests, your heart is still close to Allah."</p><div style="font-size:1.5rem;margin-top:.5rem">💜</div></div>
-                            <div class="phone-card" style="background:rgba(255,255,255,.5);border-color:rgba(176,128,128,.2)">
-                                <div class="arabic" style="font-size:.95rem;color:#9A6B6B">لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا</div>
-                                <div class="ref" style="color:var(--rose)">Bakara 286</div>
-                            </div>
-                            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-bottom:.75rem">
-                                <div style="background:rgba(255,255,255,.5);border-radius:.6rem;padding:.6rem;text-align:center;border:1px solid rgba(176,128,128,.2)"><div style="font-size:.65rem;color:var(--rose)">Mood</div><div style="font-size:1.1rem">😌</div></div>
-                                <div style="background:rgba(255,255,255,.5);border-radius:.6rem;padding:.6rem;text-align:center;border:1px solid rgba(176,128,128,.2)"><div style="font-size:.65rem;color:var(--rose)">Symptoms</div><div style="font-size:1.1rem">📝</div></div>
-                            </div>
-                            <div style="font-size:.65rem;color:var(--rose);margin-bottom:.4rem;font-weight:500">Today's Activities</div>
-                            <div style="display:flex;flex-direction:column;gap:.4rem">
-                                <div style="display:flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.5);padding:.4rem .6rem;border-radius:.4rem;font-size:.75rem;color:#9A6B6B;border:1px solid rgba(176,128,128,.2)">🎧 Listen to Quran</div>
-                                <div style="display:flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.5);padding:.4rem .6rem;border-radius:.4rem;font-size:.75rem;color:#9A6B6B;border:1px solid rgba(176,128,128,.2)">📿 Dhikr & Reflection</div>
-                            </div>
-                        </div>
+                        <div class="phone-screen phone-shot"><img src="/img/app/en-donem.webp" alt="Lunora’s Period Mode: the My Cycle screen" width="540" height="1219" loading="lazy"></div>
                     </div>
                 </div>
                 <div class="features-list reveal">
@@ -468,7 +434,7 @@
                 </div>
                 <div class="faq-item">
                     <div class="faq-q" onclick="this.parentElement.classList.toggle('open');let a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">Is Lunora available on iPhone and Android?</div>
-                    <div class="faq-a"><p>Yes. Lunora is available on the App Store for iPhone and on Google Play for Android phones, in 200+ countries.</p></div>
+                    <div class="faq-a"><p>Yes. Lunora is available on the App Store for iPhone and on Google Play for Android phones.</p></div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-q" onclick="this.parentElement.classList.toggle('open');let a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">Is Lunora free?</div>
@@ -501,7 +467,7 @@
                     <span class="btn-text"><small>Get it on</small><strong>Google Play</strong></span>
                 </a>
             </div>
-            <p class="greeting">As-salamu alaykum, sister. 🙏</p>
+            <p class="greeting">As-salamu alaykum, sister. 🤍</p>
         </div>
     </section>
 
