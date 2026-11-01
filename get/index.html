@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Lunora</title>
+    <meta name="robots" content="noindex">
+    <meta name="description" content="Lunora: prayer times, Quran, duas and Period Mode for Muslim women.">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <meta property="og:title" content="Lunora — for Muslim women">
+    <meta property="og:description" content="Prayer times, Quran, duas and Period Mode, in one calm app.">
+    <meta property="og:image" content="https://mylunora.app/icon-192.png">
+    <!--
+      One link for sharing Lunora, whatever phone the friend has (1 Kasım 2026).
+
+      The app's "share" used to send the sender's own store: an iPhone sent an
+      App Store link to an Android friend, and neither store link carried a
+      source, so every install from a share read "(direct)" in GA4 and nothing
+      at all in App Store Connect. This page sends each phone to its store
+      with the source attached:
+        Android → Play, referrer=utm_source=<s>&utm_medium=<m>&utm_campaign=<c>
+                  (GA4 first_user_source reads it through the install referrer)
+        iPhone  → App Store, pt=128518745&ct=<s>[-<c>] (App Store Connect →
+                  Sources → Campaigns)
+      Anything else (a computer) gets both buttons.
+
+      Parameters: s = source (default "share"), m = medium (default "app"),
+      c = campaign (optional). Only [a-z0-9_-] survive, so the page cannot be
+      made to forward anything else.
+    -->
+    <style>
+        :root { --bg: #f7f3ec; --ink: #1d2a22; --muted: #5b6b61; --acc: #3d6b52; }
+        * { box-sizing: border-box; }
+        body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+               background: var(--bg); color: var(--ink); font-family: -apple-system, system-ui, "Segoe UI", sans-serif; padding: 24px 16px; }
+        main { max-width: 380px; width: 100%; text-align: center; }
+        img.icon { width: 88px; height: 88px; border-radius: 20px; box-shadow: 0 6px 18px rgba(0,0,0,.12); }
+        h1 { font-size: 26px; margin: 18px 0 6px; }
+        p { color: var(--muted); margin: 0 0 24px; line-height: 1.5; }
+        a.btn { display: block; padding: 14px 18px; margin: 10px 0; border-radius: 14px; background: var(--acc);
+                color: #fff; text-decoration: none; font-weight: 600; }
+        a.btn.alt { background: #fff; color: var(--acc); border: 1.5px solid var(--acc); }
+    </style>
+</head>
+<body>
+<main>
+    <img class="icon" src="/icon-192.png" alt="Lunora">
+    <h1>Lunora</h1>
+    <p>Prayer times, Quran, duas and Period Mode — for Muslim women.</p>
+    <a id="ios" class="btn" href="https://apps.apple.com/app/apple-store/id6758765933?pt=128518745&amp;ct=share&amp;mt=8">Download on the App Store</a>
+    <a id="android" class="btn alt" href="https://play.google.com/store/apps/details?id=com.studiolunora.lunora&amp;referrer=utm_source%3Dshare%26utm_medium%3Dapp">Get it on Google Play</a>
+</main>
+<script>
+(function () {
+    var q = new URLSearchParams(location.search);
+    function clean(v, d) { v = (v || d || '').toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 40); return v || d; }
+    var s = clean(q.get('s'), 'share'), m = clean(q.get('m'), 'app'), c = clean(q.get('c'), '');
+    var ref = 'utm_source=' + s + '&utm_medium=' + m + (c ? '&utm_campaign=' + c : '');
+    var play = 'https://play.google.com/store/apps/details?id=com.studiolunora.lunora&referrer=' + encodeURIComponent(ref);
+    var ct = (c ? s + '-' + c : s).slice(0, 40);
+    var appStore = 'https://apps.apple.com/app/apple-store/id6758765933?pt=128518745&ct=' + encodeURIComponent(ct) + '&mt=8';
+    document.getElementById('android').href = play;
+    document.getElementById('ios').href = appStore;
+    var ua = navigator.userAgent || '';
+    var isIOS = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    if (isIOS) location.replace(appStore);
+    else if (/Android/.test(ua)) location.replace(play);
+})();
+</script>
+</body>
+</html>
