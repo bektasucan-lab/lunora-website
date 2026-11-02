@@ -11,6 +11,8 @@
     <meta property="og:title" content="Lunora — for Muslim women">
     <meta property="og:description" content="Prayer times, Quran, duas and Period Mode, in one calm app.">
     <meta property="og:image" content="https://mylunora.app/icon-192.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!--
       One link for sharing Lunora, whatever phone the friend has (1 Kasım 2026).
 
@@ -28,9 +30,29 @@
       Parameters: s = source (default "share"), m = medium (default "app"),
       c = campaign (optional). Only [a-z0-9_-] survive, so the page cannot be
       made to forward anything else.
+
+      Language (2 Kasım 2026): the app's nine. Taken from c=invite_<lang>
+      (what the app's share sends), else ?l=<lang>, else the browser; English
+      when none of them is one of the nine. Arabic and Urdu are RTL. The line
+      under the name is each language's Play short description, already
+      translated and live; the button labels are the stores' own wording.
+
+      Buttons (2 Kasım 2026): the app's primary button, LunoraCloudButton
+      (lib/core/design_v2/cloud_button.dart) — the same three-slice
+      watercolour cloud, assets/design_v2/cloud3.webp (840×249) cut at the
+      app's centerSlice into /img/cloud3-l.webp (x 0–300), cloud3-m.webp
+      (300–540) and cloud3-r.webp (540–840). Caps never stretch, the middle
+      does; drawn 52 px tall a cap is 52×300/249 = 62.65 px. The label keeps 34 px clear of each edge (the app's hPad) and
+      the cloud is never narrower than two caps (125.3 px). Label faces as
+      V2Type.cloudLabel: Playfair Display 600 17 px, white; Arabic Cairo 700
+      16 px; Urdu Noto Nastaliq Urdu at 17 × 1.10; Bangla Noto Sans Bengali.
     -->
     <style>
-        :root { --bg: #f7f3ec; --ink: #1d2a22; --muted: #5b6b61; --acc: #3d6b52; }
+        :root { --bg: #f7f3ec; --ink: #1d2a22; --muted: #5b6b61; --acc: #3d6b52;
+                --label: "Playfair Display", Georgia, serif; --label-size: 17px; --label-weight: 600; }
+        html[lang="ar"] { --label: "Cairo", "Segoe UI", sans-serif; --label-size: 16px; --label-weight: 700; }
+        html[lang="ur"] { --label: "Noto Nastaliq Urdu", serif; --label-size: 18.7px; }
+        html[lang="bn"] { --label: "Noto Sans Bengali", sans-serif; }
         * { box-sizing: border-box; }
         body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
                color: var(--ink); font-family: -apple-system, system-ui, "Segoe UI", sans-serif; padding: 24px 16px;
@@ -41,19 +63,31 @@
                -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
         img.icon { width: 88px; height: 88px; border-radius: 20px; box-shadow: 0 6px 18px rgba(0,0,0,.12); }
         h1 { font-size: 26px; margin: 18px 0 6px; }
-        p { color: var(--muted); margin: 0 0 24px; line-height: 1.5; }
-        a.btn { display: block; padding: 14px 18px; margin: 10px 0; border-radius: 14px; background: var(--acc);
-                color: #fff; text-decoration: none; font-weight: 600; }
-        a.btn.alt { background: #fff; color: var(--acc); border: 1.5px solid var(--acc); }
+        p { color: var(--muted); margin: 0 0 20px; line-height: 1.5; }
+        html[lang="ur"] p { line-height: 2.1; }
+        a.cloud { display: flex; align-items: center; justify-content: center; width: 100%; min-width: 125.3px;
+                  height: 52px; margin: 8px 0; padding: 0; color: #fff; text-decoration: none;
+                  font-family: var(--label); font-size: var(--label-size); font-weight: var(--label-weight); line-height: 1.2;
+                  padding: 0 34px;
+                  /* Three slices, caps on top: the middle runs 2 px under each cap so no seam shows
+                     (border-image left a hairline at both joins in Chrome). */
+                  background: url('/img/cloud3-l.webp') left center / auto 100% no-repeat,
+                              url('/img/cloud3-r.webp') right center / auto 100% no-repeat,
+                              url('/img/cloud3-m.webp') center / calc(100% - 121.3px) 100% no-repeat;
+                  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+                  -webkit-tap-highlight-color: transparent; transition: opacity .15s; }
+        a.cloud:hover { opacity: .9; }
+        a.cloud:active { opacity: .8; }
+        a.cloud:focus-visible { outline: 2px solid var(--acc); outline-offset: 3px; border-radius: 26px; }
     </style>
 </head>
 <body>
 <main>
     <img class="icon" src="/icon-192.png" alt="Lunora">
     <h1>Lunora</h1>
-    <p>Prayer times, Quran, duas and Period Mode — for Muslim women.</p>
-    <a id="ios" class="btn" href="https://apps.apple.com/app/apple-store/id6758765933?pt=128518745&amp;ct=share&amp;mt=8">Download on the App Store</a>
-    <a id="android" class="btn alt" href="https://play.google.com/store/apps/details?id=com.studiolunora.lunora&amp;referrer=utm_source%3Dshare%26utm_medium%3Dapp">Get it on Google Play</a>
+    <p id="tagline">Quran, prayer times, duas, dhikr, qibla &amp; Period Mode for Muslim women</p>
+    <a id="ios" class="cloud" href="https://apps.apple.com/app/apple-store/id6758765933?pt=128518745&amp;ct=share&amp;mt=8">Download on the App Store</a>
+    <a id="android" class="cloud" href="https://play.google.com/store/apps/details?id=com.studiolunora.lunora&amp;referrer=utm_source%3Dshare%26utm_medium%3Dapp">Get it on Google Play</a>
 </main>
 <script>
 (function () {
@@ -68,8 +102,38 @@
     document.getElementById('ios').href = appStore;
     var ua = navigator.userAgent || '';
     var isIOS = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-    if (isIOS) location.replace(appStore);
-    else if (/Android/.test(ua)) location.replace(play);
+    if (isIOS) { location.replace(appStore); }
+    else if (/Android/.test(ua)) { location.replace(play); }
+
+    var T = {
+        en: ['Quran, prayer times, duas, dhikr, qibla & Period Mode for Muslim women', 'Download on the App Store', 'Get it on Google Play'],
+        tr: ['Namaz vakitleri, Kuran, dua, zikir, kıble ve Dönem Modu — kadınlara özel', "App Store'dan İndirin", "Google Play'den Alın"],
+        ar: ['قرآن، مواقيت الصلاة، أدعية، أذكار، قبلة ووضع الدورة الشهرية للمرأة المسلمة', 'تنزيل من App Store', 'احصل عليه من Google Play'],
+        id: ["Al-Qur'an, jadwal sholat, doa, zikir, kiblat & Mode Haid untuk muslimah", 'Download di App Store', 'Temukan di Google Play'],
+        de: ['Gebetszeiten, Koran, Duas, Qibla, Dhikr & Periodenmodus für muslimische Frauen', 'Laden im App Store', 'Jetzt bei Google Play'],
+        fr: ['Coran, horaires de prière, duas, dhikr, qibla, Mode règles — pour les musulmanes', "Télécharger dans l'App Store", 'Disponible sur Google Play'],
+        ur: ['نماز کے اوقات، قرآن، دعائیں، اذکار، قبلہ اور پیریڈ موڈ — مسلمان خواتین کے لیے', 'App Store سے ڈاؤن لوڈ کریں', 'Google Play سے حاصل کریں'],
+        bn: ['নামাজের সময়, কুরআন, দোয়া, জিকির, কিবলা ও পিরিয়ড মোড — মুসলিম নারীদের জন্য', 'App Store থেকে ডাউনলোড করুন', 'Google Play থেকে পান'],
+        ms: ['Waktu solat, al-Quran, doa, zikir, kiblat & Mod Haid — wanita Muslim', 'Muat turun di App Store', 'Dapatkan di Google Play']
+    };
+    var FONT = { ar: 'Cairo:wght@700', ur: 'Noto+Nastaliq+Urdu:wght@600', bn: 'Noto+Sans+Bengali:wght@600' };
+    function pick() {
+        var fromInvite = /^invite_([a-z]{2})$/.exec(c);
+        var cands = [fromInvite && fromInvite[1], clean(q.get('l'), '')].concat(
+            (navigator.languages || [navigator.language || '']).map(function (x) { return String(x).slice(0, 2).toLowerCase(); }));
+        for (var i = 0; i < cands.length; i++) if (cands[i] && T[cands[i]]) return cands[i];
+        return 'en';
+    }
+    var lang = pick(), t = T[lang], root = document.documentElement;
+    root.lang = lang;
+    root.dir = (lang === 'ar' || lang === 'ur') ? 'rtl' : 'ltr';
+    document.getElementById('tagline').textContent = t[0];
+    document.getElementById('ios').textContent = t[1];
+    document.getElementById('android').textContent = t[2];
+    var font = document.createElement('link');
+    font.rel = 'stylesheet';
+    font.href = 'https://fonts.googleapis.com/css2?family=' + (FONT[lang] || 'Playfair+Display:wght@600') + '&display=swap';
+    document.head.appendChild(font);
 })();
 </script>
 </body>
