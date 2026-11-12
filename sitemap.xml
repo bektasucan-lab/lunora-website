@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mylunora.app/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://mylunora.app/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://mylunora.app/tr/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://mylunora.app/fr/"/>
@@ -11,7 +11,7 @@
   </url>
   <url>
     <loc>https://mylunora.app/tr/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://mylunora.app/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://mylunora.app/tr/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://mylunora.app/fr/"/>
@@ -35,6 +35,62 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mylunora.app/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mylunora.app/de/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mylunora.app/"/>
+  </url>
+  <url>
+    <loc>https://mylunora.app/dhikr-widget.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mylunora.app/dhikr-widget.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://mylunora.app/tr/zikir-widget.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mylunora.app/dhikr-widget.html"/>
+  </url>
+  <url>
+    <loc>https://mylunora.app/tr/zikir-widget.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mylunora.app/dhikr-widget.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://mylunora.app/tr/zikir-widget.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mylunora.app/dhikr-widget.html"/>
+  </url>
+  <url>
+    <loc>https://mylunora.app/quran-reading-plan.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mylunora.app/quran-reading-plan.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://mylunora.app/tr/kuran-okuma-plani.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mylunora.app/quran-reading-plan.html"/>
+  </url>
+  <url>
+    <loc>https://mylunora.app/tr/kuran-okuma-plani.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mylunora.app/quran-reading-plan.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://mylunora.app/tr/kuran-okuma-plani.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mylunora.app/quran-reading-plan.html"/>
+  </url>
+  <url>
+    <loc>https://mylunora.app/protect-my-prayer.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mylunora.app/protect-my-prayer.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://mylunora.app/tr/namazimi-koru.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mylunora.app/protect-my-prayer.html"/>
+  </url>
+  <url>
+    <loc>https://mylunora.app/tr/namazimi-koru.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mylunora.app/protect-my-prayer.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://mylunora.app/tr/namazimi-koru.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mylunora.app/protect-my-prayer.html"/>
+  </url>
+  <url>
+    <loc>https://mylunora.app/period-mode.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mylunora.app/period-mode.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://mylunora.app/tr/donem-modu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mylunora.app/period-mode.html"/>
+  </url>
+  <url>
+    <loc>https://mylunora.app/tr/donem-modu.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mylunora.app/period-mode.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://mylunora.app/tr/donem-modu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mylunora.app/period-mode.html"/>
   </url>
   <url>
     <loc>https://mylunora.app/blog.html</loc>
