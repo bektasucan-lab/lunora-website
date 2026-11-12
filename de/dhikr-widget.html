@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhikr-Widget &amp; Tasbih-Zähler für iPhone und Android | Lunora</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="theme-color" content="#5B9A8B">
+    <meta name="description" content="Zähle Dhikr mit Lunoras Tasbih-Widget, ohne die App zu öffnen. Dhikr-Bibliothek mit Quellen, eigene Sets und die 99 Namen. Gratis-Download für iPhone &amp; Android.">
+    <link rel="canonical" href="https://mylunora.app/de/dhikr-widget.html">
+    <link rel="alternate" hreflang="en" href="https://mylunora.app/dhikr-widget.html">
+    <link rel="alternate" hreflang="tr" href="https://mylunora.app/tr/zikir-widget.html">
+    <link rel="alternate" hreflang="fr" href="https://mylunora.app/fr/widget-dhikr.html">
+    <link rel="alternate" hreflang="de" href="https://mylunora.app/de/dhikr-widget.html">
+    <link rel="alternate" hreflang="x-default" href="https://mylunora.app/dhikr-widget.html">
+    <meta property="og:title" content="Lunora: Dhikr-Widget und Tasbih-Zähler">
+    <meta property="og:description" content="Zähle deinen Dhikr auf dem Startbildschirm. Eine Dhikr-Bibliothek mit Quellen, eigene Sets und die 99 Namen, in einer islamischen App für muslimische Frauen.">
+    <meta property="og:url" content="https://mylunora.app/de/dhikr-widget.html">
+    <meta property="og:image" content="https://mylunora.app/img/features/en-dhikr-widget.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Lunora">
+    <meta property="og:locale" content="de_DE">
+    <meta name="twitter:card" content="summary">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--cream:#FDFBF7;--cream-dark:#F3EBD8;--gold:#C9A962;--gold-dark:#9A7B3D;--teal:#5B9A8B;--rose:#B08080;--dark:#2D2A26}
+        html{scroll-behavior:smooth}
+        body{font-family:'Outfit',sans-serif;background:linear-gradient(180deg,var(--cream),var(--cream-dark));color:var(--dark);line-height:1.6;overflow-x:hidden}
+        .serif{font-family:'Cormorant Garamond',serif}
+
+        /* Nav */
+        nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.5rem 2rem;transition:all .3s}
+        nav.scrolled{background:rgba(255,255,255,.9);backdrop-filter:blur(20px);padding:1rem 2rem;box-shadow:0 2px 20px rgba(0,0,0,.05)}
+        .nav-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+        .logo{text-decoration:none;color:var(--dark);font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;display:flex;align-items:center;gap:.5rem}
+        .logo-icon{width:32px;height:32px;border-radius:8px}
+        .nav-links{display:flex;gap:2rem;align-items:center}
+        .nav-links a{text-decoration:none;color:rgba(45,42,38,.7);font-size:.9rem;transition:color .3s}
+        .nav-links a:hover{color:var(--gold)}
+        .nav-cta{background:var(--gold)!important;color:#fff!important;padding:.6rem 1.2rem;border-radius:50px}
+        .hamburger{display:none;background:none;border:none;cursor:pointer;padding:.5rem;flex-direction:column;gap:5px}
+        .hamburger span{display:block;width:22px;height:2px;background:var(--dark);border-radius:2px;transition:all .3s}
+        @media(max-width:768px){
+            nav{padding:1rem 1rem}
+            nav.scrolled{padding:.75rem 1rem}
+            .hamburger{display:flex}
+            .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(255,255,255,.98);backdrop-filter:blur(20px);flex-direction:column;padding:1.5rem 2rem;gap:1rem;box-shadow:0 10px 30px rgba(0,0,0,.1)}
+            .nav-links.open{display:flex}
+            .nav-cta{text-align:center}
+        }
+
+        /* Language Switcher */
+        .lang-switch{display:inline-flex;align-items:center;gap:.25rem;background:rgba(45,42,38,.05);border-radius:50px;padding:.25rem;font-size:.8rem}
+        .lang-switch a{text-decoration:none;padding:.3rem .6rem;border-radius:50px;color:rgba(45,42,38,.5);transition:all .3s}
+        .lang-switch a.active{background:var(--gold);color:#fff}
+        .lang-switch a:hover:not(.active){color:var(--dark)}
+
+        /* Hero */
+        .page-hero{padding:8rem 2rem 4rem;position:relative;overflow:hidden}
+        .hero-bg{position:absolute;top:15%;left:10%;width:400px;height:400px;max-width:80vw;background:rgba(201,169,98,.15);border-radius:50%;filter:blur(80px);pointer-events:none}
+        .hero-bg2{position:absolute;top:45%;right:8%;width:350px;height:350px;max-width:70vw;background:rgba(176,128,128,.12);border-radius:50%;filter:blur(80px);pointer-events:none}
+        .hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.25fr .75fr;gap:4rem;align-items:center;position:relative}
+        @media(max-width:1024px){.hero-inner{grid-template-columns:1fr;gap:3rem}}
+        .crumbs{font-size:.8rem;color:rgba(45,42,38,.5);margin-bottom:1.25rem}
+        .crumbs a{color:rgba(45,42,38,.6);text-decoration:none}
+        .crumbs a:hover{color:var(--gold-dark)}
+        .hero-badge{display:inline-block;padding:.5rem 1rem;background:rgba(201,169,98,.1);color:var(--gold-dark);border-radius:50px;font-size:.875rem;margin-bottom:1.25rem;border:1px solid rgba(201,169,98,.2)}
+        .page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,5vw,3.6rem);font-weight:600;line-height:1.1;margin-bottom:1.5rem}
+        .summary{font-size:1.1rem;color:rgba(45,42,38,.75);margin-bottom:2rem;max-width:620px}
+        .summary p+p{margin-top:.75rem}
+
+        .btns{display:flex;gap:1rem;flex-wrap:wrap}
+        .btn{display:inline-flex;align-items:center;gap:.75rem;padding:1rem 1.5rem;border-radius:1rem;text-decoration:none;font-weight:500;transition:all .3s}
+        .btn-dark{background:var(--dark);color:var(--cream)}
+        .btn-dark:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.15)}
+        .btn-light{background:#fff;color:var(--dark);border:1px solid rgba(45,42,38,.1)}
+        .btn-light:hover{border-color:var(--gold);transform:translateY(-2px)}
+        .btn svg{width:24px;height:24px}
+        .btn-text{text-align:left}
+        .btn-text small{display:block;font-size:.65rem;opacity:.7}
+        .btn-text strong{font-size:.9rem}
+        .trust{display:flex;gap:1.5rem;margin-top:2rem;font-size:.875rem;color:rgba(45,42,38,.5);flex-wrap:wrap}
+
+        .shot-wrap{display:flex;justify-content:center;position:relative}
+        .shot-glow{position:absolute;inset:-10%;background:radial-gradient(circle,rgba(201,169,98,.25),rgba(176,128,128,.15),transparent 70%);border-radius:50%;filter:blur(40px)}
+        .shot{position:relative;width:100%;max-width:300px;height:auto;border-radius:1.75rem;box-shadow:0 30px 70px rgba(0,0,0,.15);display:block}
+        .shot-art{position:relative;width:100%;max-width:340px;height:auto;display:block;background:rgba(255,255,255,.6);border-radius:2rem;border:1px solid rgba(201,169,98,.15);padding:1.5rem;box-shadow:0 30px 70px rgba(0,0,0,.08)}
+
+        /* Sections */
+        section{padding:4.5rem 2rem}
+        .container{max-width:1100px;margin:0 auto}
+        .section-head{text-align:center;margin-bottom:2.5rem}
+        .badge{display:inline-block;padding:.4rem .9rem;border-radius:50px;font-size:.8rem;margin-bottom:1rem}
+        .badge-rose{background:rgba(176,128,128,.1);color:var(--rose);border:1px solid rgba(176,128,128,.2)}
+        .badge-teal{background:rgba(91,154,139,.1);color:var(--teal);border:1px solid rgba(91,154,139,.2)}
+        .badge-gold{background:rgba(201,169,98,.1);color:var(--gold-dark);border:1px solid rgba(201,169,98,.2)}
+        .section-head h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:.75rem;line-height:1.15}
+        .section-head p{font-size:1.05rem;color:rgba(45,42,38,.6);max-width:600px;margin:0 auto}
+
+        /* Feature cards */
+        .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+        @media(max-width:900px){.features-grid{grid-template-columns:repeat(2,1fr)}}
+        @media(max-width:600px){.features-grid{grid-template-columns:1fr}}
+        .fcard{padding:1.75rem;background:rgba(255,255,255,.6);border-radius:1.25rem;border:1px solid rgba(201,169,98,.15);transition:all .3s}
+        .fcard:hover{transform:translateY(-5px);box-shadow:0 15px 40px rgba(0,0,0,.05)}
+        .fcard .icn{font-size:2rem;margin-bottom:.75rem;display:block}
+        .fcard h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;margin-bottom:.5rem;line-height:1.2}
+        .fcard p{color:rgba(45,42,38,.65);font-size:.92rem}
+
+        /* Steps */
+        .steps-sec{background:linear-gradient(180deg,var(--cream-dark),var(--cream))}
+        .steps{list-style:none;max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:1rem}
+        .step{display:flex;gap:1.1rem;align-items:flex-start;padding:1.25rem 1.4rem;background:rgba(255,255,255,.65);border-radius:1rem;border:1px solid rgba(91,154,139,.18)}
+        .step-num{flex-shrink:0;width:2.1rem;height:2.1rem;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:.95rem}
+        .step h3{font-size:1rem;font-weight:600;margin-bottom:.2rem}
+        .step p{font-size:.92rem;color:rgba(45,42,38,.65)}
+
+        /* Detail blocks */
+        .detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;max-width:960px;margin:0 auto}
+        @media(max-width:760px){.detail-grid{grid-template-columns:1fr}}
+        .detail{padding:1.6rem;background:rgba(255,255,255,.6);border-radius:1.25rem;border:1px solid rgba(176,128,128,.2)}
+        .detail h3{font-family:'Cormorant Garamond',serif;font-size:1.35rem;margin-bottom:.6rem;line-height:1.2}
+        .detail p,.detail li{font-size:.92rem;color:rgba(45,42,38,.7)}
+        .detail p+p{margin-top:.6rem}
+        .detail ul{padding-left:1.1rem;display:flex;flex-direction:column;gap:.35rem}
+        .note{max-width:960px;margin:1.5rem auto 0;padding:1.1rem 1.4rem;background:rgba(255,255,255,.45);border-radius:1rem;border-left:4px solid var(--rose);font-size:.92rem;color:rgba(45,42,38,.7)}
+
+        /* FAQ */
+        .faq{background:linear-gradient(180deg,var(--cream),var(--cream-dark))}
+        .faq-list{max-width:760px;margin:0 auto}
+        .faq-item{background:rgba(255,255,255,.6);border:1px solid rgba(201,169,98,.15);border-radius:1rem;margin-bottom:.75rem;overflow:hidden;transition:all .3s}
+        .faq-item:hover{border-color:var(--gold)}
+        .faq-q{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 1.5rem;cursor:pointer;font-weight:500;font-size:1rem;gap:1rem;width:100%;background:none;border:none;text-align:left;font-family:inherit;color:inherit}
+        .faq-q::after{content:'+';font-size:1.3rem;color:var(--gold);transition:transform .3s;flex-shrink:0}
+        .faq-item.open .faq-q::after{transform:rotate(45deg)}
+        .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+        .faq-a p{padding:0 1.5rem 1.25rem;color:rgba(45,42,38,.65);font-size:.95rem;line-height:1.7}
+
+        /* Related */
+        .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:960px;margin:0 auto}
+        @media(max-width:900px){.related-grid{grid-template-columns:1fr}}
+        .rcard{display:block;padding:1.4rem;background:rgba(255,255,255,.6);border-radius:1.1rem;border:1px solid rgba(201,169,98,.15);text-decoration:none;color:var(--dark);transition:all .3s}
+        .rcard:hover{border-color:var(--gold);transform:translateY(-3px)}
+        .rcard .icn{font-size:1.5rem}
+        .rcard h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;margin:.3rem 0 .25rem}
+        .rcard p{font-size:.88rem;color:rgba(45,42,38,.6)}
+        .reading{max-width:960px;margin:2rem auto 0;text-align:center}
+        .reading h3{font-size:.95rem;font-weight:600;margin-bottom:.75rem;color:rgba(45,42,38,.7)}
+        .reading ul{list-style:none;display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center}
+        .reading a{display:inline-block;padding:.5rem .95rem;border-radius:50px;background:rgba(91,154,139,.1);border:1px solid rgba(91,154,139,.2);color:var(--teal);text-decoration:none;font-size:.88rem}
+        .reading a:hover{background:rgba(91,154,139,.18)}
+
+        /* Download */
+        .download{background:linear-gradient(180deg,var(--cream),var(--dark) 40%,#1F1D1A);text-align:center;padding:6rem 2rem}
+        .download .container{padding-top:3rem}
+        .download .badge{background:rgba(201,169,98,.2);color:#E8D5A8;border:1px solid rgba(201,169,98,.3)}
+        .download h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);color:var(--cream);margin-bottom:1rem}
+        .download .container>p{color:rgba(253,251,247,.6);font-size:1.1rem;margin-bottom:2.5rem;max-width:460px;margin-left:auto;margin-right:auto}
+        .dl-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
+        .dl-btn{display:inline-flex;align-items:center;gap:.75rem;padding:1rem 1.75rem;border-radius:1rem;text-decoration:none;transition:all .3s}
+        .dl-btn svg{width:26px;height:26px}
+        .dl-btn-light{background:var(--cream);color:var(--dark)}
+        .dl-btn-light:hover{background:#fff;transform:translateY(-2px)}
+        .dl-btn-outline{background:transparent;color:var(--cream);border:2px solid rgba(253,251,247,.3)}
+        .dl-btn-outline:hover{background:rgba(253,251,247,.1);border-color:rgba(253,251,247,.5);transform:translateY(-2px)}
+        .greeting{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:rgba(201,169,98,.7)}
+
+        /* Footer */
+        footer{background:#1F1D1A;color:var(--cream);padding:3rem 2rem 1.5rem}
+        .footer-inner{max-width:1200px;margin:0 auto}
+        .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:2rem}
+        @media(max-width:768px){.footer-grid{grid-template-columns:1fr;gap:1.5rem}}
+        .footer-brand .logo{margin-bottom:.75rem}
+        .footer-brand p{color:rgba(253,251,247,.5);max-width:280px;font-size:.9rem}
+        .footer-links h4{color:var(--gold);font-weight:600;margin-bottom:.75rem;font-size:.9rem}
+        .footer-links ul{list-style:none}
+        .footer-links li{margin-bottom:.4rem}
+        .footer-links a{color:rgba(253,251,247,.5);text-decoration:none;font-size:.9rem;transition:color .3s}
+        .footer-links a:hover{color:var(--gold)}
+        .footer-divider{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.2;margin-bottom:1.5rem}
+        .footer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.85rem;color:rgba(253,251,247,.4)}
+        .footer-bottom .tagline{font-style:italic}
+
+        @media(max-width:600px){
+            .page-hero{padding:7rem 1rem 3rem}
+            section{padding:3.5rem 1rem}
+            .download{padding:5rem 1rem}
+            footer{padding:3rem 1rem 1.5rem}
+            .fcard,.detail{padding:1.4rem}
+            .step{padding:1.1rem}
+            .faq-q{padding:1.1rem 1.1rem}
+            .faq-a p{padding:0 1.1rem 1.1rem}
+        }
+    </style>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Kann ich Dhikr auf dem Startbildschirm zählen, ohne die App zu öffnen?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja. Füge das Lunora-Widget „Tasbih mit Zähler“ hinzu und tippe auf + Zählen oder auf den Ring. Jeder Tipp wird im Widget gezählt und zu deinem Tageszähler in der App addiert. Auf dem iPhone braucht das iOS 17 oder neuer; bei älteren Versionen öffnet ein Tipp stattdessen den Zähler."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Welchen Dhikr kann ich im Widget zählen?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Das Widget zeigt zuerst den Dhikr, den du zuletzt in der App gezählt hast, dann sechs alltägliche Formeln: SubhanAllah, Alhamdulillah, Allahu Akbar, La ilaha illallah, Astaghfirullah und Allahumma salli ala Muhammad. Tippe auf die Formel, um zur nächsten zu wechseln."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Zeigt Lunora, woher jeder Dhikr stammt?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja. Jeder Eintrag in der Dhikr-Bibliothek von Lunora nennt seine Quelle, zum Beispiel eine Hadith-Nummer aus Bukhari oder Muslim, zusammen mit dem arabischen Text, einer Umschrift und der Bedeutung."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Enthält Lunora die 99 Namen Allahs (Asma ul Husna)?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja. Du kannst die 99 Namen mit kurzen Bedeutungen lesen, sie einzeln der Reihe nach durchzählen und ein Widget „Name des Tages“ hinzufügen. Die App weist darauf hin, dass der Hadith über die neunundneunzig Namen Allahs sahih ist, die Liste der Namen selbst aber von Gelehrten zusammengestellt wurde."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Kann ich während meiner Periode weiter Dhikr machen?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja. Dhikr und Duas bleiben an Periodentagen verfügbar. Wenn der Periodenmodus an ist, verlinkt der Dhikr-Bildschirm außerdem auf den Periodenratgeber, der die Ansichten der vier Rechtsschulen zum Koranlesen während der Menstruation darlegt."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Gibt es Lunora für iPhone und Android?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Lunora kannst du kostenlos aus dem App Store und von Google Play herunterladen, und es gibt keine Werbung. Lunora+ ist ein Abo, das die ganze App freischaltet, und du kannst es mit einem Gratis-Test beginnen."
+            }
+        }
+    ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "@id": "https://mylunora.app/#org",
+            "name": "Studio Lunora",
+            "url": "https://mylunora.app/",
+            "logo": "https://mylunora.app/icon-192.png",
+            "sameAs": [
+                "https://instagram.com/mylunora.app"
+            ]
+        },
+        {
+            "@type": "MobileApplication",
+            "@id": "https://mylunora.app/#app",
+            "name": "Lunora - Muslim Women",
+            "alternateName": "Lunora",
+            "operatingSystem": "iOS, Android",
+            "applicationCategory": "LifestyleApplication",
+            "description": "An Islamic app for Muslim women: prayer times, Quran, duas, dhikr and a Period Mode with fiqh guidance from the four madhhabs. Works offline, no ads, no account.",
+            "inLanguage": [
+                "en",
+                "tr",
+                "ar",
+                "fr",
+                "de",
+                "id",
+                "ms",
+                "ur",
+                "bn"
+            ],
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            },
+            "publisher": {
+                "@id": "https://mylunora.app/#org"
+            },
+            "sameAs": [
+                "https://apps.apple.com/us/app/lunora-muslim-women/id6758765933",
+                "https://play.google.com/store/apps/details?id=com.studiolunora.lunora"
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://mylunora.app/de/dhikr-widget.html#webpage",
+            "url": "https://mylunora.app/de/dhikr-widget.html",
+            "name": "Dhikr-Widget & Tasbih-Zähler für iPhone und Android | Lunora",
+            "description": "Zähle Dhikr mit Lunoras Tasbih-Widget, ohne die App zu öffnen. Dhikr-Bibliothek mit Quellen, eigene Sets und die 99 Namen. Gratis-Download für iPhone & Android.",
+            "inLanguage": "de",
+            "about": {
+                "@id": "https://mylunora.app/#app"
+            },
+            "primaryImageOfPage": "https://mylunora.app/img/features/en-dhikr-widget.webp",
+            "breadcrumb": {
+                "@id": "https://mylunora.app/de/dhikr-widget.html#breadcrumb"
+            }
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://mylunora.app/de/dhikr-widget.html#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Startseite",
+                    "item": "https://mylunora.app/de/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Dhikr-Widget",
+                    "item": "https://mylunora.app/de/dhikr-widget.html"
+                }
+            ]
+        }
+    ]
+}
+    </script>
+</head>
+<body>
+    <nav id="nav">
+        <div class="nav-inner">
+            <a href="/de/" class="logo"><img src="/icon-192.png" alt="Lunora" class="logo-icon"> Lunora</a>
+            <div class="nav-links">
+                <a href="/de/#features">Funktionen</a>
+                <a href="/de/periodenmodus.html">Periodenmodus</a>
+                <a href="/blog.html">Blog</a>
+                <a href="#download" class="nav-cta">Herunterladen</a>
+                <div class="lang-switch">
+                    <a href="/dhikr-widget.html" hreflang="en">EN</a>
+                    <a href="/tr/zikir-widget.html" hreflang="tr">TR</a>
+                    <a href="/fr/widget-dhikr.html" hreflang="fr">FR</a>
+                    <a href="/de/dhikr-widget.html" class="active" hreflang="de">DE</a>
+                </div>
+            </div>
+            <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menü">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="hero-bg"></div>
+        <div class="hero-bg2"></div>
+        <div class="hero-inner">
+            <div>
+                <p class="crumbs"><a href="/de/">Startseite</a> › <a href="/de/#features">Funktionen</a> › Dhikr-Widget</p>
+                <span class="hero-badge">📿 Dhikr &amp; Tasbih</span>
+                <h1 class="serif">Dhikr-Widget und Tasbih-Zähler</h1>
+                <div class="summary">
+                    <p>Lunora ist eine islamische App für muslimische Frauen mit einem Tasbih-Widget für deinen Startbildschirm: Tippe darauf, um Dhikr zu zählen, ohne die App zu öffnen, und jeder Tipp fließt in denselben Tageszähler wie der Zähler in der App. In der App findest du eine Dhikr-Bibliothek mit 113 Einträgen mit arabischem Text, Umschrift, Bedeutung und Quelle, dazu deine eigenen Dhikr-Sets und die 99 Namen Allahs. Lunora kannst du kostenlos für iPhone und Android herunterladen.</p>
+                </div>
+                <div class="btns">
+                    <a href="https://apps.apple.com/app/apple-store/id6758765933?pt=128518745&amp;ct=web-dhikr-de-1&amp;mt=8" class="btn btn-dark">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        <span class="btn-text"><small>Laden im</small><strong>App Store</strong></span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.studiolunora.lunora&amp;referrer=utm_source%3Dmylunora.app%26utm_medium%3Dweb%26utm_campaign%3Ddhikr_widget_hero_de" class="btn btn-light">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
+                        <span class="btn-text"><small>Jetzt bei</small><strong>Google Play</strong></span>
+                    </a>
+                </div>
+                <div class="trust"><span>📱 iPhone und Android</span><span>🚫 Keine Werbung</span><span>🌍 9 Sprachen</span></div>
+            </div>
+            <div class="shot-wrap">
+                <div class="shot-glow"></div>
+                <img class="shot" src="/img/features/en-dhikr-widget.webp" alt="Lunora-Widgets auf einem iPhone-Startbildschirm, darunter das Tasbih-Widget mit 21 von 33" width="600" height="1301">
+            </div>
+        </div>
+    </header>
+
+    <main>
+    <section id="what">
+        <div class="container">
+            <div class="section-head">
+                <span class="badge badge-teal">✨ Was dich erwartet</span>
+                <h2 class="serif">Deine Tasbih, auf dem Startbildschirm und in der App</h2>
+                <p>Drei Dhikr-Widgets, ein Zähler, der Runden und Sets mitzählt, und eine Bibliothek, die dir sagt, woher jeder Dhikr stammt.</p>
+            </div>
+            <div class="features-grid">
+                <div class="fcard"><span class="icn">📱</span><h3>Zählen auf dem Startbildschirm</h3><p>Das Widget „Tasbih mit Zähler“ zeigt einen Ring aus 33, die Formel, die du gerade sprichst, und eine Schaltfläche <strong>+ Zählen</strong>. Tippe auf die Formel, um zur nächsten zu wechseln, oder auf ↺, um die Runde neu zu beginnen.</p></div>
+                <div class="fcard"><span class="icn">⭕</span><h3>Ein Ring, der deinen Tag zeigt</h3><p>Das kleine Widget „Dhikr-Zähler“ zeigt, wie viel Dhikr du heute gemacht hast. Auf dem iPhone kann es auch auf dem Sperrbildschirm sitzen.</p></div>
+                <div class="fcard"><span class="icn">📿</span><h3>Tesbih mit Perlen</h3><p>Ein großes Widget zeichnet deinen Dhikr als Perlenschnur, die gezählten Perlen sind farbig (Lunora+).</p></div>
+                <div class="fcard"><span class="icn">📚</span><h3>Eine Dhikr-Bibliothek mit Quellen</h3><p>113 Einträge in 16 Kategorien: nach dem Gebet, morgens und abends, vor dem Schlafen, auf Reisen, bei Krankheit, in Bedrängnis, Istighfar, Salawat, Rabbana-Duas und mehr. Zu jedem Eintrag siehst du den arabischen Text, eine Umschrift, die Bedeutung und die Quelle, etwa „Muslim 591“.</p></div>
+                <div class="fcard"><span class="icn">✍️</span><h3>Eigener Dhikr und eigene Sets</h3><p>Schreib deinen eigenen Dhikr oder wähle einen aus der Bibliothek, setz dir ein Ziel von 33, 99, 100, 1000 oder einer beliebigen Zahl, und stell Sets zusammen, deren Schritte aufeinander folgen.</p></div>
+                <div class="fcard"><span class="icn">✨</span><h3>Die 99 Namen</h3><p>Lies die Schönen Namen Allahs mit ihren Bedeutungen oder zähle alle 99 der Reihe nach durch; jeder Tipp bringt den nächsten Namen. Es gibt auch ein Widget „Name des Tages“.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="steps-sec" id="how-it-works">
+        <div class="container">
+            <div class="section-head">
+                <span class="badge badge-gold">🧭 So funktioniert’s</span>
+                <h2 class="serif">Von der App auf deinen Startbildschirm</h2>
+            </div>
+            <ol class="steps">
+                <li class="step"><span class="step-num">1</span><div><h3>Starte einen Dhikr in der App</h3><p>Öffne in Lunora den Bereich Dhikr und wähle einen Dhikr aus der Bibliothek, die Tasbihat nach dem Gebet, die Morgen- oder Abend-Adhkar oder einen Dhikr, den du selbst erstellt hast.</p></div></li>
+                <li class="step"><span class="step-num">2</span><div><h3>Tippen zum Zählen</h3><p>Tippe irgendwo auf den Zähler. Am Ziel schließt sich die Runde und die Zählung beginnt von vorn; in einem Set beginnt der nächste Schritt. Viele Schritte kannst du dir auch anhören.</p></div></li>
+                <li class="step"><span class="step-num">3</span><div><h3>Füge das Widget hinzu</h3><p>Füge aus der Widget-Galerie deines Handys „Tasbih mit Zähler“ oder „Dhikr-Zähler“ hinzu.</p></div></li>
+                <li class="step"><span class="step-num">4</span><div><h3>Zähl im Widget weiter</h3><p>Das Widget beginnt mit dem Dhikr, den du zuletzt in der App gezählt hast, und bietet dann sechs alltägliche Formeln an: SubhanAllah, Alhamdulillah, Allahu Akbar, La ilaha illallah, Astaghfirullah und Salawat. Jeder Tipp erscheint sofort im Widget und wird zu deinem Tageszähler in Lunora addiert.</p></div></li>
+            </ol>
+        </div>
+    </section>
+
+    <section id="details">
+        <div class="container">
+            <div class="section-head">
+                <span class="badge badge-rose">📱 iPhone &amp; Android</span>
+                <h2 class="serif">So funktionieren die Widgets auf jedem Handy</h2>
+            </div>
+            <div class="detail-grid">
+                <div class="detail">
+                    <h3>Auf dem iPhone</h3>
+                    <p>Das Zählen im Widget funktioniert ab iOS 17, auf dem Startbildschirm und auf dem Sperrbildschirm. Unter iOS 16 zeigt das Widget weiterhin deinen Stand, und ein Tipp öffnet den Zähler in der App.</p>
+                    <ul><li>Dhikr-Zähler: klein, dazu Varianten für den Sperrbildschirm</li><li>Tasbih mit Zähler: mittel</li><li>Tesbih mit Perlen: groß (Lunora+)</li></ul>
+                </div>
+                <div class="detail">
+                    <h3>Auf Android</h3>
+                    <p>Tippe auf das Widget, um zu zählen, genau wie auf dem iPhone. Das Widget speichert die Tipps, und Lunora übernimmt sie in deinen Tageszähler, sodass nichts doppelt gezählt wird.</p>
+                    <ul><li>Dhikr-Zähler</li><li>Tasbih mit Zähler (4×2)</li><li>Tesbih mit Perlen (Lunora+)</li></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-head">
+                <span class="badge badge-gold">❓ Häufige Fragen</span>
+                <h2 class="serif">Häufig gestellte Fragen</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button type="button" class="faq-q" onclick="this.parentElement.classList.toggle('open');let a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">Kann ich Dhikr auf dem Startbildschirm zählen, ohne die App zu öffnen?</button>
+                    <div class="faq-a"><p>Ja. Füge das Lunora-Widget „Tasbih mit Zähler“ hinzu und tippe auf + Zählen oder auf den Ring. Jeder Tipp wird im Widget gezählt und zu deinem Tageszähler in der App addiert. Auf dem iPhone braucht das iOS 17 oder neuer; bei älteren Versionen öffnet ein Tipp stattdessen den Zähler.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button type="button" class="faq-q" onclick="this.parentElement.classList.toggle('open');let a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">Welchen Dhikr kann ich im Widget zählen?</button>
+                    <div class="faq-a"><p>Das Widget zeigt zuerst den Dhikr, den du zuletzt in der App gezählt hast, dann sechs alltägliche Formeln: SubhanAllah, Alhamdulillah, Allahu Akbar, La ilaha illallah, Astaghfirullah und Allahumma salli ala Muhammad. Tippe auf die Formel, um zur nächsten zu wechseln.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button type="button" class="faq-q" onclick="this.parentElement.classList.toggle('open');let a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">Zeigt Lunora, woher jeder Dhikr stammt?</button>
+                    <div class="faq-a"><p>Ja. Jeder Eintrag in der Dhikr-Bibliothek von Lunora nennt seine Quelle, zum Beispiel eine Hadith-Nummer aus Bukhari oder Muslim, zusammen mit dem arabischen Text, einer Umschrift und der Bedeutung.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button type="button" class="faq-q" onclick="this.parentElement.classList.toggle('open');let a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">Enthält Lunora die 99 Namen Allahs (Asma ul Husna)?</button>
+                    <div class="faq-a"><p>Ja. Du kannst die 99 Namen mit kurzen Bedeutungen lesen, sie einzeln der Reihe nach durchzählen und ein Widget „Name des Tages“ hinzufügen. Die App weist darauf hin, dass der Hadith über die neunundneunzig Namen Allahs sahih ist, die Liste der Namen selbst aber von Gelehrten zusammengestellt wurde.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button type="button" class="faq-q" onclick="this.parentElement.classList.toggle('open');let a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">Kann ich während meiner Periode weiter Dhikr machen?</button>
+                    <div class="faq-a"><p>Ja. Dhikr und Duas bleiben an Periodentagen verfügbar. Wenn der Periodenmodus an ist, verlinkt der Dhikr-Bildschirm außerdem auf den Periodenratgeber, der die Ansichten der vier Rechtsschulen zum Koranlesen während der Menstruation darlegt.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button type="button" class="faq-q" onclick="this.parentElement.classList.toggle('open');let a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">Gibt es Lunora für iPhone und Android?</button>
+                    <div class="faq-a"><p>Lunora kannst du kostenlos aus dem App Store und von Google Play herunterladen, und es gibt keine Werbung. Lunora+ ist ein Abo, das die ganze App freischaltet, und du kannst es mit einem Gratis-Test beginnen.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="more">
+        <div class="container">
+            <div class="section-head">
+                <span class="badge badge-teal">✨ Mehr von Lunora</span>
+                <h2 class="serif">Weitere Funktionen</h2>
+            </div>
+            <div class="related-grid">
+                <a class="rcard" href="/de/koran-leseplan.html"><span class="icn">📖</span><h3>Koran-Leseplan</h3><p>Khatm-Pläne für den Ramadan, 60 Tage oder ein Jahr, und Pläne, die du selbst erstellst.</p></a>
+                <a class="rcard" href="/de/mein-gebet-schuetzen.html"><span class="icn">🔒</span><h3>Mein Gebet schützen</h3><p>Zur Gebetszeit warten die Apps deiner Wahl, bis du dein Gebet markierst.</p></a>
+                <a class="rcard" href="/de/periodenmodus.html"><span class="icn">🌸</span><h3>Periodenmodus</h3><p>Ibada während deiner Periode, mit den Ansichten der vier Rechtsschulen und einem Qada-Fastenzähler.</p></a>
+            </div>
+            <div class="reading">
+                <h3>Weiterlesen</h3>
+                <ul><li><a href="/daily-duas-dhikr-muslim-women-guide.html">Tägliche Duas &amp; Dhikr für muslimische Frauen (auf Englisch)</a></li><li><a href="/spiritual-self-care-muslim-women.html">Spirituelle Selbstfürsorge für muslimische Frauen (auf Englisch)</a></li><li><a href="/blog.html">Alle Artikel im Lunora-Blog (auf Englisch)</a></li></ul>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <section class="download" id="download">
+        <div class="container">
+            <span class="badge">🌙 Beginne deinen Weg</span>
+            <h2 class="serif">Lunora herunterladen</h2>
+            <p>Kostenlos herunterladen für iPhone und Android, ohne Werbung. Eine spirituelle Begleiterin, gestaltet mit der Fürsorge und dem Verständnis, die du verdienst.</p>
+            <div class="dl-btns">
+                <a href="https://apps.apple.com/app/apple-store/id6758765933?pt=128518745&amp;ct=web-dhikr-de-2&amp;mt=8" class="dl-btn dl-btn-light">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                    <span class="btn-text"><small>Laden im</small><strong>App Store</strong></span>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.studiolunora.lunora&amp;referrer=utm_source%3Dmylunora.app%26utm_medium%3Dweb%26utm_campaign%3Ddhikr_widget_download_de" class="dl-btn dl-btn-outline">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
+                    <span class="btn-text"><small>Jetzt bei</small><strong>Google Play</strong></span>
+                </a>
+            </div>
+            <p class="greeting">As-salamu alaykum, liebe Schwester. 🤍</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/de/" class="logo" style="color:var(--cream)"><img src="/icon-192.png" alt="Lunora" class="logo-icon"> Lunora</a>
+                    <p>Eine spirituelle Begleiterin für muslimische Frauen, mit Fürsorge und Verständnis im Herzen.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>App</h4>
+                    <ul>
+                        <li><a href="/de/dhikr-widget.html">Dhikr-Widget</a></li>
+                        <li><a href="/de/koran-leseplan.html">Koran-Leseplan</a></li>
+                        <li><a href="/de/mein-gebet-schuetzen.html">Mein Gebet schützen</a></li>
+                        <li><a href="/de/periodenmodus.html">Periodenmodus</a></li>
+                        <li><a href="#download">Herunterladen</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="/privacy.html">Datenschutzerklärung (EN)</a></li>
+                        <li><a href="/terms.html">Nutzungsbedingungen (EN)</a></li>
+                        <li><a href="/support.html">Support (EN)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Folge uns</h4>
+                    <ul>
+                        <li><a href="https://instagram.com/mylunora.app" target="_blank" rel="noopener noreferrer">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:4px" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                            Instagram
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p>© 2026 Lunora. Mit 💜 gemacht von Studio Lunora</p>
+                <p class="tagline">Deine spirituelle Begleiterin, mit Liebe gestaltet.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+</html>
