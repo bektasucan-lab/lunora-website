@@ -78,6 +78,7 @@
                   -webkit-tap-highlight-color: transparent; transition: opacity .15s; }
         a.cloud:hover { opacity: .9; }
         a.cloud:active { opacity: .8; }
+        p.hint { margin: 14px 0 0; font-size: 14px; color: var(--ink); }
         a.cloud:focus-visible { outline: 2px solid var(--acc); outline-offset: 3px; border-radius: 26px; }
     </style>
 </head>
@@ -88,6 +89,7 @@
     <p id="tagline">Quran, prayer times, duas, dhikr, qibla &amp; Period Mode for Muslim women</p>
     <a id="ios" class="cloud" href="https://apps.apple.com/app/apple-store/id6758765933?pt=128518745&amp;ct=share&amp;mt=8">Download on the App Store</a>
     <a id="android" class="cloud" href="https://play.google.com/store/apps/details?id=com.studiolunora.lunora&amp;referrer=utm_source%3Dshare%26utm_medium%3Dapp">Get it on Google Play</a>
+    <p id="hint" class="hint" hidden></p>
 </main>
 <script>
 (function () {
@@ -106,15 +108,15 @@
     else if (/Android/.test(ua)) { location.replace(play); }
 
     var T = {
-        en: ['Quran, prayer times, duas, dhikr, qibla & Period Mode for Muslim women', 'Download on the App Store', 'Get it on Google Play'],
-        tr: ['Namaz vakitleri, Kuran, dua, zikir, kıble ve Dönem Modu — kadınlara özel', "App Store'dan İndirin", "Google Play'den Alın"],
-        ar: ['قرآن، مواقيت الصلاة، أدعية، أذكار، قبلة ووضع الدورة الشهرية للمرأة المسلمة', 'تنزيل من App Store', 'احصل عليه من Google Play'],
-        id: ["Al-Qur'an, jadwal sholat, doa, zikir, kiblat & Mode Haid untuk muslimah", 'Download di App Store', 'Temukan di Google Play'],
-        de: ['Gebetszeiten, Koran, Duas, Qibla, Dhikr & Periodenmodus für muslimische Frauen', 'Laden im App Store', 'Jetzt bei Google Play'],
-        fr: ['Coran, horaires de prière, duas, dhikr, qibla, Mode règles — pour les musulmanes', "Télécharger dans l'App Store", 'Disponible sur Google Play'],
-        ur: ['نماز کے اوقات، قرآن، دعائیں، اذکار، قبلہ اور پیریڈ موڈ — مسلمان خواتین کے لیے', 'App Store سے ڈاؤن لوڈ کریں', 'Google Play سے حاصل کریں'],
-        bn: ['নামাজের সময়, কুরআন, দোয়া, জিকির, কিবলা ও পিরিয়ড মোড — মুসলিম নারীদের জন্য', 'App Store থেকে ডাউনলোড করুন', 'Google Play থেকে পান'],
-        ms: ['Waktu solat, al-Quran, doa, zikir, kiblat & Mod Haid — wanita Muslim', 'Muat turun di App Store', 'Dapatkan di Google Play']
+        en: ['Quran, prayer times, duas, dhikr, qibla & Period Mode for Muslim women', 'Download on the App Store', 'Get it on Google Play', 'Store didn\u2019t open? Tap \u22ef at the top and choose \u201cOpen in browser\u201d.'],
+        tr: ['Namaz vakitleri, Kuran, dua, zikir, kıble ve Dönem Modu — kadınlara özel', "App Store'dan İndirin", "Google Play'den Alın", 'Mağaza açılmadı mı? Üstteki \u22ef simgesine dokunup \u201cTarayıcıda aç\u201d seçeneğini seçin.'],
+        ar: ['قرآن، مواقيت الصلاة، أدعية، أذكار، قبلة ووضع الدورة الشهرية للمرأة المسلمة', 'تنزيل من App Store', 'احصل عليه من Google Play', 'لم يفتح المتجر؟ اضغطي على \u22ef في الأعلى واختاري «فتح في المتصفح».'],
+        id: ["Al-Qur'an, jadwal sholat, doa, zikir, kiblat & Mode Haid untuk muslimah", 'Download di App Store', 'Temukan di Google Play', 'Toko tidak terbuka? Ketuk \u22ef di atas lalu pilih \u201cBuka di browser\u201d.'],
+        de: ['Gebetszeiten, Koran, Duas, Qibla, Dhikr & Periodenmodus für muslimische Frauen', 'Laden im App Store', 'Jetzt bei Google Play', 'Der Store öffnet sich nicht? Tippe oben auf \u22ef und wähle \u201eIm Browser öffnen\u201c.'],
+        fr: ['Coran, horaires de prière, duas, dhikr, qibla, Mode règles — pour les musulmanes', "Télécharger dans l'App Store", 'Disponible sur Google Play', 'Le Store ne s\u2019ouvre pas\u00a0? Touchez \u22ef en haut, puis \u00ab\u00a0Ouvrir dans le navigateur\u00a0\u00bb.'],
+        ur: ['نماز کے اوقات، قرآن، دعائیں، اذکار، قبلہ اور پیریڈ موڈ — مسلمان خواتین کے لیے', 'App Store سے ڈاؤن لوڈ کریں', 'Google Play سے حاصل کریں', 'اسٹور نہیں کھلا؟ اوپر \u22ef پر ٹیپ کریں اور «براؤزر میں کھولیں» منتخب کریں۔'],
+        bn: ['নামাজের সময়, কুরআন, দোয়া, জিকির, কিবলা ও পিরিয়ড মোড — মুসলিম নারীদের জন্য', 'App Store থেকে ডাউনলোড করুন', 'Google Play থেকে পান', 'স্টোর খোলেনি? উপরে \u22ef চাপুন এবং \u201cব্রাউজারে খুলুন\u201d বেছে নিন।'],
+        ms: ['Waktu solat, al-Quran, doa, zikir, kiblat & Mod Haid — wanita Muslim', 'Muat turun di App Store', 'Dapatkan di Google Play', 'Kedai tidak dibuka? Ketik \u22ef di atas dan pilih \u201cBuka dalam pelayar\u201d.']
     };
     var FONT = { ar: 'Cairo:wght@700', ur: 'Noto+Nastaliq+Urdu:wght@600', bn: 'Noto+Sans+Bengali:wght@600' };
     function pick() {
@@ -130,6 +132,19 @@
     document.getElementById('tagline').textContent = t[0];
     document.getElementById('ios').textContent = t[1];
     document.getElementById('android').textContent = t[2];
+
+    // Instagram's and TikTok's own browsers have at times swallowed the jump to
+    // the App Store (reported Jul–Aug 2026), leaving a page that seems to do
+    // nothing. If we are still showing after 1.5 s inside one of them, say how
+    // to get out: the ⋯ menu's "open in browser". Text only, no new schemes.
+    if (/Instagram|FBAN|FBAV|musical_ly|BytedanceWebview|TikTok/i.test(ua)) {
+        setTimeout(function () {
+            if (document.visibilityState !== 'visible') return;
+            var h = document.getElementById('hint');
+            h.textContent = t[3];
+            h.hidden = false;
+        }, 1500);
+    }
     var font = document.createElement('link');
     font.rel = 'stylesheet';
     font.href = 'https://fonts.googleapis.com/css2?family=' + (FONT[lang] || 'Playfair+Display:wght@600') + '&display=swap';
