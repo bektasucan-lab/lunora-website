@@ -31,7 +31,7 @@
       c = campaign (optional). Only [a-z0-9_-] survive, so the page cannot be
       made to forward anything else.
 
-      Language (2 Kasım 2026): the app's nine. Taken from c=invite_<lang>
+      Language (2 Kasım 2026): the app's nine. Taken from c=<kind>_<lang> (invite_, ayah_, dua_, friday_ … since 2.0.8)
       (what the app's share sends), else ?l=<lang>, else the browser; English
       when none of them is one of the nine. Arabic and Urdu are RTL. The line
       under the name is each language's Play short description, already
@@ -120,7 +120,7 @@
     };
     var FONT = { ar: 'Cairo:wght@700', ur: 'Noto+Nastaliq+Urdu:wght@600', bn: 'Noto+Sans+Bengali:wght@600' };
     function pick() {
-        var fromInvite = /^invite_([a-z]{2})$/.exec(c);
+        var fromInvite = /^[a-z]+_([a-z]{2})$/.exec(c);
         var cands = [fromInvite && fromInvite[1], clean(q.get('l'), '')].concat(
             (navigator.languages || [navigator.language || '']).map(function (x) { return String(x).slice(0, 2).toLowerCase(); }));
         for (var i = 0; i < cands.length; i++) if (cands[i] && T[cands[i]]) return cands[i];
