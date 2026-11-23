@@ -461,3 +461,13 @@ a.feat:hover{border-color:rgba(196,163,90,.55);color:inherit}
 .prose .info-card h4{margin:0;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-t)}
 .prose .info-card p{margin:4px 0 0;font-size:15px}
 .prose .highlight-box{padding:16px 20px;border-radius:16px;background:var(--paper-2);border-inline-start:3px solid var(--gold)}
+/* small laptops 1024–1279: phone and rail stack in a narrower column so the hero text keeps room */
+@media (min-width:1024px) and (max-width:1279px){
+  .hero-grid{grid-template-columns:minmax(0,1fr) 320px}
+  .day{flex-direction:column;gap:22px}
+  .day .phone{--pw:280px}
+  .rail{flex-direction:row;gap:14px}
+  .rail .lbl{display:none}
+  .cur{display:flex}
+  .phero-grid{grid-template-columns:minmax(0,1fr) minmax(300px,400px)}
+}
