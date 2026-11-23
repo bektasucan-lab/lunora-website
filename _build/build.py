@@ -8,7 +8,7 @@ from home_text import T as HT, REVIEWS, FAQ as NEW_FAQ
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 B = os.path.join(ROOT, '_build')
 LIVE = json.load(open(os.path.join(B, 'content', 'live.json')))
-V = '3'  # css/js cache version
+V = '4'  # css/js cache version
 SITE = 'https://mylunora.app'
 APPLE = 'https://apps.apple.com/app/apple-store/id6758765933?pt=128518745&amp;ct=%s&amp;mt=8'
 PLAY = 'https://play.google.com/store/apps/details?id=com.studiolunora.lunora&amp;referrer=utm_source%%3Dmylunora.app%%26utm_medium%%3Dweb%%26utm_campaign%%3D%s'
@@ -143,17 +143,20 @@ def footer(l):
 def page(l, headhtml, body, active, alternates):
     return '%s\n<body>\n%s\n<main id="main">\n%s\n</main>\n%s\n</body>\n</html>\n' % (headhtml, nav(l, active, alternates), body, footer(l))
 
-# Google Play star rating and review count, as the store shows them on 23 Nov:
-# 629 reviews everywhere; the rating is per country (TR 4.8, US/FR 4.7), so
-# the Turkish page gives Turkey's and the others the US one.
+# Store rating and review count (Beck, 23 Nov): Google Play 629 reviews,
+# 4.7 (US listing); App Store 40 ratings, 4.7. Together: 650+, 4.7. Written by
+# hand; update when the count passes 700 or the rating moves.
 RATING = {
-    'en': '4.7 on Google Play · 600+ reviews',
-    'tr': "Google Play'de 4,8 · 600+ yorum",
-    'de': '4,7 bei Google Play · 600+ Bewertungen',
-    'fr': '4,7 sur Google Play · 600+ avis',
-    'ar': '٤٫٧ على Google Play · أكثر من ٦٠٠ مراجعة',
-    'id': '4,7 di Google Play · 600+ ulasan',
+    'en': '4.7 · 650+ reviews on the App Store and Google Play',
+    'tr': "4,7 · App Store ve Google Play'de 650+ yorum",
+    'de': '4,7 · 650+ Bewertungen im App Store und bei Google Play',
+    'fr': "4,7 · plus de 650 avis sur l'App Store et Google Play",
+    'ar': '٤٫٧ · أكثر من ٦٥٠ مراجعة على App Store وGoogle Play',
+    'id': '4,7 · 650+ ulasan di App Store dan Google Play',
 }
+# The hero line sits under the two store buttons, so it names no store.
+RATING_SHORT = {'en': '4.7 · 650+ reviews', 'tr': '4,7 · 650+ yorum', 'de': '4,7 · 650+ Bewertungen',
+                'fr': '4,7 · plus de 650 avis', 'ar': '٤٫٧ · أكثر من ٦٥٠ مراجعة', 'id': '4,7 · 650+ ulasan'}
 
 
 def trust(items):
@@ -230,7 +233,7 @@ def home_page(l):
             '<ul class="rail">%s</ul><div class="cur" aria-hidden="true"><span class="t">%s</span><span class="l">%s</span></div></div>'
             '</div></section>') % (
         img('bg-b-45'), esc(t['tag']), esc(t['h1a']), esc(t['h1b']), esc(t['lead']), store_btns(l, a[0], p[0]),
-        trust([('star-fill', RATING[l]), ('gift', t['trial']), ('prohibit', t['noads'])]),
+        trust([('star-fill', RATING_SHORT[l]), ('gift', t['trial']), ('prohibit', t['noads'])]),
         esc(t['rail_label']), slides, rail, esc(day[0][0]), esc(day[0][1]))
 
     pil_meta = [('bg-c-45', '50% 30%', 'C', '#86692A', FEAT_PATHS['quran']), ('bg-a-45', '50% 40%', 'A2', '#9A5A62', FEAT_PATHS['period']), ('bg-b-45', '50% 40%', 'B5', '#3F6B55', FEAT_PATHS['protect'])]
@@ -267,8 +270,8 @@ def home_page(l):
         feats += ('<a class="feat" href="%s">%s</a>' % (lk.get(l, lk['en']), inner)) if lk else '<div class="feat">%s</div>' % inner
     sec3 = '<section class="sec"><div class="wrap"><div class="head"><span class="kicker">%s</span><h2>%s</h2></div><div class="feats">%s</div></div></section>' % (esc(t['k2']), esc(t['h2b']), feats)
     stars = ic('star-fill') * 5
-    revs = ''.join('<figure class="rev"><div class="stars" role="img" aria-label="5/5">%s</div><blockquote lang="%s"%s>“%s”</blockquote><figcaption><span>%s</span><span>%sGoogle Play</span></figcaption></figure>' % (
-        stars, r['lang'], ' dir="rtl"' if r['lang'] == 'ar' else '', esc(r['q']), ('— ' + esc(r['name'])) if r.get('name') else '', ic('google-play-logo-fill')) for r in REVIEWS[l])
+    revs = ''.join('<figure class="rev"><div class="stars" role="img" aria-label="5/5">%s</div><blockquote lang="%s"%s>“%s”</blockquote>%s</figure>' % (
+        stars, r['lang'], ' dir="rtl"' if r['lang'] == 'ar' else '', esc(r['q']), ('<figcaption><span>— %s</span></figcaption>' % esc(r['name'])) if r.get('name') else '') for r in REVIEWS[l])
     sec4 = ('<section class="sec revs"><img class="bg" src="%s" alt="" loading="lazy"><div class="revs-wash"></div><div class="wrap">'
             '<div class="head"><span class="kicker">%s</span><p class="rev-score"><span class="stars" aria-hidden="true">%s</span>%s</p></div><div class="rev-grid">%s</div><p class="rev-note">%s</p></div></section>') % (
         img('guven-bg'), esc(t['revK']), stars, esc(RATING[l]), revs, esc(t['revNote']))

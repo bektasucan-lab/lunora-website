@@ -2,10 +2,13 @@
 """Emulator captures (_handoff/shots/<lang>/<key>.png) -> img/v1/app/<lang>-<key>.webp (390 wide)."""
 import os, glob
 from PIL import Image
+import sys; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from strip_gift import strip
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 for f in sorted(glob.glob(os.path.join(ROOT, '_handoff/shots/*/*.png'))):
     lang = os.path.basename(os.path.dirname(f)); key = os.path.basename(f)[:-4]
     im = Image.open(f).convert('RGB'); w = 390
+    if key in ('C', 'D'): im, _ = strip(im, key)  # the Lunora+ gift note: members (paying, or where Plus is not sold) never see it
     if key == 'A2': im = im.crop((0, 112, im.width, im.height))  # Period Mode opens as a sheet: drop the dimmed strip above it
     im = im.resize((w, round(im.height * w / im.width)), Image.LANCZOS)
     out = os.path.join(ROOT, 'img/v1/app/%s-%s.webp' % (lang, key)); im.save(out, 'WEBP', quality=80, method=6)
