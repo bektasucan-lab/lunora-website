@@ -191,24 +191,24 @@ T['id'] = dict(
   ctaH='Dibuat dengan cinta untuk muslimah di mana pun', ctaP='Tanpa iklan, dalam bahasa apa pun. Lunora+ membuka semuanya: semua qari, Al-Qur’an offline, Kursus Al-Qur’an dan Hafalan lengkap, Jaga Salatku untuk kelima waktu salat, dan widget besar. Mulai dengan coba gratis 7 hari.', salam='Assalamu’alaikum, saudariku.',
 )
 
-# Real Google Play reviews (5 stars), quoted as written. Only Monique's first
-# name is known (handoff); the CSV export carries no reviewer names.
+# Real Google Play reviews (5 stars), quoted as written, with the reviewer's
+# first name as Play shows it (looked up 23 Nov; first name only).
 R_MONIQUE = dict(q='I love it ❤️ as a revert helps me so much', lang='en', name='Monique')
-R_EN2 = dict(q='it’s amazing app, Masya Allah. thank you so much for this app, everything in this app is so beautiful.. thank you 💗', lang='en')
-R_EN3 = dict(q='luv it highly recommended 🥰', lang='en')
+R_EN2 = dict(q='it’s amazing app, Masya Allah. thank you so much for this app, everything in this app is so beautiful.. thank you 💗', lang='en', name='Lala')
+R_EN3 = dict(q='luv it highly recommended 🥰', lang='en', name='Amna')
 REVIEWS = {
   'en': [R_MONIQUE, R_EN2, R_EN3],
   'de': [R_MONIQUE, R_EN2, R_EN3],
-  'tr': [dict(q='Rabbim yaptığınız işten binlerce kez razı olsun ve yolunuzu hayırlı kolay bereketli kılsın İnşAllah o kadar iyi ki ücretsiz hali bile bana çok fayda sağlıyor', lang='tr'),
-         dict(q='Herşey düşünülmüş. Beklentiminde üzerinde çıktı. Harika bir uygulama. mutlaka tavsiye ederim 🌹', lang='tr'), R_MONIQUE],
-  'fr': [dict(q='vraiment merci beaucoup ça m’aide beaucoup en tant que fille musulmane', lang='fr'),
-         dict(q='l’application lunora est super pour la jeune fille musulmane', lang='fr'),
-         dict(q='je vous le recommende vraiment', lang='fr')],
-  'ar': [dict(q='اجمل تطبيق في كل شيء مفيد الله يسعد من صمم هذا التطبيق الجميل أنصح الكل بتنزيله خاص كل البنات المسلمات', lang='ar'),
-         dict(q='تطبيق رائع وممتاز يساعد على تجنب الفتن الموجودة على الهاتف بالانشغال بالذكر وما يرضي الله…', lang='ar'),
-         dict(q='حبيت التطبيق كتير جزا الله خير من صنعه🤍🌷', lang='ar')],
-  'id': [dict(q='Aplikasi nya mendukung para girls banget! suka deh, apalagi tema nya ituloh! keren! suka banget deh pokoknya, bermanfaat juga.', lang='id'),
-         dict(q='aplikasi untuk muslimah sangatt aestetic rekomen untuk pengingat sholat kitaa🤍', lang='id'), R_MONIQUE],
+  'tr': [dict(q='Rabbim yaptığınız işten binlerce kez razı olsun ve yolunuzu hayırlı kolay bereketli kılsın İnşAllah o kadar iyi ki ücretsiz hali bile bana çok fayda sağlıyor', lang='tr', name='Senem'),
+         dict(q='Herşey düşünülmüş. Beklentiminde üzerinde çıktı. Harika bir uygulama. mutlaka tavsiye ederim 🌹', lang='tr', name='Elif'), R_MONIQUE],
+  'fr': [dict(q='Machallah bon applications pour muslims girls alla hou akbar', lang='fr', name='Khadidia'),
+         dict(q='l’application lunora est super pour la jeune fille musulmane', lang='fr', name='Karamoko'),
+         dict(q='je vous le recommende vraiment', lang='fr', name='Assiran')],
+  'ar': [dict(q='تطبيق رائع جدا أتمنى من كل بنت تجربته', lang='ar', name='لين'),
+         dict(q='تطبيق رائع وممتاز يساعد على تجنب الفتن الموجودة على الهاتف بالانشغال بالذكر وما يرضي الله…', lang='ar', name='أم أحمد'),
+         dict(q='تطبيق جميل اللهم بارك وربنا يجزيكم خير ويجعله في ميزان حسناتكم', lang='ar', name='ملك')],
+  'id': [dict(q='Aplikasi nya mendukung para girls banget! suka deh, apalagi tema nya ituloh! keren! suka banget deh pokoknya, bermanfaat juga.', lang='id', name='Shaneiza'),
+         dict(q='aplikasi untuk muslimah sangatt aestetic rekomen untuk pengingat sholat kitaa🤍', lang='id', name='Adelia'), R_MONIQUE],
 }
 
 # Homepage FAQ for the two new languages (EN/TR/DE/FR come from the live pages).
