@@ -471,3 +471,6 @@ a.feat:hover{border-color:rgba(196,163,90,.55);color:inherit}
   .cur{display:flex}
   .phero-grid{grid-template-columns:minmax(0,1fr) minmax(300px,400px)}
 }
+.rev-score{display:flex;align-items:center;justify-content:center;gap:10px;margin:10px 0 0;font-weight:700;font-size:15px;color:var(--ink)}
+.rev-score .stars{display:flex;gap:2px;color:var(--star)}.rev-score .stars .ic{width:16px;height:16px}
+.trust span:first-child .ic{color:var(--star)}

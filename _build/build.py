@@ -8,7 +8,7 @@ from home_text import T as HT, REVIEWS, FAQ as NEW_FAQ
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 B = os.path.join(ROOT, '_build')
 LIVE = json.load(open(os.path.join(B, 'content', 'live.json')))
-V = '2'  # css/js cache version
+V = '3'  # css/js cache version
 SITE = 'https://mylunora.app'
 APPLE = 'https://apps.apple.com/app/apple-store/id6758765933?pt=128518745&amp;ct=%s&amp;mt=8'
 PLAY = 'https://play.google.com/store/apps/details?id=com.studiolunora.lunora&amp;referrer=utm_source%%3Dmylunora.app%%26utm_medium%%3Dweb%%26utm_campaign%%3D%s'
@@ -143,6 +143,19 @@ def footer(l):
 def page(l, headhtml, body, active, alternates):
     return '%s\n<body>\n%s\n<main id="main">\n%s\n</main>\n%s\n</body>\n</html>\n' % (headhtml, nav(l, active, alternates), body, footer(l))
 
+# Google Play star rating and review count, as the store shows them on 23 Nov:
+# 629 reviews everywhere; the rating is per country (TR 4.8, US/FR 4.7), so
+# the Turkish page gives Turkey's and the others the US one.
+RATING = {
+    'en': '4.7 on Google Play · 600+ reviews',
+    'tr': "Google Play'de 4,8 · 600+ yorum",
+    'de': '4,7 bei Google Play · 600+ Bewertungen',
+    'fr': '4,7 sur Google Play · 600+ avis',
+    'ar': '٤٫٧ على Google Play · أكثر من ٦٠٠ مراجعة',
+    'id': '4,7 di Google Play · 600+ ulasan',
+}
+
+
 def trust(items):
     return '<div class="trust">%s</div>' % ''.join('<span>%s%s</span>' % (ic(i), esc(t)) for i, t in items)
 
@@ -217,7 +230,7 @@ def home_page(l):
             '<ul class="rail">%s</ul><div class="cur" aria-hidden="true"><span class="t">%s</span><span class="l">%s</span></div></div>'
             '</div></section>') % (
         img('bg-b-45'), esc(t['tag']), esc(t['h1a']), esc(t['h1b']), esc(t['lead']), store_btns(l, a[0], p[0]),
-        trust([('gift', t['trial']), ('globe-hemisphere-west', t['langs']), ('prohibit', t['noads'])]),
+        trust([('star-fill', RATING[l]), ('gift', t['trial']), ('prohibit', t['noads'])]),
         esc(t['rail_label']), slides, rail, esc(day[0][0]), esc(day[0][1]))
 
     pil_meta = [('bg-c-45', '50% 30%', 'C', '#86692A', FEAT_PATHS['quran']), ('bg-a-45', '50% 40%', 'A2', '#9A5A62', FEAT_PATHS['period']), ('bg-b-45', '50% 40%', 'B5', '#3F6B55', FEAT_PATHS['protect'])]
@@ -257,8 +270,8 @@ def home_page(l):
     revs = ''.join('<figure class="rev"><div class="stars" role="img" aria-label="5/5">%s</div><blockquote lang="%s"%s>“%s”</blockquote><figcaption><span>%s</span><span>%sGoogle Play</span></figcaption></figure>' % (
         stars, r['lang'], ' dir="rtl"' if r['lang'] == 'ar' else '', esc(r['q']), ('— ' + esc(r['name'])) if r.get('name') else '', ic('google-play-logo-fill')) for r in REVIEWS[l])
     sec4 = ('<section class="sec revs"><img class="bg" src="%s" alt="" loading="lazy"><div class="revs-wash"></div><div class="wrap">'
-            '<div class="head"><span class="kicker">%s</span></div><div class="rev-grid">%s</div><p class="rev-note">%s</p></div></section>') % (
-        img('guven-bg'), esc(t['revK']), revs, esc(t['revNote']))
+            '<div class="head"><span class="kicker">%s</span><p class="rev-score"><span class="stars" aria-hidden="true">%s</span>%s</p></div><div class="rev-grid">%s</div><p class="rev-note">%s</p></div></section>') % (
+        img('guven-bg'), esc(t['revK']), stars, esc(RATING[l]), revs, esc(t['revNote']))
     # widgets
     n0 = 12; fmt = lambda x: ''.join(num[int(c)] for c in str(x))
     ar_name = 'Subhanallah' if l != 'tr' else 'Sübhânallah'
