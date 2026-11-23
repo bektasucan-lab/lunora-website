@@ -1,267 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lunora — Islamic App for Muslim Women | iPhone &amp; Android</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="shortcut icon" href="favicon.ico">
-    <meta name="theme-color" content="#5B9A8B">
-    <link rel="alternate" hreflang="en" href="https://mylunora.app/">
-    <link rel="alternate" hreflang="tr" href="https://mylunora.app/tr/">
-    <link rel="alternate" hreflang="fr" href="https://mylunora.app/fr/">
-    <link rel="alternate" hreflang="de" href="https://mylunora.app/de/">
-    <link rel="alternate" hreflang="x-default" href="https://mylunora.app/">
-    <meta name="description" content="Lunora is an Islamic app for Muslim women, free on iPhone and Android: prayer times, Quran, duas, dhikr counter and widgets, and a Period Mode with fiqh guidance from the four madhhabs. 9 languages, no ads.">
-    <link rel="canonical" href="https://mylunora.app/">
-    <meta property="og:title" content="Lunora — Your Spiritual Companion">
-    <meta property="og:description" content="An Islamic app for Muslim women, free on iPhone and Android. Prayer times, Quran, duas, dhikr and a Period Mode.">
-    <meta property="og:image" content="icon-192.png">
-    <meta property="og:type" content="website">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        :root{--cream:#FDFBF7;--cream-dark:#F3EBD8;--gold:#C9A962;--gold-dark:#9A7B3D;--teal:#5B9A8B;--rose:#B08080;--dark:#2D2A26}
-        html{scroll-behavior:smooth}
-        body{font-family:'Outfit',sans-serif;background:linear-gradient(180deg,var(--cream),var(--cream-dark));color:var(--dark);line-height:1.6}
-        .serif{font-family:'Cormorant Garamond',serif}
-        
-        /* Nav */
-        nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.5rem 2rem;transition:all .3s}
-        nav.scrolled{background:rgba(255,255,255,.9);backdrop-filter:blur(20px);padding:1rem 2rem;box-shadow:0 2px 20px rgba(0,0,0,.05)}
-        .nav-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
-        .logo{text-decoration:none;color:var(--dark);font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;display:flex;align-items:center;gap:.5rem}
-        .logo-icon{width:32px;height:32px;border-radius:8px}
-        .nav-links{display:flex;gap:2rem;align-items:center}
-        .nav-links a{text-decoration:none;color:rgba(45,42,38,.7);font-size:.9rem;transition:color .3s}
-        .nav-links a:hover{color:var(--gold)}
-        .nav-cta{background:var(--gold)!important;color:#fff!important;padding:.6rem 1.2rem;border-radius:50px}
-        .hamburger{display:none;background:none;border:none;cursor:pointer;padding:.5rem;flex-direction:column;gap:5px}
-        .hamburger span{display:block;width:22px;height:2px;background:var(--dark);border-radius:2px;transition:all .3s}
-        @media(max-width:768px){
-            .hamburger{display:flex}
-            .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(255,255,255,.98);backdrop-filter:blur(20px);flex-direction:column;padding:1.5rem 2rem;gap:1rem;box-shadow:0 10px 30px rgba(0,0,0,.1)}
-            .nav-links.open{display:flex}
-            .nav-cta{text-align:center}
-        }
-        
-        /* Hero */
-        .hero{min-height:100vh;display:flex;align-items:center;padding:8rem 2rem 4rem;position:relative;overflow:hidden}
-        .hero-bg{position:absolute;top:20%;left:15%;width:400px;height:400px;background:rgba(201,169,98,.15);border-radius:50%;filter:blur(80px);pointer-events:none}
-        .hero-bg2{position:absolute;top:50%;right:10%;width:350px;height:350px;background:rgba(176,128,128,.12);border-radius:50%;filter:blur(80px);pointer-events:none}
-        .hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative}
-        @media(max-width:1024px){.hero-inner{grid-template-columns:1fr;text-align:center}}
-        
-        .hero-badge{display:inline-block;padding:.5rem 1rem;background:rgba(201,169,98,.1);color:var(--gold-dark);border-radius:50px;font-size:.875rem;margin-bottom:1.5rem;border:1px solid rgba(201,169,98,.2)}
-        .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:600;line-height:1.1;margin-bottom:1.5rem}
-        .gradient-text{background:linear-gradient(135deg,var(--gold),var(--rose),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-        .hero p{font-size:1.2rem;color:rgba(45,42,38,.6);margin-bottom:2rem;max-width:480px}
-        @media(max-width:1024px){.hero p{margin:0 auto 2rem}}
-        
-        .btns{display:flex;gap:1rem;flex-wrap:wrap}
-        @media(max-width:1024px){.btns{justify-content:center}}
-        .btn{display:inline-flex;align-items:center;gap:.75rem;padding:1rem 1.5rem;border-radius:1rem;text-decoration:none;font-weight:500;transition:all .3s}
-        .btn-dark{background:var(--dark);color:var(--cream)}
-        .btn-dark:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.15)}
-        .btn-light{background:#fff;color:var(--dark);border:1px solid rgba(45,42,38,.1)}
-        .btn-light:hover{border-color:var(--gold);transform:translateY(-2px)}
-        .btn svg{width:24px;height:24px}
-        .btn-text{text-align:left}
-        .btn-text small{display:block;font-size:.65rem;opacity:.7}
-        .btn-text strong{font-size:.9rem}
-        
-        .trust{display:flex;gap:1.5rem;margin-top:2rem;font-size:.875rem;color:rgba(45,42,38,.5);flex-wrap:wrap}
-        @media(max-width:1024px){.trust{justify-content:center}}
-        .stars{color:var(--gold)}
-        
-        /* Phone */
-        .phone-wrap{display:flex;justify-content:center;position:relative}
-        .phone-glow{position:absolute;inset:-15%;background:radial-gradient(circle,rgba(201,169,98,.25),rgba(176,128,128,.15),transparent 70%);border-radius:50%;filter:blur(40px)}
-        .phone{position:relative;background:var(--dark);border-radius:2.5rem;padding:.6rem;box-shadow:0 40px 80px rgba(0,0,0,.15);animation:float 6s ease-in-out infinite}
-        @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
-        .phone-notch{position:absolute;top:.6rem;left:50%;transform:translateX(-50%);width:4.5rem;height:1.3rem;background:var(--dark);border-radius:50px;z-index:5}
-        .phone-screen{background:linear-gradient(180deg,var(--cream),var(--cream-dark));border-radius:2rem;width:260px;height:520px;padding:1.25rem;display:flex;flex-direction:column}
-        .phone-status{display:flex;justify-content:space-between;font-size:.7rem;color:rgba(45,42,38,.5);margin-bottom:.75rem}
-        .phone-title{text-align:center;margin-bottom:1rem}
-        .phone-title h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-style:italic}
-        .phone-title p{font-size:.7rem;color:rgba(45,42,38,.5)}
-        .phone-card{background:rgba(255,255,255,.8);border-radius:.875rem;padding:1rem;margin-bottom:.75rem;border:1px solid rgba(201,169,98,.1);text-align:center}
-        .phone-card .lbl{font-size:.7rem;color:var(--gold);margin-bottom:.5rem}
-        .phone-card .arabic{font-size:1rem;direction:rtl;margin-bottom:.4rem}
-        .phone-card .eng{font-size:.75rem;color:rgba(45,42,38,.6);font-style:italic}
-        .phone-card .ref{font-size:.65rem;color:var(--gold);margin-top:.4rem}
-        .phone-prayer{background:rgba(91,154,139,.1);border:1px solid rgba(91,154,139,.2);display:flex;justify-content:space-between;align-items:center;text-align:left}
-        .phone-prayer .lbl{color:var(--teal);margin:0}
-        .phone-prayer .time{font-size:1.1rem;font-weight:600;color:var(--teal)}
-        .phone-prayer .icn{font-size:1.5rem}
-        .phone-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem;margin-top:auto}
-        .phone-act{background:rgba(255,255,255,.6);border-radius:.6rem;padding:.6rem;text-align:center;border:1px solid rgba(201,169,98,.1)}
-        .phone-act .icn{font-size:1.1rem}
-        .phone-act .lbl{font-size:.6rem;color:rgba(45,42,38,.6)}
-        
-        /* Sections */
-        section{padding:5rem 2rem}
-        .container{max-width:1200px;margin:0 auto}
-        .section-head{text-align:center;margin-bottom:3rem}
-        .badge{display:inline-block;padding:.4rem .9rem;border-radius:50px;font-size:.8rem;margin-bottom:1rem}
-        .badge-rose{background:rgba(176,128,128,.1);color:var(--rose);border:1px solid rgba(176,128,128,.2)}
-        .badge-teal{background:rgba(91,154,139,.1);color:var(--teal);border:1px solid rgba(91,154,139,.2)}
-        .badge-gold{background:rgba(201,169,98,.1);color:var(--gold-dark);border:1px solid rgba(201,169,98,.2)}
-        .section-head h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);margin-bottom:.75rem}
-        .section-head p{font-size:1.1rem;color:rgba(45,42,38,.6);max-width:550px;margin:0 auto}
-        
-        /* Period Section */
-        .period{background:linear-gradient(180deg,var(--cream),#F5E8E8,#E8D0D0);overflow:hidden}
-        .period-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-        @media(max-width:1024px){.period-grid{grid-template-columns:1fr}}
-        .period-phone .phone-screen{background:linear-gradient(180deg,#F5E0E0,#F0D5D5);height:580px}
-        .period-phone .phone-glow{background:radial-gradient(circle,rgba(176,128,128,.3),transparent 70%)}
-        .period-msg{background:rgba(255,255,255,.5);border-radius:1rem;padding:1rem;border:1px solid rgba(176,128,128,.2);text-align:center;margin-bottom:.75rem}
-        .period-msg p{font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:var(--rose)}
-        .period-badge{display:inline-flex;align-items:center;gap:.4rem;padding:.2rem .6rem;background:rgba(176,128,128,.2);color:var(--rose);border-radius:50px;font-size:.75rem;margin-bottom:.5rem}
-        
-        .features-list{display:flex;flex-direction:column;gap:1rem}
-        .feat{display:flex;gap:1rem;padding:1rem;background:rgba(255,255,255,.6);border-radius:1rem;border:1px solid rgba(176,128,128,.2);transition:all .3s}
-        .feat:hover{transform:translateX(5px);background:rgba(255,255,255,.8)}
-        .feat .icn{font-size:1.75rem}
-        .feat h4{font-weight:600;margin-bottom:.2rem}
-        .feat p{font-size:.85rem;color:rgba(45,42,38,.6)}
-        .period-quote{margin-top:2rem;padding:1.25rem;background:rgba(255,255,255,.4);border-radius:1rem;border-left:4px solid var(--rose)}
-        .period-quote p{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;margin-bottom:.3rem}
-        .period-quote cite{font-size:.85rem;color:var(--rose);font-style:normal}
-        
-        /* Features */
-        .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
-        @media(max-width:900px){.features-grid{grid-template-columns:repeat(2,1fr)}}
-        @media(max-width:600px){.features-grid{grid-template-columns:1fr}}
-        .fcard{padding:1.75rem;background:rgba(255,255,255,.6);border-radius:1.25rem;border:1px solid rgba(201,169,98,.15);transition:all .3s}
-        .fcard:hover{transform:translateY(-5px);box-shadow:0 15px 40px rgba(0,0,0,.05)}
-        .fcard .icn{font-size:2.25rem;margin-bottom:.75rem;display:block}
-        .fcard h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;margin-bottom:.5rem}
-        .fcard p{color:rgba(45,42,38,.6);font-size:.9rem}
-        .fmore{display:inline-block;margin-top:.75rem;color:var(--gold-dark);font-size:.875rem;font-weight:500;text-decoration:none}
-        .fmore:hover{color:var(--gold)}
-        
-        /* Quote */
-        .quote{text-align:center;padding:4rem 2rem}
-        .quote .heart{font-size:3rem;margin-bottom:1.5rem}
-        .quote blockquote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,3vw,2.2rem);font-style:italic;margin-bottom:1rem;max-width:700px;margin-left:auto;margin-right:auto}
-        .quote cite{color:var(--gold);font-style:normal}
-        
-        /* Download */
-        .download{background:linear-gradient(180deg,var(--cream),var(--dark) 40%,#1F1D1A);text-align:center;padding:6rem 2rem}
-        .download .container{padding-top:3rem}
-        .download .badge{background:rgba(201,169,98,.2);color:#E8D5A8;border-color:rgba(201,169,98,.3)}
-        .download h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);color:var(--cream);margin-bottom:1rem}
-        .download>p,.download .container>p{color:rgba(253,251,247,.6);font-size:1.1rem;margin-bottom:2.5rem;max-width:450px;margin-left:auto;margin-right:auto}
-        .dl-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
-        .dl-btn{display:inline-flex;align-items:center;gap:.75rem;padding:1rem 1.75rem;border-radius:1rem;text-decoration:none;transition:all .3s}
-        .dl-btn svg{width:26px;height:26px}
-        .dl-btn-light{background:var(--cream);color:var(--dark)}
-        .dl-btn-light:hover{background:#fff;transform:translateY(-2px)}
-        .dl-btn-outline{background:transparent;color:var(--cream);border:2px solid rgba(253,251,247,.3)}
-        .dl-btn-outline:hover{background:rgba(253,251,247,.1);border-color:rgba(253,251,247,.5);transform:translateY(-2px)}
-        .greeting{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:rgba(201,169,98,.7)}
-        
-        /* Footer */
-        footer{background:#1F1D1A;color:var(--cream);padding:3rem 2rem 1.5rem}
-        .footer-inner{max-width:1200px;margin:0 auto}
-        .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:2rem}
-        @media(max-width:768px){.footer-grid{grid-template-columns:1fr;gap:1.5rem}}
-        .footer-brand .logo{margin-bottom:.75rem}
-        .footer-brand p{color:rgba(253,251,247,.5);max-width:280px;font-size:.9rem}
-        .footer-links h4{color:var(--gold);font-weight:600;margin-bottom:.75rem;font-size:.9rem}
-        .footer-links ul{list-style:none}
-        .footer-links li{margin-bottom:.4rem}
-        .footer-links a{color:rgba(253,251,247,.5);text-decoration:none;font-size:.9rem;transition:color .3s}
-        .footer-links a:hover{color:var(--gold)}
-        .footer-divider{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.2;margin-bottom:1.5rem}
-        .footer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.85rem;color:rgba(253,251,247,.4)}
-        .footer-bottom .tagline{font-style:italic}
-        
-        /* Reveal animation */
-        .reveal{opacity:0;transform:translateY(30px);transition:all .8s ease}
-        .reveal.active{opacity:1;transform:translateY(0)}
-
-        /* Language Switcher */
-        .lang-switch{display:inline-flex;align-items:center;gap:.25rem;background:rgba(45,42,38,.05);border-radius:50px;padding:.25rem;font-size:.8rem}
-        .lang-switch a{text-decoration:none;padding:.3rem .6rem;border-radius:50px;color:rgba(45,42,38,.5);transition:all .3s}
-        .lang-switch a.active{background:var(--gold);color:#fff}
-        .lang-switch a:hover:not(.active){color:var(--dark)}
-
-        /* FAQ */
-        .faq{padding:5rem 2rem;background:linear-gradient(180deg,var(--cream),var(--cream-dark))}
-        .faq-list{max-width:720px;margin:0 auto}
-        .faq-item{background:rgba(255,255,255,.6);border:1px solid rgba(201,169,98,.15);border-radius:1rem;margin-bottom:.75rem;overflow:hidden;transition:all .3s}
-        .faq-item:hover{border-color:var(--gold)}
-        .faq-q{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 1.5rem;cursor:pointer;font-weight:500;font-size:1rem;gap:1rem}
-        .faq-q::after{content:'+';font-size:1.3rem;color:var(--gold);transition:transform .3s;flex-shrink:0}
-        .faq-item.open .faq-q::after{transform:rotate(45deg)}
-        .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
-        .faq-a p{padding:0 1.5rem 1.25rem;color:rgba(45,42,38,.6);font-size:.95rem;line-height:1.7}
-        .phone-screen.phone-shot{padding:0;width:260px;height:auto;aspect-ratio:540/1219;overflow:hidden;background:#fff}
-        .phone-shot img{width:100%;height:100%;object-fit:cover;display:block}
-    </style>
-    <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-        {
-            "@type": "Question",
-            "name": "What is Lunora?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Lunora is an Islamic app designed for Muslim women. It brings prayer times, the Quran, duas, dhikr and a Period Mode into one app, free on iPhone and Android. It works offline, has no ads and needs no account."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "What is Period Mode?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Period Mode follows your cycle alongside your prayer, Quran and dhikr. You can track your cycle and see predictions, read hadith and fiqh guidance from all four madhhabs and a ghusl guide, get dua and dhikr suggestions that fit your mood, and count your qada fasts. Prayer reminders go quiet on your period days, and your period records stay on your device."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Is Lunora available on iPhone and Android?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Lunora is available on the App Store for iPhone and on Google Play for Android phones."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Is Lunora free?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Lunora is free to download and has no ads. In most countries the full app is unlocked with Lunora+, a subscription you can start with a 7-day free trial; in countries where Lunora+ can't be purchased, the app is free to use. Lunora+ includes every reciter, the offline Quran, the full Quran Course and Hifz, Protect My Prayer for all five prayers and the large widgets."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Which languages does Lunora support?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "English, Turkish, Arabic, French, German, Indonesian, Malay, Urdu and Bengali."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Is my data private?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Your period, mood, symptom and journal records, notes and saved duas stay on your device and are not uploaded to our servers. No account is needed and there are no ads. To fix crashes and improve the app, we collect anonymous usage and crash data with Firebase Analytics and Crashlytics, and your city and country are used to calculate prayer times. We never sell your data. See our Privacy Policy for details."
-            }
-        }
-    ]
-}
-    </script>
-    <script type="application/ld+json">
-{
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lunora — Islamic App for Muslim Women | iPhone &amp; Android</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="theme-color" content="#3F6B55">
+<meta name="description" content="Lunora is an Islamic app for Muslim women on iPhone and Android: prayer times, the whole Quran, duas, dhikr and widgets, and a Period Mode with fiqh guidance from the four madhhabs. 9 languages, no ads, 7-day free trial.">
+<link rel="canonical" href="https://mylunora.app/">
+<link rel="alternate" hreflang="en" href="https://mylunora.app/">
+<link rel="alternate" hreflang="tr" href="https://mylunora.app/tr/">
+<link rel="alternate" hreflang="ar" href="https://mylunora.app/ar/">
+<link rel="alternate" hreflang="de" href="https://mylunora.app/de/">
+<link rel="alternate" hreflang="fr" href="https://mylunora.app/fr/">
+<link rel="alternate" hreflang="id" href="https://mylunora.app/id/">
+<link rel="alternate" hreflang="x-default" href="https://mylunora.app/">
+<meta property="og:title" content="Lunora: prayer, Quran and your cycle, in one calm place">
+<meta property="og:description" content="Lunora is an Islamic app for Muslim women on iPhone and Android: prayer times, the whole Quran, duas, dhikr and widgets, and a Period Mode with fiqh guidance from the four madhhabs. 9 languages, no ads, 7-day free trial.">
+<meta property="og:url" content="https://mylunora.app/">
+<meta property="og:image" content="https://mylunora.app/icon-192.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lunora">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;family=Nunito:wght@400;600;700;800&amp;family=Amiri:wght@700&amp;display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/img/v1/bg-b-45.webp">
+<link rel="stylesheet" href="/css/v1.css?v=1">
+<script src="/js/v1.js?v=1" defer></script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is Lunora?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Lunora is an Islamic app designed for Muslim women. It brings prayer times, the Quran, duas, dhikr and a Period Mode into one app, free on iPhone and Android. It works offline, has no ads and needs no account."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is Period Mode?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Period Mode follows your cycle alongside your prayer, Quran and dhikr. You can track your cycle and see predictions, read hadith and fiqh guidance from all four madhhabs and a ghusl guide, get dua and dhikr suggestions that fit your mood, and count your qada fasts. Prayer reminders go quiet on your period days, and your period records stay on your device."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is Lunora available on iPhone and Android?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Lunora is available on the App Store for iPhone and on Google Play for Android phones."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is Lunora free?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Lunora is free to download and has no ads. In most countries the full app is unlocked with Lunora+, a subscription you can start with a 7-day free trial; in countries where Lunora+ can't be purchased, the app is free to use. Lunora+ includes every reciter, the offline Quran, the full Quran Course and Hifz, Protect My Prayer for all five prayers and the large widgets."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Which languages does Lunora support?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "English, Turkish, Arabic, French, German, Indonesian, Malay, Urdu and Bengali."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is my data private?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Your period, mood, symptom and journal records, notes and saved duas stay on your device and are not uploaded to our servers. No account is needed and there are no ads. To fix crashes and improve the app, we collect anonymous usage and crash data with Firebase Analytics and Crashlytics, and your city and country are used to calculate prayer times. We never sell your data. See our Privacy Policy for details."
+   }
+  }
+ ]
+}</script>
+<script type="application/ld+json">{
     "@context": "https://schema.org",
     "@graph": [
         {
@@ -307,240 +130,13 @@
             ]
         }
     ]
-}
-    </script>
+}</script>
 </head>
 <body>
-    <nav id="nav">
-        <div class="nav-inner">
-            <a href="/" class="logo"><img src="icon-192.png" alt="Lunora" class="logo-icon"> Lunora</a>
-            <div class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#period-mode">Period Mode</a>
-                <a href="blog.html">Blog</a>
-                <a href="#download" class="nav-cta">Download</a>
-                <div class="lang-switch">
-                    <a href="/" class="active">EN</a>
-                    <a href="/tr/">TR</a>
-                    <a href="/fr/">FR</a>
-                    <a href="/de/">DE</a>
-                </div>
-            </div>
-            <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
-
-    <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-bg2"></div>
-        <div class="hero-inner">
-            <div>
-                <span class="hero-badge">✨ Lunora 2.0 · Free on iPhone &amp; Android</span>
-                <h1 class="serif">A gentle pause<br><span class="gradient-text">for your soul</span></h1>
-                <p>An Islamic app designed for <em style="color:var(--rose);font-style:normal;font-weight:500">her</em>. Prayer times, the Quran, duas and dhikr, and a thoughtful Period Mode built with care. Free on iPhone and Android, with no ads.</p>
-                <div class="btns">
-                    <a href="https://apps.apple.com/app/apple-store/id6758765933?pt=128518745&amp;ct=web-home-en-1&amp;mt=8" class="btn btn-dark">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-                        <span class="btn-text"><small>Download on the</small><strong>App Store</strong></span>
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.studiolunora.lunora&amp;referrer=utm_source%3Dmylunora.app%26utm_medium%3Dweb%26utm_campaign%3Dhome_hero_en" class="btn btn-light">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
-                        <span class="btn-text"><small>Get it on</small><strong>Google Play</strong></span>
-                    </a>
-                </div>
-                <div class="trust">
-                    <span>📱 iPhone &amp; Android</span>
-                    <span>🔒 Privacy First</span>
-                    <span>🌍 9 Languages</span>
-                </div>
-            </div>
-            <div class="phone-wrap">
-                <div class="phone-glow"></div>
-                <div class="phone">
-                    <div class="phone-screen phone-shot"><img src="/img/app/en-namaz.webp" alt="Lunora’s Protect My Prayer screen at prayer time" width="540" height="1219"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="period" id="period-mode">
-        <div class="container">
-            <div class="section-head reveal">
-                <span class="badge badge-rose">🌸 Designed for Women</span>
-                <h2 class="serif">Period Mode</h2>
-                <p>Your spiritual companion adapts with <em style="color:var(--rose);font-style:normal;font-weight:500">care and understanding</em> during your cycle.</p>
-            </div>
-            <div class="period-grid">
-                <div class="phone-wrap period-phone reveal">
-                    <div class="phone-glow"></div>
-                    <div class="phone" style="box-shadow:0 0 60px rgba(176,128,128,.3)">
-                        <div class="phone-screen phone-shot"><img src="/img/app/en-donem.webp" alt="Lunora’s Period Mode: the My Cycle screen" width="540" height="1219" loading="lazy"></div>
-                    </div>
-                </div>
-                <div class="features-list reveal">
-                    <div class="feat"><span class="icn">🌸</span><div><h4>Gentle Guidance</h4><p>Prayer reminders go quiet on your period days, and Protect My Prayer rests</p></div></div>
-                    <div class="feat"><span class="icn">💜</span><div><h4>Mood & Symptom Tracking</h4><p>Track privately with encrypted, on-device storage, and get duas and dhikr that fit your mood</p></div></div>
-                    <div class="feat"><span class="icn">📚</span><div><h4>Four Madhhabs</h4><p>Hadith and fiqh guidance from all four madhhabs, with a ghusl guide</p></div></div>
-                    <div class="feat"><span class="icn">🔒</span><div><h4>Complete Privacy</h4><p>Your health data never leaves your device</p></div></div>
-                    <div class="period-quote"><p>"No guilt. No judgment. Just support."</p><cite>— The Lunora Philosophy</cite></div>
-                    <a class="fmore" href="/period-mode.html">More about Period Mode →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="features">
-        <div class="container">
-            <div class="section-head reveal">
-                <span class="badge badge-teal">✨ Everything You Need</span>
-                <h2 class="serif">Beautifully Designed</h2>
-                <p>Carefully crafted tools to support your spiritual journey.</p>
-            </div>
-            <div class="features-grid">
-                <div class="fcard reveal"><span class="icn">📖</span><h3>Quran</h3><p>All 114 surahs in Arabic with translation, as a list or as mushaf pages, with tajweed colors, five reciters and a reading plan.</p><a class="fmore" href="/quran-reading-plan.html">Reading plans &amp; khatam →</a></div>
-                <div class="fcard reveal"><span class="icn">🕌</span><h3>Prayer Times &amp; Qibla</h3><p>Accurate times for 200+ countries with local methods (Diyanet, JAKIM, MWL, ISNA), adhan, a qada counter and an offline qibla compass.</p></div>
-                <div class="fcard reveal"><span class="icn">📿</span><h3>Dhikr &amp; Tasbih</h3><p>A dhikr counter and tasbih, your own dhikr sets, and your tasbih on your home screen as a widget.</p><a class="fmore" href="/dhikr-widget.html">About the dhikr widget →</a></div>
-                <div class="fcard reveal"><span class="icn">🤲</span><h3>Duas</h3><p>Morning, evening and protection duas, the dua of the day, and your own dua collection.</p></div>
-                <div class="fcard reveal"><span class="icn">🔒</span><h3>Protect My Prayer</h3><p>At prayer time the apps you choose wait until you mark the prayer as prayed. It rests by itself on your period days.</p><a class="fmore" href="/protect-my-prayer.html">How Protect My Prayer works →</a></div>
-                <div class="fcard reveal"><span class="icn">🎓</span><h3>Learn &amp; Memorize</h3><p>A Quran Course from the letters to tajweed, Hifz with daily review, Dua Memorization and Pray Together.</p></div>
-                <div class="fcard reveal"><span class="icn">📱</span><h3>Widgets</h3><p>The next prayer time, the Verse of the Day and your tasbih on your home screen, and a verse on your lock screen.</p></div>
-                <div class="fcard reveal"><span class="icn">✨</span><h3>Journal &amp; Habits</h3><p>A gratitude journal, small daily habits, and Luna: tell her how you feel and find a verse and dua that fit.</p></div>
-                <div class="fcard reveal"><span class="icn">🌙</span><h3>Ramadan</h3><p>Sahur and iftar times on the imsakiye.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="quote">
-        <div class="container reveal">
-            <div class="heart">💜</div>
-            <blockquote>"Verily, in the remembrance of Allah do hearts find rest."</blockquote>
-            <cite>— Surah Ar-Ra'd (13:28)</cite>
-        </div>
-    </section>
-
-    <section class="faq" id="faq">
-        <div class="container">
-            <div class="section-head reveal">
-                <span class="badge badge-gold">❓ Common Questions</span>
-                <h2 class="serif">Frequently Asked Questions</h2>
-            </div>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-q" onclick="this.parentElement.classList.toggle('open');let a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">What is Lunora?</div>
-                    <div class="faq-a"><p>Lunora is an Islamic app designed for Muslim women. It brings prayer times, the Quran, duas, dhikr and a Period Mode into one app, free on iPhone and Android. It works offline, has no ads and needs no account.</p></div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-q" onclick="this.parentElement.classList.toggle('open');let a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">What is Period Mode?</div>
-                    <div class="faq-a"><p>Period Mode follows your cycle alongside your prayer, Quran and dhikr. You can track your cycle and see predictions, read hadith and fiqh guidance from all four madhhabs and a ghusl guide, get dua and dhikr suggestions that fit your mood, and count your qada fasts. Prayer reminders go quiet on your period days, and your period records stay on your device.</p></div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-q" onclick="this.parentElement.classList.toggle('open');let a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">Is Lunora available on iPhone and Android?</div>
-                    <div class="faq-a"><p>Yes. Lunora is available on the App Store for iPhone and on Google Play for Android phones.</p></div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-q" onclick="this.parentElement.classList.toggle('open');let a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">Is Lunora free?</div>
-                    <div class="faq-a"><p>Lunora is free to download and has no ads. In most countries the full app is unlocked with Lunora+, a subscription you can start with a 7-day free trial; in countries where Lunora+ can't be purchased, the app is free to use. Lunora+ includes every reciter, the offline Quran, the full Quran Course and Hifz, Protect My Prayer for all five prayers and the large widgets.</p></div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-q" onclick="this.parentElement.classList.toggle('open');let a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">Which languages does Lunora support?</div>
-                    <div class="faq-a"><p>English, Turkish, Arabic, French, German, Indonesian, Malay, Urdu and Bengali.</p></div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-q" onclick="this.parentElement.classList.toggle('open');let a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">Is my data private?</div>
-                    <div class="faq-a"><p>Your period, mood, symptom and journal records, notes and saved duas stay on your device and are not uploaded to our servers. No account is needed and there are no ads. To fix crashes and improve the app, we collect anonymous usage and crash data with Firebase Analytics and Crashlytics, and your city and country are used to calculate prayer times. We never sell your data. See our <a href="/privacy.html">Privacy Policy</a> for details.</p></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="download" id="download">
-        <div class="container reveal">
-            <span class="badge">🌙 Begin Your Journey</span>
-            <h2 class="serif">Download Lunora</h2>
-            <p>Free on iPhone and Android, with no ads. A spiritual companion designed with the care and understanding you deserve.</p>
-            <div class="dl-btns">
-                <a href="https://apps.apple.com/app/apple-store/id6758765933?pt=128518745&amp;ct=web-home-en-2&amp;mt=8" class="dl-btn dl-btn-light">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-                    <span class="btn-text"><small>Download on the</small><strong>App Store</strong></span>
-                </a>
-                <a href="https://play.google.com/store/apps/details?id=com.studiolunora.lunora&amp;referrer=utm_source%3Dmylunora.app%26utm_medium%3Dweb%26utm_campaign%3Dhome_download_en" class="dl-btn dl-btn-outline">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
-                    <span class="btn-text"><small>Get it on</small><strong>Google Play</strong></span>
-                </a>
-            </div>
-            <p class="greeting">As-salamu alaykum, sister. 🤍</p>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-inner">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="/" class="logo" style="color:var(--cream)"><img src="icon-192.png" alt="Lunora" class="logo-icon"> Lunora</a>
-                    <p>A spiritual companion designed for Muslim women, with care and understanding at its heart.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>App</h4>
-                    <ul>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#period-mode">Period Mode</a></li>
-                        <li><a href="#download">Download</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="support.html">Support</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Follow Us</h4>
-                    <ul>
-                        <li><a href="https://instagram.com/mylunora.app" target="_blank" rel="noopener noreferrer">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:4px"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                            Instagram
-                        </a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-divider"></div>
-            <div class="footer-bottom">
-                <p>© 2026 Lunora. Made with 💜 by Studio Lunora</p>
-                <p class="tagline">Your spiritual companion, designed with love.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Nav scroll
-        const nav = document.getElementById('nav');
-        window.addEventListener('scroll', () => {
-            nav.classList.toggle('scrolled', window.scrollY > 50);
-        });
-        
-        // Reveal on scroll
-        const reveals = document.querySelectorAll('.reveal');
-        const revealOnScroll = () => {
-            reveals.forEach(el => {
-                const top = el.getBoundingClientRect().top;
-                if (top < window.innerHeight - 100) el.classList.add('active');
-            });
-        };
-        window.addEventListener('scroll', revealOnScroll);
-        window.addEventListener('load', revealOnScroll);
-        
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', e => {
-                e.preventDefault();
-                const target = document.querySelector(a.getAttribute('href'));
-                if (target) target.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-    </script>
+<a class="skip" href="#main">Skip to content</a><header class="nav"><div class="wrap nav-in"><a class="brand" href="/"><img src="/img/v1/app-icon.webp" alt="" width="36" height="36"><span>Lunora</span></a><nav class="nav-links" aria-label="Menu"><a href="/#features">Features</a><a href="/period-mode.html">Period Mode</a><a href="/protect-my-prayer.html">Protect My Prayer</a><a href="/blog.html">Blog</a><a href="/support.html">Support</a></nav><div class="nav-end"><details class="lang"><summary aria-label="Language">EN<svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></summary><ul><li><a href="/" hreflang="en" lang="en" aria-current="true">English<small>EN</small></a></li><li><a href="/tr/" hreflang="tr" lang="tr">Türkçe<small>TR</small></a></li><li><a href="/ar/" hreflang="ar" lang="ar">العربية<small>AR</small></a></li><li><a href="/de/" hreflang="de" lang="de">Deutsch<small>DE</small></a></li><li><a href="/fr/" hreflang="fr" lang="fr">Français<small>FR</small></a></li><li><a href="/id/" hreflang="id" lang="id">Bahasa Indonesia<small>ID</small></a></li></ul></details><button class="burger" type="button" aria-expanded="false" aria-controls="panel" aria-label="Menu"><svg viewBox="0 0 256 256" class="ic ic-list" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></svg><svg viewBox="0 0 256 256" class="ic ic-x" aria-hidden="true" focusable="false"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></button></div></div><div class="panel" id="panel"><a href="/#features">Features</a><a href="/period-mode.html">Period Mode</a><a href="/protect-my-prayer.html">Protect My Prayer</a><a href="/blog.html">Blog</a><a href="/support.html">Support</a><div class="panel-langs"><a href="/tr/" hreflang="tr" lang="tr">Türkçe</a><a href="/ar/" hreflang="ar" lang="ar">العربية</a><a href="/de/" hreflang="de" lang="de">Deutsch</a><a href="/fr/" hreflang="fr" lang="fr">Français</a><a href="/id/" hreflang="id" lang="id">Bahasa Indonesia</a></div></div></header>
+<main id="main">
+<section class="hero"><img class="bg" src="/img/v1/bg-b-45.webp" alt="" fetchpriority="high"><div class="hero-wash"></div><div class="wrap hero-grid"><div class="hero-txt"><div class="pill-row"><span class="pill">Made for Muslim women</span></div><h1>Prayer, Quran and your cycle, <em>in one calm place.</em></h1><p class="lead">Prayer times, the whole Quran, duas and dhikr, and a Period Mode that follows your worship days with care. No ads, in 9 languages. Try it free for 7 days.</p><div class="stores"><a class="store" href="https://apps.apple.com/app/apple-store/id6758765933?pt=128518745&amp;ct=web-home-en-1&amp;mt=8"><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M128.23,30A40,40,0,0,1,167,0h1a8,8,0,0,1,0,16h-1a24,24,0,0,0-23.24,18,8,8,0,1,1-15.5-4ZM223.3,169.59a8.07,8.07,0,0,0-2.8-3.4C203.53,154.53,200,134.64,200,120c0-17.67,13.47-33.06,21.5-40.67a8,8,0,0,0,0-11.62C208.82,55.74,187.82,48,168,48a72.23,72.23,0,0,0-40,12.13,71.56,71.56,0,0,0-90.71,9.09A74.63,74.63,0,0,0,16,123.4a127,127,0,0,0,40.14,89.73A39.8,39.8,0,0,0,83.59,224h87.68a39.84,39.84,0,0,0,29.12-12.57,125,125,0,0,0,17.82-24.6C225.23,174,224.33,172,223.3,169.59Z"/></svg><span><small>Download on the</small><b>App Store</b></span></a><a class="store" href="https://play.google.com/store/apps/details?id=com.studiolunora.lunora&amp;referrer=utm_source%3Dmylunora.app%26utm_medium%3Dweb%26utm_campaign%3Dhome_hero_en"><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M239.82,114.18,72,18.16a16,16,0,0,0-16.12,0A15.68,15.68,0,0,0,48,31.87V224.13a15.68,15.68,0,0,0,7.92,13.67,16,16,0,0,0,16.12,0l167.78-96a15.76,15.76,0,0,0,0-27.64ZM160,139.31l18.92,18.92-88.5,50.66ZM90.4,47.1l88.53,50.67L160,116.69ZM193.31,150l-22-22,22-22,38.43,22Z"/></svg><span><small>Get it on</small><b>Google Play</b></span></a></div><div class="trust"><span><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M216,72H180.92c.39-.33.79-.65,1.17-1A29.53,29.53,0,0,0,192,49.57,32.62,32.62,0,0,0,158.44,16,29.53,29.53,0,0,0,137,25.91a54.94,54.94,0,0,0-9,14.48,54.94,54.94,0,0,0-9-14.48A29.53,29.53,0,0,0,97.56,16,32.62,32.62,0,0,0,64,49.57,29.53,29.53,0,0,0,73.91,71c.38.33.78.65,1.17,1H40A16,16,0,0,0,24,88v32a16,16,0,0,0,16,16v64a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V136a16,16,0,0,0,16-16V88A16,16,0,0,0,216,72ZM149,36.51a13.69,13.69,0,0,1,10-4.5h.49A16.62,16.62,0,0,1,176,49.08a13.69,13.69,0,0,1-4.5,10c-9.49,8.4-25.24,11.36-35,12.4C137.7,60.89,141,45.5,149,36.51Zm-64.09.36A16.63,16.63,0,0,1,96.59,32h.49a13.69,13.69,0,0,1,10,4.5c8.39,9.48,11.35,25.2,12.39,34.92-9.72-1-25.44-4-34.92-12.39a13.69,13.69,0,0,1-4.5-10A16.6,16.6,0,0,1,84.87,36.87ZM40,88h80v32H40Zm16,48h64v64H56Zm144,64H136V136h64Zm16-80H136V88h80v32Z"/></svg>7-day free trial</span><span><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm88,104a87.62,87.62,0,0,1-6.4,32.94l-44.7-27.49a15.92,15.92,0,0,0-6.24-2.23l-22.82-3.08a16.11,16.11,0,0,0-16,7.86h-8.72l-3.8-7.86a15.91,15.91,0,0,0-11-8.67l-8-1.73L96.14,104h16.71a16.06,16.06,0,0,0,7.73-2l12.25-6.76a16.62,16.62,0,0,0,3-2.14l26.91-24.34A15.93,15.93,0,0,0,166,49.1l-.36-.65A88.11,88.11,0,0,1,216,128ZM143.31,41.34,152,56.9,125.09,81.24,112.85,88H96.14a16,16,0,0,0-13.88,8l-8.73,15.23L63.38,84.19,74.32,58.32a87.87,87.87,0,0,1,69-17ZM40,128a87.53,87.53,0,0,1,8.54-37.8l11.34,30.27a16,16,0,0,0,11.62,10l21.43,4.61L96.74,143a16.09,16.09,0,0,0,14.4,9h1.48l-7.23,16.23a16,16,0,0,0,2.86,17.37l.14.14L128,205.94l-1.94,10A88.11,88.11,0,0,1,40,128Zm102.58,86.78,1.13-5.81a16.09,16.09,0,0,0-4-13.9,1.85,1.85,0,0,1-.14-.14L120,174.74,133.7,144l22.82,3.08,45.72,28.12A88.18,88.18,0,0,1,142.58,214.78Z"/></svg>9 languages</span><span><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm88,104a87.56,87.56,0,0,1-20.41,56.28L71.72,60.4A88,88,0,0,1,216,128ZM40,128A87.56,87.56,0,0,1,60.41,71.72L184.28,195.6A88,88,0,0,1,40,128Z"/></svg>No ads</span></div></div><div class="day" role="group" aria-label="A day with Lunora"><div class="phone"><div class="scr slides"><img src="/img/v1/app/en-F.webp" alt="Lunora Today screen with the verse of the day" width="390" height="800" class="on"><img src="/img/v1/app/en-D.webp" alt="Pray Together, the prayer step by step" width="390" height="800" loading="lazy"><img src="/img/v1/app/en-C.webp" alt="Quran Course, the first lesson" width="390" height="800" loading="lazy"><img src="/img/v1/app/en-B5.webp" alt="Protect My Prayer waiting screen at prayer time" width="390" height="800" loading="lazy"><img src="/img/v1/app/en-A2.webp" alt="Period Mode, the My Cycle screen" width="390" height="800" loading="lazy"></div></div><ul class="rail"><li><button type="button" class="on" aria-pressed="true" data-t="Fajr · 06:24" data-l="Verse of the day, on your Today screen"><span class="dot"></span><span class="lbl"><span class="t">Fajr · 06:24</span><span class="l">Verse of the day, on your Today screen</span></span></button></li><li><button type="button" class="" aria-pressed="false" data-t="Dhuhr · 12:56" data-l="Pray Together, step by step"><span class="dot"></span><span class="lbl"><span class="t">Dhuhr · 12:56</span><span class="l">Pray Together, step by step</span></span></button></li><li><button type="button" class="" aria-pressed="false" data-t="Asr · 15:26" data-l="A Quran lesson from the first letter"><span class="dot"></span><span class="lbl"><span class="t">Asr · 15:26</span><span class="l">A Quran lesson from the first letter</span></span></button></li><li><button type="button" class="" aria-pressed="false" data-t="Maghrib · 17:47" data-l="Protect My Prayer pauses your apps"><span class="dot"></span><span class="lbl"><span class="t">Maghrib · 17:47</span><span class="l">Protect My Prayer pauses your apps</span></span></button></li><li><button type="button" class="" aria-pressed="false" data-t="Night" data-l="Period Mode follows your cycle"><span class="dot"></span><span class="lbl"><span class="t">Night</span><span class="l">Period Mode follows your cycle</span></span></button></li></ul><div class="cur" aria-hidden="true"><span class="t">Fajr · 06:24</span><span class="l">Verse of the day, on your Today screen</span></div></div></div></section><section class="sec" id="features"><div class="wrap"><div class="head"><span class="kicker">What she finds inside</span><h2>Three things she opens Lunora for</h2></div><div class="pillars"><article class="pillar"><div class="pillar-img"><img class="bg" src="/img/v1/bg-c-45.webp" alt="" loading="lazy" style="object-position:50% 30%"><div class="phone sm"><div class="scr"><img src="/img/v1/app/en-C.webp" alt="Quran Course, the first lesson" loading="lazy" width="390" height="800"></div></div></div><div class="pillar-txt"><span class="kicker" style="color:#86692A">Quran &amp; prayer times</span><h3>The whole Quran, from the first letter</h3><p>114 surahs as a list or mushaf pages, five reciters and reading plans. A Quran Course that starts at the alphabet, and prayer times by GPS with local methods.</p><a class="more" href="/quran-reading-plan.html">Learn more <svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg></a></div></article><article class="pillar"><div class="pillar-img"><img class="bg" src="/img/v1/bg-a-45.webp" alt="" loading="lazy" style="object-position:50% 40%"><div class="phone sm"><div class="scr"><img src="/img/v1/app/en-A2.webp" alt="Period Mode, the My Cycle screen" loading="lazy" width="390" height="800"></div></div></div><div class="pillar-txt"><span class="kicker" style="color:#9A5A62">Period Mode</span><h3>Your cycle and your worship, together</h3><p>Track your days, see what is excused and what to make up, with fiqh from the four madhhabs. Reminders go quiet by themselves.</p><a class="more" href="/period-mode.html">Learn more <svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg></a></div></article><article class="pillar"><div class="pillar-img"><img class="bg" src="/img/v1/bg-b-45.webp" alt="" loading="lazy" style="object-position:50% 40%"><div class="phone sm"><div class="scr"><img src="/img/v1/app/en-B5.webp" alt="Protect My Prayer waiting screen at prayer time" loading="lazy" width="390" height="800"></div></div></div><div class="pillar-txt"><span class="kicker" style="color:#3F6B55">Protect My Prayer</span><h3>Your apps wait for your prayer</h3><p>At prayer time the apps you choose pause until you mark the prayer as prayed. It rests on its own during your period.</p><a class="more" href="/protect-my-prayer.html">Learn more <svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg></a></div></article></div><p class="and">and in your quiet moments</p><div class="band lib"><img class="bg" src="/img/v1/kehf.webp" alt="" loading="lazy"><div class="lib-wash"></div><div class="band-in"><div class="band-txt"><span class="pill dark">Library</span><h2>Sounds that <em>rest the heart</em></h2><p>Stories of the prophets, the lives of the women companions, recitations with the surah explained, bedtime stories for your children, and live radio. Read or listen, one player for everything.</p><div class="chips"><span>Stories</span><span>Seerah</span><span>Women companions</span><span>Recitation</span><span>For your children</span><span>Radio</span></div></div><div class="covers"><div class="cover"><img src="/img/v1/hacer.webp" alt="" loading="lazy"><span><small>Story</small><b>Hajar and Zamzam</b></span></div><div class="cover"><img src="/img/v1/hatice.webp" alt="" loading="lazy"><span><small>Women companions</small><b>Khadijah</b></span></div><div class="cover"><img src="/img/v1/rahman.webp" alt="" loading="lazy"><span><small>Recitation</small><b>Ar-Rahman</b></span></div></div></div></div></div></section><section id="period-mode"><div class="wrap"><p class="and" style="margin-top:0">and on your period days, too</p><div class="band per"><img class="bg" src="/img/v1/bg-a-wide.webp" alt="" loading="lazy"><div class="per-wash"></div><div class="band-in"><div class="band-txt"><span class="pill rose">Period Mode</span><h2>Excused, <em>not behind.</em></h2><p>Your cycle, your worship days and your make-up fasts, in one calm place. Prayer reminders go quiet, Protect My Prayer rests, and the guidance comes from all four madhhabs, with its sources.</p><ul><li><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M210.35,129.36c-.81-.47-1.7-.92-2.62-1.36.92-.44,1.81-.89,2.62-1.36a40,40,0,1,0-40-69.28c-.81.47-1.65,1-2.48,1.59.08-1,.13-2,.13-3a40,40,0,0,0-80,0c0,.94,0,1.94.13,3-.83-.57-1.67-1.12-2.48-1.59a40,40,0,1,0-40,69.28c.81.47,1.7.92,2.62,1.36-.92.44-1.81.89-2.62,1.36a40,40,0,1,0,40,69.28c.81-.47,1.65-1,2.48-1.59-.08,1-.13,2-.13,2.95a40,40,0,0,0,80,0c0-.94-.05-1.94-.13-2.95.83.57,1.67,1.12,2.48,1.59A39.79,39.79,0,0,0,190.29,204a40.43,40.43,0,0,0,10.42-1.38,40,40,0,0,0,9.64-73.28ZM128,156a28,28,0,1,1,28-28A28,28,0,0,1,128,156Z"/></svg>Mood and symptoms, kept on your phone only</li><li><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M232,48H168a32,32,0,0,0-32,32v87.73a8.17,8.17,0,0,1-7.47,8.25,8,8,0,0,1-8.53-8V80A32,32,0,0,0,88,48H24a8,8,0,0,0-8,8V200a8,8,0,0,0,8,8H96a24,24,0,0,1,24,23.94,7.9,7.9,0,0,0,5.12,7.55A8,8,0,0,0,136,232a24,24,0,0,1,24-24h72a8,8,0,0,0,8-8V56A8,8,0,0,0,232,48ZM208,168H168.27a8.17,8.17,0,0,1-8.25-7.47,8,8,0,0,1,8-8.53h39.73a8.17,8.17,0,0,1,8.25,7.47A8,8,0,0,1,208,168Zm0-32H168.27a8.17,8.17,0,0,1-8.25-7.47,8,8,0,0,1,8-8.53h39.73a8.17,8.17,0,0,1,8.25,7.47A8,8,0,0,1,208,136Zm0-32H168.27A8.17,8.17,0,0,1,160,96.53,8,8,0,0,1,168,88h39.73A8.17,8.17,0,0,1,216,95.47,8,8,0,0,1,208,104Z"/></svg>Fiqh of the four madhhabs and a ghusl guide</li><li><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M240,96a8,8,0,0,1-8,8H216v16a8,8,0,0,1-16,0V104H184a8,8,0,0,1,0-16h16V72a8,8,0,0,1,16,0V88h16A8,8,0,0,1,240,96ZM144,56h8v8a8,8,0,0,0,16,0V56h8a8,8,0,0,0,0-16h-8V32a8,8,0,0,0-16,0v8h-8a8,8,0,0,0,0,16Zm65.14,94.33A88.07,88.07,0,0,1,105.67,46.86a8,8,0,0,0-10.6-9.06A96,96,0,1,0,218.2,160.93a8,8,0,0,0-9.06-10.6Z"/></svg>Duas and dhikr that fit the day you are having</li></ul><a class="link-more" href="/period-mode.html">More about Period Mode <svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg></a></div><div class="ring"><img src="/img/v1/ring-a.webp" alt="Period Mode cycle ring, day 3 of 7" loading="lazy" width="400" height="400"><img class="sak" src="/img/v1/sakura.webp" alt="" loading="lazy"></div></div></div></div></section><section class="sec"><div class="wrap"><div class="head"><span class="kicker">And everything around it</span><h2>Built like a companion, not a toolbox</h2></div><div class="feats"><a class="feat" href="/dhikr-widget.html"><span class="disk"><img src="/img/v1/ic-tasbih.webp" alt="" loading="lazy" width="56" height="56"></span><b>Dhikr &amp; tasbih</b><span>A counter, your own dhikr sets, and a tasbih widget.</span></a><div class="feat"><span class="disk"><img src="/img/v1/ic-rug.webp" alt="" loading="lazy" width="56" height="56"></span><b>Qada</b><span>Missed prayers and fasts, counted and made up at your pace.</span></div><div class="feat"><span class="disk"><img src="/img/v1/ic-lantern.webp" alt="" loading="lazy" width="56" height="56"></span><b>Duas</b><span>Morning, evening and protection duas, and your own.</span></div><div class="feat"><span class="disk"><img src="/img/v1/ic-books.webp" alt="" loading="lazy" width="56" height="56"></span><b>Quran Course</b><span>From the letters to tajweed, lesson by lesson.</span></div><div class="feat"><span class="disk"><img src="/img/v1/ic-rahle.webp" alt="" loading="lazy" width="56" height="56"></span><b>Hifz</b><span>Page by page, with daily review.</span></div><div class="feat"><span class="disk"><img src="/img/v1/ic-rug.webp" alt="" loading="lazy" width="56" height="56"></span><b>Pray Together</b><span>Learn salah step by step, at home.</span></div><div class="feat"><span class="disk"><img src="/img/v1/ic-pen.webp" alt="" loading="lazy" width="56" height="56"></span><b>Journal &amp; habits</b><span>A gratitude journal and small daily habits.</span></div><div class="feat"><span class="disk"><img src="/img/v1/ic-tree.webp" alt="" loading="lazy" width="56" height="56"></span><b>Luna</b><span>Tell her how you feel; find a verse that fits.</span></div></div></div></section><section class="sec revs"><img class="bg" src="/img/v1/guven-bg.webp" alt="" loading="lazy"><div class="revs-wash"></div><div class="wrap"><div class="head"><span class="kicker">In their words</span></div><div class="rev-grid"><figure class="rev"><div class="stars" role="img" aria-label="5/5"><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></svg><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></svg><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></svg><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></svg><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></svg></div><blockquote lang="en">“I love it ❤️ as a revert helps me so much”</blockquote><figcaption><span>— Monique</span><span><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M239.82,114.18,72,18.16a16,16,0,0,0-16.12,0A15.68,15.68,0,0,0,48,31.87V224.13a15.68,15.68,0,0,0,7.92,13.67,16,16,0,0,0,16.12,0l167.78-96a15.76,15.76,0,0,0,0-27.64ZM160,139.31l18.92,18.92-88.5,50.66ZM90.4,47.1l88.53,50.67L160,116.69ZM193.31,150l-22-22,22-22,38.43,22Z"/></svg>Google Play</span></figcaption></figure><figure class="rev"><div class="stars" role="img" aria-label="5/5"><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></svg><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></svg><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></svg><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></svg><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></svg></div><blockquote lang="en">“it’s amazing app, Masya Allah. thank you so much for this app, everything in this app is so beautiful.. thank you 💗”</blockquote><figcaption><span></span><span><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M239.82,114.18,72,18.16a16,16,0,0,0-16.12,0A15.68,15.68,0,0,0,48,31.87V224.13a15.68,15.68,0,0,0,7.92,13.67,16,16,0,0,0,16.12,0l167.78-96a15.76,15.76,0,0,0,0-27.64ZM160,139.31l18.92,18.92-88.5,50.66ZM90.4,47.1l88.53,50.67L160,116.69ZM193.31,150l-22-22,22-22,38.43,22Z"/></svg>Google Play</span></figcaption></figure><figure class="rev"><div class="stars" role="img" aria-label="5/5"><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></svg><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></svg><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></svg><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></svg><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></svg></div><blockquote lang="en">“luv it highly recommended 🥰”</blockquote><figcaption><span></span><span><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M239.82,114.18,72,18.16a16,16,0,0,0-16.12,0A15.68,15.68,0,0,0,48,31.87V224.13a15.68,15.68,0,0,0,7.92,13.67,16,16,0,0,0,16.12,0l167.78-96a15.76,15.76,0,0,0,0-27.64ZM160,139.31l18.92,18.92-88.5,50.66ZM90.4,47.1l88.53,50.67L160,116.69ZM193.31,150l-22-22,22-22,38.43,22Z"/></svg>Google Play</span></figcaption></figure></div><p class="rev-note">Reviews from Google Play, quoted as written.</p></div></section><section class="sec"><div class="wrap wgrid"><div class="wtxt"><span class="kicker">On your home screen</span><h2>Dhikr without opening the app</h2><p>A tasbih on your home screen and your lock screen: tap to count. Plus the next prayer time, the verse of the day and your prayer streak, more than ten widgets in all.</p><a class="link-more" style="color:var(--green);border-color:var(--green)" href="/dhikr-widget.html">Dhikr widget <svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg></a></div><div class="wstack" data-tasbih="12" data-num="0123456789"><div class="w-med"><img class="bg" src="/img/v1/tesbih-bg-wide.webp" alt="" loading="lazy"><button class="beads" type="button" data-add aria-label="Say"><span class="n"><b data-count>12</b><small>/ 33</small></span></button><span class="w-sep"></span><div class="w-txt"><span class="eb">DHIKR</span><span class="ar" lang="ar" dir="rtl">سُبْحَانَ اللّٰه</span><span class="nm">Subhanallah</span><div class="w-btns"><button class="say" type="button" data-add><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg>Say</button><button class="reset" type="button" data-reset aria-label="Reset"><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M224,128a96,96,0,0,1-94.71,96H128A95.38,95.38,0,0,1,62.1,197.8a8,8,0,0,1,11-11.63A80,80,0,1,0,71.43,71.39a3.07,3.07,0,0,1-.26.25L44.59,96H72a8,8,0,0,1,0,16H24a8,8,0,0,1-8-8V56a8,8,0,0,1,16,0V85.8L60.25,60A96,96,0,0,1,224,128Z"/></svg></button></div></div></div><div class="w-lock"><img class="bg" src="/img/v1/tesbih-bg.webp" alt="" loading="lazy"><div class="w-rect"><small>SUBHANALLAH</small><b><span data-count>12</span> <small>/ 33</small></b><span class="bar"><i data-bar></i></span></div><div class="w-circ"><svg width="72" height="72" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="29" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="5" stroke-linecap="round" stroke-dasharray="136.7 182.2"/><circle data-gauge cx="36" cy="36" r="29" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-dasharray="49.7 182.2"/></svg><span data-count>12</span></div></div></div></div></section><section class="sec" id="faq" style="padding-top:0"><div class="wrap"><div class="head"><h2>Frequently asked questions</h2></div><div class="faq"><details open><summary>What is Lunora?<svg viewBox="0 0 256 256" class="ic pl" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg><svg viewBox="0 0 256 256" class="ic mi" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg></summary><div class="a"><p>Lunora is an Islamic app designed for Muslim women. It brings prayer times, the Quran, duas, dhikr and a Period Mode into one app, free on iPhone and Android. It works offline, has no ads and needs no account.</p></div></details><details><summary>What is Period Mode?<svg viewBox="0 0 256 256" class="ic pl" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg><svg viewBox="0 0 256 256" class="ic mi" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg></summary><div class="a"><p>Period Mode follows your cycle alongside your prayer, Quran and dhikr. You can track your cycle and see predictions, read hadith and fiqh guidance from all four madhhabs and a ghusl guide, get dua and dhikr suggestions that fit your mood, and count your qada fasts. Prayer reminders go quiet on your period days, and your period records stay on your device.</p></div></details><details><summary>Is Lunora available on iPhone and Android?<svg viewBox="0 0 256 256" class="ic pl" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg><svg viewBox="0 0 256 256" class="ic mi" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg></summary><div class="a"><p>Yes. Lunora is available on the App Store for iPhone and on Google Play for Android phones.</p></div></details><details><summary>Is Lunora free?<svg viewBox="0 0 256 256" class="ic pl" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg><svg viewBox="0 0 256 256" class="ic mi" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg></summary><div class="a"><p>Lunora is free to download and has no ads. In most countries the full app is unlocked with Lunora+, a subscription you can start with a 7-day free trial; in countries where Lunora+ can't be purchased, the app is free to use. Lunora+ includes every reciter, the offline Quran, the full Quran Course and Hifz, Protect My Prayer for all five prayers and the large widgets.</p></div></details><details><summary>Which languages does Lunora support?<svg viewBox="0 0 256 256" class="ic pl" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg><svg viewBox="0 0 256 256" class="ic mi" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg></summary><div class="a"><p>English, Turkish, Arabic, French, German, Indonesian, Malay, Urdu and Bengali.</p></div></details><details><summary>Is my data private?<svg viewBox="0 0 256 256" class="ic pl" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg><svg viewBox="0 0 256 256" class="ic mi" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg></summary><div class="a"><p>Your period, mood, symptom and journal records, notes and saved duas stay on your device and are not uploaded to our servers. No account is needed and there are no ads. To fix crashes and improve the app, we collect anonymous usage and crash data with Firebase Analytics and Crashlytics, and your city and country are used to calculate prayer times. We never sell your data. See our <a href="/privacy.html">Privacy Policy</a> for details.</p></div></details></div></div></section><section class="sec" id="download" style="padding-top:0"><div class="wrap"><div class="cta"><img class="heart" src="/img/v1/heart.webp" alt="" width="88" height="88" loading="lazy"><h2>Made with love for Muslim sisters everywhere</h2><p>No ads, in any language. Lunora+ opens everything: every reciter, the offline Quran, the full Quran Course and Hifz, Protect My Prayer for all five prayers and the large widgets. Start with a 7-day free trial.</p><div class="stores"><a class="store light" href="https://apps.apple.com/app/apple-store/id6758765933?pt=128518745&amp;ct=web-home-en-2&amp;mt=8"><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M128.23,30A40,40,0,0,1,167,0h1a8,8,0,0,1,0,16h-1a24,24,0,0,0-23.24,18,8,8,0,1,1-15.5-4ZM223.3,169.59a8.07,8.07,0,0,0-2.8-3.4C203.53,154.53,200,134.64,200,120c0-17.67,13.47-33.06,21.5-40.67a8,8,0,0,0,0-11.62C208.82,55.74,187.82,48,168,48a72.23,72.23,0,0,0-40,12.13,71.56,71.56,0,0,0-90.71,9.09A74.63,74.63,0,0,0,16,123.4a127,127,0,0,0,40.14,89.73A39.8,39.8,0,0,0,83.59,224h87.68a39.84,39.84,0,0,0,29.12-12.57,125,125,0,0,0,17.82-24.6C225.23,174,224.33,172,223.3,169.59Z"/></svg><span><small>Download on the</small><b>App Store</b></span></a><a class="store light" href="https://play.google.com/store/apps/details?id=com.studiolunora.lunora&amp;referrer=utm_source%3Dmylunora.app%26utm_medium%3Dweb%26utm_campaign%3Dhome_download_en"><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M239.82,114.18,72,18.16a16,16,0,0,0-16.12,0A15.68,15.68,0,0,0,48,31.87V224.13a15.68,15.68,0,0,0,7.92,13.67,16,16,0,0,0,16.12,0l167.78-96a15.76,15.76,0,0,0,0-27.64ZM160,139.31l18.92,18.92-88.5,50.66ZM90.4,47.1l88.53,50.67L160,116.69ZM193.31,150l-22-22,22-22,38.43,22Z"/></svg><span><small>Get it on</small><b>Google Play</b></span></a></div><span class="salam">As-salamu alaykum, sister.</span></div></div></section>
+</main>
+<footer class="foot"><div class="wrap foot-grid"><div class="foot-about"><a class="brand" href="/"><img src="/img/v1/app-icon.webp" alt="" width="32" height="32"><span>Lunora</span></a><p>A spiritual companion designed for Muslim women, with care and understanding at its heart.</p></div><div><h4>App</h4><a href="/#features">Features</a><a href="/period-mode.html">Period Mode</a><a href="/protect-my-prayer.html">Protect My Prayer</a><a href="/quran-reading-plan.html">Quran reading plan</a><a href="/dhikr-widget.html">Dhikr widget</a><a href="/blog.html">Blog</a></div><div><h4>Help</h4><a href="/support.html">Support</a><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a></div><div><h4>Follow</h4><a class="ig" href="https://instagram.com/mylunora.app" rel="noopener"><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></svg>@mylunora.app</a><span class="copy">© 2026 Studio Lunora</span></div></div></footer>
 </body>
 </html>

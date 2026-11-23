@@ -1,278 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lunora Blog — Spiritual Guidance for Muslim Women</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="shortcut icon" href="favicon.ico">
-    <meta name="theme-color" content="#5B9A8B">
-    <link rel="alternate" hreflang="en" href="https://mylunora.app/blog.html">
-    <link rel="alternate" hreflang="tr" href="https://mylunora.app/tr/blog.html">
-    <link rel="alternate" hreflang="x-default" href="https://mylunora.app/blog.html">
-    <meta name="description" content="Explore Islamic guides, spiritual self-care tips, and practical advice for Muslim women. Articles on prayer, menstruation in Islam, Quran, and daily worship.">
-    <meta name="author" content="Lunora">
-    <link rel="canonical" href="https://mylunora.app/blog.html">
-
-    <meta property="og:title" content="Lunora Blog — Spiritual Guidance for Muslim Women">
-    <meta property="og:description" content="Explore Islamic guides, spiritual self-care tips, and practical advice for Muslim women.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mylunora.app/blog.html">
-    <meta property="og:site_name" content="Lunora">
-    <meta property="og:image" content="icon-192.png">
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        :root{--cream:#FDFBF7;--cream-dark:#F3EBD8;--gold:#C9A962;--gold-dark:#9A7B3D;--teal:#5B9A8B;--rose:#B08080;--dark:#2D2A26}
-        html{scroll-behavior:smooth}
-        body{font-family:'Outfit',sans-serif;background:var(--cream);color:var(--dark);line-height:1.7}
-        .serif{font-family:'Cormorant Garamond',serif}
-
-        /* Nav */
-        nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2rem;background:rgba(255,255,255,.9);backdrop-filter:blur(20px);box-shadow:0 2px 20px rgba(0,0,0,.05)}
-        .nav-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
-        .logo{text-decoration:none;color:var(--dark);font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;display:flex;align-items:center;gap:.5rem}
-        .logo-icon{width:32px;height:32px;border-radius:8px}
-        .nav-links{display:flex;gap:2rem;align-items:center}
-        .nav-links a{text-decoration:none;color:rgba(45,42,38,.7);font-size:.9rem;transition:color .3s}
-        .nav-links a:hover{color:var(--gold)}
-        .nav-cta{background:var(--gold)!important;color:#fff!important;padding:.6rem 1.2rem;border-radius:50px}
-        .lang-switch{display:inline-flex;align-items:center;gap:.25rem;background:rgba(45,42,38,.05);border-radius:50px;padding:.25rem;font-size:.8rem}
-        .lang-switch a{text-decoration:none;padding:.3rem .6rem;border-radius:50px;color:rgba(45,42,38,.5);transition:all .3s}
-        .lang-switch a.active{background:var(--gold);color:#fff}
-        .lang-switch a:hover:not(.active){color:var(--dark)}
-
-        /* Hamburger */
-        .hamburger{display:none;background:none;border:none;cursor:pointer;padding:.5rem;flex-direction:column;gap:5px}
-        .hamburger span{display:block;width:22px;height:2px;background:var(--dark);border-radius:2px;transition:all .3s}
-        @media(max-width:768px){
-            .hamburger{display:flex}
-            .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(255,255,255,.98);backdrop-filter:blur(20px);flex-direction:column;padding:1.5rem 2rem;gap:1rem;box-shadow:0 10px 30px rgba(0,0,0,.1)}
-            .nav-links.open{display:flex}
-            .nav-cta{text-align:center}
-        }
-
-        /* Blog Hero */
-        .blog-hero{padding:7rem 2rem 3rem;text-align:center;background:linear-gradient(180deg,var(--cream),var(--cream-dark))}
-        .blog-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);margin-bottom:.5rem}
-        .blog-hero p{font-size:1.1rem;color:rgba(45,42,38,.5)}
-
-        /* Blog Cards */
-        .blog-list{padding:2rem;max-width:800px;margin:0 auto}
-        .blog-container{display:flex;flex-direction:column;gap:1.5rem}
-        .blog-card{display:block;padding:2rem;background:rgba(255,255,255,.6);border-radius:1.25rem;border:1px solid rgba(201,169,98,.15);text-decoration:none;transition:all .3s}
-        .blog-card:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(0,0,0,.05);border-color:var(--gold)}
-        .blog-card-badge{display:inline-block;padding:.3rem .7rem;border-radius:50px;font-size:.75rem;margin-bottom:1rem;background:rgba(91,154,139,.1);color:var(--teal);border:1px solid rgba(91,154,139,.2)}
-        .blog-card h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--dark);margin-bottom:.75rem;line-height:1.3}
-        .blog-card p{font-size:.95rem;color:rgba(45,42,38,.6);line-height:1.7;margin-bottom:1rem}
-        .blog-card-meta{display:flex;gap:1.5rem;font-size:.85rem;color:rgba(45,42,38,.4)}
-
-        /* CTA */
-        .article-cta{max-width:720px;margin:0 auto 4rem;padding:0 2rem}
-        .article-cta-inner{background:linear-gradient(180deg,var(--dark),#1F1D1A);border-radius:1.5rem;padding:3rem 2.5rem;text-align:center;position:relative;overflow:hidden}
-        .article-cta-inner::before{content:'';position:absolute;top:-50%;right:-20%;width:300px;height:300px;background:radial-gradient(circle,rgba(201,169,98,.15),transparent);border-radius:50%}
-        .article-cta-inner>*{position:relative;z-index:1}
-        .article-cta-inner h2{font-family:'Cormorant Garamond',serif;color:var(--cream);font-size:1.8rem;margin-bottom:.75rem}
-        .article-cta-inner p{color:rgba(253,251,247,.6);font-size:1rem;margin-bottom:1.5rem;max-width:420px;margin-left:auto;margin-right:auto}
-        .dl-btn{display:inline-flex;align-items:center;gap:.75rem;padding:1rem 1.75rem;border-radius:1rem;text-decoration:none;transition:all .3s}
-        .dl-btn svg{width:24px;height:24px}
-        .dl-btn-light{background:var(--cream);color:var(--dark)}
-        .dl-btn-light:hover{background:#fff;transform:translateY(-2px)}
-        .btn-text{text-align:left}
-        .btn-text small{display:block;font-size:.65rem;opacity:.7}
-        .btn-text strong{font-size:.9rem}
-
-        /* Footer */
-        footer{background:#1F1D1A;color:var(--cream);padding:3rem 2rem 1.5rem}
-        .footer-inner{max-width:1200px;margin:0 auto}
-        .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:2rem}
-        @media(max-width:768px){.footer-grid{grid-template-columns:1fr;gap:1.5rem}}
-        .footer-brand .logo{margin-bottom:.75rem}
-        .footer-brand p{color:rgba(253,251,247,.5);max-width:280px;font-size:.9rem}
-        .footer-links h4{color:var(--gold);font-weight:600;margin-bottom:.75rem;font-size:.9rem}
-        .footer-links ul{list-style:none}
-        .footer-links li{margin-bottom:.4rem}
-        .footer-links a{color:rgba(253,251,247,.5);text-decoration:none;font-size:.9rem;transition:color .3s}
-        .footer-links a:hover{color:var(--gold)}
-        .footer-divider{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.2;margin-bottom:1.5rem}
-        .footer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.85rem;color:rgba(253,251,247,.4)}
-        .footer-bottom .tagline{font-style:italic}
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lunora Blog — Spiritual Guidance for Muslim Women</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="theme-color" content="#3F6B55">
+<link rel="alternate" hreflang="en" href="https://mylunora.app/blog.html">
+<link rel="alternate" hreflang="tr" href="https://mylunora.app/tr/blog.html">
+<link rel="alternate" hreflang="x-default" href="https://mylunora.app/blog.html">
+<meta name="description" content="Explore Islamic guides, spiritual self-care tips, and practical advice for Muslim women. Articles on prayer, menstruation in Islam, Quran, and daily worship.">
+<meta name="author" content="Lunora">
+<link rel="canonical" href="https://mylunora.app/blog.html">
+<meta property="og:title" content="Lunora Blog — Spiritual Guidance for Muslim Women">
+<meta property="og:description" content="Explore Islamic guides, spiritual self-care tips, and practical advice for Muslim women.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mylunora.app/blog.html">
+<meta property="og:site_name" content="Lunora">
+<meta property="og:image" content="https://mylunora.app/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/v1.css?v=1">
+<script src="/js/v1.js?v=1" defer></script>
 </head>
 <body>
-
-<nav>
-    <div class="nav-inner">
-        <a href="/" class="logo"><img src="icon-192.png" alt="Lunora" class="logo-icon"> Lunora</a>
-        <div class="nav-links">
-            <a href="index.html#features">Features</a>
-            <a href="index.html#period-mode">Period Mode</a>
-            <a href="blog.html">Blog</a>
-            <a href="https://apps.apple.com/app/apple-store/id6758765933?pt=128518745&amp;ct=web-blog-en-1&amp;mt=8" class="nav-cta">Download</a>
-            <div class="lang-switch">
-                <a href="/blog.html" class="active">EN</a>
-                <a href="/tr/blog.html">TR</a>
-            </div>
-        </div>
-        <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
-            <span></span><span></span><span></span>
-        </button>
-    </div>
-</nav>
-
-<section class="blog-hero">
-    <h1 class="serif">Lunora Blog</h1>
-    <p>Gentle guidance for your spiritual journey</p>
-</section>
-
-<section class="blog-list">
-    <div class="blog-container">
-
-        <!-- NEW: Marriage Spiritual Guide -->
-        <a href="muslim-women-marriage-spiritual-guide.html" class="blog-card">
-            <div class="blog-card-badge" style="background:rgba(176,128,128,.1);color:var(--rose);border-color:rgba(176,128,128,.2)">Marriage Guide</div>
-            <h2 class="serif">The Muslim Woman's Complete Spiritual Guide to Marriage</h2>
-            <p>Duas for every stage of marriage, istikhara guidance, cycle-aware intimacy, gratitude practices, mood tracking, and spiritual self-care. The first complete marriage guide written for Muslim women.</p>
-            <div class="blog-card-meta">
-                <span>May 2, 2026</span>
-                <span>19 min read</span>
-            </div>
-        </a>
-
-        <!-- Mental Health & Faith -->
-        <a href="muslim-women-mental-health-faith.html" class="blog-card">
-            <div class="blog-card-badge" style="background:rgba(176,128,128,.1);color:var(--rose);border-color:rgba(176,128,128,.2)">Mental Health &amp; Faith</div>
-            <h2 class="serif">Muslim Women and Mental Health: How Faith Supports Your Emotional Wellbeing</h2>
-            <p>Depression is not a sign of weak iman. Discover what Islam really teaches about mental health, practical duas for anxiety, 7 self-care practices, and how to balance faith and therapy.</p>
-            <div class="blog-card-meta">
-                <span>March 31, 2026</span>
-                <span>15 min read</span>
-            </div>
-        </a>
-
-        <!-- Daily Duas & Dhikr Guide -->
-        <a href="daily-duas-dhikr-muslim-women-guide.html" class="blog-card">
-            <div class="blog-card-badge" style="background:rgba(201,169,98,.1);color:var(--gold-dark);border-color:rgba(201,169,98,.2)">Dua &amp; Dhikr Guide</div>
-            <h2 class="serif">The Complete Guide to Daily Duas and Dhikr for Muslim Women</h2>
-            <p>Morning adhkar, evening adhkar, dhikr after salah, duas for every occasion, and spiritual practices during your period. The first all-in-one dua guide written for Muslim women.</p>
-            <div class="blog-card-meta">
-                <span>March 21, 2026</span>
-                <span>18 min read</span>
-            </div>
-        </a>
-
-        <!-- Prayer Times & Salah Guide -->
-        <a href="muslim-women-prayer-times-salah-guide.html" class="blog-card">
-            <div class="blog-card-badge" style="background:rgba(91,154,139,.1);color:var(--teal);border-color:rgba(91,154,139,.2)">Prayer Guide</div>
-            <h2 class="serif">The Muslim Woman's Complete Guide to Prayer Times and Salah</h2>
-            <p>Everything you need to understand the five daily prayers, build a realistic schedule around your life, and navigate prayer during your period. The first salah guide written for Muslim women.</p>
-            <div class="blog-card-meta">
-                <span>March 12, 2026</span>
-                <span>17 min read</span>
-            </div>
-        </a>
-
-        <!-- Quran Reading Guide -->
-        <a href="quran-reading-guide-muslim-women.html" class="blog-card">
-            <div class="blog-card-badge" style="background:rgba(91,154,139,.1);color:var(--teal);border-color:rgba(91,154,139,.2)">Quran Guide</div>
-            <h2 class="serif">The Muslim Woman's Complete Quran Reading Guide: Tips, Schedules and Spiritual Growth</h2>
-            <p>Build a consistent Quran reading habit with cycle-aware schedules, beginner tips, and practical tools. The first guide designed for your whole reality as a Muslim woman.</p>
-            <div class="blog-card-meta">
-                <span>March 9, 2026</span>
-                <span>15 min read</span>
-            </div>
-        </a>
-
-        <!-- Prayer During Period Article -->
-        <a href="can-muslim-women-pray-during-period.html" class="blog-card">
-            <div class="blog-card-badge">Spiritual Guide</div>
-            <h2 class="serif">Can Muslim Women Pray During Their Period? A Complete Spiritual Guide</h2>
-            <p>Learn the ruling, discover what you CAN do spiritually during menstruation, and get a daily dhikr routine. Your faith never has to pause.</p>
-            <div class="blog-card-meta">
-                <span>March 7, 2026</span>
-                <span>14 min read</span>
-            </div>
-        </a>
-
-        <!-- Self-Care Article -->
-        <a href="spiritual-self-care-muslim-women.html" class="blog-card">
-            <div class="blog-card-badge">IWD 2026</div>
-            <h2 class="serif">Spiritual Self-Care for Muslim Women: A Complete Guide for International Women's Day 2026</h2>
-            <p>Discover Islamic self-care practices rooted in the Quran and Sunnah. 5 pillars of spiritual self-care, practical daily routines, and why taking care of yourself is an act of faith.</p>
-            <div class="blog-card-meta">
-                <span>March 5, 2026</span>
-                <span>14 min read</span>
-            </div>
-        </a>
-
-        <!-- EXISTING: Period Article -->
-        <a href="what-to-do-during-period-in-islam.html" class="blog-card">
-            <div class="blog-card-badge" style="background:rgba(176,128,128,.1);color:var(--rose);border-color:rgba(176,128,128,.2)">Complete Guide</div>
-            <h2 class="serif">What to Do During Your Period in Islam: A Complete Guide for Muslim Women</h2>
-            <p>Practical 7-day spiritual routine, scholarly guidance on what you CAN do during menstruation, and honest answers to questions you've been too shy to ask.</p>
-            <div class="blog-card-meta">
-                <span>March 4, 2026</span>
-                <span>15 min read</span>
-            </div>
-        </a>
-
-    </div>
-</section>
-
-<div class="article-cta">
-    <div class="article-cta-inner">
-        <h2 class="serif">Your spiritual journey doesn't pause</h2>
-        <p>Download Lunora and experience Period Mode — with curated duas, mood tracking, and gentle reminders designed for exactly this moment.</p>
-        <a href="https://apps.apple.com/app/apple-store/id6758765933?pt=128518745&amp;ct=web-blog-en-2&amp;mt=8" class="dl-btn dl-btn-light">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-            <span class="btn-text"><small>Download on the</small><strong>App Store</strong></span>
-        </a>
-    </div>
-</div>
-
-<footer>
-    <div class="footer-inner">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <a href="/" class="logo" style="color:var(--cream)"><img src="icon-192.png" alt="Lunora" class="logo-icon"> Lunora</a>
-                <p>A spiritual companion designed for Muslim women, with care and understanding at its heart.</p>
-            </div>
-            <div class="footer-links">
-                <h4>App</h4>
-                <ul>
-                    <li><a href="index.html#features">Features</a></li>
-                    <li><a href="index.html#period-mode">Period Mode</a></li>
-                    <li><a href="index.html#download">Download</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
-                    <li><a href="support.html">Support</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Follow Us</h4>
-                <ul>
-                    <li><a href="https://instagram.com/mylunora.app" target="_blank" rel="noopener noreferrer">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:4px"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                        Instagram
-                    </a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-divider"></div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Lunora. Made with 💜 by Studio Lunora</p>
-            <p class="tagline">Your spiritual companion, designed with love.</p>
-        </div>
-    </div>
-</footer>
-
+<a class="skip" href="#main">Skip to content</a><header class="nav"><div class="wrap nav-in"><a class="brand" href="/"><img src="/img/v1/app-icon.webp" alt="" width="36" height="36"><span>Lunora</span></a><nav class="nav-links" aria-label="Menu"><a href="/#features">Features</a><a href="/period-mode.html">Period Mode</a><a href="/protect-my-prayer.html">Protect My Prayer</a><a href="/blog.html" aria-current="page">Blog</a><a href="/support.html">Support</a></nav><div class="nav-end"><details class="lang"><summary aria-label="Language">EN<svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></summary><ul><li><a href="/blog.html" hreflang="en" lang="en" aria-current="true">English<small>EN</small></a></li><li><a href="/tr/blog.html" hreflang="tr" lang="tr">Türkçe<small>TR</small></a></li></ul></details><button class="burger" type="button" aria-expanded="false" aria-controls="panel" aria-label="Menu"><svg viewBox="0 0 256 256" class="ic ic-list" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></svg><svg viewBox="0 0 256 256" class="ic ic-x" aria-hidden="true" focusable="false"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></button></div></div><div class="panel" id="panel"><a href="/#features">Features</a><a href="/period-mode.html">Period Mode</a><a href="/protect-my-prayer.html">Protect My Prayer</a><a href="/blog.html" aria-current="page">Blog</a><a href="/support.html">Support</a><div class="panel-langs"><a href="/tr/blog.html" hreflang="tr" lang="tr">Türkçe</a></div></div></header>
+<main id="main">
+<section class="bhero"><img class="bg" src="/img/v1/guven-bg.webp" alt=""><div class="bhero-wash"></div><div class="wrap"><span class="pill">The Lunora journal</span><h1>Notes for <em>your quiet moments.</em></h1><p class="lead">Gentle guidance for your spiritual journey</p></div></section><section class="sec"><div class="wrap"><h2 class="sr">Lunora Blog</h2><div class="filters" role="group"><button type="button" data-cat="all" aria-pressed="true">All</button><button type="button" data-cat="period" aria-pressed="false">Period</button><button type="button" data-cat="prayer" aria-pressed="false">Prayer</button><button type="button" data-cat="quran" aria-pressed="false">Quran</button><button type="button" data-cat="dhikr" aria-pressed="false">Duas &amp; dhikr</button><button type="button" data-cat="life" aria-pressed="false">Life &amp; faith</button></div><div class="posts"><a class="post" href="/muslim-women-marriage-spiritual-guide.html" data-cat="life"><div class="post-img"><img src="/img/v1/hatice.webp" alt="" loading="lazy"></div><div class="post-txt"><span class="kicker" style="color:#86692A">Marriage Guide</span><h2>The Muslim Woman's Complete Spiritual Guide to Marriage</h2><p>Duas for every stage of marriage, istikhara guidance, cycle-aware intimacy, gratitude practices, mood tracking, and spiritual self-care. The first complete marriage guide written for Muslim women.</p><span class="meta"><time>May 2, 2026</time> · 19 min read <svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg></span></div></a><a class="post" href="/muslim-women-mental-health-faith.html" data-cat="life"><div class="post-img"><img src="/img/v1/guven-bg.webp" alt="" loading="lazy"></div><div class="post-txt"><span class="kicker" style="color:#86692A">Mental Health &amp; Faith</span><h2>Muslim Women and Mental Health: How Faith Supports Your Emotional Wellbeing</h2><p>Depression is not a sign of weak iman. Discover what Islam really teaches about mental health, practical duas for anxiety, 7 self-care practices, and how to balance faith and therapy.</p><span class="meta"><time>March 31, 2026</time> · 15 min read <svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg></span></div></a><a class="post" href="/daily-duas-dhikr-muslim-women-guide.html" data-cat="dhikr"><div class="post-img"><img src="/img/v1/tesbih-bg.webp" alt="" loading="lazy"></div><div class="post-txt"><span class="kicker" style="color:#3F6B55">Dua &amp; Dhikr Guide</span><h2>The Complete Guide to Daily Duas and Dhikr for Muslim Women</h2><p>Morning adhkar, evening adhkar, dhikr after salah, duas for every occasion, and spiritual practices during your period. The first all-in-one dua guide written for Muslim women.</p><span class="meta"><time>March 21, 2026</time> · 18 min read <svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg></span></div></a><a class="post" href="/muslim-women-prayer-times-salah-guide.html" data-cat="prayer"><div class="post-img"><img src="/img/v1/namaz-bg.webp" alt="" loading="lazy"></div><div class="post-txt"><span class="kicker" style="color:#3F6B55">Prayer Guide</span><h2>The Muslim Woman's Complete Guide to Prayer Times and Salah</h2><p>Everything you need to understand the five daily prayers, build a realistic schedule around your life, and navigate prayer during your period. The first salah guide written for Muslim women.</p><span class="meta"><time>March 12, 2026</time> · 17 min read <svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg></span></div></a><a class="post" href="/quran-reading-guide-muslim-women.html" data-cat="quran"><div class="post-img"><img src="/img/v1/kurs-bg.webp" alt="" loading="lazy"></div><div class="post-txt"><span class="kicker" style="color:#86692A">Quran Guide</span><h2>The Muslim Woman's Complete Quran Reading Guide: Tips, Schedules and Spiritual Growth</h2><p>Build a consistent Quran reading habit with cycle-aware schedules, beginner tips, and practical tools. The first guide designed for your whole reality as a Muslim woman.</p><span class="meta"><time>March 9, 2026</time> · 15 min read <svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg></span></div></a><a class="post" href="/can-muslim-women-pray-during-period.html" data-cat="period"><div class="post-img"><img src="/img/v1/empty-invite.webp" alt="" loading="lazy"></div><div class="post-txt"><span class="kicker" style="color:#9A5A62">Spiritual Guide</span><h2>Can Muslim Women Pray During Their Period? A Complete Spiritual Guide</h2><p>Learn the ruling, discover what you CAN do spiritually during menstruation, and get a daily dhikr routine. Your faith never has to pause.</p><span class="meta"><time>March 7, 2026</time> · 14 min read <svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg></span></div></a><a class="post" href="/spiritual-self-care-muslim-women.html" data-cat="life"><div class="post-img"><img src="/img/v1/bg-a-wide.webp" alt="" loading="lazy"></div><div class="post-txt"><span class="kicker" style="color:#86692A">IWD 2026</span><h2>Spiritual Self-Care for Muslim Women: A Complete Guide for International Women's Day 2026</h2><p>Discover Islamic self-care practices rooted in the Quran and Sunnah. 5 pillars of spiritual self-care, practical daily routines, and why taking care of yourself is an act of faith.</p><span class="meta"><time>March 5, 2026</time> · 14 min read <svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg></span></div></a><a class="post" href="/what-to-do-during-period-in-islam.html" data-cat="period"><div class="post-img"><img src="/img/v1/empty-waiting.webp" alt="" loading="lazy"></div><div class="post-txt"><span class="kicker" style="color:#9A5A62">Complete Guide</span><h2>What to Do During Your Period in Islam: A Complete Guide for Muslim Women</h2><p>Practical 7-day spiritual routine, scholarly guidance on what you CAN do during menstruation, and honest answers to questions you've been too shy to ask.</p><span class="meta"><time>March 4, 2026</time> · 15 min read <svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg></span></div></a></div></div></section><section class="sec" id="download" style="padding-top:0"><div class="wrap"><div class="cta"><h2>Read it <em>in the app, too</em></h2><p>Duas, dhikr, the Quran and Period Mode, together in Lunora. No ads, in 9 languages.</p><div class="stores"><a class="store light" href="https://apps.apple.com/app/apple-store/id6758765933?pt=128518745&amp;ct=web-blog-en-2&amp;mt=8"><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M128.23,30A40,40,0,0,1,167,0h1a8,8,0,0,1,0,16h-1a24,24,0,0,0-23.24,18,8,8,0,1,1-15.5-4ZM223.3,169.59a8.07,8.07,0,0,0-2.8-3.4C203.53,154.53,200,134.64,200,120c0-17.67,13.47-33.06,21.5-40.67a8,8,0,0,0,0-11.62C208.82,55.74,187.82,48,168,48a72.23,72.23,0,0,0-40,12.13,71.56,71.56,0,0,0-90.71,9.09A74.63,74.63,0,0,0,16,123.4a127,127,0,0,0,40.14,89.73A39.8,39.8,0,0,0,83.59,224h87.68a39.84,39.84,0,0,0,29.12-12.57,125,125,0,0,0,17.82-24.6C225.23,174,224.33,172,223.3,169.59Z"/></svg><span><small>Download on the</small><b>App Store</b></span></a><a class="store light" href="https://play.google.com/store/apps/details?id=com.studiolunora.lunora&amp;referrer=utm_source%3Dmylunora.app%26utm_medium%3Dweb%26utm_campaign%3Dblog_en"><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M239.82,114.18,72,18.16a16,16,0,0,0-16.12,0A15.68,15.68,0,0,0,48,31.87V224.13a15.68,15.68,0,0,0,7.92,13.67,16,16,0,0,0,16.12,0l167.78-96a15.76,15.76,0,0,0,0-27.64ZM160,139.31l18.92,18.92-88.5,50.66ZM90.4,47.1l88.53,50.67L160,116.69ZM193.31,150l-22-22,22-22,38.43,22Z"/></svg><span><small>Get it on</small><b>Google Play</b></span></a></div></div></div></section>
+</main>
+<footer class="foot"><div class="wrap foot-grid"><div class="foot-about"><a class="brand" href="/"><img src="/img/v1/app-icon.webp" alt="" width="32" height="32"><span>Lunora</span></a><p>A spiritual companion designed for Muslim women, with care and understanding at its heart.</p></div><div><h4>App</h4><a href="/#features">Features</a><a href="/period-mode.html">Period Mode</a><a href="/protect-my-prayer.html">Protect My Prayer</a><a href="/quran-reading-plan.html">Quran reading plan</a><a href="/dhikr-widget.html">Dhikr widget</a><a href="/blog.html">Blog</a></div><div><h4>Help</h4><a href="/support.html">Support</a><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a></div><div><h4>Follow</h4><a class="ig" href="https://instagram.com/mylunora.app" rel="noopener"><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></svg>@mylunora.app</a><span class="copy">© 2026 Studio Lunora</span></div></div></footer>
 </body>
 </html>

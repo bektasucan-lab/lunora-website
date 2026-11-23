@@ -1,203 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quran Reading Plan &amp; Khatam Tracker for Muslim Women | Lunora</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <meta name="theme-color" content="#5B9A8B">
-    <meta name="description" content="Lunora&#x27;s Quran reading plans split the Quran into daily portions and track your progress: Ramadan khatam in 30 days, khatam in 60 days or a year, short plans and your own. Free to download on iPhone and Android.">
-    <link rel="canonical" href="https://mylunora.app/quran-reading-plan.html">
-    <link rel="alternate" hreflang="en" href="https://mylunora.app/quran-reading-plan.html">
-    <link rel="alternate" hreflang="tr" href="https://mylunora.app/tr/kuran-okuma-plani.html">
-    <link rel="alternate" hreflang="fr" href="https://mylunora.app/fr/plan-lecture-coran.html">
-    <link rel="alternate" hreflang="de" href="https://mylunora.app/de/koran-leseplan.html">
-    <link rel="alternate" hreflang="x-default" href="https://mylunora.app/quran-reading-plan.html">
-    <meta property="og:title" content="Lunora: Quran reading plan and khatam tracker">
-    <meta property="og:description" content="Khatam plans for Ramadan, 60 days or a year, short surah plans and plans you build yourself, tracked day by day.">
-    <meta property="og:url" content="https://mylunora.app/quran-reading-plan.html">
-    <meta property="og:image" content="https://mylunora.app/img/features/quran-plan-rahle.webp">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Lunora">
-    <meta property="og:locale" content="en_US">
-    <meta name="twitter:card" content="summary">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        :root{--cream:#FDFBF7;--cream-dark:#F3EBD8;--gold:#C9A962;--gold-dark:#9A7B3D;--teal:#5B9A8B;--rose:#B08080;--dark:#2D2A26}
-        html{scroll-behavior:smooth}
-        body{font-family:'Outfit',sans-serif;background:linear-gradient(180deg,var(--cream),var(--cream-dark));color:var(--dark);line-height:1.6;overflow-x:hidden}
-        .serif{font-family:'Cormorant Garamond',serif}
-
-        /* Nav */
-        nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.5rem 2rem;transition:all .3s}
-        nav.scrolled{background:rgba(255,255,255,.9);backdrop-filter:blur(20px);padding:1rem 2rem;box-shadow:0 2px 20px rgba(0,0,0,.05)}
-        .nav-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
-        .logo{text-decoration:none;color:var(--dark);font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;display:flex;align-items:center;gap:.5rem}
-        .logo-icon{width:32px;height:32px;border-radius:8px}
-        .nav-links{display:flex;gap:2rem;align-items:center}
-        .nav-links a{text-decoration:none;color:rgba(45,42,38,.7);font-size:.9rem;transition:color .3s}
-        .nav-links a:hover{color:var(--gold)}
-        .nav-cta{background:var(--gold)!important;color:#fff!important;padding:.6rem 1.2rem;border-radius:50px}
-        .hamburger{display:none;background:none;border:none;cursor:pointer;padding:.5rem;flex-direction:column;gap:5px}
-        .hamburger span{display:block;width:22px;height:2px;background:var(--dark);border-radius:2px;transition:all .3s}
-        @media(max-width:768px){
-            nav{padding:1rem 1rem}
-            nav.scrolled{padding:.75rem 1rem}
-            .hamburger{display:flex}
-            .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(255,255,255,.98);backdrop-filter:blur(20px);flex-direction:column;padding:1.5rem 2rem;gap:1rem;box-shadow:0 10px 30px rgba(0,0,0,.1)}
-            .nav-links.open{display:flex}
-            .nav-cta{text-align:center}
-        }
-
-        /* Language Switcher */
-        .lang-switch{display:inline-flex;align-items:center;gap:.25rem;background:rgba(45,42,38,.05);border-radius:50px;padding:.25rem;font-size:.8rem}
-        .lang-switch a{text-decoration:none;padding:.3rem .6rem;border-radius:50px;color:rgba(45,42,38,.5);transition:all .3s}
-        .lang-switch a.active{background:var(--gold);color:#fff}
-        .lang-switch a:hover:not(.active){color:var(--dark)}
-
-        /* Hero */
-        .page-hero{padding:8rem 2rem 4rem;position:relative;overflow:hidden}
-        .hero-bg{position:absolute;top:15%;left:10%;width:400px;height:400px;max-width:80vw;background:rgba(201,169,98,.15);border-radius:50%;filter:blur(80px);pointer-events:none}
-        .hero-bg2{position:absolute;top:45%;right:8%;width:350px;height:350px;max-width:70vw;background:rgba(176,128,128,.12);border-radius:50%;filter:blur(80px);pointer-events:none}
-        .hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.25fr .75fr;gap:4rem;align-items:center;position:relative}
-        @media(max-width:1024px){.hero-inner{grid-template-columns:1fr;gap:3rem}}
-        .crumbs{font-size:.8rem;color:rgba(45,42,38,.5);margin-bottom:1.25rem}
-        .crumbs a{color:rgba(45,42,38,.6);text-decoration:none}
-        .crumbs a:hover{color:var(--gold-dark)}
-        .hero-badge{display:inline-block;padding:.5rem 1rem;background:rgba(201,169,98,.1);color:var(--gold-dark);border-radius:50px;font-size:.875rem;margin-bottom:1.25rem;border:1px solid rgba(201,169,98,.2)}
-        .page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,5vw,3.6rem);font-weight:600;line-height:1.1;margin-bottom:1.5rem}
-        .summary{font-size:1.1rem;color:rgba(45,42,38,.75);margin-bottom:2rem;max-width:620px}
-        .summary p+p{margin-top:.75rem}
-
-        .btns{display:flex;gap:1rem;flex-wrap:wrap}
-        .btn{display:inline-flex;align-items:center;gap:.75rem;padding:1rem 1.5rem;border-radius:1rem;text-decoration:none;font-weight:500;transition:all .3s}
-        .btn-dark{background:var(--dark);color:var(--cream)}
-        .btn-dark:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.15)}
-        .btn-light{background:#fff;color:var(--dark);border:1px solid rgba(45,42,38,.1)}
-        .btn-light:hover{border-color:var(--gold);transform:translateY(-2px)}
-        .btn svg{width:24px;height:24px}
-        .btn-text{text-align:left}
-        .btn-text small{display:block;font-size:.65rem;opacity:.7}
-        .btn-text strong{font-size:.9rem}
-        .trust{display:flex;gap:1.5rem;margin-top:2rem;font-size:.875rem;color:rgba(45,42,38,.5);flex-wrap:wrap}
-
-        .shot-wrap{display:flex;justify-content:center;position:relative}
-        .shot-glow{position:absolute;inset:-10%;background:radial-gradient(circle,rgba(201,169,98,.25),rgba(176,128,128,.15),transparent 70%);border-radius:50%;filter:blur(40px)}
-        .shot{position:relative;width:100%;max-width:300px;height:auto;border-radius:1.75rem;box-shadow:0 30px 70px rgba(0,0,0,.15);display:block}
-        .shot-art{position:relative;width:100%;max-width:340px;height:auto;display:block;background:rgba(255,255,255,.6);border-radius:2rem;border:1px solid rgba(201,169,98,.15);padding:1.5rem;box-shadow:0 30px 70px rgba(0,0,0,.08)}
-
-        /* Sections */
-        section{padding:4.5rem 2rem}
-        .container{max-width:1100px;margin:0 auto}
-        .section-head{text-align:center;margin-bottom:2.5rem}
-        .badge{display:inline-block;padding:.4rem .9rem;border-radius:50px;font-size:.8rem;margin-bottom:1rem}
-        .badge-rose{background:rgba(176,128,128,.1);color:var(--rose);border:1px solid rgba(176,128,128,.2)}
-        .badge-teal{background:rgba(91,154,139,.1);color:var(--teal);border:1px solid rgba(91,154,139,.2)}
-        .badge-gold{background:rgba(201,169,98,.1);color:var(--gold-dark);border:1px solid rgba(201,169,98,.2)}
-        .section-head h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:.75rem;line-height:1.15}
-        .section-head p{font-size:1.05rem;color:rgba(45,42,38,.6);max-width:600px;margin:0 auto}
-
-        /* Feature cards */
-        .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
-        @media(max-width:900px){.features-grid{grid-template-columns:repeat(2,1fr)}}
-        @media(max-width:600px){.features-grid{grid-template-columns:1fr}}
-        .fcard{padding:1.75rem;background:rgba(255,255,255,.6);border-radius:1.25rem;border:1px solid rgba(201,169,98,.15);transition:all .3s}
-        .fcard:hover{transform:translateY(-5px);box-shadow:0 15px 40px rgba(0,0,0,.05)}
-        .fcard .icn{font-size:2rem;margin-bottom:.75rem;display:block}
-        .fcard h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;margin-bottom:.5rem;line-height:1.2}
-        .fcard p{color:rgba(45,42,38,.65);font-size:.92rem}
-
-        /* Steps */
-        .steps-sec{background:linear-gradient(180deg,var(--cream-dark),var(--cream))}
-        .steps{list-style:none;max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:1rem}
-        .step{display:flex;gap:1.1rem;align-items:flex-start;padding:1.25rem 1.4rem;background:rgba(255,255,255,.65);border-radius:1rem;border:1px solid rgba(91,154,139,.18)}
-        .step-num{flex-shrink:0;width:2.1rem;height:2.1rem;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:.95rem}
-        .step h3{font-size:1rem;font-weight:600;margin-bottom:.2rem}
-        .step p{font-size:.92rem;color:rgba(45,42,38,.65)}
-
-        /* Detail blocks */
-        .detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;max-width:960px;margin:0 auto}
-        @media(max-width:760px){.detail-grid{grid-template-columns:1fr}}
-        .detail{padding:1.6rem;background:rgba(255,255,255,.6);border-radius:1.25rem;border:1px solid rgba(176,128,128,.2)}
-        .detail h3{font-family:'Cormorant Garamond',serif;font-size:1.35rem;margin-bottom:.6rem;line-height:1.2}
-        .detail p,.detail li{font-size:.92rem;color:rgba(45,42,38,.7)}
-        .detail p+p{margin-top:.6rem}
-        .detail ul{padding-left:1.1rem;display:flex;flex-direction:column;gap:.35rem}
-        .note{max-width:960px;margin:1.5rem auto 0;padding:1.1rem 1.4rem;background:rgba(255,255,255,.45);border-radius:1rem;border-left:4px solid var(--rose);font-size:.92rem;color:rgba(45,42,38,.7)}
-
-        /* FAQ */
-        .faq{background:linear-gradient(180deg,var(--cream),var(--cream-dark))}
-        .faq-list{max-width:760px;margin:0 auto}
-        .faq-item{background:rgba(255,255,255,.6);border:1px solid rgba(201,169,98,.15);border-radius:1rem;margin-bottom:.75rem;overflow:hidden;transition:all .3s}
-        .faq-item:hover{border-color:var(--gold)}
-        .faq-q{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 1.5rem;cursor:pointer;font-weight:500;font-size:1rem;gap:1rem;width:100%;background:none;border:none;text-align:left;font-family:inherit;color:inherit}
-        .faq-q::after{content:'+';font-size:1.3rem;color:var(--gold);transition:transform .3s;flex-shrink:0}
-        .faq-item.open .faq-q::after{transform:rotate(45deg)}
-        .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
-        .faq-a p{padding:0 1.5rem 1.25rem;color:rgba(45,42,38,.65);font-size:.95rem;line-height:1.7}
-
-        /* Related */
-        .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:960px;margin:0 auto}
-        @media(max-width:900px){.related-grid{grid-template-columns:1fr}}
-        .rcard{display:block;padding:1.4rem;background:rgba(255,255,255,.6);border-radius:1.1rem;border:1px solid rgba(201,169,98,.15);text-decoration:none;color:var(--dark);transition:all .3s}
-        .rcard:hover{border-color:var(--gold);transform:translateY(-3px)}
-        .rcard .icn{font-size:1.5rem}
-        .rcard h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;margin:.3rem 0 .25rem}
-        .rcard p{font-size:.88rem;color:rgba(45,42,38,.6)}
-        .reading{max-width:960px;margin:2rem auto 0;text-align:center}
-        .reading h3{font-size:.95rem;font-weight:600;margin-bottom:.75rem;color:rgba(45,42,38,.7)}
-        .reading ul{list-style:none;display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center}
-        .reading a{display:inline-block;padding:.5rem .95rem;border-radius:50px;background:rgba(91,154,139,.1);border:1px solid rgba(91,154,139,.2);color:var(--teal);text-decoration:none;font-size:.88rem}
-        .reading a:hover{background:rgba(91,154,139,.18)}
-
-        /* Download */
-        .download{background:linear-gradient(180deg,var(--cream),var(--dark) 40%,#1F1D1A);text-align:center;padding:6rem 2rem}
-        .download .container{padding-top:3rem}
-        .download .badge{background:rgba(201,169,98,.2);color:#E8D5A8;border:1px solid rgba(201,169,98,.3)}
-        .download h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);color:var(--cream);margin-bottom:1rem}
-        .download .container>p{color:rgba(253,251,247,.6);font-size:1.1rem;margin-bottom:2.5rem;max-width:460px;margin-left:auto;margin-right:auto}
-        .dl-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
-        .dl-btn{display:inline-flex;align-items:center;gap:.75rem;padding:1rem 1.75rem;border-radius:1rem;text-decoration:none;transition:all .3s}
-        .dl-btn svg{width:26px;height:26px}
-        .dl-btn-light{background:var(--cream);color:var(--dark)}
-        .dl-btn-light:hover{background:#fff;transform:translateY(-2px)}
-        .dl-btn-outline{background:transparent;color:var(--cream);border:2px solid rgba(253,251,247,.3)}
-        .dl-btn-outline:hover{background:rgba(253,251,247,.1);border-color:rgba(253,251,247,.5);transform:translateY(-2px)}
-        .greeting{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:rgba(201,169,98,.7)}
-
-        /* Footer */
-        footer{background:#1F1D1A;color:var(--cream);padding:3rem 2rem 1.5rem}
-        .footer-inner{max-width:1200px;margin:0 auto}
-        .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:2rem}
-        @media(max-width:768px){.footer-grid{grid-template-columns:1fr;gap:1.5rem}}
-        .footer-brand .logo{margin-bottom:.75rem}
-        .footer-brand p{color:rgba(253,251,247,.5);max-width:280px;font-size:.9rem}
-        .footer-links h4{color:var(--gold);font-weight:600;margin-bottom:.75rem;font-size:.9rem}
-        .footer-links ul{list-style:none}
-        .footer-links li{margin-bottom:.4rem}
-        .footer-links a{color:rgba(253,251,247,.5);text-decoration:none;font-size:.9rem;transition:color .3s}
-        .footer-links a:hover{color:var(--gold)}
-        .footer-divider{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.2;margin-bottom:1.5rem}
-        .footer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.85rem;color:rgba(253,251,247,.4)}
-        .footer-bottom .tagline{font-style:italic}
-
-        @media(max-width:600px){
-            .page-hero{padding:7rem 1rem 3rem}
-            section{padding:3.5rem 1rem}
-            .download{padding:5rem 1rem}
-            footer{padding:3rem 1rem 1.5rem}
-            .fcard,.detail{padding:1.4rem}
-            .step{padding:1.1rem}
-            .faq-q{padding:1.1rem 1.1rem}
-            .faq-a p{padding:0 1.1rem 1.1rem}
-        }
-    </style>
-    <script type="application/ld+json">
-{
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quran Reading Plan &amp; Khatam Tracker for Muslim Women | Lunora</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="theme-color" content="#3F6B55">
+<meta name="description" content="Lunora&#x27;s Quran reading plans split the Quran into daily portions and track your progress: Ramadan khatam in 30 days, khatam in 60 days or a year, short plans and your own. Free to download on iPhone and Android.">
+<link rel="canonical" href="https://mylunora.app/quran-reading-plan.html">
+<link rel="alternate" hreflang="en" href="https://mylunora.app/quran-reading-plan.html">
+<link rel="alternate" hreflang="tr" href="https://mylunora.app/tr/kuran-okuma-plani.html">
+<link rel="alternate" hreflang="fr" href="https://mylunora.app/fr/plan-lecture-coran.html">
+<link rel="alternate" hreflang="de" href="https://mylunora.app/de/koran-leseplan.html">
+<link rel="alternate" hreflang="x-default" href="https://mylunora.app/quran-reading-plan.html">
+<meta property="og:title" content="Lunora: Quran reading plan and khatam tracker">
+<meta property="og:description" content="Khatam plans for Ramadan, 60 days or a year, short surah plans and plans you build yourself, tracked day by day.">
+<meta property="og:url" content="https://mylunora.app/quran-reading-plan.html">
+<meta property="og:image" content="https://mylunora.app/img/features/quran-plan-rahle.webp">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lunora">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/v1.css?v=1">
+<script src="/js/v1.js?v=1" defer></script>
+<script type="application/ld+json">{
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
@@ -250,10 +80,8 @@
             }
         }
     ]
-}
-    </script>
-    <script type="application/ld+json">
-{
+}</script>
+<script type="application/ld+json">{
     "@context": "https://schema.org",
     "@graph": [
         {
@@ -332,238 +160,13 @@
             ]
         }
     ]
-}
-    </script>
+}</script>
 </head>
 <body>
-    <nav id="nav">
-        <div class="nav-inner">
-            <a href="/" class="logo"><img src="/icon-192.png" alt="Lunora" class="logo-icon"> Lunora</a>
-            <div class="nav-links">
-                <a href="/#features">Features</a>
-                <a href="/period-mode.html">Period Mode</a>
-                <a href="/blog.html">Blog</a>
-                <a href="#download" class="nav-cta">Download</a>
-                <div class="lang-switch">
-                    <a href="/quran-reading-plan.html" class="active" hreflang="en">EN</a>
-                    <a href="/tr/kuran-okuma-plani.html" hreflang="tr">TR</a>
-                    <a href="/fr/plan-lecture-coran.html" hreflang="fr">FR</a>
-                    <a href="/de/koran-leseplan.html" hreflang="de">DE</a>
-                </div>
-            </div>
-            <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
-
-    <header class="page-hero">
-        <div class="hero-bg"></div>
-        <div class="hero-bg2"></div>
-        <div class="hero-inner">
-            <div>
-                <p class="crumbs"><a href="/">Home</a> › <a href="/#features">Features</a> › Quran reading plan</p>
-                <span class="hero-badge">📖 Quran</span>
-                <h1 class="serif">Quran reading plan and khatam tracker</h1>
-                <div class="summary">
-                    <p>Lunora’s reading plans divide the Quran into daily portions and track your progress day by day, from a 30-day Ramadan khatam (one juz a day) to a khatam in 60 days or in a year. You can also build a plan from the surahs you choose, and pause a plan during your period if you wish. Lunora is an Islamic app for Muslim women, free to download on iPhone and Android.</p>
-                </div>
-                <div class="btns">
-                    <a href="https://apps.apple.com/app/apple-store/id6758765933?pt=128518745&amp;ct=web-quranplan-en-1&amp;mt=8" class="btn btn-dark">
-                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-                        <span class="btn-text"><small>Download on the</small><strong>App Store</strong></span>
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.studiolunora.lunora&amp;referrer=utm_source%3Dmylunora.app%26utm_medium%3Dweb%26utm_campaign%3Dquran_plan_hero_en" class="btn btn-light">
-                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
-                        <span class="btn-text"><small>Get it on</small><strong>Google Play</strong></span>
-                    </a>
-                </div>
-                <div class="trust"><span>📱 iPhone &amp; Android</span><span>🚫 No ads</span><span>🌍 9 languages</span></div>
-            </div>
-            <div class="shot-wrap">
-                <div class="shot-glow"></div>
-                <img class="shot-art" src="/img/features/quran-plan-rahle.webp" alt="Watercolour of an open Quran on a wooden rahle, the illustration Lunora uses for its khatam plan" width="384" height="384">
-            </div>
-        </div>
-    </header>
-
-    <main>
-    <section id="what">
-        <div class="container">
-            <div class="section-head">
-                <span class="badge badge-teal">📅 The plans</span>
-                <h2 class="serif">Ten ready-made plans, or your own</h2>
-                <p>Three khatam plans for reading the whole Quran, seven shorter plans, and a custom plan built from the surahs you pick.</p>
-            </div>
-            <div class="features-grid">
-                <div class="fcard"><span class="icn">🌙</span><h3>Ramadan khatam</h3><p>30 days, one juz a day, each day starting from the first verse of its juz.</p></div>
-                <div class="fcard"><span class="icn">📅</span><h3>Khatam in 60 days</h3><p>The whole Quran in two months: about ten pages of the Madinah mushaf a day, with the page numbers for each day.</p></div>
-                <div class="fcard"><span class="icn">🕰️</span><h3>Khatam in a year</h3><p>One to two pages a day for 365 days. A little each day, without stopping.</p></div>
-                <div class="fcard"><span class="icn">🌱</span><h3>Seven short plans</h3><p>For beginners (Al-Fatiha, then short surahs), Friday surahs, Morning surahs, Night surahs, Healing verses, Calming surahs and 7 surahs in 7 days.</p></div>
-                <div class="fcard"><span class="icn">✍️</span><h3>Your own plan</h3><p>Choose the surahs, give the plan a name and an icon if you like, then read one or two surahs a day or set the number of days yourself.</p></div>
-                <div class="fcard"><span class="icn">🌸</span><h3>Your choice during your period</h3><p>When Period Mode is on, you decide whether to pause or continue. A paused plan doesn’t move its day count and continues from the same day.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="steps-sec" id="how-it-works">
-        <div class="container">
-            <div class="section-head">
-                <span class="badge badge-gold">🧭 How it works</span>
-                <h2 class="serif">A plan that tells you what to read today</h2>
-            </div>
-            <ol class="steps">
-                <li class="step"><span class="step-num">1</span><div><h3>Pick a plan</h3><p>Open Reading plans in Lunora and start a khatam plan, a short plan, or create your own.</p></div></li>
-                <li class="step"><span class="step-num">2</span><div><h3>See today’s reading</h3><p>Every day shows exactly what to read: a page range, a juz or a surah. The whole plan is listed day by day.</p></div></li>
-                <li class="step"><span class="step-num">3</span><div><h3>Read in the Quran reader</h3><p>Read as a list with translation and transliteration, or as mushaf pages with the Madinah mushaf layout. When you finish, tap “I’ve read it”.</p></div></li>
-                <li class="step"><span class="step-num">4</span><div><h3>Track your progress</h3><p>The plan shows which day you are on and what percentage is done. If you switch to another plan, your progress is kept, and you can go back to it any time.</p></div></li>
-                <li class="step"><span class="step-num">5</span><div><h3>Complete it</h3><p>On the last day Lunora marks the plan as completed, with “May Allah accept it”. You can start it again or choose another plan.</p></div></li>
-            </ol>
-        </div>
-    </section>
-
-    <section id="details">
-        <div class="container">
-            <div class="section-head">
-                <span class="badge badge-rose">📖 The Quran in Lunora</span>
-                <h2 class="serif">Where you read your plan</h2>
-            </div>
-            <div class="detail-grid">
-                <div class="detail">
-                    <h3>The reader</h3>
-                    <p>All 114 surahs in Arabic with translation, as a list or as mushaf pages, with tajweed colours.</p>
-                    <p>Listen to five reciters, bookmark verses, add notes and share a verse as a card. More reciters and offline listening by juz come with Lunora+.</p>
-                </div>
-                <div class="detail">
-                    <h3>On your home screen</h3>
-                    <p>The “Where you left off” widget shows the surah and verse you stopped on, so you can pick up your reading in one tap.</p>
-                    <p>The Healing verses plan collects verses read with the intention of healing; as the app itself says, they do not replace treatment.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="faq" id="faq">
-        <div class="container">
-            <div class="section-head">
-                <span class="badge badge-gold">❓ Common Questions</span>
-                <h2 class="serif">Frequently asked questions</h2>
-            </div>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <button type="button" class="faq-q" onclick="this.parentElement.classList.toggle('open');let a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">Does Lunora have a khatam (hatim) tracker?</button>
-                    <div class="faq-a"><p>Yes. Lunora has three khatam plans: Ramadan khatam (30 days, one juz a day), khatam in 60 days (about ten pages a day) and khatam in a year (one to two pages a day). The app shows which day of the plan you are on and how much of it is done.</p></div>
-                </div>
-                <div class="faq-item">
-                    <button type="button" class="faq-q" onclick="this.parentElement.classList.toggle('open');let a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">Can I make my own Quran reading plan?</button>
-                    <div class="faq-a"><p>Yes. Choose the surahs you want, add a name and an icon if you like, then read one surah a day, two a day, or set the number of days yourself. A day may then hold more than one surah.</p></div>
-                </div>
-                <div class="faq-item">
-                    <button type="button" class="faq-q" onclick="this.parentElement.classList.toggle('open');let a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">How do I mark a day as read?</button>
-                    <div class="faq-a"><p>Open the day&#x27;s reading from the plan, read it in Lunora&#x27;s Quran reader and tap “I&#x27;ve read it”. The day is marked as done and the plan moves on to the next one.</p></div>
-                </div>
-                <div class="faq-item">
-                    <button type="button" class="faq-q" onclick="this.parentElement.classList.toggle('open');let a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">What happens to my reading plan during my period?</button>
-                    <div class="faq-a"><p>If Period Mode is on, Lunora leaves the choice to you: pause the plan or continue. While it is paused the day count does not advance, and it carries on from the same day when you turn Period Mode off. The plan also links to the Period Mode guide, which lists the views of the four madhhabs on reading the Quran during menstruation.</p></div>
-                </div>
-                <div class="faq-item">
-                    <button type="button" class="faq-q" onclick="this.parentElement.classList.toggle('open');let a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">Which mushaf layout does Lunora use?</button>
-                    <div class="faq-a"><p>The page view follows the page layout of the Madinah mushaf, 604 pages, and the 60-day and one-year khatam plans give their daily readings as page ranges of that mushaf. Translation and transliteration are available in list view.</p></div>
-                </div>
-                <div class="faq-item">
-                    <button type="button" class="faq-q" onclick="this.parentElement.classList.toggle('open');let a=this.nextElementSibling;a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+'px'">Is Lunora available on iPhone and Android?</button>
-                    <div class="faq-a"><p>Lunora is free to download from the App Store and Google Play and has no ads. Lunora+ is a subscription that unlocks the full app, and you can start it with a free trial.</p></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="more">
-        <div class="container">
-            <div class="section-head">
-                <span class="badge badge-teal">✨ More from Lunora</span>
-                <h2 class="serif">Other features</h2>
-            </div>
-            <div class="related-grid">
-                <a class="rcard" href="/dhikr-widget.html"><span class="icn">📿</span><h3>Dhikr widget</h3><p>Count dhikr from your home screen, with a sourced dhikr library and the 99 Names.</p></a>
-                <a class="rcard" href="/protect-my-prayer.html"><span class="icn">🔒</span><h3>Protect My Prayer</h3><p>At prayer time the apps you choose wait until you mark your prayer.</p></a>
-                <a class="rcard" href="/period-mode.html"><span class="icn">🌸</span><h3>Period Mode</h3><p>Worship during your period, with the views of the four madhhabs and a qada fast counter.</p></a>
-            </div>
-            <div class="reading">
-                <h3>Related reading</h3>
-                <ul><li><a href="/quran-reading-guide-muslim-women.html">Quran reading guide for Muslim women</a></li><li><a href="/what-to-do-during-period-in-islam.html">What to do during your period in Islam</a></li><li><a href="/blog.html">All articles on the Lunora blog</a></li></ul>
-            </div>
-        </div>
-    </section>
-    </main>
-
-    <section class="download" id="download">
-        <div class="container">
-            <span class="badge">🌙 Begin Your Journey</span>
-            <h2 class="serif">Download Lunora</h2>
-            <p>Free to download on iPhone and Android, with no ads. A spiritual companion designed with the care and understanding you deserve.</p>
-            <div class="dl-btns">
-                <a href="https://apps.apple.com/app/apple-store/id6758765933?pt=128518745&amp;ct=web-quranplan-en-2&amp;mt=8" class="dl-btn dl-btn-light">
-                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-                    <span class="btn-text"><small>Download on the</small><strong>App Store</strong></span>
-                </a>
-                <a href="https://play.google.com/store/apps/details?id=com.studiolunora.lunora&amp;referrer=utm_source%3Dmylunora.app%26utm_medium%3Dweb%26utm_campaign%3Dquran_plan_download_en" class="dl-btn dl-btn-outline">
-                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
-                    <span class="btn-text"><small>Get it on</small><strong>Google Play</strong></span>
-                </a>
-            </div>
-            <p class="greeting">As-salamu alaykum, sister. 🤍</p>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-inner">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="/" class="logo" style="color:var(--cream)"><img src="/icon-192.png" alt="Lunora" class="logo-icon"> Lunora</a>
-                    <p>A spiritual companion designed for Muslim women, with care and understanding at its heart.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>App</h4>
-                    <ul>
-                        <li><a href="/dhikr-widget.html">Dhikr widget</a></li>
-                        <li><a href="/quran-reading-plan.html">Quran reading plan</a></li>
-                        <li><a href="/protect-my-prayer.html">Protect My Prayer</a></li>
-                        <li><a href="/period-mode.html">Period Mode</a></li>
-                        <li><a href="#download">Download</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="/privacy.html">Privacy Policy</a></li>
-                        <li><a href="/terms.html">Terms of Service</a></li>
-                        <li><a href="/support.html">Support</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Follow Us</h4>
-                    <ul>
-                        <li><a href="https://instagram.com/mylunora.app" target="_blank" rel="noopener noreferrer">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:4px" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                            Instagram
-                        </a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-divider"></div>
-            <div class="footer-bottom">
-                <p>© 2026 Lunora. Made with 💜 by Studio Lunora</p>
-                <p class="tagline">Your spiritual companion, designed with love.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        const nav = document.getElementById('nav');
-        window.addEventListener('scroll', () => {
-            nav.classList.toggle('scrolled', window.scrollY > 50);
-        });
-    </script>
+<a class="skip" href="#main">Skip to content</a><header class="nav"><div class="wrap nav-in"><a class="brand" href="/"><img src="/img/v1/app-icon.webp" alt="" width="36" height="36"><span>Lunora</span></a><nav class="nav-links" aria-label="Menu"><a href="/#features" aria-current="page">Features</a><a href="/period-mode.html">Period Mode</a><a href="/protect-my-prayer.html">Protect My Prayer</a><a href="/blog.html">Blog</a><a href="/support.html">Support</a></nav><div class="nav-end"><details class="lang"><summary aria-label="Language">EN<svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></summary><ul><li><a href="/quran-reading-plan.html" hreflang="en" lang="en" aria-current="true">English<small>EN</small></a></li><li><a href="/tr/kuran-okuma-plani.html" hreflang="tr" lang="tr">Türkçe<small>TR</small></a></li><li><a href="/de/koran-leseplan.html" hreflang="de" lang="de">Deutsch<small>DE</small></a></li><li><a href="/fr/plan-lecture-coran.html" hreflang="fr" lang="fr">Français<small>FR</small></a></li></ul></details><button class="burger" type="button" aria-expanded="false" aria-controls="panel" aria-label="Menu"><svg viewBox="0 0 256 256" class="ic ic-list" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></svg><svg viewBox="0 0 256 256" class="ic ic-x" aria-hidden="true" focusable="false"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></button></div></div><div class="panel" id="panel"><a href="/#features" aria-current="page">Features</a><a href="/period-mode.html">Period Mode</a><a href="/protect-my-prayer.html">Protect My Prayer</a><a href="/blog.html">Blog</a><a href="/support.html">Support</a><div class="panel-langs"><a href="/tr/kuran-okuma-plani.html" hreflang="tr" lang="tr">Türkçe</a><a href="/de/koran-leseplan.html" hreflang="de" lang="de">Deutsch</a><a href="/fr/plan-lecture-coran.html" hreflang="fr" lang="fr">Français</a></div></div></header>
+<main id="main">
+<section class="phero"><img class="bg" src="/img/v1/bg-c-wide.webp" alt="" style="--pos:40% 50%"><div class="phero-wash"></div><div class="wrap phero-grid"><div class="phero-txt"><ol class="crumbs"><li><a href="/">Home</a></li><li><a href="/#features">Features</a></li><li aria-current="page">Quran reading plan</li></ol><span class="pill">Quran</span><h1>Quran reading plan and khatam tracker</h1><p class="lead">Lunora’s reading plans divide the Quran into daily portions and track your progress day by day, from a 30-day Ramadan khatam (one juz a day) to a khatam in 60 days or in a year. You can also build a plan from the surahs you choose, and pause a plan during your period if you wish. Lunora is an Islamic app for Muslim women, free to download on iPhone and Android.</p><div class="stores"><a class="store" href="https://apps.apple.com/app/apple-store/id6758765933?pt=128518745&amp;ct=web-quranplan-en-1&amp;mt=8"><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M128.23,30A40,40,0,0,1,167,0h1a8,8,0,0,1,0,16h-1a24,24,0,0,0-23.24,18,8,8,0,1,1-15.5-4ZM223.3,169.59a8.07,8.07,0,0,0-2.8-3.4C203.53,154.53,200,134.64,200,120c0-17.67,13.47-33.06,21.5-40.67a8,8,0,0,0,0-11.62C208.82,55.74,187.82,48,168,48a72.23,72.23,0,0,0-40,12.13,71.56,71.56,0,0,0-90.71,9.09A74.63,74.63,0,0,0,16,123.4a127,127,0,0,0,40.14,89.73A39.8,39.8,0,0,0,83.59,224h87.68a39.84,39.84,0,0,0,29.12-12.57,125,125,0,0,0,17.82-24.6C225.23,174,224.33,172,223.3,169.59Z"/></svg><span><small>Download on the</small><b>App Store</b></span></a><a class="store" href="https://play.google.com/store/apps/details?id=com.studiolunora.lunora&amp;referrer=utm_source%3Dmylunora.app%26utm_medium%3Dweb%26utm_campaign%3Dquran_plan_hero_en"><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M239.82,114.18,72,18.16a16,16,0,0,0-16.12,0A15.68,15.68,0,0,0,48,31.87V224.13a15.68,15.68,0,0,0,7.92,13.67,16,16,0,0,0,16.12,0l167.78-96a15.76,15.76,0,0,0,0-27.64ZM160,139.31l18.92,18.92-88.5,50.66ZM90.4,47.1l88.53,50.67L160,116.69ZM193.31,150l-22-22,22-22,38.43,22Z"/></svg><span><small>Get it on</small><b>Google Play</b></span></a></div><div class="trust"><span><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M176,16H80A24,24,0,0,0,56,40V216a24,24,0,0,0,24,24h96a24,24,0,0,0,24-24V40A24,24,0,0,0,176,16ZM72,64H184V192H72Zm8-32h96a8,8,0,0,1,8,8v8H72V40A8,8,0,0,1,80,32Zm96,192H80a8,8,0,0,1-8-8v-8H184v8A8,8,0,0,1,176,224Z"/></svg>iPhone &amp; Android</span><span><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm88,104a87.56,87.56,0,0,1-20.41,56.28L71.72,60.4A88,88,0,0,1,216,128ZM40,128A87.56,87.56,0,0,1,60.41,71.72L184.28,195.6A88,88,0,0,1,40,128Z"/></svg>No ads</span><span><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm88,104a87.62,87.62,0,0,1-6.4,32.94l-44.7-27.49a15.92,15.92,0,0,0-6.24-2.23l-22.82-3.08a16.11,16.11,0,0,0-16,7.86h-8.72l-3.8-7.86a15.91,15.91,0,0,0-11-8.67l-8-1.73L96.14,104h16.71a16.06,16.06,0,0,0,7.73-2l12.25-6.76a16.62,16.62,0,0,0,3-2.14l26.91-24.34A15.93,15.93,0,0,0,166,49.1l-.36-.65A88.11,88.11,0,0,1,216,128ZM143.31,41.34,152,56.9,125.09,81.24,112.85,88H96.14a16,16,0,0,0-13.88,8l-8.73,15.23L63.38,84.19,74.32,58.32a87.87,87.87,0,0,1,69-17ZM40,128a87.53,87.53,0,0,1,8.54-37.8l11.34,30.27a16,16,0,0,0,11.62,10l21.43,4.61L96.74,143a16.09,16.09,0,0,0,14.4,9h1.48l-7.23,16.23a16,16,0,0,0,2.86,17.37l.14.14L128,205.94l-1.94,10A88.11,88.11,0,0,1,40,128Zm102.58,86.78,1.13-5.81a16.09,16.09,0,0,0-4-13.9,1.85,1.85,0,0,1-.14-.14L120,174.74,133.7,144l22.82,3.08,45.72,28.12A88.18,88.18,0,0,1,142.58,214.78Z"/></svg>9 languages</span></div></div><div class="phero-vis"><div class="plans"><div class="plan"><img src="/img/v1/ic-lantern.webp" alt="" width="110" height="110"><b>Ramadan khatam</b></div><div class="plan"><img src="/img/v1/ic-rahle.webp" alt="" width="110" height="110"><b>Khatam in 60 days</b></div><div class="plan"><img src="/img/v1/ic-quran-stand.webp" alt="" width="110" height="110"><b>Khatam in a year</b></div><div class="plan"><img src="/img/v1/ic-book-pink.webp" alt="" width="110" height="110"><b>Seven short plans</b></div></div></div></div></section><section class="sec " id="what"><div class="wrap"><div class="head"><span class="kicker" style="color:#86692A">The plans</span><h2>Ten ready-made plans, or your own</h2><p>Three khatam plans for reading the whole Quran, seven shorter plans, and a custom plan built from the surahs you pick.</p></div><div class="cards"><article class="card"><div class="card-img"><img src="/img/v1/ic-lantern.webp" alt="" loading="lazy" width="130" height="130"></div><div class="card-txt"><h3>Ramadan khatam</h3><p>30 days, one juz a day, each day starting from the first verse of its juz.</p></div></article><article class="card"><div class="card-img"><img src="/img/v1/ic-rahle.webp" alt="" loading="lazy" width="130" height="130"></div><div class="card-txt"><h3>Khatam in 60 days</h3><p>The whole Quran in two months: about ten pages of the Madinah mushaf a day, with the page numbers for each day.</p></div></article><article class="card"><div class="card-img"><img src="/img/v1/ic-quran-stand.webp" alt="" loading="lazy" width="130" height="130"></div><div class="card-txt"><h3>Khatam in a year</h3><p>One to two pages a day for 365 days. A little each day, without stopping.</p></div></article><article class="card"><div class="card-img"><img src="/img/v1/ic-book-pink.webp" alt="" loading="lazy" width="130" height="130"></div><div class="card-txt"><h3>Seven short plans</h3><p>For beginners (Al-Fatiha, then short surahs), Friday surahs, Morning surahs, Night surahs, Healing verses, Calming surahs and 7 surahs in 7 days.</p></div></article><article class="card"><div class="card-img"><img src="/img/v1/ic-pen.webp" alt="" loading="lazy" width="130" height="130"></div><div class="card-txt"><h3>Your own plan</h3><p>Choose the surahs, give the plan a name and an icon if you like, then read one or two surahs a day or set the number of days yourself.</p></div></article><article class="card"><div class="card-img"><img src="/img/v1/sakura.webp" alt="" loading="lazy" width="130" height="130"></div><div class="card-txt"><h3>Your choice during your period</h3><p>When Period Mode is on, you decide whether to pause or continue. A paused plan doesn’t move its day count and continues from the same day.</p></div></article></div></div></section><section class="sec" id="how-it-works" style="padding-top:0;--acc:#86692A;--line:#C4A35A"><div class="wrap"><div class="head"><span class="kicker" style="color:#86692A">How it works</span><h2>A plan that tells you what to read today</h2></div><ol class="steps" style="--n:5"><li class="step"><span class="num">1</span><h3>Pick a plan</h3><p>Open Reading plans in Lunora and start a khatam plan, a short plan, or create your own.</p></li><li class="step"><span class="num">2</span><h3>See today’s reading</h3><p>Every day shows exactly what to read: a page range, a juz or a surah. The whole plan is listed day by day.</p></li><li class="step"><span class="num">3</span><h3>Read in the Quran reader</h3><p>Read as a list with translation and transliteration, or as mushaf pages with the Madinah mushaf layout. When you finish, tap “I’ve read it”.</p></li><li class="step"><span class="num">4</span><h3>Track your progress</h3><p>The plan shows which day you are on and what percentage is done. If you switch to another plan, your progress is kept, and you can go back to it any time.</p></li><li class="step"><span class="num">5</span><h3>Complete it</h3><p>On the last day Lunora marks the plan as completed, with “May Allah accept it”. You can start it again or choose another plan.</p></li></ol></div></section><section id="details"><div class="wrap"><div class="dband gold"><img class="bg" src="/img/v1/bg-c-wide.webp" alt="" loading="lazy"><div class="band-in"><div class="band-txt"><span class="pill">The Quran in Lunora</span><h2>Where you read your plan</h2></div><div class="facts"><div class="fact"><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M232,48H168a32,32,0,0,0-32,32v87.73a8.17,8.17,0,0,1-7.47,8.25,8,8,0,0,1-8.53-8V80A32,32,0,0,0,88,48H24a8,8,0,0,0-8,8V200a8,8,0,0,0,8,8H96a24,24,0,0,1,24,23.94,7.9,7.9,0,0,0,5.12,7.55A8,8,0,0,0,136,232a24,24,0,0,1,24-24h72a8,8,0,0,0,8-8V56A8,8,0,0,0,232,48ZM208,168H168.27a8.17,8.17,0,0,1-8.25-7.47,8,8,0,0,1,8-8.53h39.73a8.17,8.17,0,0,1,8.25,7.47A8,8,0,0,1,208,168Zm0-32H168.27a8.17,8.17,0,0,1-8.25-7.47,8,8,0,0,1,8-8.53h39.73a8.17,8.17,0,0,1,8.25,7.47A8,8,0,0,1,208,136Zm0-32H168.27A8.17,8.17,0,0,1,160,96.53,8,8,0,0,1,168,88h39.73A8.17,8.17,0,0,1,216,95.47,8,8,0,0,1,208,104Z"/></svg><h3>The reader</h3><p>All 114 surahs in Arabic with translation, as a list or as mushaf pages, with tajweed colours.</p><p>Listen to five reciters, bookmark verses, add notes and share a verse as a card. More reciters and offline listening by juz come with Lunora+.</p></div><div class="fact"><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M176,16H80A24,24,0,0,0,56,40V216a24,24,0,0,0,24,24h96a24,24,0,0,0,24-24V40A24,24,0,0,0,176,16ZM72,64H184V192H72Zm8-32h96a8,8,0,0,1,8,8v8H72V40A8,8,0,0,1,80,32Zm96,192H80a8,8,0,0,1-8-8v-8H184v8A8,8,0,0,1,176,224Z"/></svg><h3>On your home screen</h3><p>The “Where you left off” widget shows the surah and verse you stopped on, so you can pick up your reading in one tap.</p><p>The Healing verses plan collects verses read with the intention of healing; as the app itself says, they do not replace treatment.</p></div></div></div></div></div></section><section class="sec" id="faq"><div class="wrap"><div class="head"><span class="kicker">Common Questions</span><h2>Frequently asked questions</h2></div><div class="faq"><details open><summary>Does Lunora have a khatam (hatim) tracker?<svg viewBox="0 0 256 256" class="ic pl" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg><svg viewBox="0 0 256 256" class="ic mi" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg></summary><div class="a"><p>Yes. Lunora has three khatam plans: Ramadan khatam (30 days, one juz a day), khatam in 60 days (about ten pages a day) and khatam in a year (one to two pages a day). The app shows which day of the plan you are on and how much of it is done.</p></div></details><details><summary>Can I make my own Quran reading plan?<svg viewBox="0 0 256 256" class="ic pl" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg><svg viewBox="0 0 256 256" class="ic mi" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg></summary><div class="a"><p>Yes. Choose the surahs you want, add a name and an icon if you like, then read one surah a day, two a day, or set the number of days yourself. A day may then hold more than one surah.</p></div></details><details><summary>How do I mark a day as read?<svg viewBox="0 0 256 256" class="ic pl" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg><svg viewBox="0 0 256 256" class="ic mi" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg></summary><div class="a"><p>Open the day&#x27;s reading from the plan, read it in Lunora&#x27;s Quran reader and tap “I&#x27;ve read it”. The day is marked as done and the plan moves on to the next one.</p></div></details><details><summary>What happens to my reading plan during my period?<svg viewBox="0 0 256 256" class="ic pl" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg><svg viewBox="0 0 256 256" class="ic mi" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg></summary><div class="a"><p>If Period Mode is on, Lunora leaves the choice to you: pause the plan or continue. While it is paused the day count does not advance, and it carries on from the same day when you turn Period Mode off. The plan also links to the Period Mode guide, which lists the views of the four madhhabs on reading the Quran during menstruation.</p></div></details><details><summary>Which mushaf layout does Lunora use?<svg viewBox="0 0 256 256" class="ic pl" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg><svg viewBox="0 0 256 256" class="ic mi" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg></summary><div class="a"><p>The page view follows the page layout of the Madinah mushaf, 604 pages, and the 60-day and one-year khatam plans give their daily readings as page ranges of that mushaf. Translation and transliteration are available in list view.</p></div></details><details><summary>Is Lunora available on iPhone and Android?<svg viewBox="0 0 256 256" class="ic pl" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg><svg viewBox="0 0 256 256" class="ic mi" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg></summary><div class="a"><p>Lunora is free to download from the App Store and Google Play and has no ads. Lunora+ is a subscription that unlocks the full app, and you can start it with a free trial.</p></div></details></div></div></section><section class="sec" id="more" style="padding-top:0"><div class="wrap"><div class="head"><span class="kicker">More from Lunora</span><h2>Other features</h2></div><div class="rel"><a class="feat" href="/dhikr-widget.html"><span class="disk"><img src="/img/v1/ic-tasbih.webp" alt="" loading="lazy" width="56" height="56"></span><div><b>Dhikr widget</b><span>Count dhikr from your home screen, with a sourced dhikr library and the 99 Names.</span></div></a><a class="feat" href="/protect-my-prayer.html"><span class="disk"><img src="/img/v1/ic-lock.webp" alt="" loading="lazy" width="56" height="56"></span><div><b>Protect My Prayer</b><span>At prayer time the apps you choose wait until you mark your prayer.</span></div></a><a class="feat" href="/period-mode.html"><span class="disk"><img src="/img/v1/sakura.webp" alt="" loading="lazy" width="56" height="56"></span><div><b>Period Mode</b><span>Worship during your period, with the views of the four madhhabs and a qada fast counter.</span></div></a></div><div class="read"><h3>Related reading</h3><ul><li><a href="/quran-reading-guide-muslim-women.html"><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg> Quran reading guide for Muslim women</a></li><li><a href="/what-to-do-during-period-in-islam.html"><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg> What to do during your period in Islam</a></li><li><a href="/blog.html"><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg> All articles on the Lunora blog</a></li></ul></div></div></section><section class="sec" id="download" style="padding-top:0"><div class="wrap"><div class="cta "><span class="kicker" style="color:rgba(255,255,255,.8)">Begin Your Journey</span><h2>Download Lunora</h2><p>Free to download on iPhone and Android, with no ads. A spiritual companion designed with the care and understanding you deserve.</p><div class="stores"><a class="store light" href="https://apps.apple.com/app/apple-store/id6758765933?pt=128518745&amp;ct=web-quranplan-en-2&amp;mt=8"><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M128.23,30A40,40,0,0,1,167,0h1a8,8,0,0,1,0,16h-1a24,24,0,0,0-23.24,18,8,8,0,1,1-15.5-4ZM223.3,169.59a8.07,8.07,0,0,0-2.8-3.4C203.53,154.53,200,134.64,200,120c0-17.67,13.47-33.06,21.5-40.67a8,8,0,0,0,0-11.62C208.82,55.74,187.82,48,168,48a72.23,72.23,0,0,0-40,12.13,71.56,71.56,0,0,0-90.71,9.09A74.63,74.63,0,0,0,16,123.4a127,127,0,0,0,40.14,89.73A39.8,39.8,0,0,0,83.59,224h87.68a39.84,39.84,0,0,0,29.12-12.57,125,125,0,0,0,17.82-24.6C225.23,174,224.33,172,223.3,169.59Z"/></svg><span><small>Download on the</small><b>App Store</b></span></a><a class="store light" href="https://play.google.com/store/apps/details?id=com.studiolunora.lunora&amp;referrer=utm_source%3Dmylunora.app%26utm_medium%3Dweb%26utm_campaign%3Dquran_plan_download_en"><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M239.82,114.18,72,18.16a16,16,0,0,0-16.12,0A15.68,15.68,0,0,0,48,31.87V224.13a15.68,15.68,0,0,0,7.92,13.67,16,16,0,0,0,16.12,0l167.78-96a15.76,15.76,0,0,0,0-27.64ZM160,139.31l18.92,18.92-88.5,50.66ZM90.4,47.1l88.53,50.67L160,116.69ZM193.31,150l-22-22,22-22,38.43,22Z"/></svg><span><small>Get it on</small><b>Google Play</b></span></a></div><span class="salam">As-salamu alaykum, sister.</span></div></div></section>
+</main>
+<footer class="foot"><div class="wrap foot-grid"><div class="foot-about"><a class="brand" href="/"><img src="/img/v1/app-icon.webp" alt="" width="32" height="32"><span>Lunora</span></a><p>A spiritual companion designed for Muslim women, with care and understanding at its heart.</p></div><div><h4>App</h4><a href="/#features">Features</a><a href="/period-mode.html">Period Mode</a><a href="/protect-my-prayer.html">Protect My Prayer</a><a href="/quran-reading-plan.html">Quran reading plan</a><a href="/dhikr-widget.html">Dhikr widget</a><a href="/blog.html">Blog</a></div><div><h4>Help</h4><a href="/support.html">Support</a><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a></div><div><h4>Follow</h4><a class="ig" href="https://instagram.com/mylunora.app" rel="noopener"><svg viewBox="0 0 256 256" class="ic" aria-hidden="true" focusable="false"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></svg>@mylunora.app</a><span class="copy">© 2026 Studio Lunora</span></div></div></footer>
 </body>
 </html>
