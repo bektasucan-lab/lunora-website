@@ -8,7 +8,7 @@ from home_text import T as HT, REVIEWS, FAQ as NEW_FAQ
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 B = os.path.join(ROOT, '_build')
 LIVE = json.load(open(os.path.join(B, 'content', 'live.json')))
-V = '4'  # css/js cache version
+V = '5'  # css/js cache version
 SITE = 'https://mylunora.app'
 APPLE = 'https://apps.apple.com/app/apple-store/id6758765933?pt=128518745&amp;ct=%s&amp;mt=8'
 PLAY = 'https://play.google.com/store/apps/details?id=com.studiolunora.lunora&amp;referrer=utm_source%%3Dmylunora.app%%26utm_medium%%3Dweb%%26utm_campaign%%3D%s'
@@ -24,6 +24,9 @@ FEAT_PATHS = {
     'dhikr': {'en': '/dhikr-widget.html', 'tr': '/tr/zikir-widget.html', 'de': '/de/dhikr-widget.html', 'fr': '/fr/widget-dhikr.html'},
 }
 BLOG_PATHS = {'en': '/blog.html', 'tr': '/tr/blog.html'}
+# Free online tasbih counter (28 Nov): "dhikr counter" ~1,000 US searches a month, KD 3.
+TASBIH = {'en': '/tasbih-counter.html', 'tr': '/tr/zikirmatik.html', 'de': '/de/tasbih-zaehler.html',
+          'fr': '/fr/compteur-tasbih.html', 'id': '/id/tasbih-digital.html'}
 
 UI = {
  'en': dict(nav=['Features', 'Period Mode', 'Protect My Prayer', 'Blog', 'Support'], menu='Menu', language='Language', skip='Skip to content',
@@ -130,9 +133,10 @@ def nav(l, active, alternates):
 def footer(l):
     u = UI[l]; f = FEAT_PATHS
     g = lambda k: f[k].get(l, f[k]['en'])
+    tc_link = ('<a href="%s">%s</a>' % (TASBIH[l], esc(TC[l]['crumb']))) if l in TASBIH else ''
     return ('<footer class="foot"><div class="wrap foot-grid">'
             '<div class="foot-about"><a class="brand" href="%s"><img src="/img/v1/app-icon.webp" alt="" width="32" height="32"><span>Lunora</span></a><p>%s</p></div>'
-            '<div><h4>%s</h4><a href="%s#features">%s</a><a href="%s">%s</a><a href="%s">%s</a><a href="%s">%s</a><a href="%s">%s</a><a href="%s">%s</a></div>'
+            '<div><h4>%s</h4><a href="%s#features">%s</a><a href="%s">%s</a><a href="%s">%s</a><a href="%s">%s</a><a href="%s">%s</a>' + tc_link + '<a href="%s">%s</a></div>'
             '<div><h4>%s</h4><a href="/support.html">%s</a><a href="/privacy.html">%s</a><a href="/terms.html">%s</a></div>'
             '<div><h4>%s</h4><a class="ig" href="https://instagram.com/mylunora.app" rel="noopener">%s@mylunora.app</a><span class="copy">© 2026 Studio Lunora</span></div>'
             '</div></footer>') % (
@@ -298,9 +302,37 @@ def home_page(l):
     sec7 = ('<section class="sec" id="download" style="padding-top:0"><div class="wrap"><div class="cta">'
             '<img class="heart" src="%s" alt="" width="88" height="88" loading="lazy"><h2>%s</h2><p>%s</p>%s<span class="salam">%s</span></div></div></section>') % (
         img('heart'), esc(t['ctaH']), esc(t['ctaP']), store_btns(l, a[1], p[1], light=True), esc(t['salam']))
-    body = hero + sec1 + sec2 + sec3 + sec4 + sec5 + sec6 + sec7
+    body = hero + sec1 + sec2 + sec3 + sec4 + sec5 + guides_block(l) + sec6 + sec7
     hh = head(l, t['title'], tags, jsonld, amiri=True, preload=img('bg-b-45'))
     return write(HOME[l] + 'index.html', page(l, hh, body, 'home', HOME))
+
+GUIDES = {'en': dict(k='Guides', h='Read before you download', all='All guides', tc='Free online tasbih counter', tcp='Count your dhikr in the browser: the tasbih after prayer, istighfar, salawat.'),
+          'tr': dict(k='Rehberler', h='İndirmeden önce okuyun', all='Tüm yazılar', tc='Ücretsiz online zikirmatik', tcp='Tarayıcıda zikir sayın: namaz sonrası tesbihat, istiğfar, salavat.'),
+          'de': dict(k='Mehr entdecken', h='Kostenlos ausprobieren, mehr erfahren', all='Alle Funktionen', tc='Kostenloser Online-Tasbih-Zähler', tcp='Zähle deinen Dhikr im Browser: Tasbih nach dem Gebet, Istighfar, Salawat.'),
+          'fr': dict(k='À découvrir', h='Essaie gratuitement, découvre la suite', all='Toutes les fonctionnalités', tc='Compteur tasbih en ligne gratuit', tcp='Compte ton dhikr dans le navigateur : tasbih après la prière, istighfar, salawat.'),
+          'id': dict(k='Coba sekarang', h='Gratis, langsung di browser', all='Semua fitur', tc='Tasbih digital online gratis', tcp='Hitung zikirmu di browser: tasbih setelah salat, istigfar, selawat.')}
+def guides_block(l):
+    """Home section that links the blog guides and the tasbih counter, so every guide is
+    one click from an indexed page (28 Nov: Google had found several only via other languages)."""
+    if l not in GUIDES: return ''
+    g = GUIDES[l]
+    cards = '<a class="post" href="%s"><div class="post-txt"><span class="kicker" style="color:var(--green)">%s</span><h3>%s</h3><p>%s</p></div></a>' % (
+        TASBIH[l], esc(TC[l]['crumb']), esc(g['tc']), esc(g['tcp']))
+    if l == 'en':
+        for p in LIVE['blog']['en']['posts'][:6]:
+            s = slug_of(p['href']); cat = POST_META[s][0]
+            cards += '<a class="post" href="/%s.html"><div class="post-txt"><span class="kicker" style="color:%s">%s</span><h3>%s</h3><p>%s</p></div></a>' % (
+                s, CAT_COL[cat], esc(p['badge']), LIVE['articles'][s]['h1'] if s in LIVE['articles'] else p['h2'], p['p'])
+    elif l not in BLOG_PATHS:   # no blog in this language: link the feature pages instead
+        for k2 in ['period', 'protect', 'quran', 'dhikr']:
+            if l not in FEAT_PATHS[k2]: continue
+            fd = LIVE['features'][k2][l]
+            cards += '<a class="post" href="%s"><div class="post-txt"><span class="kicker" style="color:%s">%s</span><h3>%s</h3><p>%s</p></div></a>' % (
+                FEAT_PATHS[k2][l], THEMES[k2]['acc'], esc(H.unescape(fd['badge'])), re.sub('<[^>]+>', '', fd['h1']), re.sub('<[^>]+>', '', fd['summary'][0]))
+    more = BLOG_PATHS.get(l, HOME[l] + '#features')
+    return ('<section class="sec guides" style="padding-top:0"><div class="wrap"><div class="head"><span class="kicker">%s</span><h2>%s</h2></div>'
+            '<div class="posts">%s</div><p class="and"><a href="%s">%s %s</a></p></div></section>') % (
+        esc(g['k']), esc(g['h']), cards, more, esc(g['all']), ic('arrow-right-bold'))
 
 def _reset_icon():
     # Phosphor arrow-counter-clockwise (regular), inline
@@ -382,7 +414,9 @@ def feature_page(key, l):
         return 'ic-books'
     rel = ''.join('<a class="feat" href="%s"><span class="disk"><img src="%s" alt="" loading="lazy" width="56" height="56"></span><div><b>%s</b><span>%s</span></div></a>' % (
         c['href'], img(icon_of(c['href'])), c['h3'], c['p']) for c in mo['cards'])
-    reading = '<div class="read"><h3>%s</h3><ul>%s</ul></div>' % (mo['reading']['h3'], ''.join('<li><a href="%s">%s %s</a></li>' % (h, ic('arrow-right-bold'), t) for h, t in mo['reading']['links']))
+    rlinks = list(mo['reading']['links'])
+    if key == 'dhikr' and l in TASBIH: rlinks.insert(0, (TASBIH[l], esc(GUIDES[l]['tc'])))
+    reading = '<div class="read"><h3>%s</h3><ul>%s</ul></div>' % (mo['reading']['h3'], ''.join('<li><a href="%s">%s %s</a></li>' % (h, ic('arrow-right-bold'), t) for h, t in rlinks))
     s_more = '<section class="sec" id="more" style="padding-top:0"><div class="wrap"><div class="head"><span class="kicker">%s</span><h2>%s</h2></div><div class="rel">%s</div>%s</div></section>' % (
         esc(mo['badge']), mo['h2'], rel, reading)
     dl = d['download']
@@ -407,7 +441,6 @@ POST_META = {
     'daily-duas-dhikr-muslim-women-guide': ('dhikr', 'tesbih-bg'),
     'muslim-women-prayer-times-salah-guide': ('prayer', 'namaz-bg'),
     'quran-reading-guide-muslim-women': ('quran', 'kurs-bg'),
-    'can-muslim-women-pray-during-period': ('period', 'empty-invite'),
     'spiritual-self-care-muslim-women': ('life', 'bg-a-wide'),
     'what-to-do-during-period-in-islam': ('period', 'empty-waiting'),
 }
@@ -443,6 +476,21 @@ def blog_page(l):
     return write(BLOG_PATHS[l], page(l, hh, hero + lst + cta, 'blog', BLOG_PATHS))
 
 ART_CTA_P = 'No ads, in 9 languages.'
+# Each guide points at the app feature it is about (internal link to a feature page).
+APPBOX = {
+    'period': ('period', 'Period Mode', 'Track your cycle alongside prayer, Quran and dhikr, see the views of the four madhhabs, and keep count of the fasts to make up.'),
+    'dhikr': ('dhikr', 'Dhikr widget and tasbih counter', 'Count dhikr from your home screen without opening the app.'),
+    'quran': ('quran', 'Quran reading plan', 'Daily portions and khatm tracking, from a 30-day Ramadan khatm to a year-long plan.'),
+    'prayer': ('protect', 'Protect My Prayer', 'Pause the apps you choose when prayer time comes in; tap “I prayed” to open them again.'),
+    'life': (None, 'Lunora for Muslim women', 'Prayer times, the whole Quran, duas and dhikr, and Period Mode in one calm app. No ads.'),
+}
+
+def retired_page(slug, to):
+    """Old URL kept as a pointer: noindex + canonical + instant refresh (GitHub Pages has no 301)."""
+    s = ('<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="UTF-8">\n<title>Lunora</title>\n<meta name="robots" content="noindex">\n'
+         '<link rel="canonical" href="%s%s">\n<meta http-equiv="refresh" content="0; url=%s">\n</head>\n<body>\n<p><a href="%s">Continue to %s%s</a></p>\n</body>\n</html>\n') % (
+        SITE, to, to, to, SITE, to)
+    return write('/%s.html' % slug, s)
 def article_page(slug):
     d = LIVE['articles'][slug]; l = 'en'; cat, im = POST_META[slug]
     crumbs = re.split(r'\s*&rarr;\s*|\s*→\s*', d['crumbs_html'])
@@ -457,6 +505,11 @@ def article_page(slug):
             '<span class="kicker" style="color:%s">%s</span><h1>%s</h1><p class="meta">%s</p></div></section>') % (
         img(im), cl, CAT_COL[cat], esc(dict(CATS['en'])[cat]), d['h1'], d['meta'])
     body = '<article class="prose">%s</article>' % d['body']
+    fk, ftitle, fp = APPBOX[cat]
+    fhref = FEAT_PATHS[fk]['en'] if fk else '/'
+    extra = (' <a href="%s">%s</a>' % (TASBIH['en'], esc(GUIDES['en']['tc']))) if fk == 'dhikr' else ''
+    body += ('<aside class="appbox"><span class="kicker" style="color:%s">%s</span><h2><a href="%s">%s</a></h2><p>%s%s</p></aside>') % (
+        CAT_COL[cat], 'In the Lunora app', fhref, esc(ftitle), esc(fp), extra)
     rel = ''
     if d['related']:
         rel = '<section class="arel"><h2>%s</h2><div class="posts">%s</div></section>' % (esc(d['related_h3'] or UI['en']['reltitle']), ''.join(
@@ -481,6 +534,192 @@ def simple_page(k):
     hh = head(l, d['head']['title'], d['head']['tags'], d['head']['jsonld'])
     return write('/%s.html' % k, page(l, hh, hero + body, 'support' if k == 'support' else '', {'en': '/%s.html' % k}))
 
+# ---------------------------------------------------------------- tasbih counter (28 Nov)
+# Steps: (arabic, transliteration, meaning, count). count 0 = no target (free count).
+_SUB, _HAM, _AKB = 'سُبْحَانَ اللّٰهِ', 'الْحَمْدُ لِلّٰهِ', 'اللّٰهُ أَكْبَرُ'
+_TAHLIL = 'لَا إِلٰهَ إِلَّا اللّٰهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ'
+TC = {
+ 'en': dict(
+    crumb='Tasbih counter', title='Online Tasbih Counter: Free Digital Dhikr Counter | Lunora',
+    desc='A free online tasbih counter. Tap or press the space bar to count dhikr: the tasbih after prayer, Fatimah’s tasbih before sleep, istighfar and salawat.',
+    pill='Free · no sign-up', h1='Online tasbih counter', lead='A free digital tasbih in your browser. Tap the circle or press the space bar to count, and choose a set below. Your count stays on this device.',
+    tap='Tap to count', reset='Reset', done='Completed. May Allah accept it.', today='Today on this device', of='of', next='Next',
+    sets=[('After prayer', [(_SUB, 'SubhanAllah', 'Glory be to Allah', 33), (_HAM, 'Alhamdulillah', 'All praise is for Allah', 33), (_AKB, 'Allahu Akbar', 'Allah is the Greatest', 33),
+                            (_TAHLIL, 'La ilaha illallah wahdahu la sharika lah…', 'None has the right to be worshipped but Allah alone…', 1)]),
+          ('Before sleep', [(_SUB, 'SubhanAllah', 'Glory be to Allah', 33), (_HAM, 'Alhamdulillah', 'All praise is for Allah', 33), (_AKB, 'Allahu Akbar', 'Allah is the Greatest', 34)]),
+          ('Istighfar', [('أَسْتَغْفِرُ اللّٰهَ', 'Astaghfirullah', 'I seek Allah’s forgiveness', 100)]),
+          ('Salawat', [('اللّٰهُمَّ صَلِّ عَلَى مُحَمَّدٍ', 'Allahumma salli ‘ala Muhammad', 'O Allah, send blessings upon Muhammad', 100)]),
+          ('Free count', [('لَا إِلٰهَ إِلَّا اللّٰهُ', 'La ilaha illallah', 'There is no god but Allah', 0)])],
+    how_h='How to use it', how=[('Pick a set', 'After prayer, before sleep, istighfar, salawat, or a free count with no target.'),
+                                 ('Tap or press space', 'Each tap adds one. The ring fills as you go and moves on to the next phrase by itself.'),
+                                 ('Finish and reset', 'At the end you see your total for today. Reset starts the set again.')],
+    src_h='Where the numbers come from',
+    src=['<b>After every prayer:</b> the Prophet ﷺ taught saying SubhanAllah 33 times, Alhamdulillah 33 times and Allahu Akbar 33 times, then completing the hundred with “La ilaha illallah wahdahu la sharika lah, lahul-mulku wa lahul-hamdu wa huwa ‘ala kulli shay’in qadir”. (<a href="https://sunnah.com/muslim:597" rel="noopener">Sahih Muslim 597</a>)',
+         '<b>Before sleep:</b> he taught Ali and Fatimah to say SubhanAllah 33 times, Alhamdulillah 33 times and Allahu Akbar 34 times when going to bed, and told them it was better for them than a servant. (<a href="https://sunnah.com/bukhari:3113" rel="noopener">Sahih al-Bukhari 3113</a>, <a href="https://sunnah.com/muslim:2727" rel="noopener">Sahih Muslim 2727</a>)'],
+    faq_h='Questions', faq=[
+        ('Is it fine to count dhikr with a digital counter?', 'Counting on the fingers is the Sunnah, and the Prophet ﷺ encouraged it. Many scholars see beads or a counter as a permissible tool for keeping count. If you are unsure, ask a scholar you trust.'),
+        ('Does the counter save my count?', 'Yes, on this device only. Your count and today’s total are stored in your browser. Nothing is sent to us, and there is no account.'),
+        ('Can I use it during my period?', 'Yes. Dhikr, dua and salawat are open to you during your period; the counter is a good companion for those days.'),
+        ('Is there a tasbih for my home screen?', 'Lunora has a tasbih widget for the iPhone and Android home screen, with a sourced dhikr library, so you can count without opening an app.')],
+    cta_h='Keep your tasbih on your home screen', cta_p='Lunora’s dhikr widget counts from your home screen, alongside prayer times, the Quran and Period Mode. No ads, in 9 languages.', widget='See the dhikr widget'),
+ 'tr': dict(
+    crumb='Zikirmatik', title='Online Zikirmatik: Ücretsiz Dijital Tesbih Sayacı | Lunora',
+    desc='Ücretsiz online zikirmatik. Dokunarak ya da boşluk tuşuyla zikir sayın: namaz sonrası tesbihat, yatmadan önce Hz. Fâtıma tesbihi, istiğfar ve salavat.',
+    pill='Ücretsiz · üyelik yok', h1='Online zikirmatik', lead='Tarayıcınızda ücretsiz bir dijital tesbih. Saymak için daireye dokunun ya da boşluk tuşuna basın, aşağıdan bir set seçin. Sayınız bu cihazda kalır.',
+    tap='Saymak için dokunun', reset='Sıfırla', done='Tamamlandı. Allah kabul etsin.', today='Bugün bu cihazda', of='/', next='Sonraki',
+    sets=[('Namaz sonrası', [(_SUB, 'Sübhânallah', 'Allah her türlü eksiklikten uzaktır', 33), (_HAM, 'Elhamdülillah', 'Hamd Allah’adır', 33), (_AKB, 'Allâhu ekber', 'Allah en büyüktür', 33),
+                             (_TAHLIL, 'Lâ ilâhe illallâhu vahdehû lâ şerîke leh…', 'Allah’tan başka ilah yoktur, O tektir, ortağı yoktur…', 1)]),
+          ('Yatmadan önce', [(_SUB, 'Sübhânallah', 'Allah her türlü eksiklikten uzaktır', 33), (_HAM, 'Elhamdülillah', 'Hamd Allah’adır', 33), (_AKB, 'Allâhu ekber', 'Allah en büyüktür', 34)]),
+          ('İstiğfar', [('أَسْتَغْفِرُ اللّٰهَ', 'Estağfirullah', 'Allah’tan bağışlanma dilerim', 100)]),
+          ('Salavat', [('اللّٰهُمَّ صَلِّ عَلَى مُحَمَّدٍ', 'Allâhümme salli alâ Muhammed', 'Allah’ım, Muhammed’e salât eyle', 100)]),
+          ('Serbest', [('لَا إِلٰهَ إِلَّا اللّٰهُ', 'Lâ ilâhe illallah', 'Allah’tan başka ilah yoktur', 0)])],
+    how_h='Nasıl kullanılır', how=[('Bir set seçin', 'Namaz sonrası, yatmadan önce, istiğfar, salavat ya da hedefsiz serbest sayım.'),
+                                    ('Dokunun ya da boşluğa basın', 'Her dokunuş bir sayar. Halka doldukça bir sonraki zikre kendiliğinden geçer.'),
+                                    ('Bitirin, sıfırlayın', 'Sonunda bugünkü toplamınızı görürsünüz. Sıfırla, seti baştan başlatır.')],
+    src_h='Sayılar nereden geliyor',
+    src=['<b>Her namazdan sonra:</b> Peygamber Efendimiz ﷺ 33 kez Sübhânallah, 33 kez Elhamdülillah, 33 kez Allâhu ekber demeyi ve yüzü “Lâ ilâhe illallâhu vahdehû lâ şerîke leh, lehü’l-mülkü ve lehü’l-hamdü ve hüve alâ külli şey’in kadîr” ile tamamlamayı öğretti. (<a href="https://sunnah.com/muslim:597" rel="noopener">Müslim, 597</a>)',
+         '<b>Yatmadan önce:</b> Hz. Ali ve Hz. Fâtıma’ya yatağa girerken 33 kez Sübhânallah, 33 kez Elhamdülillah ve 34 kez Allâhu ekber demelerini öğretti ve bunun onlar için bir hizmetçiden daha hayırlı olduğunu söyledi. (<a href="https://sunnah.com/bukhari:3113" rel="noopener">Buhârî, 3113</a>; <a href="https://sunnah.com/muslim:2727" rel="noopener">Müslim, 2727</a>)'],
+    faq_h='Sorular', faq=[
+        ('Zikri dijital sayaçla saymak uygun mu?', 'Parmaklarla saymak sünnettir ve Peygamber Efendimiz ﷺ bunu teşvik etmiştir. Pek çok âlim tesbih ya da sayacı saymayı kolaylaştıran caiz bir araç olarak görür. Emin değilseniz güvendiğiniz bir âlime danışın.'),
+        ('Sayaç sayımı kaydediyor mu?', 'Evet, yalnız bu cihazda. Sayınız ve bugünkü toplamınız tarayıcınızda saklanır. Bize hiçbir şey gönderilmez, hesap gerekmez.'),
+        ('Özel günlerimde kullanabilir miyim?', 'Evet. Zikir, dua ve salavat özel günlerinizde de size açıktır; sayaç bu günler için iyi bir yol arkadaşıdır.'),
+        ('Ana ekranım için bir tesbih var mı?', 'Lunora’da iPhone ve Android ana ekranı için kaynaklı zikir kütüphanesiyle bir tesbih widget’ı var; uygulamayı açmadan sayabilirsiniz.')],
+    cta_h='Tesbihiniz ana ekranınızda olsun', cta_p='Lunora’nın zikir widget’ı ana ekrandan sayar; namaz vakitleri, Kur’an ve Dönem Modu da bir arada. Reklamsız, 9 dilde.', widget='Zikir widget’ını görün'),
+ 'de': dict(
+    crumb='Tasbih-Zähler', title='Tasbih-Zähler online: Kostenloser Dhikr-Zähler | Lunora',
+    desc='Kostenloser Tasbih-Zähler online. Tippe oder drücke die Leertaste, um Dhikr zu zählen: Tasbih nach dem Gebet, Fatimas Tasbih vor dem Schlafen, Istighfar, Salawat.',
+    pill='Kostenlos · ohne Anmeldung', h1='Tasbih-Zähler online', lead='Eine kostenlose digitale Tasbih in deinem Browser. Tippe auf den Kreis oder drücke die Leertaste, um zu zählen, und wähle unten ein Set. Dein Zählstand bleibt auf diesem Gerät.',
+    tap='Zum Zählen tippen', reset='Zurücksetzen', done='Geschafft. Möge Allah es annehmen.', today='Heute auf diesem Gerät', of='von', next='Weiter',
+    sets=[('Nach dem Gebet', [(_SUB, 'Subhanallah', 'Gepriesen sei Allah', 33), (_HAM, 'Alhamdulillah', 'Alles Lob gebührt Allah', 33), (_AKB, 'Allahu Akbar', 'Allah ist der Größte', 33),
+                              (_TAHLIL, 'La ilaha illallahu wahdahu la scharika lah…', 'Es gibt keinen Gott außer Allah, dem Einen, ohne Partner…', 1)]),
+          ('Vor dem Schlafen', [(_SUB, 'Subhanallah', 'Gepriesen sei Allah', 33), (_HAM, 'Alhamdulillah', 'Alles Lob gebührt Allah', 33), (_AKB, 'Allahu Akbar', 'Allah ist der Größte', 34)]),
+          ('Istighfar', [('أَسْتَغْفِرُ اللّٰهَ', 'Astaghfirullah', 'Ich bitte Allah um Vergebung', 100)]),
+          ('Salawat', [('اللّٰهُمَّ صَلِّ عَلَى مُحَمَّدٍ', 'Allahumma salli ‘ala Muhammad', 'O Allah, segne Muhammad', 100)]),
+          ('Frei zählen', [('لَا إِلٰهَ إِلَّا اللّٰهُ', 'La ilaha illallah', 'Es gibt keinen Gott außer Allah', 0)])],
+    how_h='So funktioniert es', how=[('Set wählen', 'Nach dem Gebet, vor dem Schlafen, Istighfar, Salawat oder frei ohne Ziel.'),
+                                      ('Tippen oder Leertaste', 'Jedes Tippen zählt eins. Der Ring füllt sich und springt von selbst zum nächsten Satz.'),
+                                      ('Fertig und zurücksetzen', 'Am Ende siehst du deine Summe für heute. „Zurücksetzen“ startet das Set neu.')],
+    src_h='Woher die Zahlen kommen',
+    src=['<b>Nach jedem Gebet:</b> Der Prophet ﷺ lehrte, 33-mal Subhanallah, 33-mal Alhamdulillah und 33-mal Allahu Akbar zu sagen und die Hundert mit „La ilaha illallahu wahdahu la scharika lah, lahul-mulku wa lahul-hamdu wa huwa ‘ala kulli schay’in qadir“ zu vollenden. (<a href="https://sunnah.com/muslim:597" rel="noopener">Sahih Muslim 597</a>)',
+         '<b>Vor dem Schlafen:</b> Er lehrte Ali und Fatima, beim Zubettgehen 33-mal Subhanallah, 33-mal Alhamdulillah und 34-mal Allahu Akbar zu sagen, und sagte, das sei besser für sie als ein Diener. (<a href="https://sunnah.com/bukhari:3113" rel="noopener">Sahih al-Bukhari 3113</a>, <a href="https://sunnah.com/muslim:2727" rel="noopener">Sahih Muslim 2727</a>)'],
+    faq_h='Fragen', faq=[
+        ('Darf man Dhikr mit einem digitalen Zähler zählen?', 'Das Zählen an den Fingern ist Sunna, und der Prophet ﷺ hat dazu ermutigt. Viele Gelehrte sehen Perlen oder einen Zähler als erlaubtes Hilfsmittel zum Zählen. Frag im Zweifel eine Gelehrte oder einen Gelehrten deines Vertrauens.'),
+        ('Speichert der Zähler meinen Stand?', 'Ja, nur auf diesem Gerät. Dein Zählstand und die Summe für heute bleiben in deinem Browser. Nichts wird an uns gesendet, ein Konto brauchst du nicht.'),
+        ('Kann ich ihn während meiner Periode nutzen?', 'Ja. Dhikr, Dua und Salawat stehen dir auch während deiner Periode offen; der Zähler ist für diese Tage ein guter Begleiter.'),
+        ('Gibt es eine Tasbih für den Startbildschirm?', 'Lunora hat ein Tasbih-Widget für den Startbildschirm von iPhone und Android, mit einer Dhikr-Bibliothek mit Quellen. So zählst du, ohne eine App zu öffnen.')],
+    cta_h='Deine Tasbih auf dem Startbildschirm', cta_p='Das Dhikr-Widget von Lunora zählt direkt auf dem Startbildschirm, dazu Gebetszeiten, der Koran und der Periodenmodus. Ohne Werbung, in 9 Sprachen.', widget='Zum Dhikr-Widget'),
+ 'fr': dict(
+    crumb='Compteur tasbih', title='Compteur tasbih en ligne : compteur de dhikr gratuit | Lunora',
+    desc='Compteur tasbih en ligne et gratuit. Touche ou appuie sur la barre d’espace pour compter ton dhikr : tasbih après la prière, tasbih de Fatima avant de dormir, istighfar, salawat.',
+    pill='Gratuit · sans inscription', h1='Compteur tasbih en ligne', lead='Un tasbih numérique gratuit dans ton navigateur. Touche le cercle ou appuie sur la barre d’espace pour compter, et choisis une série ci-dessous. Ton compte reste sur cet appareil.',
+    tap='Touche pour compter', reset='Recommencer', done='Terminé. Qu’Allah l’accepte.', today='Aujourd’hui sur cet appareil', of='sur', next='Suivant',
+    sets=[('Après la prière', [(_SUB, 'SubhanAllah', 'Gloire à Allah', 33), (_HAM, 'Alhamdoulillah', 'Louange à Allah', 33), (_AKB, 'Allahou Akbar', 'Allah est le plus grand', 33),
+                               (_TAHLIL, 'La ilaha illa Allah wahdahou la charika lah…', 'Nul ne mérite d’être adoré en dehors d’Allah, Seul, sans associé…', 1)]),
+          ('Avant de dormir', [(_SUB, 'SubhanAllah', 'Gloire à Allah', 33), (_HAM, 'Alhamdoulillah', 'Louange à Allah', 33), (_AKB, 'Allahou Akbar', 'Allah est le plus grand', 34)]),
+          ('Istighfar', [('أَسْتَغْفِرُ اللّٰهَ', 'Astaghfiroullah', 'Je demande pardon à Allah', 100)]),
+          ('Salawat', [('اللّٰهُمَّ صَلِّ عَلَى مُحَمَّدٍ', 'Allahoumma salli ‘ala Muhammad', 'Ô Allah, prie sur Muhammad', 100)]),
+          ('Compte libre', [('لَا إِلٰهَ إِلَّا اللّٰهُ', 'La ilaha illa Allah', 'Il n’y a de dieu qu’Allah', 0)])],
+    how_h='Comment ça marche', how=[('Choisis une série', 'Après la prière, avant de dormir, istighfar, salawat, ou un compte libre sans objectif.'),
+                                     ('Touche ou appuie sur espace', 'Chaque touche ajoute un. L’anneau se remplit et passe tout seul à la formule suivante.'),
+                                     ('Termine et recommence', 'À la fin, tu vois ton total du jour. « Recommencer » relance la série.')],
+    src_h='D’où viennent ces nombres',
+    src=['<b>Après chaque prière :</b> le Prophète ﷺ a enseigné de dire 33 fois SubhanAllah, 33 fois Alhamdoulillah et 33 fois Allahou Akbar, puis de compléter la centaine par « La ilaha illa Allah wahdahou la charika lah, lahoul-moulkou wa lahoul-hamdou wa houwa ‘ala koulli chay’in qadir ». (<a href="https://sunnah.com/muslim:597" rel="noopener">Sahih Muslim 597</a>)',
+         '<b>Avant de dormir :</b> il a enseigné à Ali et Fatima de dire, au moment de se coucher, 33 fois SubhanAllah, 33 fois Alhamdoulillah et 34 fois Allahou Akbar, et leur a dit que c’était meilleur pour eux qu’un serviteur. (<a href="https://sunnah.com/bukhari:3113" rel="noopener">Sahih al-Boukhari 3113</a>, <a href="https://sunnah.com/muslim:2727" rel="noopener">Sahih Muslim 2727</a>)'],
+    faq_h='Questions', faq=[
+        ('Peut-on compter son dhikr avec un compteur numérique ?', 'Compter sur les doigts est la Sunna, et le Prophète ﷺ y a encouragé. Beaucoup de savants considèrent le chapelet ou un compteur comme un outil permis pour garder le compte. En cas de doute, demande à une personne savante de confiance.'),
+        ('Le compteur garde-t-il mon compte ?', 'Oui, sur cet appareil uniquement. Ton compte et ton total du jour restent dans ton navigateur. Rien ne nous est envoyé, et il n’y a pas de compte à créer.'),
+        ('Puis-je l’utiliser pendant mes règles ?', 'Oui. Le dhikr, les douas et les salawat te restent ouverts pendant tes règles ; le compteur t’accompagne bien ces jours-là.'),
+        ('Existe-t-il un tasbih pour l’écran d’accueil ?', 'Lunora propose un widget tasbih pour l’écran d’accueil de l’iPhone et d’Android, avec une bibliothèque de dhikr sourcés, pour compter sans ouvrir d’appli.')],
+    cta_h='Ton tasbih sur ton écran d’accueil', cta_p='Le widget dhikr de Lunora compte depuis l’écran d’accueil, avec les horaires de prière, le Coran et le Mode règles. Sans publicité, en 9 langues.', widget='Voir le widget dhikr'),
+ 'id': dict(
+    crumb='Tasbih digital', title='Tasbih Digital Online: Penghitung Zikir Gratis | Lunora',
+    desc='Tasbih digital online gratis. Ketuk atau tekan spasi untuk menghitung zikir: tasbih setelah salat, tasbih Fatimah sebelum tidur, istigfar, dan selawat.',
+    pill='Gratis · tanpa daftar', h1='Tasbih digital online', lead='Tasbih digital gratis di browsermu. Ketuk lingkaran atau tekan spasi untuk menghitung, lalu pilih bacaan di bawah. Hitunganmu tersimpan di perangkat ini.',
+    tap='Ketuk untuk menghitung', reset='Ulangi', done='Selesai. Semoga Allah menerimanya.', today='Hari ini di perangkat ini', of='dari', next='Berikutnya',
+    sets=[('Setelah salat', [(_SUB, 'Subhanallah', 'Mahasuci Allah', 33), (_HAM, 'Alhamdulillah', 'Segala puji bagi Allah', 33), (_AKB, 'Allahu Akbar', 'Allah Mahabesar', 33),
+                             (_TAHLIL, 'La ilaha illallahu wahdahu la syarika lah…', 'Tiada tuhan selain Allah, Yang Maha Esa, tiada sekutu bagi-Nya…', 1)]),
+          ('Sebelum tidur', [(_SUB, 'Subhanallah', 'Mahasuci Allah', 33), (_HAM, 'Alhamdulillah', 'Segala puji bagi Allah', 33), (_AKB, 'Allahu Akbar', 'Allah Mahabesar', 34)]),
+          ('Istigfar', [('أَسْتَغْفِرُ اللّٰهَ', 'Astaghfirullah', 'Aku memohon ampun kepada Allah', 100)]),
+          ('Selawat', [('اللّٰهُمَّ صَلِّ عَلَى مُحَمَّدٍ', 'Allahumma shalli ‘ala Muhammad', 'Ya Allah, limpahkan selawat kepada Muhammad', 100)]),
+          ('Bebas', [('لَا إِلٰهَ إِلَّا اللّٰهُ', 'La ilaha illallah', 'Tiada tuhan selain Allah', 0)])],
+    how_h='Cara memakainya', how=[('Pilih bacaan', 'Setelah salat, sebelum tidur, istigfar, selawat, atau hitungan bebas tanpa target.'),
+                                   ('Ketuk atau tekan spasi', 'Setiap ketukan menambah satu. Lingkaran terisi dan berpindah sendiri ke bacaan berikutnya.'),
+                                   ('Selesai dan ulangi', 'Di akhir kamu melihat total hari ini. Tombol Ulangi memulai bacaan dari awal.')],
+    src_h='Dari mana angka-angka ini',
+    src=['<b>Setiap selesai salat:</b> Nabi ﷺ mengajarkan membaca Subhanallah 33 kali, Alhamdulillah 33 kali, dan Allahu Akbar 33 kali, lalu menggenapkan seratus dengan “La ilaha illallahu wahdahu la syarika lah, lahul-mulku wa lahul-hamdu wa huwa ‘ala kulli syai’in qadir”. (<a href="https://sunnah.com/muslim:597" rel="noopener">HR. Muslim no. 597</a>)',
+         '<b>Sebelum tidur:</b> beliau mengajarkan kepada Ali dan Fatimah untuk membaca Subhanallah 33 kali, Alhamdulillah 33 kali, dan Allahu Akbar 34 kali ketika hendak tidur, dan bersabda bahwa itu lebih baik bagi mereka daripada seorang pembantu. (<a href="https://sunnah.com/bukhari:3113" rel="noopener">HR. Bukhari no. 3113</a>; <a href="https://sunnah.com/muslim:2727" rel="noopener">HR. Muslim no. 2727</a>)'],
+    faq_h='Pertanyaan', faq=[
+        ('Bolehkah menghitung zikir dengan penghitung digital?', 'Menghitung dengan jari adalah sunah, dan Nabi ﷺ menganjurkannya. Banyak ulama memandang tasbih atau alat penghitung sebagai sarana yang boleh untuk menjaga hitungan. Jika ragu, tanyakan kepada ustaz atau ustazah yang kamu percaya.'),
+        ('Apakah hitunganku tersimpan?', 'Ya, hanya di perangkat ini. Hitungan dan total hari ini tersimpan di browsermu. Tidak ada yang dikirim kepada kami, dan tidak perlu akun.'),
+        ('Bolehkah dipakai saat haid?', 'Boleh. Zikir, doa, dan selawat tetap terbuka bagimu saat haid; penghitung ini teman yang baik untuk hari-hari itu.'),
+        ('Ada tasbih untuk layar utama?', 'Lunora punya widget tasbih untuk layar utama iPhone dan Android, dengan pustaka zikir bersumber, jadi kamu bisa menghitung tanpa membuka aplikasi.')],
+    cta_h='Tasbihmu di layar utama', cta_p='Widget zikir Lunora menghitung langsung dari layar utama, bersama jadwal salat, Al-Qur’an, dan Mode Haid. Tanpa iklan, dalam 9 bahasa.', widget='Lihat aplikasinya'),
+}
+
+TC_JS = r"""<script>
+(function(){var root=document.getElementById('tc');if(!root)return;var S=JSON.parse(root.dataset.sets),L=JSON.parse(root.dataset.l);
+var si=0,st=0,c=0,K='lunora.tc.'+new Date().toISOString().slice(0,10),tot=0;try{tot=parseInt(localStorage.getItem(K)||'0',10)||0}catch(e){}
+var q=function(s){return root.querySelector(s)},btn=q('.tc-tap'),ring=q('.tc-ring'),n=q('.tc-n'),of=q('.tc-of'),ar=q('.tc-ar'),tr=q('.tc-tr'),mn=q('.tc-mean'),dn=q('.tc-done'),td=q('.tc-today b'),stp=q('.tc-steps');
+function save(){try{localStorage.setItem(K,String(tot))}catch(e){}}
+function draw(){var step=S[si][1][st],t=step[3];n.textContent=c;of.textContent=t?(L.of+' '+t):'∞';ar.textContent=step[0];tr.textContent=step[1];mn.textContent=step[2];
+ring.style.setProperty('--p',t?Math.min(c/t,1):(c%33)/33);td.textContent=tot;
+stp.innerHTML=S[si][1].length<2?'':S[si][1].map(function(s,i){var w=s[1].replace('…','').split(' '),k=/^(La|Lâ|Allahu|Allâhu|Allahou)$/.test(w[0])?2:1;return '<span class="'+(i<st?'ok':i==st?'on':'')+'">'+w.slice(0,k).join(' ')+' · '+s[3]+'</span>'}).join('')}
+function setSet(i){si=i;st=0;c=0;dn.hidden=true;root.querySelectorAll('.tc-sets button').forEach(function(b,j){b.setAttribute('aria-pressed',j==i?'true':'false')});draw()}
+function tap(){if(!dn.hidden)return;var t=S[si][1][st][3];c++;tot++;save();if(navigator.vibrate)navigator.vibrate(12);
+if(t&&c>=t){if(navigator.vibrate)navigator.vibrate([30,40,30]);if(st<S[si][1].length-1){draw();setTimeout(function(){st++;c=0;draw()},450);return}draw();dn.hidden=false;return}draw()}
+btn.addEventListener('click',tap);q('.tc-reset').addEventListener('click',function(){setSet(si)});
+root.querySelectorAll('.tc-sets button').forEach(function(b,i){b.addEventListener('click',function(){setSet(i)})});
+document.addEventListener('keydown',function(e){if((e.code=='Space'||e.key==' ')&&!/INPUT|TEXTAREA|BUTTON|SUMMARY/.test(document.activeElement.tagName)){e.preventDefault();tap()}});
+setSet(0)})();
+</script>"""
+
+def tasbih_page(l):
+    t = TC[l]; u = UI[l]; path = TASBIH[l]
+    apple = [APPLE % ('web-tasbih-%s-%d' % (l, i)) for i in (1, 2)]
+    play = [PLAY % ('tasbih_%s_%d' % (l, i)) for i in (1, 2)]
+    canon = SITE + path
+    tags = ['<meta name="description" content="%s">' % esc(t['desc']), '<link rel="canonical" href="%s">' % canon]
+    tags += ['<link rel="alternate" hreflang="%s" href="%s%s">' % (x, SITE, TASBIH[x]) for x in LANGS if x in TASBIH]
+    tags += ['<link rel="alternate" hreflang="x-default" href="%s%s">' % (SITE, TASBIH['en']),
+             '<meta property="og:title" content="%s">' % esc(t['title']), '<meta property="og:description" content="%s">' % esc(t['desc']),
+             '<meta property="og:url" content="%s">' % canon, '<meta property="og:image" content="%s/icon-192.png">' % SITE,
+             '<meta property="og:type" content="website">', '<meta property="og:site_name" content="Lunora">', '<meta property="og:locale" content="%s">' % OGLOC[l],
+             '<meta name="twitter:card" content="summary">']
+    app_ld = json.dumps({'@context': 'https://schema.org', '@type': 'WebApplication', 'name': t['h1'], 'url': canon, 'description': t['desc'],
+                         'applicationCategory': 'LifestyleApplication', 'operatingSystem': 'Any', 'inLanguage': l, 'isAccessibleForFree': True,
+                         'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'USD'},
+                         'publisher': {'@type': 'Organization', 'name': 'Lunora', 'url': SITE + '/'}}, ensure_ascii=False, indent=1)
+    crumb_ld = json.dumps({'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
+        {'@type': 'ListItem', 'position': 1, 'name': u['home'], 'item': SITE + HOME[l]}, {'@type': 'ListItem', 'position': 2, 'name': t['crumb'], 'item': canon}]}, ensure_ascii=False)
+    faq_items = [{'q': esc(q), 'a': esc(a)} for q, a in t['faq']]
+    sets_json = json.dumps([[n, s] for n, s in t['sets']], ensure_ascii=False)
+    lbl = json.dumps({'of': t['of']}, ensure_ascii=False)
+    chips = ''.join('<button type="button" aria-pressed="%s">%s</button>' % ('true' if i == 0 else 'false', esc(n)) for i, (n, _) in enumerate(t['sets']))
+    counter = ('<div class="tc" id="tc" data-sets="%s" data-l="%s">'
+               '<div class="tc-sets filters" role="group" aria-label="%s">%s</div>'
+               '<div class="tc-steps" aria-hidden="true"></div>'
+               '<button class="tc-tap" type="button" aria-label="%s"><span class="tc-ring"><i></i></span>'
+               '<span class="tc-mid"><b class="tc-n" aria-live="polite">0</b><small class="tc-of"></small></span></button>'
+               '<p class="tc-ar" lang="ar" dir="rtl"></p><p class="tc-tr"></p><p class="tc-mean"></p>'
+               '<p class="tc-done" hidden>%s</p>'
+               '<div class="tc-foot"><span class="tc-today">%s: <b>0</b></span><button class="tc-reset" type="button">%s %s</button></div>'
+               '</div>') % (att(sets_json), att(lbl), esc(t['crumb']), chips, esc(t['tap']), esc(t['done']), esc(t['today']), _reset_icon(), esc(t['reset']))
+    crumbs = '<li><a href="%s">%s</a></li><li aria-current="page">%s</li>' % (HOME[l], esc(u['home']), esc(t['crumb']))
+    hero = ('<section class="phero tc-hero"><img class="bg" src="%s" alt="" style="--pos:20%% 50%%"><div class="phero-wash"></div>'
+            '<div class="wrap phero-grid"><div class="phero-txt"><ol class="crumbs">%s</ol><span class="pill green">%s</span><h1>%s</h1><p class="lead">%s</p></div>'
+            '<div class="phero-vis">%s</div></div></section>') % (img('tesbih-bg-wide'), crumbs, esc(t['pill']), esc(t['h1']), esc(t['lead']), counter)
+    steps = ''.join('<li class="step"><span class="num">%d</span><h3>%s</h3><p>%s</p></li>' % (i + 1, esc(a), esc(b)) for i, (a, b) in enumerate(t['how']))
+    s_how = '<section class="sec" style="--acc:#3F6B55;--line:#8FB09E"><div class="wrap"><div class="head"><h2>%s</h2></div><ol class="steps" style="--n:3">%s</ol></div></section>' % (esc(t['how_h']), steps)
+    s_src = '<section class="sec" style="padding-top:0"><div class="wrap prose-narrow"><div class="head"><h2>%s</h2></div>%s</div></section>' % (
+        esc(t['src_h']), ''.join('<p class="tc-src">%s</p>' % p for p in t['src']))
+    s_faq = '<section class="sec" id="faq" style="padding-top:0"><div class="wrap"><div class="head"><h2>%s</h2></div>%s</div></section>' % (esc(t['faq_h']), faq_block(faq_items))
+    s_dl = ('<section class="sec" id="download" style="padding-top:0"><div class="wrap"><div class="cta"><h2>%s</h2><p>%s</p>%s'
+            '<a class="link-more" href="%s" style="color:#fff;border-color:rgba(255,255,255,.6);margin-top:18px">%s %s</a></div></div></section>') % (
+        esc(t['cta_h']), esc(t['cta_p']), store_btns(l, apple[1], play[1], light=True), FEAT_PATHS['dhikr'].get(l, HOME[l] + '#features'), esc(t['widget']), ic('arrow-right-bold'))
+    body = hero + s_how + s_src + s_faq + s_dl + TC_JS
+    hh = head(l, t['title'], tags, [app_ld, crumb_ld, faq_jsonld(faq_items)], amiri=True)
+    return write(path, page(l, hh, body, 'features', TASBIH))
+
 # ---------------------------------------------------------------- sitemap
 def sitemap(today):
     urls = []
@@ -494,6 +733,7 @@ def sitemap(today):
     for l in LANGS: add(HOME[l], HOME)
     for k, alts in FEAT_PATHS.items():
         for l in alts: add(alts[l], alts)
+    for l in TASBIH: add(TASBIH[l], TASBIH)
     for l in BLOG_PATHS: add(BLOG_PATHS[l], BLOG_PATHS)
     for s in POST_META: add('/%s.html' % s, {'en': '/%s.html' % s})
     for extra in ['/support.html', '/privacy.html', '/terms.html']: add(extra, {'en': extra})
@@ -506,6 +746,9 @@ if __name__ == '__main__':
     out += [feature_page(k, l) for k in FEAT_PATHS for l in FEAT_PATHS[k]]
     out += [blog_page(l) for l in BLOG_PATHS]
     out += [article_page(s) for s in POST_META]
-    out += [simple_page(k) for k in ['support', 'privacy', 'terms']]
+    out += [tasbih_page(l) for l in TASBIH]
+    # privacy.html is kept by hand since 26 Nov (2.0.9 policy); live.json holds the old text.
+    out += [simple_page(k) for k in ['support', 'terms']]
+    out += [retired_page(s, r['to']) for s, r in LIVE.get('retired', {}).items()]
     out.append(sitemap(datetime.date.today().isoformat()))
     print(len(out), 'files'); print('\n'.join(out))

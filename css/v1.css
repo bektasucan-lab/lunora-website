@@ -475,3 +475,22 @@ a.feat:hover{border-color:rgba(196,163,90,.55);color:inherit}
 .rev-score .stars{display:flex;gap:2px;color:var(--star)}.rev-score .stars .ic{width:16px;height:16px}
 .trust span:first-child .ic{color:var(--star)}
 @media (max-width:1023px){.pill-row{justify-content:center}.pill-row::after{display:none}}
+/* tasbih counter page (28 Nov) */
+.tc{background:rgba(255,255,255,.92);border-radius:28px;padding:22px 20px 18px;box-shadow:var(--shadow);text-align:center;max-width:420px;margin-inline:auto;color:var(--ink)}
+.tc .tc-sets{margin-bottom:12px;gap:8px}.tc .tc-sets button{padding:7px 13px;font-size:12px}
+.tc-steps{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;min-height:22px;margin-bottom:10px;font:700 11.5px var(--sans);color:var(--mute)}
+.tc-steps span{padding:2px 8px;border-radius:999px;background:var(--paper-2)}.tc-steps .on{background:var(--green);color:#fff}.tc-steps .ok{color:var(--green);text-decoration:line-through}
+.tc-tap{position:relative;width:min(220px,62vw);aspect-ratio:1;border:0;border-radius:50%;background:radial-gradient(circle at 50% 40%,#fff,var(--paper-2));cursor:pointer;margin:4px auto 10px;display:grid;place-items:center;-webkit-tap-highlight-color:transparent;touch-action:manipulation;transition:transform .08s}
+.tc-tap:active{transform:scale(.97)}.tc-tap:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.tc-ring{position:absolute;inset:0;border-radius:50%;padding:10px;background:conic-gradient(var(--green) calc(var(--p,0)*360deg),rgba(63,107,85,.14) 0);-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 10px),#000 calc(100% - 9px));mask:radial-gradient(farthest-side,transparent calc(100% - 10px),#000 calc(100% - 9px))}
+.tc-ring i{display:block;--p:0}
+.tc-mid{display:flex;flex-direction:column;align-items:center;line-height:1}.tc-n{font:600 64px var(--serif);color:var(--green-d)}.tc-of{margin-top:6px;font:700 13px var(--sans);color:var(--mute)}
+.tc-ar{font:700 26px/1.6 'Amiri',serif;color:var(--ink);margin-top:4px}.tc-tr{font-weight:800;color:var(--green);margin-top:2px}.tc-mean{font-size:14px;color:var(--ink-2);margin-top:2px}
+.tc-done{margin-top:10px;font-weight:800;color:var(--gold-t)}
+.tc-foot{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid rgba(31,42,36,.08);font-size:13px;color:var(--mute)}
+.tc-reset{display:inline-flex;align-items:center;gap:6px;border:1.5px solid rgba(63,107,85,.3);background:#fff;color:var(--green);border-radius:999px;padding:6px 12px;font:800 12px var(--sans);cursor:pointer}
+.prose-narrow{max-width:760px}.tc-src{margin-bottom:14px;color:var(--ink-2)}.tc-src b{color:var(--ink)}
+.appbox{max-width:760px;margin:8px auto 0;padding:22px 24px;border-radius:20px;background:var(--paper-2);border-left:4px solid var(--green)}
+.appbox h2{font-size:24px;margin:6px 0 6px}.appbox h2 a{color:var(--ink);text-decoration:none}.appbox h2 a:hover{color:var(--green)}.appbox p{color:var(--ink-2)}
+@media (max-width:1023px){.appbox{margin-inline:var(--side)}}
+.guides .post h3{font-size:20px;margin:6px 0}
