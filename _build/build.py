@@ -8,7 +8,7 @@ from home_text import T as HT, REVIEWS, FAQ as NEW_FAQ
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 B = os.path.join(ROOT, '_build')
 LIVE = json.load(open(os.path.join(B, 'content', 'live.json')))
-V = '7'  # css/js cache version
+V = '8'  # css/js cache version
 SITE = 'https://mylunora.app'
 APPLE = 'https://apps.apple.com/app/apple-store/id6758765933?pt=128518745&amp;ct=%s&amp;mt=8'
 PLAY = 'https://play.google.com/store/apps/details?id=com.studiolunora.lunora&amp;referrer=utm_source%%3Dmylunora.app%%26utm_medium%%3Dweb%%26utm_campaign%%3D%s'

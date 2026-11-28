@@ -1,4 +1,4 @@
-/* Lunora web v1 — menu, language list, hero day flow, tasbih widget, blog filter. */
+/* Lunora web v1 — menu, language list, hero day flow, tasbih widget, blog filter, AI-source store links. */
 (function () {
   var d = document;
   // mobile menu
@@ -64,4 +64,43 @@
     var c = b.dataset.cat;
     d.querySelectorAll('.post[data-cat]').forEach(function (p) { p.hidden = c !== 'all' && p.dataset.cat.split(' ').indexOf(c) < 0; });
   });
+  // Visitors an AI assistant sent (28 Kasım 2026). ChatGPT and the others link to this site, not
+  // to a store, so the store buttons carry the source on; otherwise an install from ChatGPT on
+  // Android reads "google-play / organic". ChatGPT adds utm_source=chatgpt.com, the rest show
+  // only as the referrer. Kept for the visit (sessionStorage) so a second page still counts.
+  // Android → Play referrer utm_source=<ai>&utm_medium=ai&utm_campaign=<page>  (GA4 first user source)
+  // iPhone  → ct=ai-<name>-<page>                                               (App Store Connect → Campaigns)
+  var AI = [['chatgpt', 'chatgpt.com', 'chatgpt'], ['chat.openai', 'chatgpt.com', 'chatgpt'],
+    ['perplexity', 'perplexity.ai', 'perplexity'], ['gemini.google', 'gemini.google.com', 'gemini'],
+    ['copilot', 'copilot.microsoft.com', 'copilot'], ['claude.ai', 'claude.ai', 'claude'],
+    ['meta.ai', 'meta.ai', 'metaai'], ['deepseek', 'deepseek.com', 'deepseek'], ['grok', 'grok.com', 'grok'],
+    ['mistral', 'chat.mistral.ai', 'mistral']];
+  function aiOf(x) {
+    x = (x || '').toLowerCase();
+    for (var i = 0; i < AI.length; i++) if (x.indexOf(AI[i][0]) >= 0) return AI[i];
+    return null;
+  }
+  var ai = null;
+  try { ai = aiOf(new URLSearchParams(location.search).get('utm_source')) || aiOf(d.referrer && new URL(d.referrer).hostname); } catch (e) {}
+  try {
+    if (ai) sessionStorage.setItem('lunora_ai', ai[0]);
+    else ai = aiOf(sessionStorage.getItem('lunora_ai'));
+  } catch (e) {}
+  if (ai) {
+    d.querySelectorAll('a[href*="play.google.com/store/apps/details"]').forEach(function (a) {
+      try {
+        var u = new URL(a.href), r = new URLSearchParams(u.searchParams.get('referrer') || '');
+        u.searchParams.set('referrer', 'utm_source=' + ai[1] + '&utm_medium=ai&utm_campaign=' + (r.get('utm_campaign') || 'web'));
+        a.href = u.toString();
+      } catch (e) {}
+    });
+    d.querySelectorAll('a[href*="apps.apple.com"]').forEach(function (a) {
+      try {
+        var u = new URL(a.href), ct = (u.searchParams.get('ct') || 'web').replace(/^web-/, '');
+        u.searchParams.set('pt', '128518745');
+        u.searchParams.set('ct', ('ai-' + ai[2] + '-' + ct).slice(0, 40));
+        a.href = u.toString();
+      } catch (e) {}
+    });
+  }
 })();
