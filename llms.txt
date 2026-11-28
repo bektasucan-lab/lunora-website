@@ -44,6 +44,9 @@
 - [Adet Döneminde Ne Yapılır? Namaz, Kur’an, Zikir](https://mylunora.app/tr/adet-doneminde-ne-yapilir.html)
 - [Adet Döneminde Kur’an Okunur mu? Dört Mezhep](https://mylunora.app/tr/adet-doneminde-kuran-okunur-mu.html)
 - [Gusül Abdesti Nasıl Alınır? Adım Adım Rehber](https://mylunora.app/tr/gusul-abdesti-nasil-alinir.html)
+- [Esmaül Hüsna: Allah’ın 99 İsmi ve Anlamları](https://mylunora.app/tr/esmaul-husna-99-isim-anlamlari.html)
+- [Namaz Sonrası Tesbihat: Sırası, Sayısı, Kaynağı](https://mylunora.app/tr/namaz-sonrasi-tesbihat.html)
+- [Kadın Namazı Nasıl Kılınır? Adım Adım (Hanefî)](https://mylunora.app/tr/kadin-namazi-nasil-kilinir.html)
 
 ## العربية (ar)
 
@@ -54,6 +57,9 @@
 - [أداة الذكر: مسبحة على شاشتكِ الرئيسية](https://mylunora.app/ar/widget-al-dhikr.html)
 - [مسبحة إلكترونية: عدّاد تسبيح وأذكار بعد الصلاة](https://mylunora.app/ar/masbaha-electroniya.html)
 - [مدوّنة لونورا: مقالات للمرأة المسلمة](https://mylunora.app/ar/blog.html)
+- [الغسل من الحيض: كيفيته ونيته في المذاهب الأربعة](https://mylunora.app/ar/al-ghusl-min-al-haid.html)
+- [أذكار الصباح والمساء بأعدادها ومصادرها](https://mylunora.app/ar/adhkar-al-sabah-wal-masaa.html)
+- [أسماء الله الحسنى التسعة والتسعون ومعانيها](https://mylunora.app/ar/asma-allah-al-husna.html)
 - [أذكار بعد الصلاة: الترتيب والأعداد ومصادرها](https://mylunora.app/ar/adhkar-baad-al-salat.html)
 - [ما الذي يجوز للمرأة في أيام الحيض؟ المذاهب الأربعة](https://mylunora.app/ar/ma-yajuz-lil-haid.html)
 
@@ -66,6 +72,7 @@
 - [Dhikr-Widget & Tasbih-Zähler für iPhone & Android](https://mylunora.app/de/dhikr-widget.html)
 - [Tasbih-Zähler online: Kostenloser Dhikr-Zähler](https://mylunora.app/de/tasbih-zaehler.html)
 - [Lunora-Blog: Gebet, Periode, Koran und Dhikr](https://mylunora.app/de/blog.html)
+- [99 Namen Allahs: Asmaul Husna mit Bedeutung](https://mylunora.app/de/99-namen-allahs.html)
 - [Periode im Islam: Beten, Fasten & Koran lesen](https://mylunora.app/de/periode-im-islam.html)
 
 ## Français (fr)
@@ -77,6 +84,8 @@
 - [Widget dhikr et compteur de tasbih pour iPhone](https://mylunora.app/fr/widget-dhikr.html)
 - [Tasbih en ligne : compteur de dhikr gratuit](https://mylunora.app/fr/compteur-tasbih.html)
 - [Le blog Lunora : guides pour les musulmanes](https://mylunora.app/fr/blog.html)
+- [Les 99 noms d’Allah et leur sens](https://mylunora.app/fr/99-noms-d-allah.html)
+- [Comment prier : horaires et guide de la prière](https://mylunora.app/fr/horaires-de-priere-et-comment-prier.html)
 - [Prier pendant les règles en islam : le guide](https://mylunora.app/fr/prier-pendant-les-regles-en-islam.html)
 - [Douas et dhikr du quotidien pour la musulmane](https://mylunora.app/fr/invocations-et-dhikr-du-quotidien.html)
 
@@ -92,12 +101,21 @@
 - [Haid dalam Islam: Yang Boleh & Tidak Boleh](https://mylunora.app/id/haid-dalam-islam-apa-yang-boleh-dilakukan.html)
 - [Niat & Cara Mandi Wajib Setelah Haid (Syafi’i)](https://mylunora.app/id/cara-mandi-wajib-setelah-haid-niat-dan-tata-cara.html)
 - [Dzikir Setelah Sholat: Arab, Latin & Artinya](https://mylunora.app/id/dzikir-setelah-sholat-latin-arti.html)
+- [Asmaul Husna: 99 Nama Allah dan Artinya](https://mylunora.app/id/asmaul-husna-99-nama-allah-dan-artinya.html)
+- [Doa Sehari-hari dan Zikir Harian untuk Muslimah](https://mylunora.app/id/doa-dan-zikir-harian-muslimah.html)
+- [Dzikir Pagi dan Petang: Arab, Latin, Arti](https://mylunora.app/id/dzikir-pagi-petang-latin-dan-artinya.html)
 
 ## বাংলা (bn)
 
 - [Lunora: মুসলিম নারীদের ইসলামিক অ্যাপ | iPhone ও Android](https://mylunora.app/bn/)
 - [মাসিক মোড: মাসিকের সময় ইবাদত ও কাজা রোজার হিসাব](https://mylunora.app/bn/masik-mod.html)
+- [আমার নামাজ রক্ষা করুন: ওয়াক্তে অ্যাপ অপেক্ষা করে](https://mylunora.app/bn/amar-namaz-rokkha.html)
+- [কুরআন পড়ার পরিকল্পনা ও খতম ট্র্যাকার](https://mylunora.app/bn/quran-porar-porikolpona.html)
+- [জিকির উইজেট ও তাসবিহ কাউন্টার](https://mylunora.app/bn/jikir-widget.html)
 - [অনলাইন তাসবিহ কাউন্টার: বিনামূল্যে ডিজিটাল জিকির](https://mylunora.app/bn/online-tasbih.html)
+- [Lunora ব্লগ: মুসলিম নারীদের জন্য ইসলামি গাইড](https://mylunora.app/bn/blog.html)
+- [মাসিক অবস্থায় কী করবেন: নামাজ, রোজা, কুরআন, জিকির](https://mylunora.app/bn/masik-obosthay-ki-korbo.html)
+- [ফরজ গোসলের নিয়ম: মাসিকের পর গোসল ও নিয়ত](https://mylunora.app/bn/forj-gosoler-niyom.html)
 
 ## Bahasa Melayu (ms)
 
@@ -108,13 +126,23 @@
 - [Widget Zikir & Kaunter Tasbih untuk iPhone, Android](https://mylunora.app/ms/widget-zikir.html)
 - [Tasbih Digital: Kaunter Zikir Dalam Talian Percuma](https://mylunora.app/ms/tasbih-digital.html)
 - [Blog Lunora: Panduan Haid, Solat, Al-Quran dan Zikir](https://mylunora.app/ms/blog.html)
+- [Asmaul Husna: 99 Nama Allah dan Maksudnya](https://mylunora.app/ms/asmaul-husna-99-nama-allah-dan-maksudnya.html)
+- [Niat & Cara Mandi Wajib Selepas Haid (Syafie)](https://mylunora.app/ms/niat-mandi-wajib-selepas-haid.html)
+- [Zikir Selepas Solat: Arab, Rumi dan Maksud](https://mylunora.app/ms/zikir-selepas-solat.html)
+- [Doa dan Zikir Harian Wanita Muslim: Panduan](https://mylunora.app/ms/doa-zikir-harian-wanita-muslim.html)
 - [Bolehkah Wanita Solat Semasa Haid? Panduan Syafie](https://mylunora.app/ms/solat-semasa-haid.html)
 
 ## اردو (ur)
 
 - [Lunora — مسلمان خواتین کی اسلامی ایپ | iPhone اور Android](https://mylunora.app/ur/)
 - [ایام موڈ: ماہواری میں نماز، قرآن اور قضا روزے](https://mylunora.app/ur/ayyam-mode.html)
+- [میری نماز کی حفاظت: نماز کے وقت ایپ لاک](https://mylunora.app/ur/meri-namaz-ki-hifazat.html)
+- [قرآن پڑھنے کا منصوبہ اور ختمِ قرآن ٹریکر](https://mylunora.app/ur/quran-parhne-ka-mansooba.html)
+- [ذکر ویجٹ اور تسبیح کاؤنٹر: iPhone اور Android](https://mylunora.app/ur/zikr-widget.html)
 - [آن لائن تسبیح کاؤنٹر (Tasbeeh Counter)](https://mylunora.app/ur/tasbeeh-counter.html)
+- [Lunora بلاگ: ماہواری، نماز، قرآن اور ذکر کی رہنمائی](https://mylunora.app/ur/blog.html)
+- [ماہواری میں نماز اور عبادت: ایامِ حیض میں کیا کریں](https://mylunora.app/ur/mahwari-mein-namaz-aur-ibadat.html)
+- [عورتوں کی نماز کا طریقہ: حنفی مسلک، قدم بہ قدم](https://mylunora.app/ur/auraton-ke-liye-namaz-ka-tarika.html)
 
 ## Optional
 

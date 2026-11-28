@@ -8,7 +8,7 @@ from home_text import T as HT, REVIEWS, FAQ as NEW_FAQ
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 B = os.path.join(ROOT, '_build')
 LIVE = json.load(open(os.path.join(B, 'content', 'live.json')))
-V = '6'  # css/js cache version
+V = '7'  # css/js cache version
 SITE = 'https://mylunora.app'
 APPLE = 'https://apps.apple.com/app/apple-store/id6758765933?pt=128518745&amp;ct=%s&amp;mt=8'
 PLAY = 'https://play.google.com/store/apps/details?id=com.studiolunora.lunora&amp;referrer=utm_source%%3Dmylunora.app%%26utm_medium%%3Dweb%%26utm_campaign%%3D%s'
@@ -475,7 +475,26 @@ TOPICS = {
     'after-prayer-dhikr': ('dhikr', 'tesbih-bg-wide'),
     'ghusl-guide': ('period', 'bg-a-wide'),
     'quran-during-period': ('period', 'kurs-bg'),
+    'asmaul-husna': ('dhikr', 'bg-c-wide'),
+    'how-to-pray': ('prayer', 'namaz-bg'),
+    'morning-evening-adhkar': ('dhikr', 'bg-b-wide'),
 }
+ASMA = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'content', 'asma_ul_husna.json'), encoding='utf-8'))
+
+def asma_table(l, cols):
+    """The 99 names from the app's own list (same order, Lunora's short meanings). cols = 4 header labels (AR: 3)."""
+    dg = DIGITS.get(l)
+    num = lambda n: ''.join(dg[int(c)] for c in str(n)) if dg else str(n)
+    rows = ''
+    for x in ASMA:
+        ar = '<span lang="ar" dir="rtl" class="asma-ar">%s</span>' % x['arabic']
+        if l == 'ar':
+            rows += '<tr><td>%s</td><td>%s</td><td>%s</td></tr>' % (num(x['order']), ar, esc(x['zk_ar']))
+        else:
+            name = x['name_tr'] if l == 'tr' else x['transliteration']
+            mean = x.get('meaning_' + l) or (x.get('meaning_id') if l == 'ms' else '') or x['meaning_en']
+            rows += '<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>' % (num(x['order']), ar, esc(name), esc(mean))
+    return '<table class="asma"><thead><tr>%s</tr></thead><tbody>%s</tbody></table>' % (''.join('<th>%s</th>' % esc(c) for c in cols), rows)
 CAT_COL = {'period': '#9A5A62', 'prayer': '#3F6B55', 'quran': '#86692A', 'dhikr': '#3F6B55', 'life': '#86692A'}
 CATS = {'en': [('all', 'All'), ('period', 'Period'), ('prayer', 'Prayer'), ('quran', 'Quran'), ('dhikr', 'Duas & dhikr'), ('life', 'Life & faith')],
         'tr': [('all', 'Tümü'), ('period', 'Dönem'), ('prayer', 'Namaz'), ('quran', 'Kur’an'), ('dhikr', 'Dua ve zikir'), ('life', 'Hayat ve iman')]}
@@ -853,7 +872,8 @@ def article_page_l(es, l):
         img(im), crumbs, CAT_COL[cat], esc(cats[cat]), esc(a['h1']), esc('%s · %s %s' % (a['date_label'], a['minutes'], u['minread'])))
     faq = a.get('faq') or []
     faq_html = ('<h2>%s</h2>%s' % (esc(au['faq_h']), ''.join('<div class="faq-item"><h3>%s</h3><p>%s</p></div>' % (esc(q), x) for q, x in faq))) if faq else ''
-    body = '<article class="prose">%s%s</article>' % (a['body'], faq_html)
+    abody = a['body'].replace('<!--ASMA-->', asma_table(l, a.get('asma_cols') or [])) if '<!--ASMA-->' in a['body'] else a['body']
+    body = '<article class="prose">%s%s</article>' % (abody, faq_html)
     fk = APPBOX[cat][0]; bt, bp = au['appbox'][cat]
     fhref = FEAT_PATHS[fk].get(l, HOME[l] + '#features') if fk else HOME[l]
     extra = (' <a href="%s">%s</a>' % (TASBIH[l], esc(GUIDES[l]['tc']))) if fk == 'dhikr' and l in TASBIH and l in GUIDES else ''

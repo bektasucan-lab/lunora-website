@@ -420,6 +420,8 @@ a.feat:hover{border-color:rgba(196,163,90,.55);color:inherit}
 .prose table{width:100%;border-collapse:collapse;font-size:15px;display:block;overflow-x:auto}
 .prose th,.prose td{padding:10px 12px;border-bottom:1px solid rgba(196,163,90,.3);text-align:start;vertical-align:top}
 .prose th{font-weight:800;background:var(--paper-2)}
+.prose table.asma td:first-child{color:var(--ink-3,#8a7f70);width:3em}.asma-ar{font-family:'Amiri','Noto Naskh Arabic','Geeza Pro',serif;font-size:1.35em;white-space:nowrap}
+@media(max-width:640px){.prose table.asma{display:table;font-size:14px;table-layout:auto}.prose table.asma th,.prose table.asma td{padding:8px 5px;overflow-wrap:anywhere;hyphens:auto}.prose table.asma td:first-child{width:2em}.asma-ar{font-size:1.15em;white-space:normal}}
 .prose img{border-radius:18px;height:auto}
 .prose [style*="background"]{border-radius:16px}
 .prose .arabic,.prose [lang=ar],.prose [dir=rtl]{font-family:'Amiri',serif;font-size:1.25em;line-height:1.9}
