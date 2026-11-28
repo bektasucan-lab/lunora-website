@@ -1,0 +1,92 @@
+{
+ "lang": "id",
+ "features": {
+  "dhikr": {
+   "path": "/id/widget-zikir.html",
+   "seo": {
+    "title": "Widget Zikir & Penghitung Tasbih iPhone dan Android | Lunora",
+    "desc": "Hitung zikir (dzikir) dari layar utama dengan widget tasbih Lunora, tanpa membuka aplikasi. Ada pustaka zikir bersumber, set zikirmu sendiri, dan Asmaul Husna.",
+    "og_title": "Widget zikir dan penghitung tasbih Lunora",
+    "og_desc": "Tasbih di layar utama dan layar kunci, pustaka zikir dengan Arab, Latin, arti, dan sumber, serta Asmaul Husna 99 nama."
+   },
+   "badge": "Zikir & Tasbih",
+   "crumb_last": "Widget zikir",
+   "h1": "Widget zikir dan penghitung tasbih",
+   "summary": [
+    "Lunora punya widget tasbih untuk layar utamamu: ketuk untuk menghitung dzikir (zikir) tanpa membuka aplikasi, dan setiap ketukan masuk ke hitungan harian yang sama dengan penghitung di dalam aplikasi. Di dalam aplikasi ada pustaka zikir 113 bacaan dengan teks Arab, Latin, arti, dan sumber, juga set zikirmu sendiri dan Asmaul Husna. Lunora adalah aplikasi Islami untuk muslimah di iPhone dan Android."
+   ],
+   "trust": ["iPhone & Android", "Tanpa iklan", "9 bahasa"],
+   "shot": {"alt": "Widget Lunora di layar utama iPhone, termasuk widget tasbih yang menunjukkan 21 dari 33"},
+   "what": {
+    "badge": "Yang kamu dapat",
+    "h2": "Tasbihmu di layar utama dan di dalam aplikasi",
+    "p": "Tiga widget zikir, penghitung yang mengingat putaran dan set, dan pustaka yang memberi tahu dari mana setiap zikir berasal.",
+    "cards": [
+     {"icon": "📱", "h3": "Menghitung dari layar utama", "p": "Widget tasbih berhitung menampilkan cincin 33, bacaan yang sedang kamu ucapkan, dan tombol <strong>+ Hitung</strong>. Ketuk bacaannya untuk pindah ke yang berikutnya, atau ↺ untuk mengulang putaran."},
+     {"icon": "⭕", "h3": "Cincin yang menunjukkan hari ini", "p": "Widget kecil penghitung zikir menunjukkan berapa banyak zikir yang sudah kamu baca hari ini. Di iPhone, widget ini juga bisa dipasang di layar kunci."},
+     {"icon": "📿", "h3": "Tasbih berbutir", "p": "Widget besar menggambar zikirmu sebagai untaian butir, dengan butir yang sudah dihitung berwarna (Lunora+)."},
+     {"icon": "📚", "h3": "Pustaka zikir dengan sumber", "p": "113 bacaan dalam 16 kategori: setelah salat, pagi dan petang, sebelum tidur, bepergian, sakit, kesusahan, istighfar, salawat, doa Rabbana, dan lainnya. Setiap bacaan menampilkan teks Arab, Latin, arti, dan sumbernya, misalnya “HR. Muslim 591”."},
+     {"icon": "✍️", "h3": "Zikirmu sendiri dan set zikir", "p": "Tulis zikirmu sendiri atau pilih dari pustaka, tentukan target 33, 99, 100, 1000 atau berapa pun, dan susun set zikir yang langkahnya berurutan."},
+     {"icon": "✨", "h3": "Asmaul Husna", "p": "Baca nama-nama indah Allah beserta maknanya, atau hitung ke-99 nama secara berurutan, setiap ketukan membawa nama berikutnya. Ada juga widget “Nama hari ini”."}
+    ]
+   },
+   "how": {
+    "badge": "Cara kerjanya",
+    "h2": "Dari aplikasi ke layar utamamu",
+    "p": "",
+    "steps": [
+     {"h3": "Mulai zikir di aplikasi", "p": "Buka Zikir di Lunora dan pilih bacaan dari pustaka, tasbih setelah salat, zikir pagi atau petang, atau zikir buatanmu sendiri."},
+     {"h3": "Ketuk untuk menghitung", "p": "Ketuk di mana saja pada penghitung. Saat target tercapai, putaran selesai dan hitungan mulai lagi; dalam satu set, langkah berikutnya dimulai. Banyak langkah juga punya audio yang bisa kamu dengarkan."},
+     {"h3": "Tambahkan widget", "p": "Dari galeri widget di ponselmu, tambahkan widget tasbih berhitung atau penghitung zikir Lunora."},
+     {"h3": "Lanjutkan menghitung dari widget", "p": "Widget dimulai dengan zikir yang terakhir kamu hitung di aplikasi, lalu menawarkan enam bacaan sehari-hari: Subhanallah, Alhamdulillah, Allahu Akbar, La ilaha illallah, Astagfirullah, dan selawat. Setiap ketukan langsung terlihat di widget dan ditambahkan ke hitungan harianmu di Lunora."}
+    ]
+   },
+   "details": {
+    "badge": "iPhone & Android",
+    "h2": "Cara kerja widget di tiap ponsel",
+    "p": "",
+    "items": [
+     {"h3": "Di iPhone", "ps": ["Menghitung dari widget bisa di iOS 17 atau lebih baru, di layar utama maupun layar kunci. Di iOS 16 widget tetap menampilkan hitunganmu, dan ketukan membuka penghitung di aplikasi."]},
+     {"h3": "Di Android", "ps": ["Ketuk widget untuk menghitung, sama seperti di iPhone. Widget menyimpan ketukanmu dan Lunora menggabungkannya ke hitungan harian, jadi tidak ada yang terhitung dua kali."]}
+    ],
+    "note": ""
+   },
+   "faq": {
+    "badge": "Pertanyaan umum",
+    "h2": "Pertanyaan yang sering diajukan",
+    "p": "",
+    "items": [
+     {"q": "Bisakah aku menghitung zikir dari layar utama tanpa membuka aplikasi?", "a": "<p>Bisa. Tambahkan widget tasbih berhitung Lunora lalu ketuk + Hitung atau cincinnya. Setiap ketukan terhitung di widget dan ditambahkan ke hitungan harianmu di aplikasi. Di iPhone ini butuh iOS 17 atau lebih baru; di versi sebelumnya, ketukan membuka penghitung.</p>"},
+     {"q": "Zikir apa saja yang bisa dihitung di widget?", "a": "<p>Widget lebih dulu menampilkan zikir yang terakhir kamu hitung di aplikasi, lalu enam bacaan sehari-hari: Subhanallah, Alhamdulillah, Allahu Akbar, La ilaha illallah, Astagfirullah, dan Allahumma shalli ‘ala Muhammad. Ketuk bacaannya untuk pindah ke yang berikutnya.</p>"},
+     {"q": "Apakah Lunora menunjukkan sumber setiap zikir?", "a": "<p>Ya. Setiap bacaan di pustaka zikir Lunora mencantumkan sumbernya, misalnya nomor hadis dari Bukhari atau Muslim, bersama teks Arab, Latin, dan artinya.</p>"},
+     {"q": "Apakah ada Asmaul Husna 99 nama?", "a": "<p>Ada. Kamu bisa membaca 99 nama dengan makna singkatnya, menghitungnya satu per satu secara berurutan, dan menambahkan widget “Nama hari ini”. Aplikasi mencatat bahwa hadis tentang sembilan puluh sembilan nama Allah itu sahih, sedangkan daftar namanya adalah susunan para ulama.</p>"},
+     {"q": "Bolehkah berzikir saat haid?", "a": "<p>Boleh. Zikir dan doa tetap terbuka di hari haid. Saat Mode Haid aktif, layar Zikir juga menautkan ke panduan Mode Haid yang memuat pandangan empat mazhab tentang membaca Al-Qur’an saat haid.</p>"},
+     {"q": "Apakah Lunora ada di iPhone dan Android?", "a": "<p>Ada, di App Store dan Google Play, dan tanpa iklan. Lunora+ adalah langganan yang membuka seluruh aplikasi, dan kamu bisa memulainya dengan coba gratis 7 hari.</p>"}
+    ]
+   },
+   "more": {
+    "badge": "Lainnya dari Lunora",
+    "h2": "Fitur lainnya",
+    "p": "",
+    "cards": [
+     {"href": "/id/rencana-bacaan-quran.html", "icon": "📖", "h3": "Rencana bacaan Al-Qur’an", "p": "Rencana khatam Ramadan, 60 hari, atau setahun, dan rencana buatanmu sendiri."},
+     {"href": "/id/jaga-salatku.html", "icon": "🔒", "h3": "Jaga Salatku", "p": "Saat waktu salat tiba, aplikasi pilihanmu menunggu sampai kamu menandai salatmu."},
+     {"href": "/id/mode-haid.html", "icon": "🌸", "h3": "Mode Haid", "p": "Ibadah saat haid, dengan pandangan empat mazhab dan penghitung qadha puasa."}
+    ],
+    "reading": {
+     "h3": "Bacaan terkait",
+     "links": [
+      ["/id/dzikir-setelah-sholat-latin-arti.html", "Dzikir setelah sholat: Arab, Latin, dan artinya"],
+      ["/id/blog.html", "Semua tulisan di blog Lunora"]
+     ]
+    }
+   },
+   "download": {
+    "badge": "Mulai perjalananmu",
+    "h2": "Unduh Lunora",
+    "p": "Untuk iPhone dan Android, tanpa iklan. Coba gratis 7 hari. Teman spiritual yang dirancang dengan perhatian dan pengertian untukmu.",
+    "greeting": "Assalamu’alaikum, saudariku."
+   }
+  }
+ }
+}

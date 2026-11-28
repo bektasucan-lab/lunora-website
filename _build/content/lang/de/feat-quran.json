@@ -1,0 +1,183 @@
+{
+ "lang": "de",
+ "features": {
+  "quran": {
+   "h1": "Koran-Leseplan und Khatm-Tracker",
+   "summary": [
+    "Die Lesepläne von Lunora teilen den Koran in tägliche Abschnitte und verfolgen deinen Fortschritt Tag für Tag, vom Ramadan-Khatm (Hatim) in 30 Tagen (ein Juz pro Tag) bis zum Khatm in 60 Tagen oder in einem Jahr. Du kannst auch einen Plan aus Suren deiner Wahl erstellen und einen Plan während deiner Periode pausieren, wenn du möchtest. Lunora ist eine islamische App für muslimische Frauen für iPhone und Android, mit 7 Tagen kostenlosem Test."
+   ],
+   "what": {
+    "badge": "Die Pläne",
+    "h2": "Zehn fertige Pläne oder dein eigener",
+    "p": "Drei Khatm-Pläne, um den ganzen Koran zu lesen, sieben kürzere Pläne und ein eigener Plan aus den Suren, die du auswählst.",
+    "cards": [
+     {
+      "icon": "🌙",
+      "h3": "Ramadan-Khatm",
+      "p": "30 Tage, ein Juz pro Tag; jeder Tag beginnt mit dem ersten Vers seines Juz."
+     },
+     {
+      "icon": "📅",
+      "h3": "Khatm in 60 Tagen",
+      "p": "Der ganze Koran in zwei Monaten: etwa zehn Seiten des Medina-Mushafs pro Tag, mit den Seitenzahlen für jeden Tag."
+     },
+     {
+      "icon": "🕰️",
+      "h3": "Khatm in einem Jahr",
+      "p": "Ein bis zwei Seiten pro Tag, 365 Tage lang. Jeden Tag ein wenig, ohne Pause."
+     },
+     {
+      "icon": "🌱",
+      "h3": "Sieben kurze Pläne",
+      "p": "Für den Anfang (Al-Fatiha, dann kurze Suren), Freitagssuren, Morgensuren, Nachtsuren, Heilungsverse, Beruhigende Suren und 7 Suren in 7 Tagen."
+     },
+     {
+      "icon": "✍️",
+      "h3": "Dein eigener Plan",
+      "p": "Wähle die Suren, gib dem Plan einen Namen und ein Symbol, wenn du magst, und lies dann eine oder zwei Suren pro Tag oder leg die Anzahl der Tage selbst fest."
+     },
+     {
+      "icon": "🌸",
+      "h3": "Deine Wahl während der Periode",
+      "p": "Wenn der Periodenmodus an ist, entscheidest du, ob du pausierst oder weitermachst. Bei einem pausierten Plan rückt die Tageszählung nicht vor, und er geht am selben Tag weiter."
+     }
+    ]
+   },
+   "how": {
+    "badge": "So funktioniert’s",
+    "h2": "Ein Plan, der dir sagt, was du heute liest",
+    "p": "",
+    "steps": [
+     {
+      "h3": "Wähle einen Plan",
+      "p": "Öffne in Lunora die Lesepläne und starte einen Khatm-Plan oder einen kurzen Plan, oder erstelle deinen eigenen."
+     },
+     {
+      "h3": "Sieh dir die heutige Lesung an",
+      "p": "Jeder Tag zeigt genau, was du lesen sollst: einen Seitenbereich, einen Juz oder eine Sure. Der ganze Plan ist Tag für Tag aufgelistet."
+     },
+     {
+      "h3": "Lies in der Koran-Leseansicht",
+      "p": "Lies als Liste mit Übersetzung und Umschrift oder als Mushaf-Seiten im Seitenlayout des Medina-Mushafs. Wenn du fertig bist, tippe auf „Gelesen“."
+     },
+     {
+      "h3": "Verfolge deinen Fortschritt",
+      "p": "Der Plan zeigt, an welchem Tag du bist und wie viel Prozent geschafft sind. Wechselst du zu einem anderen Plan, bleibt dein Fortschritt erhalten, und du kannst jederzeit zurückkehren."
+     },
+     {
+      "h3": "Schließ ihn ab",
+      "p": "Am letzten Tag markiert Lunora den Plan als abgeschlossen, mit „Möge Allah es annehmen“. Du kannst ihn erneut beginnen oder einen anderen Plan wählen."
+     }
+    ]
+   },
+   "details": {
+    "badge": "Der Koran in Lunora",
+    "h2": "Wo du deinen Plan liest",
+    "p": "",
+    "items": [
+     {
+      "h3": "Die Leseansicht",
+      "ps": [
+       "Alle 114 Suren auf Arabisch mit Übersetzung, als Liste oder als Mushaf-Seiten, mit Tadschwid-Farben.",
+       "Hör fünf Rezitatoren, setz Lesezeichen bei Versen, füge Notizen hinzu und teile einen Vers als Karte. Weitere Rezitatoren und Offline-Hören nach Juz gibt es mit Lunora+."
+      ]
+     },
+     {
+      "h3": "Auf deinem Startbildschirm",
+      "ps": [
+       "Das Widget „Wo du aufgehört hast“ zeigt die Sure und den Vers, bei denen du aufgehört hast, sodass du mit einem Tipp weiterlesen kannst.",
+       "Der Plan „Heilungsverse“ sammelt Verse, die mit der Absicht der Heilung gelesen werden; wie die App selbst sagt, ersetzen sie keine Behandlung."
+      ]
+     }
+    ],
+    "note": ""
+   },
+   "faq": {
+    "badge": "Häufige Fragen",
+    "h2": "Häufig gestellte Fragen",
+    "p": "",
+    "items": [
+     {
+      "q": "Hat Lunora einen Khatm-Tracker (Hatim)?",
+      "a": "<p>Ja. Lunora hat drei Khatm-Pläne: Ramadan-Khatm (30 Tage, ein Juz pro Tag), Khatm in 60 Tagen (etwa zehn Seiten pro Tag) und Khatm in einem Jahr (ein bis zwei Seiten pro Tag). Die App zeigt, an welchem Tag des Plans du bist und wie viel davon geschafft ist.</p>"
+     },
+     {
+      "q": "Kann ich meinen eigenen Koran-Leseplan erstellen?",
+      "a": "<p>Ja. Wähle die Suren, die du möchtest, füge nach Wunsch einen Namen und ein Symbol hinzu und lies dann eine Sure pro Tag, zwei pro Tag, oder leg die Anzahl der Tage selbst fest. Ein Tag kann dann mehr als eine Sure enthalten.</p>"
+     },
+     {
+      "q": "Wie markiere ich einen Tag als gelesen?",
+      "a": "<p>Öffne die Lesung des Tages aus dem Plan, lies sie in Lunoras Koran-Leseansicht und tippe auf „Gelesen“. Der Tag wird als erledigt markiert, und der Plan geht zum nächsten Tag weiter.</p>"
+     },
+     {
+      "q": "Was passiert mit meinem Leseplan während meiner Periode?",
+      "a": "<p>Wenn der Periodenmodus an ist, überlässt Lunora dir die Wahl: den Plan pausieren oder weitermachen. Solange er pausiert ist, rückt die Tageszählung nicht vor, und wenn du den Periodenmodus ausschaltest, geht es am selben Tag weiter. Der Plan verlinkt außerdem auf den Periodenratgeber, der die Ansichten der vier Rechtsschulen zum Koranlesen während der Menstruation aufführt.</p>"
+     },
+     {
+      "q": "Welches Mushaf-Layout verwendet Lunora?",
+      "a": "<p>Die Seitenansicht folgt dem Seitenlayout des Medina-Mushafs mit 604 Seiten, und die Khatm-Pläne für 60 Tage und ein Jahr geben ihre täglichen Lesungen als Seitenbereiche dieses Mushafs an. Übersetzung und Umschrift gibt es in der Listenansicht.</p>"
+     },
+     {
+      "q": "Gibt es Lunora für iPhone und Android?",
+      "a": "<p>Ja, im App Store und bei Google Play, und es gibt keine Werbung. Lunora+ ist ein Abo, das die ganze App freischaltet, und du kannst es mit 7 Tagen kostenlosem Test beginnen.</p>"
+     }
+    ]
+   },
+   "more": {
+    "badge": "Mehr von Lunora",
+    "h2": "Weitere Funktionen",
+    "p": "",
+    "cards": [
+     {
+      "href": "/de/dhikr-widget.html",
+      "icon": "📿",
+      "h3": "Dhikr-Widget",
+      "p": "Zähle Dhikr auf deinem Startbildschirm, mit einer Dhikr-Bibliothek samt Quellen und den 99 Namen."
+     },
+     {
+      "href": "/de/mein-gebet-schuetzen.html",
+      "icon": "🔒",
+      "h3": "Mein Gebet schützen",
+      "p": "Zur Gebetszeit warten die Apps deiner Wahl, bis du dein Gebet markierst."
+     },
+     {
+      "href": "/de/periodenmodus.html",
+      "icon": "🌸",
+      "h3": "Periodenmodus",
+      "p": "Anbetung in deiner Periode, mit den Ansichten der vier Rechtsschulen und einem Qada-Fastenzähler."
+     }
+    ],
+    "reading": {
+     "h3": "Weiterlesen",
+     "links": [
+      [
+       "/de/periode-im-islam.html",
+       "Periode im Islam: Darf ich beten, fasten und den Koran lesen?"
+      ],
+      [
+       "/quran-reading-guide-muslim-women.html",
+       "Ratgeber zum Koranlesen für muslimische Frauen (auf Englisch)"
+      ],
+      [
+       "/de/blog.html",
+       "Alle Artikel im Lunora-Blog"
+      ]
+     ]
+    }
+   },
+   "download": {
+    "badge": "Beginne deinen Weg",
+    "h2": "Lunora herunterladen",
+    "p": "Für iPhone und Android, ohne Werbung, mit 7 Tagen kostenlosem Test. Eine spirituelle Begleiterin, gestaltet mit der Fürsorge und dem Verständnis, die du verdienst.",
+    "greeting": "As-salamu alaykum, liebe Schwester."
+   },
+   "seo": {
+    "title": "Koran-Leseplan & Khatm-Tracker (Hatim) für Frauen | Lunora",
+    "desc": "Koran-Lesepläne mit Fortschritt: Ramadan-Khatm in 30 Tagen, Khatm (Hatim) in 60 Tagen oder einem Jahr, kurze und eigene Pläne. 7 Tage kostenlos testen.",
+    "og_title": "Lunora: Koran-Leseplan und Khatm-Tracker",
+    "og_desc": "Khatm-Pläne für den Ramadan, 60 Tage oder ein Jahr, kurze Suren-Pläne und Pläne, die du selbst erstellst, Tag für Tag verfolgt."
+   },
+   "crumb_last": "Koran-Leseplan"
+  }
+ }
+}

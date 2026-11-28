@@ -1,0 +1,168 @@
+{
+ "lang": "tr",
+ "features": {
+  "period": {
+   "summary": [
+    "Dönem Modu, Lunora’nın döngünüzü namaz, Kur’an ve zikirle birlikte takip eden bölümüdür: âdetinizi (regl) kaydeder ve bir sonrakini tahmin eder, ezan sesini kapatır, Namazımı Koru’yu dinlendirir ve Ramazan’da tutamadığınız oruçları sayar. Hanefî, Şâfiî, Mâlikî ve Hanbelî mezheplerinin âdet hâlinde Kur’an okumaya dair görüşlerini kaynaklarıyla gösterir; mezhebinizi seçerseniz onu en üstte görürsünüz. Lunora, Müslüman kadınlar için bir İslami uygulamadır; iPhone ve Android’de 7 gün ücretsiz deneyebilirsiniz."
+   ],
+   "download": {
+    "p": "iPhone ve Android’de 7 gün ücretsiz deneyin; reklam yoktur. Hak ettiğiniz özen ve anlayışla tasarlanmış manevi bir yol arkadaşı."
+   },
+   "more": {
+    "reading": {
+     "links": [
+      [
+       "/tr/blog.html",
+       "Lunora Yazıları"
+      ],
+      [
+       "/tr/adet-doneminde-ne-yapilir.html",
+       "Adet döneminde ne yapılır?"
+      ],
+      [
+       "/tr/adet-doneminde-kuran-okunur-mu.html",
+       "Adet döneminde Kur’an okunur mu?"
+      ],
+      [
+       "/tr/gusul-abdesti-nasil-alinir.html",
+       "Gusül abdesti nasıl alınır?"
+      ]
+     ]
+    }
+   },
+   "what": {
+    "p": "Ne suçluluk ne de belirsizlik: uygulama takibi yapar, neyin değişip neyin değişmediğini anlatır, hükmü âlimlere bırakır.",
+    "cards": [
+     {
+      "icon": "🌸",
+      "h3": "Döngü takibi",
+      "p": "Günlerinizi döngü halkasında işaretleyin, kendi ortalamanıza göre bir sonraki dönemin tahminini görün; tahmini son günde Lunora âdetinizin bitip bitmediğini nazikçe sorar."
+     },
+     {
+      "icon": "📚",
+      "h3": "Dört mezhep",
+      "p": "Dönem rehberi, Hanefî, Şâfiî, Mâlikî ve Hanbelî mezheplerinin Kur’an okuma ve mushafa dokunmaya dair görüşlerini kaynaklarıyla verir."
+     },
+     {
+      "icon": "🗓️",
+      "h3": "Kaza orucu sayacı",
+      "p": "Dönem Modu, Ramazan’a denk gelen günleri size sorar. Kaza ekranı kaydedilen, tutulan ve kalan oruçları sayar; seçtiğiniz günden bir akşam önce hatırlatabilir."
+     },
+     {
+      "icon": "🤲",
+      "h3": "Süren ibadetler",
+      "p": "Ruh hâlinize uygun dua ve zikir önerileri, hadis ve fıkıh kartları, teselli veren ayetler ve her gün Esmâ-i Hüsnâ’dan bir isim."
+     },
+     {
+      "icon": "💧",
+      "h3": "Gusül rehberi",
+      "p": "Adım adım gusül ve âdetinizin bittiğini işaretlediğinizde, hazır olduğunuz an için tek bir hatırlatma."
+     },
+     {
+      "icon": "🔕",
+      "h3": "Bu günlerde daha sakin",
+      "p": "Ezan sesi kapanır, Namazımı Koru dinlenir, namaz seriniz korunur ve Kur’an okuma planınızı duraklatabilirsiniz."
+     },
+     {
+      "icon": "👶",
+      "h3": "Hayatın her döneminde",
+      "p": "Durumunuzu hamile, lohusa, emziren ya da düzensiz olarak seçin; tahmin buna göre uyum sağlar ya da kenara çekilir. Lohusalık modu, kanamanın kesildiğini işaretleyene kadar günleri sayar."
+     },
+     {
+      "icon": "📝",
+      "h3": "Belirti, ruh hâli ve notlar",
+      "p": "Her gün nasıl hissettiğinizi kaydedin. Lunora+ ile döngü analizi ve doktorunuzla paylaşabileceğiniz bir kayıt belgesi de gelir."
+     },
+     {
+      "icon": "🔒",
+      "h3": "Mahremiyet esas",
+      "p": "Dönem, ruh hâli ve belirti kayıtlarınız cihazınızın güvenli depolamasında kalır, hiçbir yere yüklenmez. Hesap gerekmez."
+     }
+    ]
+   },
+   "details": {
+    "items": [
+     {
+      "h3": "Âdet hâlinde Kur’an okumak",
+      "ps": [
+       "Dönem rehberi dört mezhebin her biri için mushafa dokunma, Kur’an’ı tilavet etme, ayetleri dua ya da zikir niyetiyle okuma ve dinleme konusundaki görüşü listeler."
+      ]
+     },
+     {
+      "h3": "Mezhebiniz, yalnızca siz belirtirseniz",
+      "ps": [
+       "Dönem Modu ayarlarındaki “Mezhebim” satırından mezhebinizi seçerseniz onun görüşü en üstte gösterilir. “Belirtmek istemiyorum” da diyebilirsiniz.",
+       "Lunora mezhebinizi asla ülkenizden tahmin etmez. Mezhep seçilmemişse uygulama mezhebe özgü hiçbir sayı göstermez."
+      ]
+     },
+     {
+      "h3": "Kanama uzadığında",
+      "ps": [
+       "Mezhebinizi seçtiyseniz ve kanamanız bir süredir devam ediyorsa, bir kart o mezhepte hayız için anılan azami süreyi gösterir.",
+       "Kartta bunun bir hüküm olmadığı ve durumunuz için bir ilim ehline danışmanız gerektiği açıkça yazar."
+      ]
+     },
+     {
+      "h3": "Namaz, oruç ve kaza",
+      "ps": [
+       "“Ne kalkar, ne kalmaz” bölümü, hayız (âdet) günlerinin namazının kaza edilmediğini, orucun ise kaza edildiğini anlatır.",
+       "Kaza sayacı yalnızca günleri sayar; uygulamanın da belirttiği gibi kazanın ne zaman ve nasıl tutulacağı mezheplere göre değişir, bunun için bir hocaya danışmanız gerekir."
+      ]
+     }
+    ]
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Lunora’daki Dönem Modu nedir?",
+      "a": "<p>Dönem Modu, Lunora uygulamasının âdet döngünüzü namaz, Kur’an ve zikirle birlikte takip eden bölümüdür. Döngünüzü kaydeder ve bir sonraki dönemi tahmin eder, âdet hâlinde ibadette neyin değiştiğini anlatır, ruh hâlinize uygun dua ve zikirler önerir ve kaza oruçlarını sayar. Lunora’yı iPhone ve Android’de 7 gün ücretsiz deneyebilirsiniz.</p>"
+     },
+     {
+      "q": "Lunora dört mezhebe göre mi bilgi veriyor?",
+      "a": "<p>Lunora tek bir cevap yerine Hanefî, Şâfiî, Mâlikî ve Hanbelî mezheplerinin görüşlerini gösterir. Dönem rehberi, her mezhebin âdet hâlinde Kur’an okumaya dair görüşünü kaynağıyla birlikte listeler ve mezhebinizi seçtiyseniz onu en üstte gösterir. Uygulama hüküm vermez; kendi durumunuz için bir ilim ehline danışmanızı önerir.</p>"
+     },
+     {
+      "q": "Lunora âdet yüzünden tutamadığım oruçları takip edebilir mi?",
+      "a": "<p>Evet. Dönem Modu Ramazan’a denk gelen âdet günlerinizi sorar; Kaza ekranı kaydedilen, tutulan ve kalan oruç sayısını gösterir. Bir sonraki kaza orucunuz için gün seçip bir akşam önce hatırlatma alabilirsiniz. Lunora yalnız günleri sayar; kazanın ne zaman ve nasıl tutulacağı mezhebinize göre değişir.</p>"
+     },
+     {
+      "q": "Âdet günlerimde ezana ve Namazımı Koru’ya ne olur?",
+      "a": "<p>Dönem Modu açıkken ezan sesi kapanır ve Namazımı Koru size sormadan dinlenir. Dönem bitince ikisi de kendiliğinden geri gelir; dönem günleri namaz serinizi de bozmaz.</p>"
+     },
+     {
+      "q": "Dönem verilerim gizli kalıyor mu?",
+      "a": "<p>Evet. Dönem, ruh hâli, belirti ve günlük kayıtlarınız cihazınızın güvenli depolamasında kalır ve Lunora’nın sunucularına yüklenmez. Hesap gerekmez, reklam yoktur.</p>"
+     },
+     {
+      "q": "Dönem Modu hamilelikte ya da doğumdan sonra çalışıyor mu?",
+      "a": "<p>Evet. Durumunuzu hamile, lohusa, emziren ya da düzensiz olarak belirleyebilirsiniz. Tahmin buna göre uyum sağlar ya da bekler; lohusalık modu ise kanamanın kesildiğini işaretleyene kadar günleri sayar.</p>"
+     }
+    ]
+   },
+   "head": {
+    "tags": [
+     "<meta name=\"description\" content=\"Dönem Modu âdet (regl) döngünüzü namaz, Kur’an ve zikirle takip eder; dört mezhebin görüşlerini gösterir, kaza oruçlarını sayar. 7 gün ücretsiz deneyin.\">",
+     "<link rel=\"canonical\" href=\"https://mylunora.app/tr/donem-modu.html\">",
+     "<link rel=\"alternate\" hreflang=\"en\" href=\"https://mylunora.app/period-mode.html\">",
+     "<link rel=\"alternate\" hreflang=\"tr\" href=\"https://mylunora.app/tr/donem-modu.html\">",
+     "<link rel=\"alternate\" hreflang=\"fr\" href=\"https://mylunora.app/fr/mode-regles.html\">",
+     "<link rel=\"alternate\" hreflang=\"de\" href=\"https://mylunora.app/de/periodenmodus.html\">",
+     "<link rel=\"alternate\" hreflang=\"x-default\" href=\"https://mylunora.app/period-mode.html\">",
+     "<meta property=\"og:title\" content=\"Lunora Dönem Modu: âdet günlerinde ibadet\">",
+     "<meta property=\"og:description\" content=\"Hanefî, Şâfiî, Mâlikî ve Hanbelî görüşleriyle döngü takibi, kaza orucu sayacı ve gusül rehberi.\">",
+     "<meta property=\"og:url\" content=\"https://mylunora.app/tr/donem-modu.html\">",
+     "<meta property=\"og:image\" content=\"https://mylunora.app/img/features/tr-donem-modu.webp\">",
+     "<meta property=\"og:type\" content=\"website\">",
+     "<meta property=\"og:site_name\" content=\"Lunora\">",
+     "<meta property=\"og:locale\" content=\"tr_TR\">",
+     "<meta name=\"twitter:card\" content=\"summary\">"
+    ],
+    "jsonld": [
+     "{\n \"@context\": \"https://schema.org\",\n \"@type\": \"FAQPage\",\n \"mainEntity\": [\n  {\n   \"@type\": \"Question\",\n   \"name\": \"Lunora’daki Dönem Modu nedir?\",\n   \"acceptedAnswer\": {\n    \"@type\": \"Answer\",\n    \"text\": \"Dönem Modu, Lunora uygulamasının âdet döngünüzü namaz, Kur’an ve zikirle birlikte takip eden bölümüdür. Döngünüzü kaydeder ve bir sonraki dönemi tahmin eder, âdet hâlinde ibadette neyin değiştiğini anlatır, ruh hâlinize uygun dua ve zikirler önerir ve kaza oruçlarını sayar. Lunora’yı iPhone ve Android’de 7 gün ücretsiz deneyebilirsiniz.\"\n   }\n  },\n  {\n   \"@type\": \"Question\",\n   \"name\": \"Lunora dört mezhebe göre mi bilgi veriyor?\",\n   \"acceptedAnswer\": {\n    \"@type\": \"Answer\",\n    \"text\": \"Lunora tek bir cevap yerine Hanefî, Şâfiî, Mâlikî ve Hanbelî mezheplerinin görüşlerini gösterir. Dönem rehberi, her mezhebin âdet hâlinde Kur’an okumaya dair görüşünü kaynağıyla birlikte listeler ve mezhebinizi seçtiyseniz onu en üstte gösterir. Uygulama hüküm vermez; kendi durumunuz için bir ilim ehline danışmanızı önerir.\"\n   }\n  },\n  {\n   \"@type\": \"Question\",\n   \"name\": \"Lunora âdet yüzünden tutamadığım oruçları takip edebilir mi?\",\n   \"acceptedAnswer\": {\n    \"@type\": \"Answer\",\n    \"text\": \"Evet. Dönem Modu Ramazan’a denk gelen âdet günlerinizi sorar; Kaza ekranı kaydedilen, tutulan ve kalan oruç sayısını gösterir. Bir sonraki kaza orucunuz için gün seçip bir akşam önce hatırlatma alabilirsiniz. Lunora yalnız günleri sayar; kazanın ne zaman ve nasıl tutulacağı mezhebinize göre değişir.\"\n   }\n  },\n  {\n   \"@type\": \"Question\",\n   \"name\": \"Âdet günlerimde ezana ve Namazımı Koru’ya ne olur?\",\n   \"acceptedAnswer\": {\n    \"@type\": \"Answer\",\n    \"text\": \"Dönem Modu açıkken ezan sesi kapanır ve Namazımı Koru size sormadan dinlenir. Dönem bitince ikisi de kendiliğinden geri gelir; dönem günleri namaz serinizi de bozmaz.\"\n   }\n  },\n  {\n   \"@type\": \"Question\",\n   \"name\": \"Dönem verilerim gizli kalıyor mu?\",\n   \"acceptedAnswer\": {\n    \"@type\": \"Answer\",\n    \"text\": \"Evet. Dönem, ruh hâli, belirti ve günlük kayıtlarınız cihazınızın güvenli depolamasında kalır ve Lunora’nın sunucularına yüklenmez. Hesap gerekmez, reklam yoktur.\"\n   }\n  },\n  {\n   \"@type\": \"Question\",\n   \"name\": \"Dönem Modu hamilelikte ya da doğumdan sonra çalışıyor mu?\",\n   \"acceptedAnswer\": {\n    \"@type\": \"Answer\",\n    \"text\": \"Evet. Durumunuzu hamile, lohusa, emziren ya da düzensiz olarak belirleyebilirsiniz. Tahmin buna göre uyum sağlar ya da bekler; lohusalık modu ise kanamanın kesildiğini işaretleyene kadar günleri sayar.\"\n   }\n  }\n ]\n}",
+     "{\n \"@context\": \"https://schema.org\",\n \"@graph\": [\n  {\n   \"@type\": \"Organization\",\n   \"@id\": \"https://mylunora.app/#org\",\n   \"name\": \"Studio Lunora\",\n   \"url\": \"https://mylunora.app/\",\n   \"logo\": \"https://mylunora.app/icon-192.png\",\n   \"sameAs\": [\n    \"https://instagram.com/mylunora.app\"\n   ]\n  },\n  {\n   \"@type\": \"MobileApplication\",\n   \"@id\": \"https://mylunora.app/#app\",\n   \"name\": \"Lunora - Muslim Women\",\n   \"alternateName\": \"Lunora\",\n   \"operatingSystem\": \"iOS, Android\",\n   \"applicationCategory\": \"LifestyleApplication\",\n   \"description\": \"An Islamic app for Muslim women: prayer times, Quran, duas, dhikr and a Period Mode with fiqh guidance from the four madhhabs. Works offline, no ads, no account.\",\n   \"inLanguage\": [\n    \"en\",\n    \"tr\",\n    \"ar\",\n    \"fr\",\n    \"de\",\n    \"id\",\n    \"ms\",\n    \"ur\",\n    \"bn\"\n   ],\n   \"offers\": {\n    \"@type\": \"Offer\",\n    \"price\": \"0\",\n    \"priceCurrency\": \"USD\"\n   },\n   \"publisher\": {\n    \"@id\": \"https://mylunora.app/#org\"\n   },\n   \"sameAs\": [\n    \"https://apps.apple.com/us/app/lunora-muslim-women/id6758765933\",\n    \"https://play.google.com/store/apps/details?id=com.studiolunora.lunora\"\n   ]\n  },\n  {\n   \"@type\": \"WebPage\",\n   \"@id\": \"https://mylunora.app/tr/donem-modu.html#webpage\",\n   \"url\": \"https://mylunora.app/tr/donem-modu.html\",\n   \"name\": \"Dönem Modu: Âdet Günlerinde İbadet ve Kaza Takibi | Lunora\",\n   \"description\": \"Dönem Modu âdet (regl) döngünüzü namaz, Kur’an ve zikirle takip eder; dört mezhebin görüşlerini gösterir, kaza oruçlarını sayar. 7 gün ücretsiz deneyin.\",\n   \"inLanguage\": \"tr\",\n   \"about\": {\n    \"@id\": \"https://mylunora.app/#app\"\n   },\n   \"primaryImageOfPage\": \"https://mylunora.app/img/features/tr-donem-modu.webp\",\n   \"breadcrumb\": {\n    \"@id\": \"https://mylunora.app/tr/donem-modu.html#breadcrumb\"\n   }\n  },\n  {\n   \"@type\": \"BreadcrumbList\",\n   \"@id\": \"https://mylunora.app/tr/donem-modu.html#breadcrumb\",\n   \"itemListElement\": [\n    {\n     \"@type\": \"ListItem\",\n     \"position\": 1,\n     \"name\": \"Ana sayfa\",\n     \"item\": \"https://mylunora.app/tr/\"\n    },\n    {\n     \"@type\": \"ListItem\",\n     \"position\": 2,\n     \"name\": \"Dönem Modu\",\n     \"item\": \"https://mylunora.app/tr/donem-modu.html\"\n    }\n   ]\n  }\n ]\n}"
+    ],
+    "title": "Dönem Modu: Âdet Günlerinde İbadet ve Kaza Takibi | Lunora"
+   }
+  }
+ }
+}

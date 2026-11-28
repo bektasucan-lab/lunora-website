@@ -1,0 +1,138 @@
+{
+ "lang": "de",
+ "home": {
+  "title": "Lunora: Islamische App für Frauen mit Gebetszeiten & Koran",
+  "desc": "Für muslimische Frauen: Gebetszeiten, Koran, Duas, Dhikr und Periodenmodus mit den vier Rechtsschulen. 9 Sprachen, ohne Werbung, 7 Tage kostenlos testen.",
+  "day": [
+   [
+    "Fajr · 05:12",
+    "Vers des Tages auf deinem Heute-Bildschirm"
+   ],
+   [
+    "Dhuhr · 13:05",
+    "Mein Gebet schützen pausiert deine Apps"
+   ],
+   [
+    "Asr · 16:40",
+    "Gemeinsam beten, Schritt für Schritt"
+   ],
+   [
+    "Maghrib · 19:28",
+    "Eine Koranstunde ab dem ersten Buchstaben"
+   ],
+   [
+    "Nacht",
+    "Der Periodenmodus begleitet deinen Zyklus"
+   ]
+  ],
+  "feats": [
+   [
+    "Dhikr & Tasbih",
+    "Ein Zähler, eigene Dhikr-Sets und ein Tasbih-Widget."
+   ],
+   [
+    "Qada",
+    "Verpasste Gebete und Fastentage, gezählt und in deinem Tempo nachgeholt."
+   ],
+   [
+    "Bittgebete",
+    "Duas für Morgen, Abend und Schutz, und deine eigenen."
+   ],
+   [
+    "Koran-Kurs",
+    "Von den Buchstaben bis zum Tadschwid, Lektion für Lektion."
+   ],
+   [
+    "Koran auswendig lernen",
+    "Hifz, Seite für Seite, mit täglicher Wiederholung."
+   ],
+   [
+    "Gemeinsam beten",
+    "Lerne das Gebet Schritt für Schritt, zu Hause."
+   ],
+   [
+    "Tagebuch & Gewohnheiten",
+    "Ein Dankbarkeitstagebuch und kleine tägliche Gewohnheiten."
+   ],
+   [
+    "Luna",
+    "Sag ihr, wie du dich fühlst, und finde einen passenden Vers."
+   ]
+  ],
+  "pil": [
+   [
+    "Koran & Gebetszeiten",
+    "Der ganze Koran, ab dem ersten Buchstaben",
+    "114 Suren als Liste oder Mushaf-Seiten, fünf Rezitatoren und Lesepläne. Ein Koran-Kurs, der beim Alphabet beginnt, und Gebetszeiten per GPS mit lokalen Methoden."
+   ],
+   [
+    "Periodenmodus",
+    "Dein Zyklus und dein Gebet, gemeinsam",
+    "Behalte deine Tage im Blick und sieh, wovon du befreit bist und was du nachholst, mit dem Fiqh der vier Rechtsschulen. Erinnerungen werden von selbst still."
+   ],
+   [
+    "Mein Gebet schützen",
+    "Deine Apps warten auf dein Gebet",
+    "Zur Gebetszeit pausieren die Apps, die du wählst, bis du das Gebet als verrichtet markierst. In deiner Periode ruht die Funktion von selbst."
+   ]
+  ],
+  "shot_alt": [
+   "Lunora Heute-Bildschirm mit dem Vers des Tages",
+   "Mein Gebet schützen: Wartebildschirm zur Gebetszeit",
+   "Gemeinsam beten, das Gebet Schritt für Schritt",
+   "Koran-Kurs, die erste Lektion",
+   "Periodenmodus, der Bildschirm Mein Zyklus"
+  ],
+  "covers": [
+   [
+    "Geschichte",
+    "Hajar und Zamzam"
+   ],
+   [
+    "Gefährtinnen",
+    "Khadija"
+   ],
+   [
+    "Rezitation",
+    "Ar-Rahman"
+   ]
+  ],
+  "perP": "Dein Zyklus, deine Gebetstage und deine nachzuholenden Fastentage an einem ruhigen Ort. Gebetserinnerungen werden leiser, Mein Gebet schützen ruht, und die Hinweise stammen aus allen vier Rechtsschulen, mit ihren Quellen.",
+  "ctaP": "Keine Werbung, in keiner Sprache. Lunora+ öffnet alles: alle Rezitatoren, den Offline-Koran, den ganzen Koran-Kurs und Hifz, Mein Gebet schützen für alle fünf Gebete und die großen Widgets. Starte mit 7 Tagen kostenlosem Test.",
+  "salam": "As-salamu alaykum, liebe Schwester."
+ },
+ "home_faq": {
+  "h2": "Häufige Fragen",
+  "items": [
+   [
+    "Was ist Lunora?",
+    "Lunora ist eine islamische App für muslimische Frauen. Sie vereint Gebetszeiten, Koran, Duas, Dhikr und einen Periodenmodus in einer App für iPhone und Android. Lunora funktioniert offline, hat keine Werbung und braucht kein Konto."
+   ],
+   [
+    "Was ist der Periodenmodus?",
+    "Der Periodenmodus begleitet dich durch deinen Zyklus, neben Gebet, Koran und Dhikr. Du kannst deinen Zyklus verfolgen und Vorhersagen sehen, Hadith- und Fiqh-Leitfäden der vier Rechtsschulen und den Ghusl-Leitfaden lesen, Dua- und Dhikr-Vorschläge passend zu deiner Stimmung erhalten und deine nachzuholenden Fastentage zählen. Gebetserinnerungen werden an deinen Periodentagen leiser, und deine Zyklusdaten bleiben auf deinem Gerät."
+   ],
+   [
+    "Gibt es Lunora für iPhone und Android?",
+    "Ja. Lunora gibt es im App Store für das iPhone und bei Google Play für Android-Smartphones."
+   ],
+   [
+    "Was ist Lunora+?",
+    "Es gibt keine Werbung. Lunora+ schaltet die ganze App frei, ein Abo, das du mit 7 Tagen kostenlosem Test beginnen kannst. Lunora+ umfasst alle Rezitatoren, den Offline-Koran, den vollständigen Koran-Kurs und Hifz, „Mein Gebet schützen“ für alle fünf Gebete und die großen Widgets."
+   ],
+   [
+    "In welchen Sprachen gibt es Lunora?",
+    "Deutsch, Englisch, Türkisch, Arabisch, Französisch, Indonesisch, Malaiisch, Urdu und Bengalisch."
+   ],
+   [
+    "Bleiben meine Daten privat?",
+    "Deine Zyklus-, Stimmungs-, Symptom- und Tagebucheinträge, Notizen und gespeicherten Duas bleiben auf deinem Gerät und werden nicht auf unsere Server hochgeladen. Du brauchst kein Konto, und es gibt keine Werbung. Um Abstürze zu beheben und die App zu verbessern, erheben wir mit Firebase Analytics und Crashlytics anonyme Nutzungs- und Absturzdaten; deine Stadt und dein Land werden zur Berechnung der Gebetszeiten verwendet. Wir verkaufen deine Daten niemals. Details stehen in unserer Datenschutzerklärung auf mylunora.app/privacy.html (auf Englisch)."
+   ]
+  ]
+ },
+ "guides": {
+  "k": "Ratgeber",
+  "h": "Lies nach, bevor du die App lädst",
+  "all": "Alle Artikel"
+ }
+}

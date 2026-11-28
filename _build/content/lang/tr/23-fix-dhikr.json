@@ -1,0 +1,104 @@
+{
+ "lang": "tr",
+ "features": {
+  "dhikr": {
+   "summary": [
+    "Lunora, Müslüman kadınlar için bir İslami uygulamadır. Ana ekrana eklediğiniz tesbih widget’ıyla uygulamayı açmadan zikir çekebilirsiniz; her dokunuş, uygulamadaki sayaçla aynı günlük sayıya eklenir. Uygulamanın içinde Arapça metni, okunuşu, meali ve kaynağıyla 113 zikirlik bir kütüphane, zikirmatik görünümü, kendi zikir setleriniz ve Esmâ-i Hüsnâ da var. iPhone ve Android’de 7 gün ücretsiz deneyebilirsiniz."
+   ],
+   "download": {
+    "p": "iPhone ve Android’de 7 gün ücretsiz deneyin; reklam yoktur. Hak ettiğiniz özen ve anlayışla tasarlanmış manevi bir yol arkadaşı."
+   },
+   "more": {
+    "reading": {
+     "links": [
+      [
+       "/tr/blog.html",
+       "Lunora Yazıları"
+      ],
+      [
+       "/tr/adet-doneminde-ne-yapilir.html",
+       "Adet döneminde ne yapılır?"
+      ],
+      [
+       "/daily-duas-dhikr-muslim-women-guide.html",
+       "Günlük dualar ve zikirler (İngilizce)"
+      ]
+     ]
+    }
+   },
+   "h1": "Zikirmatik widget’ı ve tesbih sayacı",
+   "how": {
+    "steps": [
+     {
+      "h3": "Uygulamada bir zikre başlayın",
+      "p": "Lunora’da Zikir bölümünü açın; kütüphaneden bir zikir, namaz sonrası tesbihat, sabah ya da akşam zikirleri veya kendi oluşturduğunuz bir zikri seçin."
+     },
+     {
+      "h3": "Saymak için dokunun",
+      "p": "Sayacın herhangi bir yerine dokunun. Hedefe varınca tur kapanır ve sayaç baştan başlar; sette sıradaki adıma geçilir. Birçok adımı sesli olarak da dinleyebilirsiniz."
+     },
+     {
+      "h3": "Widget’ı ekleyin",
+      "p": "Telefonunuzun widget galerisinden “Tesbih (sayaçlı)” ya da “Zikir sayacı” widget’ını ekleyin."
+     },
+     {
+      "h3": "Widget’tan devam edin",
+      "p": "Widget, uygulamada en son çektiğiniz zikirle başlar; ardından altı günlük zikir gelir: Sübhânallah, Elhamdülillah, Allâhu ekber, Lâ ilâhe illallah, Estağfirullah ve salavat. Her dokunuş widget’ta hemen görünür ve Lunora’daki günlük sayınıza eklenir."
+     }
+    ]
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Uygulamayı açmadan ana ekrandan zikir çekebilir miyim?",
+      "a": "<p>Evet. Lunora’nın “Tesbih (sayaçlı)” widget’ını ekleyip Say düğmesine ya da halkaya dokunmanız yeterli. Her dokunuş widget’ta sayılır ve uygulamadaki günlük sayınıza eklenir. iPhone’da bunun için iOS 17 veya sonrası gerekir; daha eski sürümlerde dokununca sayaç açılır.</p>"
+     },
+     {
+      "q": "Widget’ta hangi zikirleri çekebilirim?",
+      "a": "<p>Widget önce uygulamada en son çektiğiniz zikri gösterir, ardından altı günlük zikri: Sübhânallah, Elhamdülillah, Allâhu ekber, Lâ ilâhe illallah, Estağfirullah ve Allâhumme salli alâ Muhammed. Zikrin adına dokununca sıradakine geçilir.</p>"
+     },
+     {
+      "q": "Lunora zikirlerin kaynağını gösteriyor mu?",
+      "a": "<p>Evet. Lunora’nın zikir kütüphanesindeki her zikirde, örneğin Buhârî ya da Müslim’den bir hadis numarası olarak kaynağı yazar; Arapça metni, okunuşu ve meali de birlikte verilir.</p>"
+     },
+     {
+      "q": "Lunora’da Esmâ-i Hüsnâ var mı?",
+      "a": "<p>Evet. Allah’ın 99 ismini kısa anlamlarıyla okuyabilir, sırayla tek tek çekebilir ve “Günün esması” widget’ını ekleyebilirsiniz. Uygulama, “Allah’ın doksan dokuz ismi vardır” hadisinin sahih olduğunu, isimlerin bu listesinin ise âlimlerin derlemesi olduğunu belirtir.</p>"
+     },
+     {
+      "q": "Âdet günlerimde zikre devam edebilir miyim?",
+      "a": "<p>Evet. Zikir ve dua âdet günlerinde de açıktır. Dönem Modu açıkken Zikir ekranı, dört mezhebin âdet hâlinde Kur’an okumaya dair görüşlerinin yer aldığı Dönem Modu rehberine de bağlantı verir.</p>"
+     },
+     {
+      "q": "Lunora iPhone ve Android’de var mı?",
+      "a": "<p>Lunora, App Store ve Google Play’de bulunur ve reklam içermez. Uygulamanın tamamı Lunora+ aboneliğiyle açılır; aboneliğe 7 gün ücretsiz denemeyle başlayabilirsiniz.</p>"
+     }
+    ]
+   },
+   "head": {
+    "tags": [
+     "<meta name=\"description\" content=\"Tesbih widget’ıyla uygulamayı açmadan ana ekrandan zikir çekin. Kaynaklı zikir kütüphanesi, kendi setleriniz ve Esmâ-i Hüsnâ. 7 gün ücretsiz deneyin.\">",
+     "<link rel=\"canonical\" href=\"https://mylunora.app/tr/zikir-widget.html\">",
+     "<link rel=\"alternate\" hreflang=\"en\" href=\"https://mylunora.app/dhikr-widget.html\">",
+     "<link rel=\"alternate\" hreflang=\"tr\" href=\"https://mylunora.app/tr/zikir-widget.html\">",
+     "<link rel=\"alternate\" hreflang=\"fr\" href=\"https://mylunora.app/fr/widget-dhikr.html\">",
+     "<link rel=\"alternate\" hreflang=\"de\" href=\"https://mylunora.app/de/dhikr-widget.html\">",
+     "<link rel=\"alternate\" hreflang=\"x-default\" href=\"https://mylunora.app/dhikr-widget.html\">",
+     "<meta property=\"og:title\" content=\"Lunora: zikir widget’ı ve tesbih sayacı\">",
+     "<meta property=\"og:description\" content=\"Ana ekrandan zikir çekin. Müslüman kadınlar için bir İslami uygulamada kaynaklı zikir kütüphanesi, kendi setleriniz ve Esmâ-i Hüsnâ.\">",
+     "<meta property=\"og:url\" content=\"https://mylunora.app/tr/zikir-widget.html\">",
+     "<meta property=\"og:image\" content=\"https://mylunora.app/img/features/tr-zikir-widget.webp\">",
+     "<meta property=\"og:type\" content=\"website\">",
+     "<meta property=\"og:site_name\" content=\"Lunora\">",
+     "<meta property=\"og:locale\" content=\"tr_TR\">",
+     "<meta name=\"twitter:card\" content=\"summary\">"
+    ],
+    "jsonld": [
+     "{\n \"@context\": \"https://schema.org\",\n \"@type\": \"FAQPage\",\n \"mainEntity\": [\n  {\n   \"@type\": \"Question\",\n   \"name\": \"Uygulamayı açmadan ana ekrandan zikir çekebilir miyim?\",\n   \"acceptedAnswer\": {\n    \"@type\": \"Answer\",\n    \"text\": \"Evet. Lunora’nın “Tesbih (sayaçlı)” widget’ını ekleyip Say düğmesine ya da halkaya dokunmanız yeterli. Her dokunuş widget’ta sayılır ve uygulamadaki günlük sayınıza eklenir. iPhone’da bunun için iOS 17 veya sonrası gerekir; daha eski sürümlerde dokununca sayaç açılır.\"\n   }\n  },\n  {\n   \"@type\": \"Question\",\n   \"name\": \"Widget’ta hangi zikirleri çekebilirim?\",\n   \"acceptedAnswer\": {\n    \"@type\": \"Answer\",\n    \"text\": \"Widget önce uygulamada en son çektiğiniz zikri gösterir, ardından altı günlük zikri: Sübhânallah, Elhamdülillah, Allâhu ekber, Lâ ilâhe illallah, Estağfirullah ve Allâhumme salli alâ Muhammed. Zikrin adına dokununca sıradakine geçilir.\"\n   }\n  },\n  {\n   \"@type\": \"Question\",\n   \"name\": \"Lunora zikirlerin kaynağını gösteriyor mu?\",\n   \"acceptedAnswer\": {\n    \"@type\": \"Answer\",\n    \"text\": \"Evet. Lunora’nın zikir kütüphanesindeki her zikirde, örneğin Buhârî ya da Müslim’den bir hadis numarası olarak kaynağı yazar; Arapça metni, okunuşu ve meali de birlikte verilir.\"\n   }\n  },\n  {\n   \"@type\": \"Question\",\n   \"name\": \"Lunora’da Esmâ-i Hüsnâ var mı?\",\n   \"acceptedAnswer\": {\n    \"@type\": \"Answer\",\n    \"text\": \"Evet. Allah’ın 99 ismini kısa anlamlarıyla okuyabilir, sırayla tek tek çekebilir ve “Günün esması” widget’ını ekleyebilirsiniz. Uygulama, “Allah’ın doksan dokuz ismi vardır” hadisinin sahih olduğunu, isimlerin bu listesinin ise âlimlerin derlemesi olduğunu belirtir.\"\n   }\n  },\n  {\n   \"@type\": \"Question\",\n   \"name\": \"Âdet günlerimde zikre devam edebilir miyim?\",\n   \"acceptedAnswer\": {\n    \"@type\": \"Answer\",\n    \"text\": \"Evet. Zikir ve dua âdet günlerinde de açıktır. Dönem Modu açıkken Zikir ekranı, dört mezhebin âdet hâlinde Kur’an okumaya dair görüşlerinin yer aldığı Dönem Modu rehberine de bağlantı verir.\"\n   }\n  },\n  {\n   \"@type\": \"Question\",\n   \"name\": \"Lunora iPhone ve Android’de var mı?\",\n   \"acceptedAnswer\": {\n    \"@type\": \"Answer\",\n    \"text\": \"Lunora, App Store ve Google Play’de bulunur ve reklam içermez. Uygulamanın tamamı Lunora+ aboneliğiyle açılır; aboneliğe 7 gün ücretsiz denemeyle başlayabilirsiniz.\"\n   }\n  }\n ]\n}",
+     "{\n \"@context\": \"https://schema.org\",\n \"@graph\": [\n  {\n   \"@type\": \"Organization\",\n   \"@id\": \"https://mylunora.app/#org\",\n   \"name\": \"Studio Lunora\",\n   \"url\": \"https://mylunora.app/\",\n   \"logo\": \"https://mylunora.app/icon-192.png\",\n   \"sameAs\": [\n    \"https://instagram.com/mylunora.app\"\n   ]\n  },\n  {\n   \"@type\": \"MobileApplication\",\n   \"@id\": \"https://mylunora.app/#app\",\n   \"name\": \"Lunora - Muslim Women\",\n   \"alternateName\": \"Lunora\",\n   \"operatingSystem\": \"iOS, Android\",\n   \"applicationCategory\": \"LifestyleApplication\",\n   \"description\": \"An Islamic app for Muslim women: prayer times, Quran, duas, dhikr and a Period Mode with fiqh guidance from the four madhhabs. Works offline, no ads, no account.\",\n   \"inLanguage\": [\n    \"en\",\n    \"tr\",\n    \"ar\",\n    \"fr\",\n    \"de\",\n    \"id\",\n    \"ms\",\n    \"ur\",\n    \"bn\"\n   ],\n   \"offers\": {\n    \"@type\": \"Offer\",\n    \"price\": \"0\",\n    \"priceCurrency\": \"USD\"\n   },\n   \"publisher\": {\n    \"@id\": \"https://mylunora.app/#org\"\n   },\n   \"sameAs\": [\n    \"https://apps.apple.com/us/app/lunora-muslim-women/id6758765933\",\n    \"https://play.google.com/store/apps/details?id=com.studiolunora.lunora\"\n   ]\n  },\n  {\n   \"@type\": \"WebPage\",\n   \"@id\": \"https://mylunora.app/tr/zikir-widget.html#webpage\",\n   \"url\": \"https://mylunora.app/tr/zikir-widget.html\",\n   \"name\": \"Zikirmatik Widget’ı ve Tesbih Sayacı | Lunora\",\n   \"description\": \"Tesbih widget’ıyla uygulamayı açmadan ana ekrandan zikir çekin. Kaynaklı zikir kütüphanesi, kendi setleriniz ve Esmâ-i Hüsnâ. 7 gün ücretsiz deneyin.\",\n   \"inLanguage\": \"tr\",\n   \"about\": {\n    \"@id\": \"https://mylunora.app/#app\"\n   },\n   \"primaryImageOfPage\": \"https://mylunora.app/img/features/tr-zikir-widget.webp\",\n   \"breadcrumb\": {\n    \"@id\": \"https://mylunora.app/tr/zikir-widget.html#breadcrumb\"\n   }\n  },\n  {\n   \"@type\": \"BreadcrumbList\",\n   \"@id\": \"https://mylunora.app/tr/zikir-widget.html#breadcrumb\",\n   \"itemListElement\": [\n    {\n     \"@type\": \"ListItem\",\n     \"position\": 1,\n     \"name\": \"Ana sayfa\",\n     \"item\": \"https://mylunora.app/tr/\"\n    },\n    {\n     \"@type\": \"ListItem\",\n     \"position\": 2,\n     \"name\": \"Zikir widget’ı\",\n     \"item\": \"https://mylunora.app/tr/zikir-widget.html\"\n    }\n   ]\n  }\n ]\n}"
+    ],
+    "title": "Zikirmatik Widget’ı ve Tesbih Sayacı | Lunora"
+   }
+  }
+ }
+}

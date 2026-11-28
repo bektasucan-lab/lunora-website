@@ -1,0 +1,39 @@
+{
+ "lang": "id",
+ "ui": {
+  "quran": "Rencana bacaan Al-Qur’an"
+ },
+ "disclaim": "Perkiraan membantumu merencanakan. Itu bukan fatwa; kalau ragu, tanyakan kepada ulama atau ustazah yang kamu percaya.",
+ "guides": {
+  "k": "Panduan",
+  "h": "Baca dulu sebelum mengunduh",
+  "all": "Semua panduan",
+  "tc": "Tasbih digital online gratis",
+  "tcp": "Hitung dzikir (zikir) di browser: tasbih setelah sholat, istighfar, selawat."
+ },
+ "article_ui": {
+  "in_app": "Di aplikasi Lunora",
+  "faq_h": "Pertanyaan yang sering diajukan",
+  "cta_h": "Unduh Lunora",
+  "cta_p": "Tanpa iklan, dalam 9 bahasa. Coba gratis 7 hari.",
+  "appbox": {
+   "period": ["Mode Haid", "Catat siklusmu bersama salat, Al-Qur’an, dan zikir, lihat pandangan empat mazhab, dan hitung puasa yang perlu diqadha."],
+   "dhikr": ["Widget zikir", "Hitung zikir dari layar utama, dengan pustaka zikir bersumber, set zikirmu sendiri, dan Asmaul Husna."],
+   "quran": ["Rencana bacaan Al-Qur’an", "Rencana khatam harian, dengan terjemahan Bahasa Indonesia dan jeda saat haid."],
+   "prayer": ["Jaga Salatku", "Saat waktu salat tiba, aplikasi pilihanmu menunggu sampai kamu menandai salatmu."],
+   "life": ["Lunora", "Jadwal salat, Al-Qur’an, doa, zikir, dan Mode Haid dalam satu aplikasi yang tenang."]
+  }
+ },
+ "blog": {
+  "path": "/id/blog.html",
+  "title": "Blog Lunora: Panduan Islami untuk Muslimah",
+  "desc": "Panduan Islami untuk muslimah: haid dalam Islam, mandi wajib setelah haid, dzikir setelah sholat, Al-Qur’an, dan doa harian.",
+  "tag": "Tulisan Lunora",
+  "h1a": "Catatan untuk",
+  "h1b": "saat-saat tenangmu.",
+  "lead": "Panduan haid, mandi wajib, dan dzikir setelah sholat, ditulis untuk muslimah dengan sumber yang jelas.",
+  "cta": ["Baca juga", "di aplikasi"],
+  "ctaP": "Doa, zikir, Al-Qur’an, dan Mode Haid dalam satu aplikasi Lunora. Tanpa iklan, dalam 9 bahasa.",
+  "cats": [["all", "Semua"], ["period", "Haid"], ["prayer", "Salat"], ["quran", "Al-Qur’an"], ["dhikr", "Doa & zikir"], ["life", "Hidup & iman"]]
+ }
+}

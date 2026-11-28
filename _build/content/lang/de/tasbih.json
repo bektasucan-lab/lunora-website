@@ -1,0 +1,116 @@
+{
+ "lang": "de",
+ "tasbih": {
+  "desc": "Kostenloser Tasbih-Zähler online (Tesbih, Zikirmatik): Tippe oder drücke die Leertaste, um Dhikr zu zählen, nach dem Gebet, vor dem Schlafen, Istighfar, Salawat.",
+  "lead": "Eine kostenlose digitale Tasbih (Tesbih, Zikirmatik) in deinem Browser. Tippe auf den Kreis oder drücke die Leertaste, um zu zählen, und wähle unten ein Set. Dein Zählstand bleibt auf diesem Gerät.",
+  "sets": [
+   [
+    "Nach dem Gebet",
+    [
+     [
+      "سُبْحَانَ اللّٰهِ",
+      "Subhanallah",
+      "Gepriesen sei Allah",
+      33
+     ],
+     [
+      "الْحَمْدُ لِلّٰهِ",
+      "Alhamdulillah",
+      "Alles Lob gebührt Allah",
+      33
+     ],
+     [
+      "اللّٰهُ أَكْبَرُ",
+      "Allahu Akbar",
+      "Allah ist der Größte",
+      33
+     ],
+     [
+      "لَا إِلٰهَ إِلَّا اللّٰهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+      "La ilaha illallahu wahdahu la sharika lah…",
+      "Es gibt keinen Gott außer Allah, dem Einen, ohne Partner…",
+      1
+     ]
+    ]
+   ],
+   [
+    "Vor dem Schlafen",
+    [
+     [
+      "سُبْحَانَ اللّٰهِ",
+      "Subhanallah",
+      "Gepriesen sei Allah",
+      33
+     ],
+     [
+      "الْحَمْدُ لِلّٰهِ",
+      "Alhamdulillah",
+      "Alles Lob gebührt Allah",
+      33
+     ],
+     [
+      "اللّٰهُ أَكْبَرُ",
+      "Allahu Akbar",
+      "Allah ist der Größte",
+      34
+     ]
+    ]
+   ],
+   [
+    "Istighfar",
+    [
+     [
+      "أَسْتَغْفِرُ اللّٰهَ",
+      "Astaghfirullah",
+      "Ich bitte Allah um Vergebung",
+      100
+     ]
+    ]
+   ],
+   [
+    "Salawat",
+    [
+     [
+      "اللّٰهُمَّ صَلِّ عَلَى مُحَمَّدٍ",
+      "Allahumma salli ‘ala Muhammad",
+      "O Allah, segne Muhammad",
+      100
+     ]
+    ]
+   ],
+   [
+    "Frei zählen",
+    [
+     [
+      "لَا إِلٰهَ إِلَّا اللّٰهُ",
+      "La ilaha illallah",
+      "Es gibt keinen Gott außer Allah",
+      0
+     ]
+    ]
+   ]
+  ],
+  "src": [
+   "<b>Nach jedem Gebet:</b> Der Prophet ﷺ lehrte, 33-mal Subhanallah, 33-mal Alhamdulillah und 33-mal Allahu Akbar zu sagen und die Hundert mit „La ilaha illallahu wahdahu la sharika lah, lahul-mulku wa lahul-hamdu wa huwa ‘ala kulli shay’in qadir“ zu vollenden. (<a href=\"https://sunnah.com/muslim:597\" rel=\"noopener\">Sahih Muslim 597</a>)",
+   "<b>Vor dem Schlafen:</b> Er lehrte Ali und Fatima, beim Zubettgehen 33-mal Subhanallah, 33-mal Alhamdulillah und 34-mal Allahu Akbar zu sagen, und sagte, das sei besser für sie als ein Diener. (<a href=\"https://sunnah.com/bukhari:3113\" rel=\"noopener\">Sahih al-Bukhari 3113</a>, <a href=\"https://sunnah.com/muslim:2727\" rel=\"noopener\">Sahih Muslim 2727</a>)"
+  ],
+  "faq": [
+   [
+    "Darf man Dhikr mit einem digitalen Zähler zählen?",
+    "Das Zählen an den Fingern ist Sunna, und der Prophet ﷺ hat dazu ermutigt. Viele Gelehrte sehen Perlen oder einen Zähler als erlaubtes Hilfsmittel zum Zählen. Frag im Zweifel eine Gelehrte oder einen Gelehrten deines Vertrauens."
+   ],
+   [
+    "Speichert der Zähler meinen Stand?",
+    "Ja, nur auf diesem Gerät. Dein Zählstand und die Summe für heute bleiben in deinem Browser. Nichts wird an uns gesendet, ein Konto brauchst du nicht."
+   ],
+   [
+    "Kann ich ihn während meiner Periode nutzen?",
+    "Ja. Dhikr, Duas und Salawat stehen dir auch während deiner Periode offen; der Zähler ist für diese Tage ein guter Begleiter."
+   ],
+   [
+    "Gibt es eine Tasbih für den Startbildschirm?",
+    "Lunora hat ein Tasbih-Widget für den Startbildschirm von iPhone und Android, mit einer Dhikr-Bibliothek mit Quellen. So zählst du, ohne eine App zu öffnen."
+   ]
+  ]
+ }
+}

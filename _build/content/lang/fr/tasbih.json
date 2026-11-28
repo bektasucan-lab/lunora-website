@@ -1,0 +1,135 @@
+{
+ "lang": "fr",
+ "tasbih": {
+  "title": "Tasbih en ligne : compteur de dhikr gratuit | Lunora",
+  "desc": "Tasbih en ligne gratuit : touche ou appuie sur la barre d’espace pour compter ton dhikr (après la prière, avant de dormir, istighfar, salawat).",
+  "lead": "Un tasbih en ligne gratuit, dans ton navigateur. Touche le cercle ou appuie sur la barre d’espace pour compter, et choisis une série ci-dessous. Ton total reste sur cet appareil.",
+  "sets": [
+   [
+    "Après la prière",
+    [
+     [
+      "سُبْحَانَ اللّٰهِ",
+      "SoubhânAllah",
+      "Gloire à Allah",
+      33
+     ],
+     [
+      "الْحَمْدُ لِلّٰهِ",
+      "Alhamdoulillah",
+      "Louange à Allah",
+      33
+     ],
+     [
+      "اللّٰهُ أَكْبَرُ",
+      "Allahou Akbar",
+      "Allah est le plus grand",
+      33
+     ],
+     [
+      "لَا إِلٰهَ إِلَّا اللّٰهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+      "La ilaha illa Llah wahdahou la charika lahou…",
+      "Nul ne mérite d’être adoré en dehors d’Allah, Seul, sans associé…",
+      1
+     ]
+    ]
+   ],
+   [
+    "Avant de dormir",
+    [
+     [
+      "سُبْحَانَ اللّٰهِ",
+      "SoubhânAllah",
+      "Gloire à Allah",
+      33
+     ],
+     [
+      "الْحَمْدُ لِلّٰهِ",
+      "Alhamdoulillah",
+      "Louange à Allah",
+      33
+     ],
+     [
+      "اللّٰهُ أَكْبَرُ",
+      "Allahou Akbar",
+      "Allah est le plus grand",
+      34
+     ]
+    ]
+   ],
+   [
+    "Istighfar",
+    [
+     [
+      "أَسْتَغْفِرُ اللّٰهَ",
+      "Astaghfiroullah",
+      "Je demande pardon à Allah",
+      100
+     ]
+    ]
+   ],
+   [
+    "Salawat",
+    [
+     [
+      "اللّٰهُمَّ صَلِّ عَلَى مُحَمَّدٍ",
+      "Allahoumma salli ‘ala Muhammad",
+      "Ô Allah, envoie Tes bénédictions sur Muhammad",
+      100
+     ]
+    ]
+   ],
+   [
+    "Compte libre",
+    [
+     [
+      "لَا إِلٰهَ إِلَّا اللّٰهُ",
+      "La ilaha illa Llah",
+      "Il n’y a de dieu qu’Allah",
+      0
+     ]
+    ]
+   ]
+  ],
+  "src": [
+   "<b>Après chaque prière :</b> le Prophète ﷺ a enseigné de dire 33 fois SoubhânAllah, 33 fois Alhamdoulillah et 33 fois Allahou Akbar, puis de compléter la centaine par « La ilaha illa Llah wahdahou la charika lahou, lahou l-moulkou wa lahou l-hamdou wa houwa ‘ala koulli chay’in qadir ». (<a href=\"https://sunnah.com/muslim:597\" rel=\"noopener\">Sahih Muslim 597</a>)",
+   "<b>Avant de dormir :</b> il a enseigné à Ali et Fatima de dire, au moment de se coucher, 33 fois SoubhânAllah, 33 fois Alhamdoulillah et 34 fois Allahou Akbar, et leur a dit que c’était meilleur pour eux qu’un serviteur. (<a href=\"https://sunnah.com/bukhari:3113\" rel=\"noopener\">Sahih al-Boukhari 3113</a>, <a href=\"https://sunnah.com/muslim:2727\" rel=\"noopener\">Sahih Muslim 2727</a>)"
+  ],
+  "how": [
+   [
+    "Choisis une série",
+    "Après la prière, avant de dormir, istighfar, salawat, ou un compte libre sans objectif."
+   ],
+   [
+    "Touche ou appuie sur espace",
+    "Chaque touche ajoute un. L’anneau se remplit et passe tout seul à la formule suivante."
+   ],
+   [
+    "Termine et recommence",
+    "À la fin, tu vois ton total du jour. « Recommencer » relance la série."
+   ]
+  ],
+  "faq": [
+   [
+    "Peut-on compter son dhikr avec un compteur numérique ?",
+    "Compter sur les doigts est la Sunna, et le Prophète ﷺ l’a recommandé. Beaucoup de savants considèrent le chapelet ou un compteur comme un outil permis pour garder le compte. En cas de doute, demande à un savant ou à une savante de confiance."
+   ],
+   [
+    "Le compteur garde-t-il mon total ?",
+    "Oui, sur cet appareil uniquement. Ton décompte et ton total du jour restent dans ton navigateur. Rien ne nous est envoyé, et il n’y a pas de compte à créer."
+   ],
+   [
+    "Puis-je l’utiliser pendant mes règles ?",
+    "Oui. Le dhikr, les invocations (douas) et les salawat te restent ouverts pendant tes règles ; le compteur t’accompagne bien ces jours-là."
+   ],
+   [
+    "Quel dhikr faire après la prière ?",
+    "Le tasbih classique : SoubhânAllah, Alhamdoulillah et Allahou Akbar, 33 fois chacun, puis la formule qui complète la centaine. Choisis la série « Après la prière » ci-dessus ; les adhkar du matin et du soir sont détaillés dans notre guide des <a href=\"/fr/invocations-et-dhikr-du-quotidien.html\">douas et du dhikr du quotidien</a>."
+   ],
+   [
+    "Existe-t-il un tasbih pour l’écran d’accueil ?",
+    "Lunora propose un widget tasbih pour l’écran d’accueil de l’iPhone et d’Android, avec une bibliothèque de dhikr sourcés, pour compter sans ouvrir l’application."
+   ]
+  ]
+ }
+}

@@ -1,0 +1,177 @@
+{
+ "lang": "de",
+ "features": {
+  "dhikr": {
+   "h1": "Dhikr-Widget und Tasbih-Zähler",
+   "summary": [
+    "Lunora ist eine islamische App für muslimische Frauen mit einem Tasbih-Widget (Zikirmatik) für deinen Startbildschirm: Tippe darauf, um Dhikr zu zählen, ohne die App zu öffnen, und jeder Tipp fließt in denselben Tageszähler wie der Zähler in der App. In der App findest du eine Dhikr-Bibliothek mit 113 Einträgen mit arabischem Text, Umschrift, Bedeutung und Quelle, dazu deine eigenen Dhikr-Sets und die 99 Namen Allahs. Lunora gibt es für iPhone und Android, und du kannst es 7 Tage kostenlos testen."
+   ],
+   "what": {
+    "badge": "Was dich erwartet",
+    "h2": "Deine Tasbih, auf dem Startbildschirm und in der App",
+    "p": "Drei Dhikr-Widgets, ein Zähler, der Runden und Sets mitzählt, und eine Bibliothek, die dir sagt, woher jeder Dhikr stammt.",
+    "cards": [
+     {
+      "icon": "📱",
+      "h3": "Zählen auf dem Startbildschirm",
+      "p": "Das Widget „Tasbih mit Zähler“ zeigt einen Ring aus 33, die Formel, die du gerade sprichst, und eine Schaltfläche <strong>+ Zählen</strong>. Tippe auf die Formel, um zur nächsten zu wechseln, oder auf ↺, um die Runde neu zu beginnen."
+     },
+     {
+      "icon": "⭕",
+      "h3": "Ein Ring, der deinen Tag zeigt",
+      "p": "Das kleine Widget „Dhikr-Zähler“ zeigt, wie viel Dhikr du heute gemacht hast. Auf dem iPhone kann es auch auf dem Sperrbildschirm sitzen."
+     },
+     {
+      "icon": "📿",
+      "h3": "Tesbih mit Perlen",
+      "p": "Ein großes Widget zeichnet deinen Dhikr als Perlenschnur, die gezählten Perlen sind farbig (Lunora+)."
+     },
+     {
+      "icon": "📚",
+      "h3": "Eine Dhikr-Bibliothek mit Quellen",
+      "p": "113 Einträge in 16 Kategorien: nach dem Gebet, morgens und abends, vor dem Schlafen, auf Reisen, bei Krankheit, in Bedrängnis, Istighfar, Salawat, Rabbana-Duas und mehr. Zu jedem Eintrag siehst du den arabischen Text, eine Umschrift, die Bedeutung und die Quelle, etwa „Muslim 591“."
+     },
+     {
+      "icon": "✍️",
+      "h3": "Eigener Dhikr und eigene Sets",
+      "p": "Schreib deinen eigenen Dhikr oder wähle einen aus der Bibliothek, setz dir ein Ziel von 33, 99, 100, 1000 oder einer beliebigen Zahl, und stell Sets zusammen, deren Schritte aufeinander folgen."
+     },
+     {
+      "icon": "✨",
+      "h3": "Die 99 Namen",
+      "p": "Lies die schönsten Namen Allahs mit ihren Bedeutungen oder zähle alle 99 der Reihe nach durch; jeder Tipp bringt den nächsten Namen. Es gibt auch ein Widget „Name des Tages“."
+     }
+    ]
+   },
+   "how": {
+    "badge": "So funktioniert’s",
+    "h2": "Von der App auf deinen Startbildschirm",
+    "p": "",
+    "steps": [
+     {
+      "h3": "Starte einen Dhikr in der App",
+      "p": "Öffne in Lunora den Bereich Dhikr und wähle einen Dhikr aus der Bibliothek, die Tasbihat nach dem Gebet, die Morgen- oder Abend-Adhkar oder einen Dhikr, den du selbst erstellt hast."
+     },
+     {
+      "h3": "Tippen zum Zählen",
+      "p": "Tippe irgendwo auf den Zähler. Am Ziel schließt sich die Runde und die Zählung beginnt von vorn; in einem Set beginnt der nächste Schritt. Viele Schritte kannst du dir auch anhören."
+     },
+     {
+      "h3": "Füge das Widget hinzu",
+      "p": "Füge aus der Widget-Galerie deines Handys „Tasbih mit Zähler“ oder „Dhikr-Zähler“ hinzu."
+     },
+     {
+      "h3": "Zähl im Widget weiter",
+      "p": "Das Widget beginnt mit dem Dhikr, den du zuletzt in der App gezählt hast, und bietet dann sechs alltägliche Formeln an: SubhanAllah, Alhamdulillah, Allahu Akbar, La ilaha illallah, Astaghfirullah und Salawat. Jeder Tipp erscheint sofort im Widget und wird zu deinem Tageszähler in Lunora addiert."
+     }
+    ]
+   },
+   "details": {
+    "badge": "iPhone & Android",
+    "h2": "So funktionieren die Widgets auf jedem Handy",
+    "p": "",
+    "items": [
+     {
+      "h3": "Auf dem iPhone",
+      "ps": [
+       "Das Zählen im Widget funktioniert ab iOS 17, auf dem Startbildschirm und auf dem Sperrbildschirm. Unter iOS 16 zeigt das Widget weiterhin deinen Stand, und ein Tipp öffnet den Zähler in der App."
+      ]
+     },
+     {
+      "h3": "Auf Android",
+      "ps": [
+       "Tippe auf das Widget, um zu zählen, genau wie auf dem iPhone. Das Widget speichert die Tipps, und Lunora übernimmt sie in deinen Tageszähler, sodass nichts doppelt gezählt wird."
+      ]
+     }
+    ],
+    "note": ""
+   },
+   "faq": {
+    "badge": "Häufige Fragen",
+    "h2": "Häufig gestellte Fragen",
+    "p": "",
+    "items": [
+     {
+      "q": "Kann ich Dhikr auf dem Startbildschirm zählen, ohne die App zu öffnen?",
+      "a": "<p>Ja. Füge das Lunora-Widget „Tasbih mit Zähler“ hinzu und tippe auf + Zählen oder auf den Ring. Jeder Tipp wird im Widget gezählt und zu deinem Tageszähler in der App addiert. Auf dem iPhone braucht das iOS 17 oder neuer; bei älteren Versionen öffnet ein Tipp stattdessen den Zähler.</p>"
+     },
+     {
+      "q": "Welchen Dhikr kann ich im Widget zählen?",
+      "a": "<p>Das Widget zeigt zuerst den Dhikr, den du zuletzt in der App gezählt hast, dann sechs alltägliche Formeln: SubhanAllah, Alhamdulillah, Allahu Akbar, La ilaha illallah, Astaghfirullah und Allahumma salli ala Muhammad. Tippe auf die Formel, um zur nächsten zu wechseln.</p>"
+     },
+     {
+      "q": "Zeigt Lunora, woher jeder Dhikr stammt?",
+      "a": "<p>Ja. Jeder Eintrag in der Dhikr-Bibliothek von Lunora nennt seine Quelle, zum Beispiel eine Hadith-Nummer aus Sahih al-Bukhari oder Sahih Muslim, zusammen mit dem arabischen Text, einer Umschrift und der Bedeutung.</p>"
+     },
+     {
+      "q": "Enthält Lunora die 99 Namen Allahs (Asma ul Husna)?",
+      "a": "<p>Ja. Du kannst die 99 Namen mit kurzen Bedeutungen lesen, sie einzeln der Reihe nach durchzählen und ein Widget „Name des Tages“ hinzufügen. Die App weist darauf hin, dass der Hadith über die neunundneunzig Namen Allahs sahih ist, die Liste der Namen selbst aber von Gelehrten zusammengestellt wurde.</p>"
+     },
+     {
+      "q": "Kann ich während meiner Periode weiter Dhikr machen?",
+      "a": "<p>Ja. Dhikr und Duas bleiben an Periodentagen verfügbar. Wenn der Periodenmodus an ist, verlinkt der Dhikr-Bildschirm außerdem auf den Periodenratgeber, der die Ansichten der vier Rechtsschulen zum Koranlesen während der Menstruation darlegt.</p>"
+     },
+     {
+      "q": "Gibt es Lunora für iPhone und Android?",
+      "a": "<p>Ja, im App Store und bei Google Play, und es gibt keine Werbung. Lunora+ ist ein Abo, das die ganze App freischaltet, und du kannst es mit 7 Tagen kostenlosem Test beginnen.</p>"
+     }
+    ]
+   },
+   "more": {
+    "badge": "Mehr von Lunora",
+    "h2": "Weitere Funktionen",
+    "p": "",
+    "cards": [
+     {
+      "href": "/de/koran-leseplan.html",
+      "icon": "📖",
+      "h3": "Koran-Leseplan",
+      "p": "Khatm-Pläne für den Ramadan, 60 Tage oder ein Jahr, und Pläne, die du selbst erstellst."
+     },
+     {
+      "href": "/de/mein-gebet-schuetzen.html",
+      "icon": "🔒",
+      "h3": "Mein Gebet schützen",
+      "p": "Zur Gebetszeit warten die Apps deiner Wahl, bis du dein Gebet markierst."
+     },
+     {
+      "href": "/de/periodenmodus.html",
+      "icon": "🌸",
+      "h3": "Periodenmodus",
+      "p": "Anbetung in deiner Periode, mit den Ansichten der vier Rechtsschulen und einem Qada-Fastenzähler."
+     }
+    ],
+    "reading": {
+     "h3": "Weiterlesen",
+     "links": [
+      [
+       "/daily-duas-dhikr-muslim-women-guide.html",
+       "Tägliche Duas &amp; Dhikr für muslimische Frauen (auf Englisch)"
+      ],
+      [
+       "/spiritual-self-care-muslim-women.html",
+       "Spirituelle Selbstfürsorge für muslimische Frauen (auf Englisch)"
+      ],
+      [
+       "/de/blog.html",
+       "Alle Artikel im Lunora-Blog"
+      ]
+     ]
+    }
+   },
+   "download": {
+    "badge": "Beginne deinen Weg",
+    "h2": "Lunora herunterladen",
+    "p": "Für iPhone und Android, ohne Werbung, mit 7 Tagen kostenlosem Test. Eine spirituelle Begleiterin, gestaltet mit der Fürsorge und dem Verständnis, die du verdienst.",
+    "greeting": "As-salamu alaykum, liebe Schwester."
+   },
+   "seo": {
+    "title": "Dhikr-Widget & Tasbih-Zähler für iPhone & Android | Lunora",
+    "desc": "Zähle Dhikr mit Lunoras Tasbih-Widget (Zikirmatik), ohne die App zu öffnen. Dhikr-Bibliothek mit Quellen, eigene Sets und die 99 Namen. 7 Tage kostenlos testen.",
+    "og_title": "Lunora: Dhikr-Widget und Tasbih-Zähler",
+    "og_desc": "Zähle deinen Dhikr auf dem Startbildschirm. Eine Dhikr-Bibliothek mit Quellen, eigene Sets und die 99 Namen, in einer islamischen App für muslimische Frauen."
+   },
+   "crumb_last": "Dhikr-Widget"
+  }
+ }
+}

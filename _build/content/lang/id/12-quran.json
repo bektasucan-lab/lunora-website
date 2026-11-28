@@ -1,0 +1,93 @@
+{
+ "lang": "id",
+ "features": {
+  "quran": {
+   "path": "/id/rencana-bacaan-quran.html",
+   "seo": {
+    "title": "Rencana Bacaan Al-Qur’an & Pelacak Khatam | Lunora",
+    "desc": "Rencana bacaan Lunora membagi Al-Qur’an menjadi bacaan harian: khatam Ramadan 30 hari, 60 hari, atau setahun, atau rencana buatanmu. Bisa dijeda saat haid.",
+    "og_title": "Rencana bacaan Al-Qur’an dan pelacak khatam",
+    "og_desc": "Jadwal khatam Al-Qur’an 30 hari, 60 hari, atau setahun, dengan terjemahan Bahasa Indonesia, di iPhone dan Android."
+   },
+   "badge": "Al-Qur’an",
+   "crumb_last": "Rencana bacaan Al-Qur’an",
+   "h1": "Rencana bacaan Al-Qur’an dan pelacak khatam",
+   "summary": [
+    "Rencana bacaan Lunora membagi Al-Qur’an menjadi bacaan harian dan mencatat kemajuanmu hari demi hari, dari khatam Ramadan 30 hari (satu juz sehari) sampai khatam 60 hari atau setahun. Kamu juga bisa menyusun rencana dari surah pilihanmu sendiri, dan menjedanya saat haid kalau mau. Al-Qur’annya lengkap dengan terjemahan Bahasa Indonesia. Lunora adalah aplikasi Islami untuk muslimah di iPhone dan Android."
+   ],
+   "trust": ["iPhone & Android", "Tanpa iklan", "9 bahasa"],
+   "shot": {"alt": "Cat air Al-Qur’an terbuka di atas rehal kayu, ilustrasi yang dipakai Lunora untuk rencana khatam"},
+   "what": {
+    "badge": "Rencananya",
+    "h2": "Sepuluh rencana siap pakai, atau buatan sendiri",
+    "p": "Tiga rencana khatam untuk membaca seluruh Al-Qur’an, tujuh rencana yang lebih pendek, dan rencana khusus dari surah pilihanmu.",
+    "cards": [
+     {"icon": "🌙", "h3": "Khatam Ramadan", "p": "30 hari, satu juz sehari, dan setiap hari dimulai dari ayat pertama juz itu."},
+     {"icon": "📅", "h3": "Khatam dalam 60 hari", "p": "Seluruh Al-Qur’an dalam dua bulan: sekitar sepuluh halaman mushaf Madinah sehari, lengkap dengan nomor halaman tiap hari."},
+     {"icon": "🕰️", "h3": "Khatam dalam setahun", "p": "Satu sampai dua halaman sehari selama 365 hari. Sedikit tapi tiap hari, tanpa putus."},
+     {"icon": "🌱", "h3": "Tujuh rencana pendek", "p": "Untuk pemula (Al-Fatihah, lalu surah-surah pendek), surah-surah Jumat, surah pagi, surah malam, ayat-ayat penyembuh, surah penenang, dan 7 surah dalam 7 hari."},
+     {"icon": "✍️", "h3": "Rencanamu sendiri", "p": "Pilih surahnya, beri nama dan ikon kalau mau, lalu baca satu atau dua surah sehari atau tentukan sendiri jumlah harinya."},
+     {"icon": "🌸", "h3": "Pilihanmu saat haid", "p": "Saat Mode Haid aktif, kamu yang memutuskan menjeda atau melanjutkan. Rencana yang dijeda tidak menggeser hitungan harinya dan dilanjutkan dari hari yang sama."}
+    ]
+   },
+   "how": {
+    "badge": "Cara kerjanya",
+    "h2": "Rencana yang memberitahumu apa yang dibaca hari ini",
+    "p": "",
+    "steps": [
+     {"h3": "Pilih rencana", "p": "Buka Rencana Bacaan di Lunora dan mulai rencana khatam, rencana pendek, atau buat sendiri."},
+     {"h3": "Lihat bacaan hari ini", "p": "Setiap hari menunjukkan persis apa yang dibaca: rentang halaman, satu juz, atau satu surah. Seluruh rencana terdaftar hari demi hari."},
+     {"h3": "Baca di pembaca Al-Qur’an", "p": "Baca sebagai daftar ayat dengan terjemahan dan transliterasi, atau sebagai halaman mushaf dengan tata letak mushaf Madinah. Setelah selesai, ketuk “Sudah kubaca”."},
+     {"h3": "Pantau kemajuanmu", "p": "Rencana menunjukkan kamu ada di hari keberapa dan berapa persen yang selesai. Kalau kamu pindah ke rencana lain, kemajuanmu tetap tersimpan dan bisa dilanjutkan kapan saja."},
+     {"h3": "Selesaikan", "p": "Di hari terakhir Lunora menandai rencana selesai dengan “Semoga Allah menerimanya”. Kamu bisa memulainya lagi atau memilih rencana lain."}
+    ]
+   },
+   "details": {
+    "badge": "Al-Qur’an di Lunora",
+    "h2": "Tempat kamu membaca rencanamu",
+    "p": "",
+    "items": [
+     {"h3": "Pembaca Al-Qur’an", "ps": ["Seluruh 114 surah dalam bahasa Arab dengan terjemahan Bahasa Indonesia, sebagai daftar ayat atau halaman mushaf, dengan warna tajwid.", "Dengarkan lima qari, tandai ayat, tambahkan catatan, dan bagikan ayat sebagai kartu. Lebih banyak qari dan unduhan per juz untuk didengar offline tersedia dengan Lunora+."]},
+     {"h3": "Di layar utamamu", "ps": ["Widget “Terakhir dibaca” menampilkan surah dan ayat tempat kamu berhenti, sehingga bacaanmu bisa dilanjutkan dengan satu ketukan.", "Rencana Ayat Penyembuh berisi ayat-ayat yang dibaca dengan niat kesembuhan; seperti kata aplikasinya sendiri, ayat-ayat ini tidak menggantikan pengobatan."]}
+    ],
+    "note": ""
+   },
+   "faq": {
+    "badge": "Pertanyaan umum",
+    "h2": "Pertanyaan yang sering diajukan",
+    "p": "",
+    "items": [
+     {"q": "Apakah Lunora punya pelacak khatam?", "a": "<p>Ya. Lunora punya tiga rencana khatam: khatam Ramadan (30 hari, satu juz sehari), khatam 60 hari (sekitar sepuluh halaman sehari), dan khatam setahun (satu sampai dua halaman sehari). Aplikasi menunjukkan kamu ada di hari keberapa dan berapa banyak yang sudah selesai.</p>"},
+     {"q": "Bisakah aku membuat rencana bacaanku sendiri?", "a": "<p>Bisa. Pilih surah yang kamu mau, beri nama dan ikon kalau suka, lalu baca satu surah sehari, dua sehari, atau tentukan sendiri jumlah harinya. Satu hari bisa berisi lebih dari satu surah.</p>"},
+     {"q": "Bagaimana menandai satu hari sudah dibaca?", "a": "<p>Buka bacaan hari itu dari rencana, bacalah di pembaca Al-Qur’an Lunora, lalu ketuk “Sudah kubaca”. Hari itu ditandai selesai dan rencana berlanjut ke hari berikutnya.</p>"},
+     {"q": "Apa yang terjadi pada rencana bacaanku saat haid?", "a": "<p>Kalau Mode Haid aktif, Lunora menyerahkan pilihannya kepadamu: jeda atau lanjut. Selama dijeda, hitungan hari tidak maju, dan rencana dilanjutkan dari hari yang sama saat Mode Haid dimatikan. Rencana ini juga terhubung ke panduan Mode Haid yang memuat pandangan empat mazhab (termasuk Syafi’i) tentang membaca Al-Qur’an saat haid.</p>"},
+     {"q": "Mushaf apa yang dipakai Lunora?", "a": "<p>Tampilan halaman mengikuti tata letak mushaf Madinah, 604 halaman, dan rencana khatam 60 hari dan setahun memberi bacaan harian sebagai rentang halaman mushaf itu. Terjemahan Bahasa Indonesia dan transliterasi tersedia di tampilan daftar.</p>"},
+     {"q": "Apakah Lunora ada di iPhone dan Android?", "a": "<p>Ada, di App Store dan Google Play, dan tanpa iklan. Lunora+ adalah langganan yang membuka seluruh aplikasi, dan kamu bisa memulainya dengan coba gratis 7 hari.</p>"}
+    ]
+   },
+   "more": {
+    "badge": "Lainnya dari Lunora",
+    "h2": "Fitur lainnya",
+    "p": "",
+    "cards": [
+     {"href": "/id/widget-zikir.html", "icon": "📿", "h3": "Widget zikir", "p": "Hitung zikir dari layar utama, dengan pustaka zikir bersumber dan Asmaul Husna."},
+     {"href": "/id/jaga-salatku.html", "icon": "🔒", "h3": "Jaga Salatku", "p": "Saat waktu salat tiba, aplikasi pilihanmu menunggu sampai kamu menandai salatmu."},
+     {"href": "/id/mode-haid.html", "icon": "🌸", "h3": "Mode Haid", "p": "Ibadah saat haid, dengan pandangan empat mazhab dan penghitung qadha puasa."}
+    ],
+    "reading": {
+     "h3": "Bacaan terkait",
+     "links": [
+      ["/id/haid-dalam-islam-apa-yang-boleh-dilakukan.html", "Haid dalam Islam: apa yang boleh dan tidak boleh dilakukan"],
+      ["/id/blog.html", "Semua tulisan di blog Lunora"]
+     ]
+    }
+   },
+   "download": {
+    "badge": "Mulai perjalananmu",
+    "h2": "Unduh Lunora",
+    "p": "Untuk iPhone dan Android, tanpa iklan. Coba gratis 7 hari. Teman spiritual yang dirancang dengan perhatian dan pengertian untukmu.",
+    "greeting": "Assalamu’alaikum, saudariku."
+   }
+  }
+ }
+}

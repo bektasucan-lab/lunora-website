@@ -1,0 +1,187 @@
+{
+ "lang": "de",
+ "features": {
+  "protect": {
+   "h1": "Mein Gebet schützen: Deine Apps warten, während du betest",
+   "summary": [
+    "„Mein Gebet schützen“ ist eine Funktion in Lunora (eine App-Sperre zur Gebetszeit), die die Apps deiner Wahl warten lässt, wenn eine Gebetszeit beginnt, standardmäßig 15 Minuten. Tippe auf „Ich habe gebetet“, und sie öffnen sich sofort; tust du es nicht, öffnen sie sich von selbst, sobald die Zeit um ist, und an deinen Periodentagen ruht die Funktion von selbst. Lunora ist eine islamische App für muslimische Frauen für iPhone und Android, mit 7 Tagen kostenlosem Test."
+   ],
+   "what": {
+    "badge": "Was die Funktion tut",
+    "h2": "Eine kurze Pause zur Gebetszeit, nach deinen Regeln",
+    "p": "Kein Verbot und keine Strafe: ein paar Minuten, in denen die Apps, die dich wegziehen, auf dich warten.",
+    "cards": [
+     {
+      "icon": "⏳",
+      "h3": "Eine kurze Wartezeit",
+      "p": "Apps warten standardmäßig 15 Minuten, gerechnet ab Beginn der Gebetszeit. Auf Android kannst du 10, 15 oder 20 Minuten wählen, auf dem iPhone 15 oder 20."
+     },
+     {
+      "icon": "✅",
+      "h3": "„Ich habe gebetet“ öffnet sie",
+      "p": "Markiere dein Gebet, und die Apps öffnen sich sofort. Das Gebet wird auch bei den heutigen Gebeten auf dem Bildschirm „Heute“ markiert."
+     },
+     {
+      "icon": "🎯",
+      "h3": "Du wählst die Apps",
+      "p": "Nichts wartet, bevor du es auswählst. Die Telefon-App und Lunora müssen nie warten."
+     },
+     {
+      "icon": "🕌",
+      "h3": "Du wählst die Gebete",
+      "p": "Wähle die Gebete, die geschützt werden sollen. Alle fünf Gebete gibt es mit Lunora+."
+     },
+     {
+      "icon": "🌸",
+      "h3": "Ruht an deinen Periodentagen",
+      "p": "Solange der Periodenmodus an ist, pausiert der Schutz, ohne zu fragen, und kehrt zurück, wenn deine Periode endet. Deine Auswahl bleibt genau so, wie sie war."
+     },
+     {
+      "icon": "🔥",
+      "h3": "Eine Gebetsserie",
+      "p": "Zähle die Tage, an denen du alle fünf Gebete markiert hast. Ein verpasstes Gebet später zu markieren zählt auch, und Periodentage unterbrechen die Serie nie."
+     }
+    ]
+   },
+   "how": {
+    "badge": "So funktioniert’s",
+    "h2": "Einmal einrichten, den Rest übernimmt die Gebetszeit",
+    "p": "",
+    "steps": [
+     {
+      "h3": "Wähle deine Apps",
+      "p": "Öffne in Lunora „Mein Gebet schützen“ und wähle die Apps, die zur Gebetszeit warten sollen."
+     },
+     {
+      "h3": "Erteile die Berechtigung",
+      "p": "Auf dem iPhone fragt Apple nach der Bildschirmzeit-Berechtigung. Auf Android braucht Lunora den Nutzungszugriff und die Berechtigung, über anderen Apps angezeigt zu werden."
+     },
+     {
+      "h3": "Wähle Gebete und Wartezeit",
+      "p": "Wähle die Gebete, die geschützt werden sollen, und wie lange die Apps warten sollen."
+     },
+     {
+      "h3": "Die Gebetszeit beginnt",
+      "p": "Öffnest du eine gewählte App, erscheint stattdessen ein ruhiger Bildschirm: „Gebetszeit. Diese App kann kurz warten.“, mit den verbleibenden Minuten."
+     },
+     {
+      "h3": "Bete, dann tippe auf „Ich habe gebetet“",
+      "p": "Deine Apps öffnen sich sofort, und das Gebet ist markiert. Wenn es bei dir später wird, sorgt „Ich bete gleich“ dafür, dass sie sich von selbst öffnen, sobald die Zeit um ist."
+     }
+    ]
+   },
+   "details": {
+    "badge": "iPhone & Android",
+    "h2": "So funktioniert es auf jedem Handy",
+    "p": "",
+    "items": [
+     {
+      "h3": "Auf dem iPhone",
+      "ps": [
+       "„Mein Gebet schützen“ nutzt Apples Bildschirmzeit-Berechtigung und braucht iOS 16 oder neuer. Die Einrichtung hat zwei Schritte: die Bildschirmzeit-Berechtigung, dann die Auswahl der Apps aus Apples eigener Liste, in der die Apps nach Kategorien gruppiert sind.",
+       "Dein Code bleibt bei Apple; Lunora sieht ihn nie."
+      ]
+     },
+     {
+      "h3": "Auf Android",
+      "ps": [
+       "Die Einrichtung hat drei Schritte: Apps wählen, den Nutzungszugriff einschalten und Lunora erlauben, über anderen Apps angezeigt zu werden, damit der Wartebildschirm erscheinen kann.",
+       "Mit dem Nutzungszugriff sieht Lunora, welche App geöffnet wurde: nur ihren Namen, nie ihren Inhalt. Nichts verlässt dein Gerät."
+      ]
+     }
+    ],
+    "note": "Wenn du eine App dringend brauchst, öffnet „Ein Notfall? Jetzt aufheben“ alles bis zum nächsten Gebet. Und wenn in den Einstellungen deines Handys eine Berechtigung ausgeschaltet wird, sagt dir Lunora, dass der Schutz gestoppt ist, statt still zu versagen. Du musst Lunora nicht geöffnet lassen; es reicht, die App ab und zu zu öffnen, damit der Schutz eingerichtet bleibt."
+   },
+   "faq": {
+    "badge": "Häufige Fragen",
+    "h2": "Häufig gestellte Fragen",
+    "p": "",
+    "items": [
+     {
+      "q": "Was ist „Mein Gebet schützen“?",
+      "a": "<p>„Mein Gebet schützen“ ist eine Funktion der App Lunora. Wenn eine Gebetszeit beginnt, warten die Apps, die du gewählt hast, eine kurze Zeit, standardmäßig 15 Minuten. Wenn du in Lunora auf „Ich habe gebetet“ tippst, öffnen sie sich sofort, und das Gebet wird in deinem Gebetsprotokoll markiert.</p>"
+     },
+     {
+      "q": "Wie lange bleiben die Apps gesperrt?",
+      "a": "<p>Standardmäßig 15 Minuten, gerechnet ab Beginn der Gebetszeit. Auf Android kannst du 10, 15 oder 20 Minuten wählen, auf dem iPhone 15 oder 20. Tippst du auf „Ich habe gebetet“, öffnen sie sich sofort; wenn nicht, öffnen sie sich von selbst, sobald die Zeit um ist.</p>"
+     },
+     {
+      "q": "Kann ich in einem Notfall eine App öffnen?",
+      "a": "<p>Ja. Tippe auf „Ein Notfall? Jetzt aufheben“, und die Apps öffnen sich sofort; beim nächsten Gebet sind sie wieder geschützt. Die Telefon-App und Lunora müssen nie warten.</p>"
+     },
+     {
+      "q": "Funktioniert „Mein Gebet schützen“ auf dem iPhone?",
+      "a": "<p>Ja. Auf dem iPhone nutzt die Funktion Apples Bildschirmzeit-Berechtigung und braucht iOS 16 oder neuer. Auf Android nutzt sie den Nutzungszugriff und die Berechtigung, über anderen Apps angezeigt zu werden.</p>"
+     },
+     {
+      "q": "Was passiert während meiner Periode?",
+      "a": "<p>„Mein Gebet schützen“ ruht von selbst, solange der Periodenmodus an ist, und kommt zurück, wenn deine Periode endet. Die Funktion fragt dich nicht, deine gewählten Apps und Gebete bleiben erhalten, und Periodentage unterbrechen deine Gebetsserie nicht.</p>"
+     },
+     {
+      "q": "Gehört „Mein Gebet schützen“ zu Lunora+?",
+      "a": "<p>„Mein Gebet schützen“ für alle fünf Gebete gibt es mit Lunora+, einem Abo, das du mit 7 Tagen kostenlosem Test beginnen kannst. Lunora gibt es für iPhone und Android, und es gibt keine Werbung.</p>"
+     }
+    ]
+   },
+   "more": {
+    "badge": "Mehr von Lunora",
+    "h2": "Weitere Funktionen",
+    "p": "",
+    "cards": [
+     {
+      "href": "/de/dhikr-widget.html",
+      "icon": "📿",
+      "h3": "Dhikr-Widget",
+      "p": "Zähle Dhikr auf deinem Startbildschirm, mit einer Dhikr-Bibliothek samt Quellen und den 99 Namen."
+     },
+     {
+      "href": "/de/koran-leseplan.html",
+      "icon": "📖",
+      "h3": "Koran-Leseplan",
+      "p": "Khatm-Pläne für den Ramadan, 60 Tage oder ein Jahr, und Pläne, die du selbst erstellst."
+     },
+     {
+      "href": "/de/periodenmodus.html",
+      "icon": "🌸",
+      "h3": "Periodenmodus",
+      "p": "Anbetung in deiner Periode, mit den Ansichten der vier Rechtsschulen und einem Qada-Fastenzähler."
+     }
+    ],
+    "reading": {
+     "h3": "Weiterlesen",
+     "links": [
+      [
+       "/de/periode-im-islam.html",
+       "Periode im Islam: Darf ich beten, fasten und den Koran lesen?"
+      ],
+      [
+       "/muslim-women-prayer-times-salah-guide.html",
+       "Gebetszeiten &amp; Salah-Ratgeber für muslimische Frauen (auf Englisch)"
+      ],
+      [
+       "/spiritual-self-care-muslim-women.html",
+       "Spirituelle Selbstfürsorge für muslimische Frauen (auf Englisch)"
+      ],
+      [
+       "/de/blog.html",
+       "Alle Artikel im Lunora-Blog"
+      ]
+     ]
+    }
+   },
+   "download": {
+    "badge": "Beginne deinen Weg",
+    "h2": "Lunora herunterladen",
+    "p": "Für iPhone und Android, ohne Werbung, mit 7 Tagen kostenlosem Test. Eine spirituelle Begleiterin, gestaltet mit der Fürsorge und dem Verständnis, die du verdienst.",
+    "greeting": "As-salamu alaykum, liebe Schwester."
+   },
+   "seo": {
+    "title": "Mein Gebet schützen: Apps warten, bis du betest | Lunora",
+    "desc": "„Mein Gebet schützen“ (App-Sperre zur Gebetszeit) hält deine Apps an. „Ich habe gebetet“ öffnet sie sofort. Ruht in der Periode. 7 Tage kostenlos testen.",
+    "og_title": "Mein Gebet schützen: Deine Apps warten, während du betest",
+    "og_desc": "Zur Gebetszeit warten die Apps deiner Wahl ein paar Minuten. Markiere dein Gebet in Lunora, und sie öffnen sich sofort."
+   },
+   "crumb_last": "Mein Gebet schützen"
+  }
+ }
+}

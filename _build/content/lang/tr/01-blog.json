@@ -1,0 +1,71 @@
+{
+ "lang": "tr",
+ "article_ui": {
+  "in_app": "Lunora uygulamasında",
+  "faq_h": "Sık sorulan sorular",
+  "cta_h": "Lunora’yı indirin",
+  "cta_p": "Reklamsız, 9 dilde. 7 gün ücretsiz deneme.",
+  "appbox": {
+   "period": [
+    "Dönem Modu",
+    "Döngünüzü namaz, Kur’an ve zikirle birlikte takip edin, dört mezhebin görüşlerini kaynaklarıyla görün ve kaza oruçlarınızı sayın."
+   ],
+   "dhikr": [
+    "Zikir widget’ı ve zikirmatik",
+    "Zikrinizi ana ekrandan, uygulamayı açmadan sayın."
+   ],
+   "quran": [
+    "Kur’an okuma planı",
+    "Günlük bölümler ve hatim takibi: 30 günlük Ramazan hatminden bir yıllık plana."
+   ],
+   "prayer": [
+    "Namazımı Koru",
+    "Namaz vakti girince seçtiğiniz uygulamalar bekler; “Kıldım” deyince yeniden açılır."
+   ],
+   "life": [
+    "Lunora",
+    "Namaz vakitleri, Kur’an’ın tamamı, dua ve zikir ile Dönem Modu tek sakin uygulamada. Reklamsız."
+   ]
+  }
+ },
+ "blog": {
+  "path": "/tr/blog.html",
+  "title": "Lunora Yazıları: Adet, Namaz, Kur’an ve Zikir Rehberleri",
+  "desc": "Adet döneminde ne yapılır, adetliyken Kur’an okunur mu, gusül abdesti nasıl alınır: Müslüman kadınlar için kaynaklı, Hanefî görüşünü esas alan Türkçe rehberler.",
+  "tag": "Lunora yazıları",
+  "h1a": "Sakin anlarınız",
+  "h1b": "için notlar.",
+  "lead": "Adet ve ibadet, Kur’an, zikir ve gusül hakkında kaynaklı, Hanefî görüşünü esas alan Türkçe rehberler.",
+  "cta": [
+   "Uygulamada",
+   "da okuyun"
+  ],
+  "ctaP": "Dualar, zikirler, Kur’an ve Dönem Modu, Lunora’da bir arada. Reklamsız, 9 dilde.",
+  "cats": [
+   [
+    "all",
+    "Tümü"
+   ],
+   [
+    "period",
+    "Âdet ve ibadet"
+   ],
+   [
+    "prayer",
+    "Namaz"
+   ],
+   [
+    "quran",
+    "Kur’an"
+   ],
+   [
+    "dhikr",
+    "Dua ve zikir"
+   ],
+   [
+    "life",
+    "Hayat ve iman"
+   ]
+  ]
+ }
+}

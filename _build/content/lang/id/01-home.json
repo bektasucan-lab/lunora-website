@@ -1,0 +1,101 @@
+{
+ "lang": "id",
+ "home": {
+  "title": "Lunora: Aplikasi Muslimah, Jadwal Sholat & Mode Haid",
+  "desc": "Aplikasi Islami untuk muslimah: jadwal sholat, Al-Qur’an lengkap, doa, dzikir, widget, dan Mode Haid dengan fikih empat mazhab. Tanpa iklan. Coba gratis 7 hari.",
+  "k1": "Isi di dalamnya",
+  "pil": [
+   [
+    "Al-Qur’an & jadwal salat",
+    "Al-Qur’an lengkap, dari huruf pertama",
+    "114 surah sebagai daftar atau halaman mushaf dengan terjemahan Bahasa Indonesia, lima qari dan rencana bacaan. Kursus Al-Qur’an yang dimulai dari huruf hijaiah, dan jadwal salat lewat GPS dengan metode setempat."
+   ],
+   [
+    "Mode Haid",
+    "Siklus dan ibadahmu, berjalan bersama",
+    "Catat hari-harimu, lihat apa yang mendapat keringanan dan apa yang perlu diqadha, dengan fikih empat mazhab. Pengingat salat ikut tenang dengan sendirinya."
+   ],
+   [
+    "Jaga Salatku",
+    "Aplikasimu menunggu salatmu",
+    "Saat waktu salat tiba, aplikasi yang kamu pilih berhenti sejenak sampai kamu menandai salat sudah dikerjakan. Fitur ini beristirahat sendiri saat haid."
+   ]
+  ],
+  "perA": "Berhalangan,",
+  "perB": "bukan tertinggal.",
+  "perP": "Siklusmu, hari-hari ibadahmu, dan puasa yang perlu diqadha, di satu tempat yang tenang. Pengingat salat ikut tenang, Jaga Salatku beristirahat, dan panduan empat mazhab, termasuk Syafi’i, lengkap dengan sumbernya.",
+  "h2b": "Seperti teman, bukan sekadar alat",
+  "feats": [
+   [
+    "Zikir & tasbih",
+    "Penghitung, set zikirmu sendiri, dan widget tasbih."
+   ],
+   [
+    "Qada",
+    "Salat dan puasa yang terlewat, dihitung dan diqadha pelan-pelan."
+   ],
+   [
+    "Doa",
+    "Doa pagi, petang, dan perlindungan, juga doamu sendiri."
+   ],
+   [
+    "Kursus Al-Qur’an",
+    "Dari huruf hijaiah hingga tajwid, pelajaran demi pelajaran."
+   ],
+   [
+    "Menghafal Al-Qur’an",
+    "Halaman demi halaman, dengan ulangan harian."
+   ],
+   [
+    "Salat Bersama",
+    "Belajar salat langkah demi langkah, di rumah."
+   ],
+   [
+    "Jurnal & kebiasaan",
+    "Jurnal syukur dan kebiasaan kecil setiap hari."
+   ],
+   [
+    "Luna",
+    "Ceritakan perasaanmu, temukan ayat yang cocok."
+   ]
+  ],
+  "revK": "Kata mereka",
+  "shot_alt": [
+   "Layar Hari Ini di Lunora dengan ayat hari ini",
+   "Jaga Salatku: layar tunggu saat waktu salat",
+   "Salat Bersama, tuntunan salat langkah demi langkah",
+   "Kursus Al-Qur’an, pelajaran pertama",
+   "Mode Haid, layar Siklusku"
+  ],
+  "ctaP": "Tanpa iklan sama sekali. Lunora+ membuka semuanya: semua qari, Al-Qur’an offline, Kursus Al-Qur’an dan Menghafal Al-Qur’an lengkap, Jaga Salatku untuk kelima waktu salat, dan widget besar. Mulai dengan coba gratis 7 hari."
+ },
+ "home_faq": {
+  "h2": "Pertanyaan yang sering diajukan",
+  "items": [
+   [
+    "Apa itu Lunora?",
+    "Lunora adalah aplikasi Islami yang dirancang untuk muslimah. Aplikasi ini menyatukan jadwal salat (sholat), Al-Qur’an dengan terjemahan Bahasa Indonesia, doa, zikir (dzikir), dan Mode Haid dalam satu aplikasi di iPhone dan Android. Bisa dipakai offline, tanpa iklan, dan tidak perlu akun."
+   ],
+   [
+    "Apa itu Mode Haid?",
+    "Mode Haid mengikuti siklus datang bulanmu berdampingan dengan salat, Al-Qur’an, dan zikirmu. Kamu bisa mencatat siklus dan melihat perkiraan, membaca hadis dan panduan fikih dari empat mazhab (termasuk Syafi’i) serta panduan mandi wajib, mendapat saran doa dan zikir yang sesuai dengan suasana hatimu, dan menghitung puasa yang perlu diqadha. Pengingat salat diam di hari-hari haid, dan catatanmu tetap tersimpan di perangkatmu."
+   ],
+   [
+    "Apakah Lunora tersedia di Android dan iPhone?",
+    "Ya. Lunora tersedia di Google Play untuk ponsel Android dan di App Store untuk iPhone."
+   ],
+   [
+    "Apakah ada biaya langganan?",
+    "Lunora tanpa iklan dan tidak perlu akun. Lunora+ adalah langganan yang membuka seluruh aplikasi: semua qari, Al-Qur’an offline, Kursus Al-Qur’an dan Menghafal Al-Qur’an lengkap, Jaga Salatku untuk kelima waktu salat, dan widget besar. Kamu bisa memulainya dengan coba gratis 7 hari."
+   ],
+   [
+    "Bahasa apa saja yang didukung Lunora?",
+    "Inggris, Turki, Arab, Prancis, Jerman, Indonesia, Melayu, Urdu, dan Bengali."
+   ],
+   [
+    "Apakah dataku aman?",
+    "Catatan haid, suasana hati, gejala, dan jurnalmu, juga catatan dan doa yang kamu simpan, tetap berada di perangkatmu dan tidak diunggah ke server kami. Tidak perlu akun dan tidak ada iklan. Untuk memperbaiki gangguan dan meningkatkan aplikasi, kami mengumpulkan data penggunaan dan crash anonim dengan Firebase Analytics dan Crashlytics, dan kota serta negaramu dipakai untuk menghitung jadwal salat. Kami tidak pernah menjual datamu. Detailnya ada di Kebijakan Privasi."
+   ]
+  ]
+ }
+}

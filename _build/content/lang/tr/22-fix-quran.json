@@ -1,0 +1,111 @@
+{
+ "lang": "tr",
+ "features": {
+  "quran": {
+   "summary": [
+    "Lunora’nın okuma planları Kur’an’ı günlük bölümlere ayırır ve ilerlemenizi gün gün takip eder: günde bir cüzle 30 günlük Ramazan hatminden 60 günde ya da bir yılda hatme kadar. Seçtiğiniz surelerle kendi planınızı da kurabilir, âdet günlerinizde isterseniz planı duraklatabilirsiniz. Lunora, Müslüman kadınlar için bir İslami uygulamadır; iPhone ve Android’de 7 gün ücretsiz deneyebilirsiniz."
+   ],
+   "download": {
+    "p": "iPhone ve Android’de 7 gün ücretsiz deneyin; reklam yoktur. Hak ettiğiniz özen ve anlayışla tasarlanmış manevi bir yol arkadaşı."
+   },
+   "more": {
+    "reading": {
+     "links": [
+      [
+       "/tr/blog.html",
+       "Lunora Yazıları"
+      ],
+      [
+       "/tr/adet-doneminde-kuran-okunur-mu.html",
+       "Adet döneminde Kur’an okunur mu?"
+      ],
+      [
+       "/tr/adet-doneminde-ne-yapilir.html",
+       "Adet döneminde ne yapılır?"
+      ],
+      [
+       "/quran-reading-guide-muslim-women.html",
+       "Kur’an okuma rehberi (İngilizce)"
+      ]
+     ]
+    }
+   },
+   "how": {
+    "steps": [
+     {
+      "h3": "Bir plan seçin",
+      "p": "Lunora’da Okuma planları’nı açın; bir hatim planı ya da kısa plan başlatın veya kendi planınızı oluşturun."
+     },
+     {
+      "h3": "Bugünün okumasını görün",
+      "p": "Her gün ne okuyacağınız hazırdır: bir sayfa aralığı, bir cüz ya da bir sure. Planın tamamı gün gün listelenir."
+     },
+     {
+      "h3": "Lunora’nın Kur’an bölümünde okuyun",
+      "p": "Meal ve okunuşla liste hâlinde ya da Medine mushafı düzeninde sayfa sayfa okuyun. Bitirince “Okudum”a dokunun."
+     },
+     {
+      "h3": "İlerlemenizi izleyin",
+      "p": "Plan kaçıncı günde olduğunuzu ve yüzde kaçının bittiğini gösterir. Başka bir plana geçseniz de ilerlemeniz silinmez; istediğiniz zaman geri dönebilirsiniz."
+     },
+     {
+      "h3": "Tamamlayın",
+      "p": "Son gün Lunora planı tamamlandı olarak işaretler: “Allah kabul etsin.” Planı yeniden başlatabilir ya da başka bir plan seçebilirsiniz."
+     }
+    ]
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Lunora’da hatim takibi var mı?",
+      "a": "<p>Evet. Lunora’da üç hatim planı var: Ramazan hatmi (30 gün, günde bir cüz), 60 günde hatim (günde yaklaşık 10 sayfa) ve bir yılda hatim (günde 1–2 sayfa). Uygulama planın kaçıncı gününde olduğunuzu ve ne kadarının bittiğini gösterir.</p>"
+     },
+     {
+      "q": "Kendi Kur’an okuma planımı oluşturabilir miyim?",
+      "a": "<p>Evet. İstediğiniz sureleri seçin, isterseniz bir ad ve simge ekleyin; sonra günde bir sure, günde iki sure okuyun ya da gün sayısını kendiniz belirleyin. Bu durumda bir güne birden çok sure düşebilir.</p>"
+     },
+     {
+      "q": "Bir günü okundu olarak nasıl işaretlerim?",
+      "a": "<p>Günün okumasını plandan açın, Lunora’nın Kur’an okuyucusunda okuyun ve “Okudum”a dokunun. O gün tamamlanmış sayılır ve plan bir sonraki güne geçer.</p>"
+     },
+     {
+      "q": "Âdet günlerimde okuma planıma ne olur?",
+      "a": "<p>Dönem Modu açıksa Lunora kararı size bırakır: planı duraklatın ya da sürdürün. Duraklatılan planın gün sayısı ilerlemez; Dönem Modu’nu kapattığınızda kaldığı günden devam eder. Plan ayrıca dört mezhebin âdet hâlinde Kur’an okumaya dair görüşlerinin yer aldığı Dönem Modu rehberine bağlantı verir.</p>"
+     },
+     {
+      "q": "Lunora hangi mushafın sayfa düzenini kullanıyor?",
+      "a": "<p>Sayfa görünümü Medine mushafının 604 sayfalık düzenini izler; 60 günde ve bir yılda hatim planları günlük okumayı bu mushafın sayfa aralıkları olarak verir. Meal ve okunuş liste görünümündedir.</p>"
+     },
+     {
+      "q": "Lunora iPhone ve Android’de var mı?",
+      "a": "<p>Lunora, App Store ve Google Play’de bulunur ve reklam içermez. Uygulamanın tamamı Lunora+ aboneliğiyle açılır; aboneliğe 7 gün ücretsiz denemeyle başlayabilirsiniz.</p>"
+     }
+    ]
+   },
+   "head": {
+    "tags": [
+     "<meta name=\"description\" content=\"Lunora’nın okuma planlarıyla Kur’an’ı günlük bölümlere ayırın: 30 günde Ramazan hatmi, 60 günde ya da bir yılda hatim, kendi planınız. 7 gün ücretsiz deneyin.\">",
+     "<link rel=\"canonical\" href=\"https://mylunora.app/tr/kuran-okuma-plani.html\">",
+     "<link rel=\"alternate\" hreflang=\"en\" href=\"https://mylunora.app/quran-reading-plan.html\">",
+     "<link rel=\"alternate\" hreflang=\"tr\" href=\"https://mylunora.app/tr/kuran-okuma-plani.html\">",
+     "<link rel=\"alternate\" hreflang=\"fr\" href=\"https://mylunora.app/fr/plan-lecture-coran.html\">",
+     "<link rel=\"alternate\" hreflang=\"de\" href=\"https://mylunora.app/de/koran-leseplan.html\">",
+     "<link rel=\"alternate\" hreflang=\"x-default\" href=\"https://mylunora.app/quran-reading-plan.html\">",
+     "<meta property=\"og:title\" content=\"Lunora: Kur’an okuma planı ve hatim takibi\">",
+     "<meta property=\"og:description\" content=\"Ramazan’da, 60 günde ya da bir yılda hatim; kısa sure planları ve kendi kurduğunuz planlar, gün gün takip.\">",
+     "<meta property=\"og:url\" content=\"https://mylunora.app/tr/kuran-okuma-plani.html\">",
+     "<meta property=\"og:image\" content=\"https://mylunora.app/img/features/quran-plan-rahle.webp\">",
+     "<meta property=\"og:type\" content=\"website\">",
+     "<meta property=\"og:site_name\" content=\"Lunora\">",
+     "<meta property=\"og:locale\" content=\"tr_TR\">",
+     "<meta name=\"twitter:card\" content=\"summary\">"
+    ],
+    "jsonld": [
+     "{\n \"@context\": \"https://schema.org\",\n \"@type\": \"FAQPage\",\n \"mainEntity\": [\n  {\n   \"@type\": \"Question\",\n   \"name\": \"Lunora’da hatim takibi var mı?\",\n   \"acceptedAnswer\": {\n    \"@type\": \"Answer\",\n    \"text\": \"Evet. Lunora’da üç hatim planı var: Ramazan hatmi (30 gün, günde bir cüz), 60 günde hatim (günde yaklaşık 10 sayfa) ve bir yılda hatim (günde 1–2 sayfa). Uygulama planın kaçıncı gününde olduğunuzu ve ne kadarının bittiğini gösterir.\"\n   }\n  },\n  {\n   \"@type\": \"Question\",\n   \"name\": \"Kendi Kur’an okuma planımı oluşturabilir miyim?\",\n   \"acceptedAnswer\": {\n    \"@type\": \"Answer\",\n    \"text\": \"Evet. İstediğiniz sureleri seçin, isterseniz bir ad ve simge ekleyin; sonra günde bir sure, günde iki sure okuyun ya da gün sayısını kendiniz belirleyin. Bu durumda bir güne birden çok sure düşebilir.\"\n   }\n  },\n  {\n   \"@type\": \"Question\",\n   \"name\": \"Bir günü okundu olarak nasıl işaretlerim?\",\n   \"acceptedAnswer\": {\n    \"@type\": \"Answer\",\n    \"text\": \"Günün okumasını plandan açın, Lunora’nın Kur’an okuyucusunda okuyun ve “Okudum”a dokunun. O gün tamamlanmış sayılır ve plan bir sonraki güne geçer.\"\n   }\n  },\n  {\n   \"@type\": \"Question\",\n   \"name\": \"Âdet günlerimde okuma planıma ne olur?\",\n   \"acceptedAnswer\": {\n    \"@type\": \"Answer\",\n    \"text\": \"Dönem Modu açıksa Lunora kararı size bırakır: planı duraklatın ya da sürdürün. Duraklatılan planın gün sayısı ilerlemez; Dönem Modu’nu kapattığınızda kaldığı günden devam eder. Plan ayrıca dört mezhebin âdet hâlinde Kur’an okumaya dair görüşlerinin yer aldığı Dönem Modu rehberine bağlantı verir.\"\n   }\n  },\n  {\n   \"@type\": \"Question\",\n   \"name\": \"Lunora hangi mushafın sayfa düzenini kullanıyor?\",\n   \"acceptedAnswer\": {\n    \"@type\": \"Answer\",\n    \"text\": \"Sayfa görünümü Medine mushafının 604 sayfalık düzenini izler; 60 günde ve bir yılda hatim planları günlük okumayı bu mushafın sayfa aralıkları olarak verir. Meal ve okunuş liste görünümündedir.\"\n   }\n  },\n  {\n   \"@type\": \"Question\",\n   \"name\": \"Lunora iPhone ve Android’de var mı?\",\n   \"acceptedAnswer\": {\n    \"@type\": \"Answer\",\n    \"text\": \"Lunora, App Store ve Google Play’de bulunur ve reklam içermez. Uygulamanın tamamı Lunora+ aboneliğiyle açılır; aboneliğe 7 gün ücretsiz denemeyle başlayabilirsiniz.\"\n   }\n  }\n ]\n}",
+     "{\n \"@context\": \"https://schema.org\",\n \"@graph\": [\n  {\n   \"@type\": \"Organization\",\n   \"@id\": \"https://mylunora.app/#org\",\n   \"name\": \"Studio Lunora\",\n   \"url\": \"https://mylunora.app/\",\n   \"logo\": \"https://mylunora.app/icon-192.png\",\n   \"sameAs\": [\n    \"https://instagram.com/mylunora.app\"\n   ]\n  },\n  {\n   \"@type\": \"MobileApplication\",\n   \"@id\": \"https://mylunora.app/#app\",\n   \"name\": \"Lunora - Muslim Women\",\n   \"alternateName\": \"Lunora\",\n   \"operatingSystem\": \"iOS, Android\",\n   \"applicationCategory\": \"LifestyleApplication\",\n   \"description\": \"An Islamic app for Muslim women: prayer times, Quran, duas, dhikr and a Period Mode with fiqh guidance from the four madhhabs. Works offline, no ads, no account.\",\n   \"inLanguage\": [\n    \"en\",\n    \"tr\",\n    \"ar\",\n    \"fr\",\n    \"de\",\n    \"id\",\n    \"ms\",\n    \"ur\",\n    \"bn\"\n   ],\n   \"offers\": {\n    \"@type\": \"Offer\",\n    \"price\": \"0\",\n    \"priceCurrency\": \"USD\"\n   },\n   \"publisher\": {\n    \"@id\": \"https://mylunora.app/#org\"\n   },\n   \"sameAs\": [\n    \"https://apps.apple.com/us/app/lunora-muslim-women/id6758765933\",\n    \"https://play.google.com/store/apps/details?id=com.studiolunora.lunora\"\n   ]\n  },\n  {\n   \"@type\": \"WebPage\",\n   \"@id\": \"https://mylunora.app/tr/kuran-okuma-plani.html#webpage\",\n   \"url\": \"https://mylunora.app/tr/kuran-okuma-plani.html\",\n   \"name\": \"Kur’an Okuma Planı ve Hatim Takibi | Lunora\",\n   \"description\": \"Lunora’nın okuma planlarıyla Kur’an’ı günlük bölümlere ayırın: 30 günde Ramazan hatmi, 60 günde ya da bir yılda hatim, kendi planınız. 7 gün ücretsiz deneyin.\",\n   \"inLanguage\": \"tr\",\n   \"about\": {\n    \"@id\": \"https://mylunora.app/#app\"\n   },\n   \"primaryImageOfPage\": \"https://mylunora.app/img/features/quran-plan-rahle.webp\",\n   \"breadcrumb\": {\n    \"@id\": \"https://mylunora.app/tr/kuran-okuma-plani.html#breadcrumb\"\n   }\n  },\n  {\n   \"@type\": \"BreadcrumbList\",\n   \"@id\": \"https://mylunora.app/tr/kuran-okuma-plani.html#breadcrumb\",\n   \"itemListElement\": [\n    {\n     \"@type\": \"ListItem\",\n     \"position\": 1,\n     \"name\": \"Ana sayfa\",\n     \"item\": \"https://mylunora.app/tr/\"\n    },\n    {\n     \"@type\": \"ListItem\",\n     \"position\": 2,\n     \"name\": \"Kur’an okuma planı\",\n     \"item\": \"https://mylunora.app/tr/kuran-okuma-plani.html\"\n    }\n   ]\n  }\n ]\n}"
+    ],
+    "title": "Kur’an Okuma Planı ve Hatim Takibi | Lunora"
+   }
+  }
+ }
+}

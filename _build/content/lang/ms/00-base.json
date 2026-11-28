@@ -1,0 +1,76 @@
+{
+  "lang": "ms",
+  "name": "Bahasa Melayu",
+  "ogloc": "ms_MY",
+  "ui": {
+    "nav": ["Ciri", "Mod Haid", "Lindungi Solat Saya", "Blog", "Bantuan"],
+    "menu": "Menu",
+    "language": "Bahasa",
+    "skip": "Langkau ke kandungan",
+    "dl1": "Muat turun di",
+    "dl2": "Dapatkan di",
+    "iphone": "iPhone & Android",
+    "noads": "Tanpa iklan",
+    "langs": "9 bahasa",
+    "home": "Utama",
+    "about": "Teman rohani untuk wanita Muslim, dicipta dengan penuh kasih sayang dan kefahaman.",
+    "app": "Aplikasi",
+    "help": "Bantuan",
+    "priv": "Dasar Privasi",
+    "terms": "Syarat Perkhidmatan",
+    "follow": "Ikuti",
+    "quran": "Pelan bacaan Al-Quran",
+    "dhikr": "Widget zikir",
+    "minread": "min bacaan",
+    "all": "Semua",
+    "reltitle": "Bacaan berkaitan",
+    "blogLead": "Blog"
+  },
+  "rating": "4.7 · 650+ ulasan di App Store dan Google Play",
+  "rating_short": "4.7 · 650+ ulasan",
+  "reviews": [
+    {"q": "I love it ❤️ as a revert helps me so much", "lang": "en", "name": "Monique"},
+    {"q": "it’s amazing app, Masya Allah. thank you so much for this app, everything in this app is so beautiful.. thank you 💗", "lang": "en", "name": "Lala"},
+    {"q": "luv it highly recommended 🥰", "lang": "en", "name": "Amna"}
+  ],
+  "disclaim": "Ramalan membantu anda merancang. Ia bukan hukum; jika ragu-ragu, tanyalah ustaz atau ustazah yang anda percayai.",
+  "guides": {
+    "k": "Panduan",
+    "h": "Baca sebelum anda muat turun",
+    "all": "Semua panduan",
+    "tc": "Kaunter tasbih digital percuma",
+    "tcp": "Kira zikir anda dalam pelayar: tasbih selepas solat, istighfar dan selawat."
+  },
+  "article_ui": {
+    "in_app": "Dalam aplikasi Lunora",
+    "faq_h": "Soalan lazim",
+    "cta_h": "Muat turun Lunora",
+    "cta_p": "Tanpa iklan, dalam 9 bahasa. Cuba percuma 7 hari.",
+    "appbox": {
+      "period": ["Mod Haid", "Jejaki kitaran anda bersama solat, Al-Quran dan zikir, lihat pandangan empat mazhab, dan kira puasa qada yang perlu diganti."],
+      "dhikr": ["Widget zikir dan kaunter tasbih", "Kira zikir terus dari skrin utama tanpa membuka aplikasi."],
+      "quran": ["Pelan bacaan Al-Quran", "Bahagian harian dan penjejak khatam, daripada khataman Ramadan 30 hari hingga pelan setahun."],
+      "prayer": ["Lindungi solat saya", "Jeda aplikasi pilihan anda apabila masuk waktu solat; ketik “Sudah solat” dan ia terbuka semula."],
+      "life": ["Lunora untuk wanita Muslim", "Waktu solat, Al-Quran penuh, doa, zikir dan Mod Haid dalam satu aplikasi yang tenang. Tanpa iklan."]
+    }
+  },
+  "blog": {
+    "path": "/ms/blog.html",
+    "title": "Blog Lunora: Panduan Haid, Solat, Al-Quran dan Zikir",
+    "desc": "Panduan lembut untuk wanita Muslim daripada Lunora: ibadah semasa haid mengikut mazhab Syafie dan mazhab lain, serta zikir, solat dan bacaan Al-Quran.",
+    "tag": "Jurnal Lunora",
+    "h1a": "Catatan untuk",
+    "h1b": "saat-saat tenang anda.",
+    "lead": "Panduan lembut untuk perjalanan rohani anda, ditulis untuk wanita Muslim.",
+    "cta": ["Baca juga", "dalam aplikasi"],
+    "ctaP": "Doa, zikir, Al-Quran dan Mod Haid, bersama dalam Lunora. Tanpa iklan, dalam 9 bahasa.",
+    "cats": [
+      ["all", "Semua"],
+      ["period", "Haid"],
+      ["prayer", "Solat"],
+      ["quran", "Al-Quran"],
+      ["dhikr", "Doa & zikir"],
+      ["life", "Hidup & iman"]
+    ]
+  }
+}

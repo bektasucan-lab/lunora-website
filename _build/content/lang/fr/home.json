@@ -1,0 +1,132 @@
+{
+ "lang": "fr",
+ "home": {
+  "desc": "Lunora : application islamique pour les femmes musulmanes. Prière, Coran, invocations (douas), dhikr et Mode règles avec les quatre écoles. 7 jours d’essai gratuit.",
+  "og": "Lunora : la prière, le Coran et ton cycle, dans un seul lieu apaisé",
+  "day": [
+   [
+    "Fajr · 05:12",
+    "Le verset du jour, sur ton écran Aujourd’hui"
+   ],
+   [
+    "Dhouhr · 13:05",
+    "Protéger ma prière met tes applis en pause"
+   ],
+   [
+    "Asr · 16:40",
+    "Prier ensemble, pas à pas"
+   ],
+   [
+    "Maghrib · 19:28",
+    "Une leçon de Coran dès la première lettre"
+   ],
+   [
+    "Nuit",
+    "Le Mode règles suit ton cycle"
+   ]
+  ],
+  "per": [
+   "Humeur et symptômes, uniquement sur ton téléphone",
+   "Le fiqh des quatre écoles et un guide du ghusl",
+   "Des invocations (douas) et du dhikr adaptés à ta journée"
+  ],
+  "feats": [
+   [
+    "Dhikr & tasbih",
+    "Un compteur, tes propres séries de dhikr et un widget tasbih."
+   ],
+   [
+    "Rattrapage",
+    "Prières et jeûnes manqués (qada), comptés et rattrapés à ton rythme."
+   ],
+   [
+    "Invocations",
+    "Douas du matin, du soir et de protection, et les tiennes."
+   ],
+   [
+    "Cours de Coran",
+    "Des lettres au tajwid, leçon après leçon."
+   ],
+   [
+    "Mémorisation du Coran",
+    "Page après page, avec une révision quotidienne."
+   ],
+   [
+    "Prier ensemble",
+    "Apprends la prière pas à pas, chez toi."
+   ],
+   [
+    "Journal & habitudes",
+    "Un journal de gratitude et de petites habitudes quotidiennes."
+   ],
+   [
+    "Luna",
+    "Dis-lui ce que tu ressens et trouve un verset qui te correspond."
+   ]
+  ],
+  "shelves": [
+   "Récits",
+   "Sîra",
+   "Les compagnes",
+   "Récitation",
+   "Pour tes enfants",
+   "Radio"
+  ],
+  "covers": [
+   [
+    "Récit",
+    "Hajar et Zamzam"
+   ],
+   [
+    "Les compagnes",
+    "Khadija"
+   ],
+   [
+    "Récitation",
+    "Ar-Rahman"
+   ]
+  ],
+  "lead": "Les horaires de prière, le Coran en entier, les douas et le dhikr, et un Mode règles qui accompagne tes jours d’adoration avec soin. Sans publicité, en 9 langues. 7 jours d’essai gratuit.",
+  "wP": "Un tasbih sur ton écran d’accueil et ton écran verrouillé : touche pour compter. Avec la prochaine prière, le verset du jour et ta série de prières, plus de dix widgets en tout.",
+  "ctaP": "Aucune publicité, dans aucune langue. Lunora+ ouvre tout : tous les récitateurs, le Coran hors ligne, le cours de Coran complet et la Mémorisation du Coran, Protéger ma prière pour les cinq prières et les grands widgets. Commence par 7 jours d’essai gratuit.",
+  "title": "Lunora : application islamique pour femmes musulmanes"
+ },
+ "home_faq": {
+  "h2": "Questions fréquentes",
+  "items": [
+   [
+    "Qu’est-ce que Lunora ?",
+    "Lunora est une application islamique pensée pour les femmes musulmanes. Elle réunit horaires de prière, Coran, invocations (douas), dhikr et Mode règles dans une seule application, disponible sur iPhone et Android. Elle fonctionne hors ligne, sans publicité, et ne demande aucun compte."
+   ],
+   [
+    "Qu’est-ce que le Mode règles ?",
+    "Le Mode règles t’accompagne pendant ton cycle, aux côtés de la prière, du Coran et du dhikr. Tu peux suivre ton cycle et voir les prévisions, lire les repères de hadith et de fiqh des quatre écoles juridiques (hanafite, chaféite, malékite et hanbalite) et le guide du ghusl, recevoir des suggestions d’invocations et de dhikr adaptées à ton humeur, et compter tes jours de jeûne à rattraper. Les rappels de prière se font discrets pendant tes règles, et tes données de cycle restent sur ton appareil."
+   ],
+   [
+    "Lunora suit-elle l’école malékite ?",
+    "Lunora ne rend pas d’avis juridiques : elle présente les avis des quatre écoles, hanafite, chaféite, malékite et hanbalite, avec leurs sources. Si tu choisis ton madhhab, par exemple le malékite, son avis s’affiche en premier. Lunora ne devine jamais ton école d’après ton pays."
+   ],
+   [
+    "Lunora est-elle disponible sur iPhone et Android ?",
+    "Oui. Lunora est disponible sur l’App Store pour iPhone et sur Google Play pour Android."
+   ],
+   [
+    "Combien coûte Lunora ?",
+    "Lunora est sans publicité. L’application complète s’ouvre avec Lunora+, un abonnement que tu peux commencer par 7 jours d’essai gratuit. Lunora+ comprend tous les récitateurs, le Coran hors ligne, le Cours de Coran et la Mémorisation du Coran en version complète, Protéger ma prière pour les cinq prières et les grands widgets."
+   ],
+   [
+    "Mes données restent-elles privées ?",
+    "Tes données de cycle, d’humeur, de symptômes et de journal, tes notes et tes invocations enregistrées restent sur ton appareil et ne sont pas envoyées sur nos serveurs. Aucun compte n’est nécessaire et il n’y a pas de publicité. Pour corriger les plantages et améliorer l’application, nous collectons des données anonymes d’utilisation et de plantage avec Firebase Analytics et Crashlytics, et ta ville et ton pays servent à calculer les horaires de prière. Nous ne vendons jamais tes données. Notre politique de confidentialité (en anglais) est sur mylunora.app/privacy.html."
+   ]
+  ]
+ },
+ "rating": "4,7 · plus de 650 avis sur l’App Store et Google Play",
+ "guides": {
+  "k": "À lire et à essayer",
+  "h": "Guides et outils pour ton quotidien",
+  "all": "Tous les articles",
+  "tc": "Compteur de tasbih en ligne gratuit",
+  "tcp": "Compte ton dhikr dans le navigateur : tasbih après la prière, istighfar, salawat."
+ },
+ "disclaim": "Les prévisions t’aident à t’organiser. Ce ne sont jamais des avis juridiques ; en cas de doute, demande à un savant ou à une savante de confiance."
+}

@@ -1,0 +1,35 @@
+{
+ "lang": "tr",
+ "home_faq": {
+  "items": [
+   [
+    "Lunora nedir?",
+    "Lunora, Müslüman kadınlar için tasarlanmış bir İslami uygulamadır. Namaz vakitlerini, Kur’an’ı, duayı, zikri ve Dönem Modu’nu tek uygulamada buluşturur; iPhone ve Android’de çalışır. Çevrimdışı kullanılabilir, reklam yoktur, hesap açmanız gerekmez."
+   ],
+   [
+    "Dönem Modu nedir?",
+    "Dönem Modu, namazınızın, Kur’an’ın ve zikrin yanında âdet döngünüzü de takip eder. Döngünüzü gün gün izleyip tahminleri görebilir, dört mezhebin hadis ve fıkıh rehberini ve gusül rehberini okuyabilir, ruh hâlinize uygun dua ve zikir önerileri alabilir, kaza oruçlarınızı sayabilirsiniz. Dönem günlerinde namaz hatırlatıcıları sessize geçer; dönem kayıtlarınız yalnızca cihazınızda kalır."
+   ],
+   [
+    "Lunora iPhone ve Android’de var mı?",
+    "Evet. Lunora, iPhone için App Store’da, Android telefonlar için Google Play’de bulunur."
+   ],
+   [
+    "Lunora ücretsiz mi?",
+    "Lunora reklamsızdır. Uygulamanın tamamı Lunora+ aboneliğiyle açılır; 7 gün ücretsiz deneyerek başlayabilirsiniz. Lunora+ tüm kârileri, çevrimdışı Kur’an’ı, Kur’an Kursu ve Hafızlık’ın tamamını, beş vakitte Namazımı Koru’yu ve büyük widget’ları kapsar."
+   ],
+   [
+    "Lunora hangi dillerde?",
+    "Türkçe, İngilizce, Arapça, Fransızca, Almanca, Endonezce, Malayca, Urduca ve Bengalce."
+   ],
+   [
+    "Verilerim gizli mi?",
+    "Dönem, ruh hâli, belirti ve günlük kayıtlarınız, notlarınız ve kaydettiğiniz dualar cihazınızda kalır, sunucularımıza yüklenmez. Hesap gerekmez, reklam yoktur. Hataları gidermek ve uygulamayı geliştirmek için Firebase Analytics ve Crashlytics ile anonim kullanım ve çökme verisi toplarız; namaz vakitlerini hesaplamak için şehir ve ülke bilginiz kullanılır. Verilerinizi asla satmayız. Ayrıntılar için sayfanın altındaki Gizlilik Politikası’na bakın (İngilizce)."
+   ]
+  ]
+ },
+ "home": {
+  "title": "Lunora: Müslüman Kadınlar İçin İslami Uygulama",
+  "desc": "Namaz vakitleri, tam Kur’an, dua ve zikir, dört mezhepli Dönem Modu. iPhone ve Android’de, 9 dilde ve reklamsız. 7 gün ücretsiz deneyin."
+ }
+}

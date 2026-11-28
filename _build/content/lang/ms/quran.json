@@ -1,0 +1,101 @@
+{
+  "lang": "ms",
+  "features": {
+    "quran": {
+      "path": "/ms/pelan-khatam-quran.html",
+      "seo": {
+        "title": "Pelan Khatam Al-Quran: 30 Hari, 60 Hari, Setahun | Lunora",
+        "desc": "Pelan bacaan Lunora membahagikan Al-Quran kepada bahagian harian: khataman Ramadan 30 hari, khatam 60 hari atau setahun, pelan pendek dan pelan anda sendiri.",
+        "og_title": "Pelan bacaan Al-Quran dan penjejak khatam | Lunora",
+        "og_desc": "Bahagian harian, khataman Ramadan 30 hari, khatam 60 hari atau setahun, dan pelan yang anda bina sendiri. Boleh dijeda semasa haid."
+      },
+      "badge": "Al-Quran",
+      "crumb_last": "Pelan bacaan Al-Quran",
+      "h1": "Pelan bacaan Al-Quran dan penjejak khatam",
+      "summary": [
+        "Pelan bacaan Lunora membahagikan Al-Quran kepada bahagian harian dan menjejak kemajuan anda hari demi hari, daripada khataman Ramadan 30 hari (satu juzuk sehari) hingga khatam dalam tempoh 60 hari atau dalam setahun. Anda juga boleh membina pelan daripada surah yang anda pilih, dan menjeda pelan semasa haid jika anda mahu. Lunora ialah aplikasi Islamik untuk wanita Muslim di iPhone dan Android, dengan percubaan percuma 7 hari."
+      ],
+      "trust": ["iPhone & Android", "Tanpa iklan", "9 bahasa"],
+      "shot": {
+        "alt": "Lukisan cat air Al-Quran terbuka di atas rehal kayu, ilustrasi yang digunakan Lunora untuk pelan khatamnya"
+      },
+      "what": {
+        "badge": "Pelan-pelannya",
+        "h2": "Sepuluh pelan siap sedia, atau pelan anda sendiri",
+        "p": "Tiga pelan khatam untuk membaca seluruh Al-Quran, tujuh pelan yang lebih pendek, dan satu pelan khas yang dibina daripada surah pilihan anda.",
+        "cards": [
+          {"h3": "Khataman Ramadan", "p": "30 hari, satu juzuk sehari, setiap hari bermula dari ayat pertama juzuknya."},
+          {"h3": "Khatam dalam tempoh 60 hari", "p": "Seluruh Al-Quran dalam dua bulan: kira-kira sepuluh muka surat mushaf Madinah sehari, dengan nombor muka surat bagi setiap hari."},
+          {"h3": "Khatam dalam setahun", "p": "Satu hingga dua muka surat sehari selama 365 hari. Sedikit setiap hari, tanpa terputus."},
+          {"h3": "Tujuh pelan ringkas", "p": "Untuk pemula (Al-Fatihah, kemudian surah-surah pendek), Surah Jumaat, Surah pagi, Surah malam, Ayat penyembuh, Surah penenang dan 7 surah dalam 7 hari."},
+          {"h3": "Pelan anda sendiri", "p": "Pilih surah, beri nama dan ikon jika mahu, kemudian baca satu atau dua surah sehari atau tetapkan sendiri bilangan harinya."},
+          {"h3": "Pilihan anda semasa haid", "p": "Apabila Mod Haid dihidupkan, anda yang menentukan sama ada mahu menjeda atau meneruskan. Pelan yang dijeda tidak menggerakkan kiraan hari dan bersambung dari hari yang sama."}
+        ]
+      },
+      "how": {
+        "badge": "Cara ia berfungsi",
+        "h2": "Pelan yang memberitahu anda apa yang perlu dibaca hari ini",
+        "p": "",
+        "steps": [
+          {"h3": "Pilih pelan", "p": "Buka Pelan bacaan dalam Lunora dan mulakan pelan khatam, pelan ringkas, atau cipta pelan anda sendiri."},
+          {"h3": "Lihat bacaan hari ini", "p": "Setiap hari menunjukkan dengan tepat apa yang perlu dibaca: julat muka surat, satu juzuk atau satu surah. Seluruh pelan disenaraikan hari demi hari."},
+          {"h3": "Baca dalam pembaca Al-Quran", "p": "Baca sebagai senarai dengan terjemahan dan transliterasi, atau sebagai halaman mushaf dengan susun atur mushaf Madinah. Apabila selesai, ketik “Sudah dibaca”."},
+          {"h3": "Jejaki kemajuan anda", "p": "Pelan menunjukkan hari ke berapa anda berada dan berapa peratus yang sudah selesai. Jika anda bertukar kepada pelan lain, kemajuan anda dikekalkan dan anda boleh kembali bila-bila masa."},
+          {"h3": "Selesaikannya", "p": "Pada hari terakhir, Lunora menandakan pelan itu selesai dengan “Semoga Allah menerimanya”. Anda boleh memulakannya semula atau memilih pelan lain."}
+        ]
+      },
+      "details": {
+        "badge": "Al-Quran dalam Lunora",
+        "h2": "Tempat anda membaca pelan anda",
+        "p": "",
+        "items": [
+          {"h3": "Pembaca", "ps": [
+            "Kesemua 114 surah dalam bahasa Arab dengan terjemahan, sebagai senarai atau halaman mushaf, dengan warna tajwid.",
+            "Dengar lima qari, letak penanda pada ayat, tulis nota dan kongsi ayat sebagai kad. Lebih ramai qari dan pendengaran luar talian mengikut juzuk disertakan dengan Lunora+."
+          ]},
+          {"h3": "Pada skrin utama anda", "ps": [
+            "Widget “Tempat awak berhenti” menunjukkan surah dan ayat yang terakhir anda baca, supaya anda boleh menyambung bacaan dengan satu ketikan.",
+            "Pelan Ayat penyembuh mengumpulkan ayat-ayat yang dibaca dengan niat kesembuhan; seperti yang dinyatakan aplikasi itu sendiri, ia tidak menggantikan rawatan."
+          ]}
+        ],
+        "note": ""
+      },
+      "faq": {
+        "badge": "Soalan lazim",
+        "h2": "Soalan yang kerap ditanya",
+        "p": "",
+        "items": [
+          {"q": "Adakah Lunora ada penjejak khatam?", "a": "<p>Ada. Lunora mempunyai tiga pelan khatam: Khataman Ramadan (30 hari, satu juzuk sehari), khatam dalam tempoh 60 hari (kira-kira sepuluh muka surat sehari) dan khatam dalam setahun (satu hingga dua muka surat sehari). Aplikasi menunjukkan hari ke berapa anda berada dalam pelan dan berapa banyak yang telah selesai.</p>"},
+          {"q": "Bolehkah saya membuat pelan bacaan Al-Quran sendiri?", "a": "<p>Boleh. Pilih surah yang anda mahu, tambah nama dan ikon jika suka, kemudian baca satu surah sehari, dua sehari, atau tetapkan sendiri bilangan harinya. Satu hari boleh mengandungi lebih daripada satu surah.</p>"},
+          {"q": "Bagaimana saya menandakan satu hari sebagai sudah dibaca?", "a": "<p>Buka bacaan hari itu daripada pelan, bacalah dalam pembaca Al-Quran Lunora dan ketik “Sudah dibaca”. Hari itu ditandakan selesai dan pelan beralih ke hari seterusnya.</p>"},
+          {"q": "Apa yang berlaku kepada pelan bacaan saya semasa haid?", "a": "<p>Jika Mod Haid dihidupkan, Lunora menyerahkan pilihan kepada anda: jeda pelan atau teruskan. Semasa dijeda, kiraan hari tidak bergerak, dan pelan bersambung dari hari yang sama apabila anda mematikan Mod Haid. Pelan juga memaut kepada Panduan Haid, yang menyenaraikan pandangan empat mazhab tentang membaca Al-Quran ketika haid.</p>"},
+          {"q": "Susun atur mushaf yang manakah digunakan Lunora?", "a": "<p>Paparan halaman mengikut susun atur halaman mushaf Madinah, 604 muka surat, dan pelan khatam 60 hari serta setahun memberikan bacaan harian sebagai julat muka surat mushaf itu. Terjemahan dan transliterasi tersedia dalam paparan senarai.</p>"},
+          {"q": "Adakah Lunora tersedia untuk iPhone dan Android?", "a": "<p>Ya. Lunora tersedia di App Store dan Google Play, dan tiada iklan. Lunora+ ialah langganan yang membuka aplikasi sepenuhnya, dan anda boleh memulakannya dengan percubaan percuma 7 hari.</p>"}
+        ]
+      },
+      "more": {
+        "badge": "Lagi daripada Lunora",
+        "h2": "Ciri-ciri lain",
+        "p": "",
+        "cards": [
+          {"href": "/ms/widget-zikir.html", "h3": "Widget zikir", "p": "Kira zikir dari skrin utama anda, dengan perpustakaan zikir bersumber dan Asmaul Husna."},
+          {"href": "/ms/lindungi-solat-saya.html", "h3": "Lindungi solat saya", "p": "Pada waktu solat, aplikasi pilihan anda menunggu sehingga anda menandakan solat."},
+          {"href": "/ms/mod-haid.html", "h3": "Mod Haid", "p": "Ibadah semasa haid, dengan pandangan empat mazhab dan penghitung puasa qada."}
+        ],
+        "reading": {
+          "h3": "Bacaan berkaitan",
+          "links": [
+            ["/ms/solat-semasa-haid.html", "Apa yang boleh dilakukan semasa haid menurut Islam"],
+            ["/ms/blog.html", "Semua artikel di blog Lunora"]
+          ]
+        }
+      },
+      "download": {
+        "badge": "Mulakan perjalanan anda",
+        "h2": "Muat turun Lunora",
+        "p": "Untuk iPhone dan Android, tanpa iklan, dengan percubaan percuma 7 hari. Teman rohani yang dicipta dengan penuh perhatian dan kefahaman yang anda layak terima.",
+        "greeting": "Assalamualaikum, saudari."
+      }
+    }
+  }
+}

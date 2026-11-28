@@ -1,0 +1,71 @@
+{
+ "lang": "de",
+ "blog": {
+  "path": "/de/blog.html",
+  "title": "Lunora-Blog: Gebet, Periode, Koran und Dhikr",
+  "desc": "Ratgeber für muslimische Frauen zu Gebet, Periode, Koran, Dhikr und Alltag, mit Quellen und den Ansichten der vier Rechtsschulen.",
+  "tag": "Das Lunora-Journal",
+  "h1a": "Notizen für",
+  "h1b": "deine stillen Momente.",
+  "lead": "Ratgeber zu Gebet, Periode, Koran und Dhikr, mit Quellen und ohne erhobenen Zeigefinger.",
+  "cta": [
+   "Lies es",
+   "auch in der App"
+  ],
+  "ctaP": "Duas, Dhikr, Koran und Periodenmodus, zusammen in Lunora. Ohne Werbung, in 9 Sprachen. 7 Tage kostenlos testen.",
+  "cats": [
+   [
+    "all",
+    "Alle"
+   ],
+   [
+    "period",
+    "Periode"
+   ],
+   [
+    "prayer",
+    "Gebet"
+   ],
+   [
+    "quran",
+    "Koran"
+   ],
+   [
+    "dhikr",
+    "Bittgebete & Dhikr"
+   ],
+   [
+    "life",
+    "Leben & Glaube"
+   ]
+  ]
+ },
+ "article_ui": {
+  "in_app": "In der Lunora-App",
+  "faq_h": "Häufige Fragen",
+  "cta_h": "Lunora herunterladen",
+  "cta_p": "Keine Werbung, in 9 Sprachen. 7 Tage kostenlos testen.",
+  "appbox": {
+   "period": [
+    "Periodenmodus",
+    "Verfolge deinen Zyklus neben Gebet, Koran und Dhikr, sieh die Ansichten der vier Rechtsschulen und behalte deine nachzuholenden Fastentage im Blick."
+   ],
+   "dhikr": [
+    "Dhikr-Widget und Tasbih-Zähler",
+    "Zähle Dhikr auf deinem Startbildschirm, ohne die App zu öffnen."
+   ],
+   "quran": [
+    "Koran-Leseplan",
+    "Tägliche Abschnitte und Khatm-Fortschritt, vom Ramadan-Khatm in 30 Tagen bis zum Jahresplan."
+   ],
+   "prayer": [
+    "Mein Gebet schützen",
+    "Zur Gebetszeit warten die Apps deiner Wahl; tippe auf „Ich habe gebetet“, und sie öffnen sich wieder."
+   ],
+   "life": [
+    "Lunora für muslimische Frauen",
+    "Gebetszeiten, der ganze Koran, Duas und Dhikr und ein Periodenmodus in einer ruhigen App. Ohne Werbung."
+   ]
+  }
+ }
+}

@@ -1,0 +1,113 @@
+{
+  "lang": "ms",
+  "features": {
+    "period": {
+      "path": "/ms/mod-haid.html",
+      "seo": {
+        "title": "Mod Haid: Ibadah Semasa Haid & Qada Puasa | Lunora",
+        "desc": "Mod Haid Lunora menjejak kitaran bersama solat, Al-Quran dan zikir. Lihat empat mazhab dengan sumbernya, kira puasa qada; rekod kekal pada peranti anda.",
+        "og_title": "Mod Haid: kekal dekat dengan ibadah anda semasa haid | Lunora",
+        "og_desc": "Jejaki kitaran, ketahui apa yang diuzurkan dan apa yang perlu diganti, dengan pandangan empat mazhab dan penghitung puasa qada. Rekod anda kekal pada peranti anda."
+      },
+      "badge": "Mod Haid",
+      "crumb_last": "Mod Haid",
+      "h1": "Mod Haid: kekal dekat dengan ibadah anda semasa haid",
+      "summary": [
+        "Mod Haid ialah bahagian Lunora yang mengikuti kitaran anda bersama solat, Al-Quran dan zikir. Ia menjejak haid (datang bulan) dan menganggar haid seterusnya, mematikan bunyi azan, merehatkan Lindungi solat saya dan mengira puasa Ramadan yang perlu anda qada. Ia juga menunjukkan apa yang dikatakan mazhab Syafie, Hanafi, Maliki dan Hanbali tentang membaca Al-Quran ketika haid, lengkap dengan sumbernya, dan memaparkan mazhab anda dahulu jika anda memilihnya. Lunora ialah aplikasi Islamik untuk wanita Muslim di iPhone dan Android, dengan percubaan percuma 7 hari."
+      ],
+      "trust": ["iPhone & Android", "Tanpa iklan", "9 bahasa"],
+      "shot": {
+        "alt": "Mod Haid Lunora: skrin Kitaranku pada hari ke-3 daripada 7 di dalam gelang berbunga"
+      },
+      "what": {
+        "badge": "Apa yang ia lakukan",
+        "h2": "Kitaran dan ibadah anda, di satu tempat",
+        "p": "Tanpa rasa bersalah dan tanpa meneka-neka: aplikasi menyimpan catatan, menerangkan apa yang berubah dan apa yang tidak, dan menyerahkan hukum kepada para ulama.",
+        "cards": [
+          {"h3": "Penjejakan kitaran", "p": "Tandakan hari-hari anda pada gelang kitaran, lihat anggaran haid seterusnya berdasarkan purata anda sendiri, dan terima soalan lembut “Adakah haid anda sudah tamat?” pada hari terakhir yang dianggarkan."},
+          {"h3": "Empat mazhab", "p": "Panduan Haid menyatakan pandangan mazhab Syafie, Hanafi, Maliki dan Hanbali tentang membaca dan menyentuh Al-Quran, serta menamakan sumbernya."},
+          {"h3": "Penghitung puasa qada", "p": "Mod Haid bertanya tentang hari yang jatuh dalam Ramadan. Skrin Qada mengira puasa yang dicatat, yang sudah dilaksanakan dan yang tinggal, dan boleh mengingatkan anda pada petang sebelum hari yang anda pilih."},
+          {"h3": "Ibadah yang diteruskan", "p": "Cadangan doa dan zikir yang sesuai dengan perasaan anda, kad hadis dan fiqah, ayat penghibur, dan satu daripada Asmaul Husna setiap hari."},
+          {"h3": "Panduan mandi wajib", "p": "Mandi wajib langkah demi langkah, dan satu peringatan apabila anda menandakan haid sudah tamat, untuk bila anda bersedia."},
+          {"h3": "Lebih senyap pada hari-hari ini", "p": "Bunyi azan dimatikan, Lindungi solat saya berehat, rentetan solat anda dikekalkan, dan anda boleh menjeda pelan bacaan Al-Quran."},
+          {"h3": "Setiap peringkat hidup", "p": "Tetapkan keadaan anda kepada hamil, dalam nifas, menyusu atau kitaran tidak teratur, dan anggaran akan menyesuaikan diri atau diketepikan. Mod nifas mengira hari sehingga anda menandakan darah sudah berhenti."},
+          {"h3": "Gejala, mood dan nota", "p": "Catat perasaan anda setiap hari. Dengan Lunora+, anda juga mendapat analisis kitaran dan dokumen rekod anda untuk dikongsi dengan doktor."},
+          {"h3": "Peribadi dari asasnya", "p": "Rekod haid, mood dan gejala anda kekal pada peranti anda dalam storan selamatnya dan tidak pernah dimuat naik. Tiada akaun diperlukan."}
+        ]
+      },
+      "how": {
+        "badge": "Cara ia berfungsi",
+        "h2": "Dari hari pertama hingga mandi wajib",
+        "p": "",
+        "steps": [
+          {"h3": "Tandakan permulaan", "p": "Apabila haid bermula, tandakannya dalam Mod Haid. Bunyi azan menjadi senyap dan Lindungi solat saya berehat sejak saat itu."},
+          {"h3": "Beritahu Lunora apa yang berkaitan dengan anda", "p": "Jika mahu, pilih keadaan dan mazhab anda. Anda boleh membiarkan kedua-duanya tidak dinyatakan dan menukarnya bila-bila masa."},
+          {"h3": "Ikuti hari-hari anda", "p": "Catat gejala, mood dan nota, dan dapatkan doa serta zikir yang sesuai dengan perasaan anda. Panduan menerangkan apa yang gugur ketika haid dan apa yang tidak."},
+          {"h3": "Tandakan penghujungnya", "p": "Pada hari terakhir yang dianggarkan, Lunora bertanya sama ada haid anda sudah tamat. Selepas anda menandakannya, anda boleh mendapat satu peringatan mandi wajib untuk bila anda bersedia."},
+          {"h3": "Jejaki qada anda", "p": "Jika haid anda jatuh dalam Ramadan, Mod Haid bertanya tentang hari-hari itu dan menambahkannya pada puasa qada anda."}
+        ]
+      },
+      "details": {
+        "badge": "Empat mazhab",
+        "h2": "Apa yang Lunora tunjukkan bagi setiap mazhab",
+        "p": "Lunora tidak mengeluarkan hukum. Ia menunjukkan apa yang dilaporkan dipegang oleh setiap mazhab, menyatakan dari mana ia datang, dan mencadangkan anda bertanya kepada ustaz atau ustazah tentang keadaan anda sendiri.",
+        "items": [
+          {"h3": "Membaca Al-Quran ketika haid", "ps": [
+            "Panduan Haid menyenaraikan pandangan setiap daripada empat mazhab tentang menyentuh mushaf, membaca, membaca ayat dengan niat doa atau zikir, dan mendengar.",
+            "Dalam mazhab Syafie, misalnya, panduan menyatakan bahawa menyentuh mushaf dan membaca Al-Quran dengan lidah tidak dibenarkan, manakala melihat mushaf dan menelusuri bacaannya dalam hati tanpa menggerakkan lidah dibenarkan tanpa khilaf (an-Nawawi; Dar al-Ifta Mesir), dan membaca ayat dengan niat doa atau zikir juga dibenarkan."
+          ]},
+          {"h3": "Mazhab anda, hanya jika anda menyatakannya", "ps": [
+            "Jika anda memilih mazhab dalam tetapan Mod Haid, pandangannya dipaparkan dahulu. Anda juga boleh memilih “Saya tidak mahu menyatakan”.",
+            "Lunora tidak pernah meneka mazhab anda berdasarkan negara anda. Tanpa mazhab, aplikasi tidak memaparkan sebarang angka khusus mazhab."
+          ]},
+          {"h3": "Apabila pendarahan berlarutan", "ps": [
+            "Jika anda sudah memilih mazhab dan pendarahan anda berlarutan, sekeping kad menunjukkan had maksimum haid yang lazimnya dilaporkan diakui oleh mazhab itu; bagi mazhab Syafie, angkanya ialah 15 hari.",
+            "Kad itu menyatakan dengan jelas: “Ini bukan hukum. Untuk keadaan anda, sila rujuk ahli ilmu.”"
+          ]},
+          {"h3": "Solat, puasa dan qada", "ps": [
+            "Bahagian “Apa yang gugur, apa yang diqada” menerangkan bahawa solat pada hari-hari haid tidak diqada, manakala puasa yang tertinggal perlu diqada.",
+            "Penghitung qada hanya mengira hari: “Bila dan bagaimana mengqadanya bergantung pada mazhab anda; tanyalah ustaz atau ustazah tentang perkara itu.”"
+          ]}
+        ],
+        "note": ""
+      },
+      "faq": {
+        "badge": "Soalan lazim",
+        "h2": "Soalan yang kerap ditanya",
+        "p": "",
+        "items": [
+          {"q": "Apakah Mod Haid dalam Lunora?", "a": "<p>Mod Haid ialah bahagian aplikasi Lunora yang mengikuti kitaran haid anda bersama solat, Al-Quran dan zikir. Ia menjejak kitaran dan menganggar haid seterusnya, menerangkan apa yang berubah dalam ibadah ketika haid, menawarkan doa dan zikir yang sesuai dengan perasaan anda, serta mengira puasa qada. Lunora tersedia untuk iPhone dan Android, dan anda boleh memulakan Lunora+ dengan percubaan percuma 7 hari.</p>"},
+          {"q": "Adakah Lunora mengikut empat mazhab?", "a": "<p>Lunora menunjukkan pandangan mazhab Syafie, Hanafi, Maliki dan Hanbali, bukan satu jawapan sahaja. Panduan Haidnya menyenaraikan pandangan setiap mazhab tentang membaca Al-Quran ketika haid bersama sumbernya, dan memaparkan mazhab anda dahulu jika anda telah memilihnya. Aplikasi tidak mengeluarkan hukum dan mencadangkan anda bertanya kepada ustaz atau ustazah tentang keadaan anda sendiri.</p>"},
+          {"q": "Bolehkah Lunora menjejak puasa yang perlu saya qada selepas haid?", "a": "<p>Boleh. Mod Haid bertanya tentang hari haid yang jatuh dalam Ramadan, dan skrin Qada menunjukkan berapa puasa yang dicatat, yang sudah dilaksanakan dan yang tinggal. Anda boleh memilih satu hari untuk puasa qada seterusnya dan mendapat peringatan pada petang sebelumnya. Lunora hanya mengira hari; bila dan bagaimana mengqadanya bergantung pada mazhab anda.</p>"},
+          {"q": "Apa yang berlaku kepada azan dan Lindungi solat saya semasa haid?", "a": "<p>Semasa Mod Haid dihidupkan, bunyi azan dimatikan dan Lindungi solat saya berehat tanpa bertanya. Kedua-duanya kembali sendiri apabila haid anda tamat, dan hari-hari haid tidak memutuskan rentetan solat anda.</p>"},
+          {"q": "Adakah data haid saya peribadi?", "a": "<p>Ya. Rekod haid, mood, gejala dan jurnal anda kekal pada peranti anda dalam storan selamatnya dan tidak dimuat naik ke pelayan Lunora. Tiada akaun diperlukan dan tiada iklan.</p>"},
+          {"q": "Adakah Mod Haid berfungsi semasa hamil atau selepas bersalin?", "a": "<p>Ya. Anda boleh menetapkan keadaan anda kepada hamil, dalam nifas, menyusu atau kitaran tidak teratur. Anggaran akan menyesuaikan diri atau berhenti seketika, dan mod nifas mengira hari sehingga anda menandakan darah anda sudah berhenti.</p>"}
+        ]
+      },
+      "more": {
+        "badge": "Lagi daripada Lunora",
+        "h2": "Ciri-ciri lain",
+        "p": "",
+        "cards": [
+          {"href": "/ms/widget-zikir.html", "h3": "Widget zikir", "p": "Kira zikir dari skrin utama anda, dengan perpustakaan zikir bersumber dan Asmaul Husna."},
+          {"href": "/ms/pelan-khatam-quran.html", "h3": "Pelan bacaan Al-Quran", "p": "Pelan khatam untuk Ramadan, 60 hari atau setahun, dan pelan yang anda bina sendiri."},
+          {"href": "/ms/lindungi-solat-saya.html", "h3": "Lindungi solat saya", "p": "Pada waktu solat, aplikasi pilihan anda menunggu sehingga anda menandakan solat."}
+        ],
+        "reading": {
+          "h3": "Bacaan berkaitan",
+          "links": [
+            ["/ms/solat-semasa-haid.html", "Bolehkah wanita solat semasa haid?"],
+            ["/ms/solat-semasa-haid.html", "Apa yang boleh dilakukan semasa haid menurut Islam"],
+            ["/ms/blog.html", "Semua artikel di blog Lunora"]
+          ]
+        }
+      },
+      "download": {
+        "badge": "Mulakan perjalanan anda",
+        "h2": "Muat turun Lunora",
+        "p": "Untuk iPhone dan Android, tanpa iklan, dengan percubaan percuma 7 hari. Teman rohani yang dicipta dengan penuh perhatian dan kefahaman yang anda layak terima.",
+        "greeting": "Assalamualaikum, saudari."
+      }
+    }
+  }
+}

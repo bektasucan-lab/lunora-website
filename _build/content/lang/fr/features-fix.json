@@ -1,0 +1,622 @@
+{
+ "lang": "fr",
+ "features": {
+  "period": {
+   "head": {
+    "title": "Mode règles : prier et adorer pendant ses règles | Lunora",
+    "tags": [
+     "<meta name=\"description\" content=\"Le Mode règles suit ton cycle avec ta prière, le Coran et le dhikr : avis des quatre madhhabs, jeûnes à rattraper, données sur ton appareil. iPhone et Android.\">",
+     "<link rel=\"canonical\" href=\"https://mylunora.app/fr/mode-regles.html\">",
+     "<link rel=\"alternate\" hreflang=\"en\" href=\"https://mylunora.app/period-mode.html\">",
+     "<link rel=\"alternate\" hreflang=\"tr\" href=\"https://mylunora.app/tr/donem-modu.html\">",
+     "<link rel=\"alternate\" hreflang=\"fr\" href=\"https://mylunora.app/fr/mode-regles.html\">",
+     "<link rel=\"alternate\" hreflang=\"de\" href=\"https://mylunora.app/de/periodenmodus.html\">",
+     "<link rel=\"alternate\" hreflang=\"x-default\" href=\"https://mylunora.app/period-mode.html\">",
+     "<meta property=\"og:title\" content=\"Mode règles de Lunora : l’adoration pendant tes règles\">",
+     "<meta property=\"og:description\" content=\"Le suivi du cycle avec les avis des écoles hanafite, chaféite, malékite et hanbalite, un compteur de jeûnes à rattraper et un guide du ghusl.\">",
+     "<meta property=\"og:url\" content=\"https://mylunora.app/fr/mode-regles.html\">",
+     "<meta property=\"og:image\" content=\"https://mylunora.app/img/features/en-period-mode.webp\">",
+     "<meta property=\"og:type\" content=\"website\">",
+     "<meta property=\"og:site_name\" content=\"Lunora\">",
+     "<meta property=\"og:locale\" content=\"fr_FR\">",
+     "<meta name=\"twitter:card\" content=\"summary\">"
+    ],
+    "jsonld": [
+     "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"FAQPage\",\n  \"mainEntity\": [\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Qu’est-ce que le Mode règles dans Lunora ?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Le Mode règles est la partie de l’application Lunora qui suit ton cycle menstruel aux côtés de ta prière, du Coran et du dhikr. Il suit ton cycle et estime tes prochaines règles, explique ce qui change dans l’adoration pendant les menstrues, propose des invocations et du dhikr adaptés à ton humeur, et compte les jeûnes à rattraper. Lunora est disponible sur iPhone et Android, sans publicité.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Lunora suit-elle les quatre madhhabs ?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Lunora montre les avis des écoles hanafite, chaféite, malékite et hanbalite plutôt qu’une réponse unique. Son Guide des règles présente l’avis de chaque école sur la lecture du Coran pendant les menstrues, avec la source, et affiche ton école en premier si tu en as choisi une. L’app ne rend pas d’avis juridiques et te suggère de consulter un savant pour ta propre situation.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Lunora peut-elle suivre les jeûnes que je dois rattraper après mes règles ?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Oui. Le Mode règles te demande quels jours de règles sont tombés pendant le Ramadan, et l’écran Rattrapage indique combien de jeûnes sont enregistrés, accomplis et restants. Tu peux choisir un jour pour ton prochain jeûne de rattrapage et recevoir un rappel la veille au soir. Lunora ne fait que compter les jours ; quand et comment les rattraper dépend de ton madhhab.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Que deviennent l’adhan et Protéger ma prière pendant mes règles ?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Tant que le Mode règles est activé, le son de l’adhan est coupé et Protéger ma prière se met en pause sans te demander. Les deux reviennent tout seuls à la fin de tes règles, et les jours de règles ne cassent pas ta série de prières.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Mes données de règles restent-elles privées ?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Oui. Tes données de règles, d’humeur, de symptômes et de journal restent sur ton appareil, dans son stockage sécurisé, et ne sont pas envoyées sur les serveurs de Lunora. Aucun compte n’est nécessaire et il n’y a pas de publicité.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Le Mode règles fonctionne-t-il pendant la grossesse ou après l’accouchement ?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Oui. Tu peux indiquer ta situation : enceinte, post-partum, allaitement ou cycle irrégulier. L’estimation s’adapte ou se met en pause en conséquence, et le mode post-partum compte les jours jusqu’à ce que tu indiques que tes saignements se sont arrêtés.\"\n      }\n    }\n  ]\n}",
+     "\n{\n    \"@context\": \"https://schema.org\",\n    \"@graph\": [\n        {\n            \"@type\": \"Organization\",\n            \"@id\": \"https://mylunora.app/#org\",\n            \"name\": \"Studio Lunora\",\n            \"url\": \"https://mylunora.app/\",\n            \"logo\": \"https://mylunora.app/icon-192.png\",\n            \"sameAs\": [\n                \"https://instagram.com/mylunora.app\"\n            ]\n        },\n        {\n            \"@type\": \"MobileApplication\",\n            \"@id\": \"https://mylunora.app/#app\",\n            \"name\": \"Lunora - Muslim Women\",\n            \"alternateName\": \"Lunora\",\n            \"operatingSystem\": \"iOS, Android\",\n            \"applicationCategory\": \"LifestyleApplication\",\n            \"description\": \"An Islamic app for Muslim women: prayer times, Quran, duas, dhikr and a Period Mode with fiqh guidance from the four madhhabs. Works offline, no ads, no account.\",\n            \"inLanguage\": [\n                \"en\",\n                \"tr\",\n                \"ar\",\n                \"fr\",\n                \"de\",\n                \"id\",\n                \"ms\",\n                \"ur\",\n                \"bn\"\n            ],\n            \"offers\": {\n                \"@type\": \"Offer\",\n                \"price\": \"0\",\n                \"priceCurrency\": \"USD\"\n            },\n            \"publisher\": {\n                \"@id\": \"https://mylunora.app/#org\"\n            },\n            \"sameAs\": [\n                \"https://apps.apple.com/us/app/lunora-muslim-women/id6758765933\",\n                \"https://play.google.com/store/apps/details?id=com.studiolunora.lunora\"\n            ]\n        },\n        {\n            \"@type\": \"WebPage\",\n            \"@id\": \"https://mylunora.app/fr/mode-regles.html#webpage\",\n            \"url\": \"https://mylunora.app/fr/mode-regles.html\",\n            \"name\": \"Mode règles : adoration pendant les règles, 4 madhhabs et qada | Lunora\",\n            \"description\": \"Le Mode règles suit ton cycle avec ta prière, le Coran et le dhikr : avis des quatre madhhabs, jeûnes à rattraper, données sur ton appareil. Sur iPhone et Android, avec 7 jours d’essai gratuit.\",\n            \"inLanguage\": \"fr\",\n            \"about\": {\n                \"@id\": \"https://mylunora.app/#app\"\n            },\n            \"primaryImageOfPage\": \"https://mylunora.app/img/features/en-period-mode.webp\",\n            \"breadcrumb\": {\n                \"@id\": \"https://mylunora.app/fr/mode-regles.html#breadcrumb\"\n            }\n        },\n        {\n            \"@type\": \"BreadcrumbList\",\n            \"@id\": \"https://mylunora.app/fr/mode-regles.html#breadcrumb\",\n            \"itemListElement\": [\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 1,\n                    \"name\": \"Accueil\",\n                    \"item\": \"https://mylunora.app/fr/\"\n                },\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 2,\n                    \"name\": \"Mode règles\",\n                    \"item\": \"https://mylunora.app/fr/mode-regles.html\"\n                }\n            ]\n        }\n    ]\n}\n    "
+    ]
+   },
+   "summary": [
+    "Le Mode règles est la partie de Lunora qui suit ton cycle aux côtés de ta prière, du Coran et du dhikr : il enregistre tes règles et estime les prochaines, coupe le son de l’adhan, met Protéger ma prière en pause et compte les jeûnes du Ramadan que tu devras rattraper. Il montre aussi ce que disent les écoles hanafite, chaféite, malékite et hanbalite sur la lecture du Coran pendant les menstrues, avec leurs sources, et place ta propre école en premier si tu en choisis une. Lunora est une application islamique pensée pour les femmes musulmanes, disponible sur iPhone et Android."
+   ],
+   "what": {
+    "badge": "Ce que ça fait",
+    "h2": "Ton cycle et ton adoration, au même endroit",
+    "p": "Pas de culpabilité, pas de suppositions : l’app tient le compte, explique ce qui change et ce qui ne change pas, et laisse les avis juridiques aux savants.",
+    "cards": [
+     {
+      "icon": "🌸",
+      "h3": "Suivi du cycle",
+      "p": "Marque tes jours sur un anneau de cycle, vois une estimation de tes prochaines règles basée sur ta propre moyenne, et reçois un doux « Tes règles sont-elles terminées ? » le dernier jour estimé."
+     },
+     {
+      "icon": "📚",
+      "h3": "Les quatre madhhabs",
+      "p": "Le Guide des règles présente les avis hanafite, chaféite, malékite et hanbalite sur la lecture et le toucher du Coran, en citant ses sources."
+     },
+     {
+      "icon": "🗓️",
+      "h3": "Compteur de jeûnes à rattraper",
+      "p": "Le Mode règles te demande quels jours sont tombés pendant le Ramadan. L’écran Rattrapage compte les jeûnes enregistrés, accomplis et restants, et peut te le rappeler la veille au soir du jour que tu choisis."
+     },
+     {
+      "icon": "🤲",
+      "h3": "Une adoration qui continue",
+      "p": "Des suggestions d’invocations et de dhikr adaptées à ton humeur, des cartes de hadith et de fiqh, des versets de réconfort, et l’un des 99 Noms chaque jour."
+     },
+     {
+      "icon": "💧",
+      "h3": "Guide du ghusl",
+      "p": "Le ghusl étape par étape, et un seul rappel quand tu indiques la fin de tes règles, pour le moment où tu seras prête."
+     },
+     {
+      "icon": "🔕",
+      "h3": "Plus calme pendant ces jours",
+      "p": "Le son de l’adhan est coupé, Protéger ma prière se met en pause, ta série de prières est préservée, et tu peux mettre en pause ton plan de lecture du Coran."
+     },
+     {
+      "icon": "👶",
+      "h3": "À chaque étape de la vie",
+      "p": "Indique ta situation : enceinte, post-partum (nifâs), allaitement ou cycle irrégulier, et l’estimation s’adapte ou s’efface. Le mode post-partum compte les jours jusqu’à ce que tu indiques que tes saignements se sont arrêtés."
+     },
+     {
+      "icon": "📝",
+      "h3": "Symptômes, humeur et notes",
+      "p": "Note chaque jour comment tu te sens. Avec Lunora+, tu as aussi des analyses de ton cycle et un document de tes données à partager avec ton médecin."
+     },
+     {
+      "icon": "🔒",
+      "h3": "Confidentiel par conception",
+      "p": "Tes données de règles, d’humeur et de symptômes restent sur ton appareil, dans son stockage sécurisé, et ne sont jamais envoyées en ligne. Aucun compte n’est nécessaire."
+     }
+    ]
+   },
+   "how": {
+    "badge": "Comment ça marche",
+    "h2": "Du premier jour au ghusl",
+    "p": "",
+    "steps": [
+     {
+      "h3": "Marque le début",
+      "p": "Quand tes règles commencent, indique-le dans le Mode règles. Dès ce moment, le son de l’adhan se tait et Protéger ma prière se met en pause."
+     },
+     {
+      "h3": "Dis à Lunora ce qui s’applique à toi",
+      "p": "Si tu veux, choisis ta situation et ton madhhab. Tu peux aussi ne rien indiquer, et changer d’avis à tout moment."
+     },
+     {
+      "h3": "Suis tes journées",
+      "p": "Note tes symptômes, ton humeur et tes notes, et reçois des invocations et du dhikr adaptés à ce que tu ressens. Le guide explique ce qui est levé pendant les menstrues et ce qui ne l’est pas."
+     },
+     {
+      "h3": "Marque la fin",
+      "p": "Le dernier jour estimé, Lunora te demande si tes règles sont terminées. Une fois que tu l’as indiqué, tu peux recevoir un rappel unique pour le ghusl, quand tu seras prête."
+     },
+     {
+      "h3": "Garde le compte du qada",
+      "p": "Si tes règles sont tombées pendant le Ramadan, le Mode règles te demande quels jours et les ajoute à tes jeûnes à rattraper."
+     }
+    ]
+   },
+   "details": {
+    "badge": "Quatre madhhabs",
+    "h2": "Ce que Lunora montre pour chaque madhhab",
+    "p": "Lunora ne rend pas d’avis juridiques. Elle montre ce que chaque école est rapportée tenir, indique d’où cela vient, et te suggère de consulter un savant pour ta propre situation.",
+    "items": [
+     {
+      "h3": "Lire le Coran pendant les menstrues",
+      "ps": [
+       "Le Guide des règles présente l’avis de chacune des quatre écoles (dont la malékite, très présente au Maghreb et en Afrique de l’Ouest) sur le fait de toucher le mushaf, de réciter, de lire des versets avec l’intention de l’invocation ou du dhikr, et d’écouter."
+      ]
+     },
+     {
+      "h3": "Ton madhhab, seulement si tu le dis",
+      "ps": [
+       "Si tu choisis ton madhhab dans les réglages du Mode règles, son avis s’affiche en premier. Tu peux aussi choisir « Je préfère ne pas le dire ».",
+       "Lunora ne devine jamais ton madhhab d’après ton pays. Sans madhhab choisi, l’app n’affiche aucun chiffre propre à une école."
+      ]
+     },
+     {
+      "h3": "Quand les saignements durent plus longtemps",
+      "ps": [
+       "Si tu as choisi un madhhab et que tes saignements se prolongent, une carte indique la durée maximale des menstrues que cette école reconnaît selon ce qui est couramment rapporté.",
+       "La carte le dit clairement : « Ce n’est pas un avis juridique. Pour ta situation, consulte un savant. »"
+      ]
+     },
+     {
+      "h3": "Prière, jeûne et qada",
+      "ps": [
+       "La section « Ce qui est levé, et ce qui ne l’est pas » explique que les prières des jours de menstrues ne se rattrapent pas, alors que les jeûnes manqués se rattrapent.",
+       "Le compteur de qada ne fait que compter les jours : « Quand et comment les rattraper varie selon les écoles ; demande à un savant ou à une savante. »"
+      ]
+     }
+    ],
+    "note": ""
+   },
+   "faq": {
+    "badge": "Questions fréquentes",
+    "h2": "Questions fréquentes",
+    "p": "",
+    "items": [
+     {
+      "q": "Qu’est-ce que le Mode règles dans Lunora ?",
+      "a": "<p>Le Mode règles est la partie de l’application Lunora qui suit ton cycle menstruel aux côtés de ta prière, du Coran et du dhikr. Il suit ton cycle et estime tes prochaines règles, explique ce qui change dans l’adoration pendant les menstrues, propose des invocations et du dhikr adaptés à ton humeur, et compte les jeûnes à rattraper. Lunora est disponible sur iPhone et Android, sans publicité.</p>"
+     },
+     {
+      "q": "Lunora suit-elle les quatre madhhabs ?",
+      "a": "<p>Lunora montre les avis des écoles hanafite, chaféite, malékite et hanbalite plutôt qu’une réponse unique. Son Guide des règles présente l’avis de chaque école sur la lecture du Coran pendant les menstrues, avec la source, et affiche ton école en premier si tu en as choisi une. L’app ne rend pas d’avis juridiques et te suggère de consulter un savant pour ta propre situation.</p>"
+     },
+     {
+      "q": "Lunora peut-elle suivre les jeûnes que je dois rattraper après mes règles ?",
+      "a": "<p>Oui. Le Mode règles te demande quels jours de règles sont tombés pendant le Ramadan, et l’écran Rattrapage indique combien de jeûnes sont enregistrés, accomplis et restants. Tu peux choisir un jour pour ton prochain jeûne de rattrapage et recevoir un rappel la veille au soir. Lunora ne fait que compter les jours ; quand et comment les rattraper dépend de ton madhhab.</p>"
+     },
+     {
+      "q": "Que deviennent l’adhan et Protéger ma prière pendant mes règles ?",
+      "a": "<p>Tant que le Mode règles est activé, le son de l’adhan est coupé et Protéger ma prière se met en pause sans te demander. Les deux reviennent tout seuls à la fin de tes règles, et les jours de règles ne cassent pas ta série de prières.</p>"
+     },
+     {
+      "q": "Mes données de règles restent-elles privées ?",
+      "a": "<p>Oui. Tes données de règles, d’humeur, de symptômes et de journal restent sur ton appareil, dans son stockage sécurisé, et ne sont pas envoyées sur les serveurs de Lunora. Aucun compte n’est nécessaire et il n’y a pas de publicité.</p>"
+     },
+     {
+      "q": "Le Mode règles fonctionne-t-il pendant la grossesse ou après l’accouchement ?",
+      "a": "<p>Oui. Tu peux indiquer ta situation : enceinte, post-partum, allaitement ou cycle irrégulier. L’estimation s’adapte ou se met en pause en conséquence, et le mode post-partum compte les jours jusqu’à ce que tu indiques que tes saignements se sont arrêtés.</p>"
+     }
+    ]
+   },
+   "more": {
+    "badge": "Aussi dans Lunora",
+    "h2": "Autres fonctionnalités",
+    "p": "",
+    "cards": [
+     {
+      "href": "/fr/widget-dhikr.html",
+      "icon": "📿",
+      "h3": "Widget dhikr",
+      "p": "Compte ton dhikr depuis l’écran d’accueil, avec une bibliothèque de dhikr sourcée et les 99 Noms."
+     },
+     {
+      "href": "/fr/plan-lecture-coran.html",
+      "icon": "📖",
+      "h3": "Plan de lecture du Coran",
+      "p": "Des plans de khatm pour le Ramadan, en 60 jours ou en un an, et des plans que tu crées toi-même."
+     },
+     {
+      "href": "/fr/proteger-ma-priere.html",
+      "icon": "🔒",
+      "h3": "Protéger ma prière",
+      "p": "À l’heure de la prière, les applications que tu choisis attendent que tu marques ta prière."
+     }
+    ],
+    "reading": {
+     "h3": "À lire aussi",
+     "links": [
+      [
+       "/fr/prier-pendant-les-regles-en-islam.html",
+       "Peut-on prier pendant ses règles ? Le guide complet"
+      ],
+      [
+       "/fr/invocations-et-dhikr-du-quotidien.html",
+       "Douas et dhikr du quotidien pour les femmes musulmanes"
+      ],
+      [
+       "/fr/blog.html",
+       "Tous les articles du blog Lunora"
+      ]
+     ]
+    }
+   },
+   "download": {
+    "p": "Sur iPhone et Android, sans publicité, avec 7 jours d’essai gratuit. Une compagne spirituelle conçue avec toute la douceur et la bienveillance que tu mérites."
+   }
+  },
+  "protect": {
+   "head": {
+    "title": "Protéger ma prière : tes applis attendent ta prière | Lunora",
+    "tags": [
+     "<meta name=\"description\" content=\"Protéger ma prière met en pause les applis choisies à l’heure de la prière ; « J’ai prié » les rouvre aussitôt. Se repose pendant tes règles. iPhone et Android.\">",
+     "<link rel=\"canonical\" href=\"https://mylunora.app/fr/proteger-ma-priere.html\">",
+     "<link rel=\"alternate\" hreflang=\"en\" href=\"https://mylunora.app/protect-my-prayer.html\">",
+     "<link rel=\"alternate\" hreflang=\"tr\" href=\"https://mylunora.app/tr/namazimi-koru.html\">",
+     "<link rel=\"alternate\" hreflang=\"fr\" href=\"https://mylunora.app/fr/proteger-ma-priere.html\">",
+     "<link rel=\"alternate\" hreflang=\"de\" href=\"https://mylunora.app/de/mein-gebet-schuetzen.html\">",
+     "<link rel=\"alternate\" hreflang=\"x-default\" href=\"https://mylunora.app/protect-my-prayer.html\">",
+     "<meta property=\"og:title\" content=\"Protéger ma prière : tes applis attendent pendant que tu pries\">",
+     "<meta property=\"og:description\" content=\"À l’heure de la prière, les applications que tu choisis attendent quelques minutes. Marque ta prière dans Lunora et elles s’ouvrent aussitôt.\">",
+     "<meta property=\"og:url\" content=\"https://mylunora.app/fr/proteger-ma-priere.html\">",
+     "<meta property=\"og:image\" content=\"https://mylunora.app/img/features/en-protect-my-prayer.webp\">",
+     "<meta property=\"og:type\" content=\"website\">",
+     "<meta property=\"og:site_name\" content=\"Lunora\">",
+     "<meta property=\"og:locale\" content=\"fr_FR\">",
+     "<meta name=\"twitter:card\" content=\"summary\">"
+    ],
+    "jsonld": [
+     "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"FAQPage\",\n  \"mainEntity\": [\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Qu’est-ce que Protéger ma prière ?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Protéger ma prière est une fonctionnalité de l’application Lunora, une forme de verrouillage d’applications pensée pour la prière. Quand l’heure d’une prière arrive, les applications que tu as choisies attendent un court moment, 15 minutes par défaut. Quand tu touches « J’ai prié » dans Lunora, elles s’ouvrent aussitôt et la prière est marquée dans ton suivi des prières.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Combien de temps les applications restent-elles en attente ?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"15 minutes par défaut, à compter du début de l’heure de la prière. Sur Android, tu peux choisir 10, 15 ou 20 minutes, et sur iPhone 15 ou 20. Si tu touches « J’ai prié », elles s’ouvrent immédiatement ; sinon, elles s’ouvrent toutes seules à la fin du délai.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Puis-je ouvrir une application en cas d’urgence ?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Oui. Touche « Une urgence ? Lève-la maintenant » et les applications s’ouvrent tout de suite ; elles sont de nouveau protégées à la prière suivante. L’app Téléphone et Lunora n’attendent jamais.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Protéger ma prière fonctionne-t-il sur iPhone ?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Oui. Sur iPhone, la fonctionnalité utilise l’autorisation Temps d’écran d’Apple et nécessite iOS 16 ou une version ultérieure. Sur Android, elle utilise l’accès à l’utilisation et l’autorisation d’affichage par-dessus les autres applications.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Que se passe-t-il pendant mes règles ?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Protéger ma prière se met en pause toute seule tant que le Mode règles est activé et revient à la fin de tes règles. Elle ne te demande rien, tes applications et prières choisies sont conservées, et les jours de règles ne cassent pas ta série de prières.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Faut-il Lunora+ pour Protéger ma prière ?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Lunora est sans publicité. Protéger ma prière pour les cinq prières est inclus dans Lunora+, un abonnement que tu peux commencer par 7 jours d’essai gratuit.\"\n      }\n    }\n  ]\n}",
+     "\n{\n    \"@context\": \"https://schema.org\",\n    \"@graph\": [\n        {\n            \"@type\": \"Organization\",\n            \"@id\": \"https://mylunora.app/#org\",\n            \"name\": \"Studio Lunora\",\n            \"url\": \"https://mylunora.app/\",\n            \"logo\": \"https://mylunora.app/icon-192.png\",\n            \"sameAs\": [\n                \"https://instagram.com/mylunora.app\"\n            ]\n        },\n        {\n            \"@type\": \"MobileApplication\",\n            \"@id\": \"https://mylunora.app/#app\",\n            \"name\": \"Lunora - Muslim Women\",\n            \"alternateName\": \"Lunora\",\n            \"operatingSystem\": \"iOS, Android\",\n            \"applicationCategory\": \"LifestyleApplication\",\n            \"description\": \"An Islamic app for Muslim women: prayer times, Quran, duas, dhikr and a Period Mode with fiqh guidance from the four madhhabs. Works offline, no ads, no account.\",\n            \"inLanguage\": [\n                \"en\",\n                \"tr\",\n                \"ar\",\n                \"fr\",\n                \"de\",\n                \"id\",\n                \"ms\",\n                \"ur\",\n                \"bn\"\n            ],\n            \"offers\": {\n                \"@type\": \"Offer\",\n                \"price\": \"0\",\n                \"priceCurrency\": \"USD\"\n            },\n            \"publisher\": {\n                \"@id\": \"https://mylunora.app/#org\"\n            },\n            \"sameAs\": [\n                \"https://apps.apple.com/us/app/lunora-muslim-women/id6758765933\",\n                \"https://play.google.com/store/apps/details?id=com.studiolunora.lunora\"\n            ]\n        },\n        {\n            \"@type\": \"WebPage\",\n            \"@id\": \"https://mylunora.app/fr/proteger-ma-priere.html#webpage\",\n            \"url\": \"https://mylunora.app/fr/proteger-ma-priere.html\",\n            \"name\": \"Protéger ma prière : tes applis attendent ta prière | Lunora\",\n            \"description\": \"Protéger ma prière met en pause les applis choisies à l’heure de la prière ; « J’ai prié » les ouvre aussitôt. En pause pendant tes règles. Sur iPhone et Android, avec 7 jours d’essai gratuit.\",\n            \"inLanguage\": \"fr\",\n            \"about\": {\n                \"@id\": \"https://mylunora.app/#app\"\n            },\n            \"primaryImageOfPage\": \"https://mylunora.app/img/features/en-protect-my-prayer.webp\",\n            \"breadcrumb\": {\n                \"@id\": \"https://mylunora.app/fr/proteger-ma-priere.html#breadcrumb\"\n            }\n        },\n        {\n            \"@type\": \"BreadcrumbList\",\n            \"@id\": \"https://mylunora.app/fr/proteger-ma-priere.html#breadcrumb\",\n            \"itemListElement\": [\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 1,\n                    \"name\": \"Accueil\",\n                    \"item\": \"https://mylunora.app/fr/\"\n                },\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 2,\n                    \"name\": \"Protéger ma prière\",\n                    \"item\": \"https://mylunora.app/fr/proteger-ma-priere.html\"\n                }\n            ]\n        }\n    ]\n}\n    "
+    ]
+   },
+   "summary": [
+    "Protéger ma prière est une fonctionnalité de Lunora qui fait patienter les applications que tu choisis quand l’heure d’une prière arrive, 15 minutes par défaut. Touche « J’ai prié » et elles s’ouvrent aussitôt ; sinon, elles s’ouvrent toutes seules à la fin du délai, et pendant tes jours de règles la fonctionnalité se met en pause d’elle-même. Lunora est une application islamique pensée pour les femmes musulmanes, disponible sur iPhone et Android."
+   ],
+   "faq": {
+    "badge": "Questions fréquentes",
+    "h2": "Questions fréquentes",
+    "p": "",
+    "items": [
+     {
+      "q": "Qu’est-ce que Protéger ma prière ?",
+      "a": "<p>Protéger ma prière est une fonctionnalité de l’application Lunora, une forme de verrouillage d’applications pensée pour la prière. Quand l’heure d’une prière arrive, les applications que tu as choisies attendent un court moment, 15 minutes par défaut. Quand tu touches « J’ai prié » dans Lunora, elles s’ouvrent aussitôt et la prière est marquée dans ton suivi des prières.</p>"
+     },
+     {
+      "q": "Combien de temps les applications restent-elles en attente ?",
+      "a": "<p>15 minutes par défaut, à compter du début de l’heure de la prière. Sur Android, tu peux choisir 10, 15 ou 20 minutes, et sur iPhone 15 ou 20. Si tu touches « J’ai prié », elles s’ouvrent immédiatement ; sinon, elles s’ouvrent toutes seules à la fin du délai.</p>"
+     },
+     {
+      "q": "Puis-je ouvrir une application en cas d’urgence ?",
+      "a": "<p>Oui. Touche « Une urgence ? Lève-la maintenant » et les applications s’ouvrent tout de suite ; elles sont de nouveau protégées à la prière suivante. L’app Téléphone et Lunora n’attendent jamais.</p>"
+     },
+     {
+      "q": "Protéger ma prière fonctionne-t-il sur iPhone ?",
+      "a": "<p>Oui. Sur iPhone, la fonctionnalité utilise l’autorisation Temps d’écran d’Apple et nécessite iOS 16 ou une version ultérieure. Sur Android, elle utilise l’accès à l’utilisation et l’autorisation d’affichage par-dessus les autres applications.</p>"
+     },
+     {
+      "q": "Que se passe-t-il pendant mes règles ?",
+      "a": "<p>Protéger ma prière se met en pause toute seule tant que le Mode règles est activé et revient à la fin de tes règles. Elle ne te demande rien, tes applications et prières choisies sont conservées, et les jours de règles ne cassent pas ta série de prières.</p>"
+     },
+     {
+      "q": "Faut-il Lunora+ pour Protéger ma prière ?",
+      "a": "<p>Lunora est sans publicité. Protéger ma prière pour les cinq prières est inclus dans Lunora+, un abonnement que tu peux commencer par 7 jours d’essai gratuit.</p>"
+     }
+    ]
+   },
+   "more": {
+    "badge": "Aussi dans Lunora",
+    "h2": "Autres fonctionnalités",
+    "p": "",
+    "cards": [
+     {
+      "href": "/fr/widget-dhikr.html",
+      "icon": "📿",
+      "h3": "Widget dhikr",
+      "p": "Compte ton dhikr depuis l’écran d’accueil, avec une bibliothèque de dhikr sourcée et les 99 Noms."
+     },
+     {
+      "href": "/fr/plan-lecture-coran.html",
+      "icon": "📖",
+      "h3": "Plan de lecture du Coran",
+      "p": "Des plans de khatm pour le Ramadan, en 60 jours ou en un an, et des plans que tu crées toi-même."
+     },
+     {
+      "href": "/fr/mode-regles.html",
+      "icon": "🌸",
+      "h3": "Mode règles",
+      "p": "L’adoration pendant tes règles, avec les avis des quatre madhhabs et un compteur de jeûnes à rattraper (qada)."
+     }
+    ],
+    "reading": {
+     "h3": "À lire aussi",
+     "links": [
+      [
+       "/muslim-women-prayer-times-salah-guide.html",
+       "Horaires de prière et guide de la salat pour les femmes musulmanes (en anglais)"
+      ],
+      [
+       "/spiritual-self-care-muslim-women.html",
+       "Prendre soin de son âme quand on est une femme musulmane (en anglais)"
+      ],
+      [
+       "/fr/blog.html",
+       "Tous les articles du blog Lunora"
+      ]
+     ]
+    }
+   },
+   "download": {
+    "p": "Sur iPhone et Android, sans publicité, avec 7 jours d’essai gratuit. Une compagne spirituelle conçue avec toute la douceur et la bienveillance que tu mérites."
+   }
+  },
+  "quran": {
+   "head": {
+    "title": "Plan de lecture du Coran et khatma pour musulmanes | Lunora",
+    "tags": [
+     "<meta name=\"description\" content=\"Le Coran en portions quotidiennes avec suivi : khatma du Ramadan en 30 jours, en 60 jours ou en un an, plans courts et les tiens. iPhone et Android.\">",
+     "<link rel=\"canonical\" href=\"https://mylunora.app/fr/plan-lecture-coran.html\">",
+     "<link rel=\"alternate\" hreflang=\"en\" href=\"https://mylunora.app/quran-reading-plan.html\">",
+     "<link rel=\"alternate\" hreflang=\"tr\" href=\"https://mylunora.app/tr/kuran-okuma-plani.html\">",
+     "<link rel=\"alternate\" hreflang=\"fr\" href=\"https://mylunora.app/fr/plan-lecture-coran.html\">",
+     "<link rel=\"alternate\" hreflang=\"de\" href=\"https://mylunora.app/de/koran-leseplan.html\">",
+     "<link rel=\"alternate\" hreflang=\"x-default\" href=\"https://mylunora.app/quran-reading-plan.html\">",
+     "<meta property=\"og:title\" content=\"Lunora : plan de lecture du Coran et suivi du khatm (khatma)\">",
+     "<meta property=\"og:description\" content=\"Des plans de khatm pour le Ramadan, en 60 jours ou en un an, des plans courts de sourates et des plans que tu crées toi-même, suivis jour après jour.\">",
+     "<meta property=\"og:url\" content=\"https://mylunora.app/fr/plan-lecture-coran.html\">",
+     "<meta property=\"og:image\" content=\"https://mylunora.app/img/features/quran-plan-rahle.webp\">",
+     "<meta property=\"og:type\" content=\"website\">",
+     "<meta property=\"og:site_name\" content=\"Lunora\">",
+     "<meta property=\"og:locale\" content=\"fr_FR\">",
+     "<meta name=\"twitter:card\" content=\"summary\">"
+    ],
+    "jsonld": [
+     "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"FAQPage\",\n  \"mainEntity\": [\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Lunora permet-elle de suivre un khatm (khatma) ?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Oui. Lunora propose trois plans de khatma (khatm) : le khatm du Ramadan (30 jours, un juz par jour), le khatm en 60 jours (environ dix pages par jour) et le khatm en un an (une à deux pages par jour). L’app indique à quel jour du plan tu en es et quelle part est accomplie.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Puis-je créer mon propre plan de lecture du Coran ?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Oui. Choisis les sourates que tu veux, ajoute un nom et une icône si tu le souhaites, puis lis une sourate par jour, deux par jour, ou fixe toi-même le nombre de jours. Un jour peut alors contenir plus d’une sourate.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Comment marquer un jour comme lu ?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Ouvre la lecture du jour depuis le plan, lis-la dans le lecteur de Coran de Lunora et touche « J’ai lu ». Le jour est marqué comme fait et le plan passe au suivant.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Que devient mon plan de lecture pendant mes règles ?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Si le Mode règles est activé, Lunora te laisse le choix : mettre le plan en pause ou continuer. Tant qu’il est en pause, le compte de jours n’avance pas, et il reprend au même jour quand tu désactives le Mode règles. Le plan renvoie aussi au guide du Mode règles, qui présente les avis des quatre madhhabs sur la lecture du Coran pendant les menstrues.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Quelle mise en page de mushaf Lunora utilise-t-elle ?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"L’affichage en pages suit la mise en page du mushaf de Médine, en 604 pages. Les plans de khatm en 60 jours et en un an donnent leurs lectures quotidiennes sous forme de plages de pages de ce mushaf, et le khatm du Ramadan suit les 30 juz. La traduction et la translittération sont disponibles dans l’affichage en liste.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Lunora+ est-il nécessaire pour les plans de lecture ?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Lunora est disponible sur l’App Store et Google Play, et sans publicité. Lunora+ est un abonnement qui ouvre l’application complète, et tu peux le commencer par 7 jours d’essai gratuit.\"\n      }\n    }\n  ]\n}",
+     "\n{\n    \"@context\": \"https://schema.org\",\n    \"@graph\": [\n        {\n            \"@type\": \"Organization\",\n            \"@id\": \"https://mylunora.app/#org\",\n            \"name\": \"Studio Lunora\",\n            \"url\": \"https://mylunora.app/\",\n            \"logo\": \"https://mylunora.app/icon-192.png\",\n            \"sameAs\": [\n                \"https://instagram.com/mylunora.app\"\n            ]\n        },\n        {\n            \"@type\": \"MobileApplication\",\n            \"@id\": \"https://mylunora.app/#app\",\n            \"name\": \"Lunora - Muslim Women\",\n            \"alternateName\": \"Lunora\",\n            \"operatingSystem\": \"iOS, Android\",\n            \"applicationCategory\": \"LifestyleApplication\",\n            \"description\": \"An Islamic app for Muslim women: prayer times, Quran, duas, dhikr and a Period Mode with fiqh guidance from the four madhhabs. Works offline, no ads, no account.\",\n            \"inLanguage\": [\n                \"en\",\n                \"tr\",\n                \"ar\",\n                \"fr\",\n                \"de\",\n                \"id\",\n                \"ms\",\n                \"ur\",\n                \"bn\"\n            ],\n            \"offers\": {\n                \"@type\": \"Offer\",\n                \"price\": \"0\",\n                \"priceCurrency\": \"USD\"\n            },\n            \"publisher\": {\n                \"@id\": \"https://mylunora.app/#org\"\n            },\n            \"sameAs\": [\n                \"https://apps.apple.com/us/app/lunora-muslim-women/id6758765933\",\n                \"https://play.google.com/store/apps/details?id=com.studiolunora.lunora\"\n            ]\n        },\n        {\n            \"@type\": \"WebPage\",\n            \"@id\": \"https://mylunora.app/fr/plan-lecture-coran.html#webpage\",\n            \"url\": \"https://mylunora.app/fr/plan-lecture-coran.html\",\n            \"name\": \"Plan de lecture du Coran et suivi du khatm pour les musulmanes | Lunora\",\n            \"description\": \"Le Coran en portions quotidiennes, avec suivi : khatm du Ramadan en 30 jours, en 60 jours ou en un an, plans courts et les tiens. Sur iPhone et Android, avec 7 jours d’essai gratuit.\",\n            \"inLanguage\": \"fr\",\n            \"about\": {\n                \"@id\": \"https://mylunora.app/#app\"\n            },\n            \"primaryImageOfPage\": \"https://mylunora.app/img/features/quran-plan-rahle.webp\",\n            \"breadcrumb\": {\n                \"@id\": \"https://mylunora.app/fr/plan-lecture-coran.html#breadcrumb\"\n            }\n        },\n        {\n            \"@type\": \"BreadcrumbList\",\n            \"@id\": \"https://mylunora.app/fr/plan-lecture-coran.html#breadcrumb\",\n            \"itemListElement\": [\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 1,\n                    \"name\": \"Accueil\",\n                    \"item\": \"https://mylunora.app/fr/\"\n                },\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 2,\n                    \"name\": \"Plan de lecture du Coran\",\n                    \"item\": \"https://mylunora.app/fr/plan-lecture-coran.html\"\n                }\n            ]\n        }\n    ]\n}\n    "
+    ]
+   },
+   "h1": "Plan de lecture du Coran et suivi du khatm (khatma)",
+   "summary": [
+    "Les plans de lecture de Lunora divisent le Coran en portions quotidiennes et suivent ta progression jour après jour, du khatm du Ramadan en 30 jours (un juz par jour) au khatm en 60 jours ou en un an. Tu peux aussi créer un plan à partir des sourates que tu choisis, et mettre un plan en pause pendant tes règles si tu le souhaites. Lunora est une application islamique pensée pour les femmes musulmanes, disponible sur iPhone et Android."
+   ],
+   "faq": {
+    "badge": "Questions fréquentes",
+    "h2": "Questions fréquentes",
+    "p": "",
+    "items": [
+     {
+      "q": "Lunora permet-elle de suivre un khatm (khatma) ?",
+      "a": "<p>Oui. Lunora propose trois plans de khatma (khatm) : le khatm du Ramadan (30 jours, un juz par jour), le khatm en 60 jours (environ dix pages par jour) et le khatm en un an (une à deux pages par jour). L’app indique à quel jour du plan tu en es et quelle part est accomplie.</p>"
+     },
+     {
+      "q": "Puis-je créer mon propre plan de lecture du Coran ?",
+      "a": "<p>Oui. Choisis les sourates que tu veux, ajoute un nom et une icône si tu le souhaites, puis lis une sourate par jour, deux par jour, ou fixe toi-même le nombre de jours. Un jour peut alors contenir plus d’une sourate.</p>"
+     },
+     {
+      "q": "Comment marquer un jour comme lu ?",
+      "a": "<p>Ouvre la lecture du jour depuis le plan, lis-la dans le lecteur de Coran de Lunora et touche « J’ai lu ». Le jour est marqué comme fait et le plan passe au suivant.</p>"
+     },
+     {
+      "q": "Que devient mon plan de lecture pendant mes règles ?",
+      "a": "<p>Si le Mode règles est activé, Lunora te laisse le choix : mettre le plan en pause ou continuer. Tant qu’il est en pause, le compte de jours n’avance pas, et il reprend au même jour quand tu désactives le Mode règles. Le plan renvoie aussi au guide du Mode règles, qui présente les avis des quatre madhhabs sur la lecture du Coran pendant les menstrues.</p>"
+     },
+     {
+      "q": "Quelle mise en page de mushaf Lunora utilise-t-elle ?",
+      "a": "<p>L’affichage en pages suit la mise en page du mushaf de Médine, en 604 pages. Les plans de khatm en 60 jours et en un an donnent leurs lectures quotidiennes sous forme de plages de pages de ce mushaf, et le khatm du Ramadan suit les 30 juz. La traduction et la translittération sont disponibles dans l’affichage en liste.</p>"
+     },
+     {
+      "q": "Lunora+ est-il nécessaire pour les plans de lecture ?",
+      "a": "<p>Lunora est disponible sur l’App Store et Google Play, et sans publicité. Lunora+ est un abonnement qui ouvre l’application complète, et tu peux le commencer par 7 jours d’essai gratuit.</p>"
+     }
+    ]
+   },
+   "more": {
+    "badge": "Aussi dans Lunora",
+    "h2": "Autres fonctionnalités",
+    "p": "",
+    "cards": [
+     {
+      "href": "/fr/widget-dhikr.html",
+      "icon": "📿",
+      "h3": "Widget dhikr",
+      "p": "Compte ton dhikr depuis l’écran d’accueil, avec une bibliothèque de dhikr sourcée et les 99 Noms."
+     },
+     {
+      "href": "/fr/proteger-ma-priere.html",
+      "icon": "🔒",
+      "h3": "Protéger ma prière",
+      "p": "À l’heure de la prière, les applications que tu choisis attendent que tu marques ta prière."
+     },
+     {
+      "href": "/fr/mode-regles.html",
+      "icon": "🌸",
+      "h3": "Mode règles",
+      "p": "L’adoration pendant tes règles, avec les avis des quatre madhhabs et un compteur de jeûnes à rattraper (qada)."
+     }
+    ],
+    "reading": {
+     "h3": "À lire aussi",
+     "links": [
+      [
+       "/quran-reading-guide-muslim-women.html",
+       "Guide de lecture du Coran pour les femmes musulmanes (en anglais)"
+      ],
+      [
+       "/fr/prier-pendant-les-regles-en-islam.html",
+       "Peut-on prier pendant ses règles ? Le guide complet"
+      ],
+      [
+       "/fr/blog.html",
+       "Tous les articles du blog Lunora"
+      ]
+     ]
+    }
+   },
+   "details": {
+    "badge": "Le Coran dans Lunora",
+    "h2": "Où tu lis ton plan",
+    "p": "",
+    "items": [
+     {
+      "h3": "Le lecteur",
+      "ps": [
+       "Les 114 sourates en arabe avec la traduction, en liste ou en pages de mushaf, avec les couleurs du tajwid.",
+       "Écoute cinq récitateurs, marque des versets, ajoute des notes et partage un verset sous forme de carte. D’autres récitateurs et l’écoute hors ligne par juz sont inclus dans Lunora+."
+      ]
+     },
+     {
+      "h3": "Sur ton écran d’accueil",
+      "ps": [
+       "Le widget « Là où tu t’es arrêtée » affiche la sourate et le verset où tu t’es arrêtée, pour reprendre ta lecture d’une seule touche.",
+       "Le plan Versets de guérison rassemble des versets lus avec l’intention de la guérison ; comme l’app le précise elle-même, ils ne remplacent pas un traitement."
+      ]
+     }
+    ],
+    "note": ""
+   },
+   "download": {
+    "p": "Sur iPhone et Android, sans publicité, avec 7 jours d’essai gratuit. Une compagne spirituelle conçue avec toute la douceur et la bienveillance que tu mérites."
+   }
+  },
+  "dhikr": {
+   "head": {
+    "title": "Widget dhikr et compteur de tasbih pour iPhone | Lunora",
+    "tags": [
+     "<meta name=\"description\" content=\"Compte ton dhikr depuis l’écran d’accueil avec le widget tasbih de Lunora, sans ouvrir l’app. Dhikr sourcés, tes séries et les 99 Noms. iPhone et Android.\">",
+     "<link rel=\"canonical\" href=\"https://mylunora.app/fr/widget-dhikr.html\">",
+     "<link rel=\"alternate\" hreflang=\"en\" href=\"https://mylunora.app/dhikr-widget.html\">",
+     "<link rel=\"alternate\" hreflang=\"tr\" href=\"https://mylunora.app/tr/zikir-widget.html\">",
+     "<link rel=\"alternate\" hreflang=\"fr\" href=\"https://mylunora.app/fr/widget-dhikr.html\">",
+     "<link rel=\"alternate\" hreflang=\"de\" href=\"https://mylunora.app/de/dhikr-widget.html\">",
+     "<link rel=\"alternate\" hreflang=\"x-default\" href=\"https://mylunora.app/dhikr-widget.html\">",
+     "<meta property=\"og:title\" content=\"Lunora : widget dhikr et compteur de tasbih\">",
+     "<meta property=\"og:description\" content=\"Compte ton dhikr depuis l’écran d’accueil. Une bibliothèque de dhikr sourcée, tes propres séries et les 99 Noms, dans une application islamique pour les femmes musulmanes.\">",
+     "<meta property=\"og:url\" content=\"https://mylunora.app/fr/widget-dhikr.html\">",
+     "<meta property=\"og:image\" content=\"https://mylunora.app/img/features/en-dhikr-widget.webp\">",
+     "<meta property=\"og:type\" content=\"website\">",
+     "<meta property=\"og:site_name\" content=\"Lunora\">",
+     "<meta property=\"og:locale\" content=\"fr_FR\">",
+     "<meta name=\"twitter:card\" content=\"summary\">"
+    ],
+    "jsonld": [
+     "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"FAQPage\",\n  \"mainEntity\": [\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Puis-je compter mon dhikr depuis l’écran d’accueil sans ouvrir l’application ?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Oui. Ajoute le widget « Tasbih avec compteur » de Lunora et touche + Compter ou l’anneau. Chaque touche est comptée sur le widget et ajoutée à ton total du jour dans l’app. Sur iPhone, il faut iOS 17 ou une version ultérieure ; sur les versions plus anciennes, une touche ouvre le compteur à la place.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Quels dhikr puis-je compter sur le widget ?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Le widget affiche d’abord le dernier dhikr que tu as compté dans l’app, puis six formules du quotidien : SoubhânAllah, Alhamdoulillah, Allahou Akbar, La ilaha illa Llah, Astaghfiroullah et Allahoumma salli ‘ala Muhammad. Touche la formule pour passer à la suivante.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Lunora indique-t-elle d’où vient chaque dhikr ?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Oui. Chaque entrée de la bibliothèque de dhikr de Lunora indique sa source, par exemple un numéro de hadith chez Bukhari ou Muslim, avec le texte arabe, une translittération et le sens.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Lunora contient-elle les 99 Noms d’Allah (Asmaul Husna) ?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Oui. Tu peux lire les 99 Noms avec un sens court, les parcourir un par un dans l’ordre en les comptant, et ajouter un widget « Le Nom du jour ». L’app précise que le hadith sur les quatre-vingt-dix-neuf noms d’Allah est sahih, tandis que la liste des noms elle-même a été établie par les savants.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Puis-je continuer mon dhikr pendant mes règles ?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Oui. Le dhikr et les invocations restent disponibles pendant les jours de règles. Quand le Mode règles est activé, l’écran Dhikr renvoie aussi au guide du Mode règles, qui présente les avis des quatre madhhabs sur la lecture du Coran pendant les menstrues.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Faut-il Lunora+ pour utiliser le dhikr et les widgets ?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Lunora est disponible sur l’App Store et Google Play, et sans publicité. Lunora+ est un abonnement qui ouvre l’application complète (par exemple le grand widget chapelet), et tu peux le commencer par 7 jours d’essai gratuit.\"\n      }\n    }\n  ]\n}",
+     "\n{\n    \"@context\": \"https://schema.org\",\n    \"@graph\": [\n        {\n            \"@type\": \"Organization\",\n            \"@id\": \"https://mylunora.app/#org\",\n            \"name\": \"Studio Lunora\",\n            \"url\": \"https://mylunora.app/\",\n            \"logo\": \"https://mylunora.app/icon-192.png\",\n            \"sameAs\": [\n                \"https://instagram.com/mylunora.app\"\n            ]\n        },\n        {\n            \"@type\": \"MobileApplication\",\n            \"@id\": \"https://mylunora.app/#app\",\n            \"name\": \"Lunora - Muslim Women\",\n            \"alternateName\": \"Lunora\",\n            \"operatingSystem\": \"iOS, Android\",\n            \"applicationCategory\": \"LifestyleApplication\",\n            \"description\": \"An Islamic app for Muslim women: prayer times, Quran, duas, dhikr and a Period Mode with fiqh guidance from the four madhhabs. Works offline, no ads, no account.\",\n            \"inLanguage\": [\n                \"en\",\n                \"tr\",\n                \"ar\",\n                \"fr\",\n                \"de\",\n                \"id\",\n                \"ms\",\n                \"ur\",\n                \"bn\"\n            ],\n            \"offers\": {\n                \"@type\": \"Offer\",\n                \"price\": \"0\",\n                \"priceCurrency\": \"USD\"\n            },\n            \"publisher\": {\n                \"@id\": \"https://mylunora.app/#org\"\n            },\n            \"sameAs\": [\n                \"https://apps.apple.com/us/app/lunora-muslim-women/id6758765933\",\n                \"https://play.google.com/store/apps/details?id=com.studiolunora.lunora\"\n            ]\n        },\n        {\n            \"@type\": \"WebPage\",\n            \"@id\": \"https://mylunora.app/fr/widget-dhikr.html#webpage\",\n            \"url\": \"https://mylunora.app/fr/widget-dhikr.html\",\n            \"name\": \"Widget dhikr et compteur de tasbih pour iPhone et Android | Lunora\",\n            \"description\": \"Compte ton dhikr depuis l’écran d’accueil avec le widget tasbih de Lunora, sans ouvrir l’app. Dhikr sourcés, tes séries et les 99 Noms. Sur iPhone et Android, avec 7 jours d’essai gratuit.\",\n            \"inLanguage\": \"fr\",\n            \"about\": {\n                \"@id\": \"https://mylunora.app/#app\"\n            },\n            \"primaryImageOfPage\": \"https://mylunora.app/img/features/en-dhikr-widget.webp\",\n            \"breadcrumb\": {\n                \"@id\": \"https://mylunora.app/fr/widget-dhikr.html#breadcrumb\"\n            }\n        },\n        {\n            \"@type\": \"BreadcrumbList\",\n            \"@id\": \"https://mylunora.app/fr/widget-dhikr.html#breadcrumb\",\n            \"itemListElement\": [\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 1,\n                    \"name\": \"Accueil\",\n                    \"item\": \"https://mylunora.app/fr/\"\n                },\n                {\n                    \"@type\": \"ListItem\",\n                    \"position\": 2,\n                    \"name\": \"Widget dhikr\",\n                    \"item\": \"https://mylunora.app/fr/widget-dhikr.html\"\n                }\n            ]\n        }\n    ]\n}\n    "
+    ]
+   },
+   "summary": [
+    "Lunora est une application islamique pensée pour les femmes musulmanes, avec un widget tasbih pour ton écran d’accueil : touche-le pour compter ton dhikr sans ouvrir l’application, et chaque touche s’ajoute au même total du jour que le compteur de l’app. Dans l’application, tu trouveras une bibliothèque de 113 dhikr avec le texte arabe, la translittération, le sens et la source, ainsi que tes propres séries de dhikr et les 99 Noms d’Allah. Lunora est disponible sur iPhone et Android."
+   ],
+   "what": {
+    "badge": "Ce que tu y trouves",
+    "h2": "Ton tasbih, sur l’écran d’accueil et dans l’app",
+    "p": "Trois widgets de dhikr, un compteur qui gère les tours et les séries, et une bibliothèque qui te dit d’où vient chaque dhikr.",
+    "cards": [
+     {
+      "icon": "📱",
+      "h3": "Compter depuis l’écran d’accueil",
+      "p": "Le widget « Tasbih avec compteur » affiche un anneau de 33, la formule que tu récites et un bouton <strong>+ Compter</strong>. Touche la formule pour passer à la suivante, ou ↺ pour recommencer le tour."
+     },
+     {
+      "icon": "⭕",
+      "h3": "Un anneau qui montre ta journée",
+      "p": "Le petit widget « Compteur de dhikr » montre combien de dhikr tu as fait aujourd’hui. Sur iPhone, il peut aussi se placer sur l’écran de verrouillage."
+     },
+     {
+      "icon": "📿",
+      "h3": "Chapelet à grains",
+      "p": "Un grand widget dessine ton dhikr sous forme de chapelet, avec les grains déjà comptés en couleur (Lunora+)."
+     },
+     {
+      "icon": "📚",
+      "h3": "Une bibliothèque de dhikr sourcée",
+      "p": "113 dhikr répartis en 16 catégories : après la prière, matin et soir, avant de dormir, voyage, maladie, détresse, istighfar, salawat, invocations Rabbana et plus encore. Chacun affiche le texte arabe, une translittération, le sens et sa source, par exemple « Muslim 591 »."
+     },
+     {
+      "icon": "✍️",
+      "h3": "Tes propres dhikr et séries",
+      "p": "Écris ton propre dhikr ou choisis-en un dans la bibliothèque, fixe un objectif de 33, 99, 100, 1000 ou le nombre de ton choix, et crée des séries dont les étapes s’enchaînent."
+     },
+     {
+      "icon": "✨",
+      "h3": "Les 99 Noms",
+      "p": "Lis les Beaux Noms d’Allah avec leur sens, ou parcours les 99 dans l’ordre en les comptant, chaque touche faisant apparaître le nom suivant. Un widget « Le Nom du jour » est aussi disponible."
+     }
+    ]
+   },
+   "how": {
+    "badge": "Comment ça marche",
+    "h2": "De l’app à ton écran d’accueil",
+    "p": "",
+    "steps": [
+     {
+      "h3": "Commence un dhikr dans l’app",
+      "p": "Ouvre Dhikr dans Lunora et choisis un dhikr de la bibliothèque, les tasbihat après la prière, les adhkar du matin ou du soir, ou un dhikr que tu as créé."
+     },
+     {
+      "h3": "Touche pour compter",
+      "p": "Touche n’importe où sur le compteur. À l’objectif, le tour se termine et le compte repart à zéro ; dans une série, l’étape suivante commence. Beaucoup d’étapes ont aussi un audio que tu peux écouter."
+     },
+     {
+      "h3": "Ajoute le widget",
+      "p": "Depuis la galerie de widgets de ton téléphone, ajoute « Tasbih avec compteur » ou « Compteur de dhikr »."
+     },
+     {
+      "h3": "Continue depuis le widget",
+      "p": "Le widget commence par le dernier dhikr que tu as compté dans l’app, puis propose six formules du quotidien : SoubhânAllah, Alhamdoulillah, Allahou Akbar, La ilaha illa Llah, Astaghfiroullah et les salawat. Chaque touche s’affiche aussitôt sur le widget et s’ajoute à ton total du jour dans Lunora."
+     }
+    ]
+   },
+   "faq": {
+    "badge": "Questions fréquentes",
+    "h2": "Questions fréquentes",
+    "p": "",
+    "items": [
+     {
+      "q": "Puis-je compter mon dhikr depuis l’écran d’accueil sans ouvrir l’application ?",
+      "a": "<p>Oui. Ajoute le widget « Tasbih avec compteur » de Lunora et touche + Compter ou l’anneau. Chaque touche est comptée sur le widget et ajoutée à ton total du jour dans l’app. Sur iPhone, il faut iOS 17 ou une version ultérieure ; sur les versions plus anciennes, une touche ouvre le compteur à la place.</p>"
+     },
+     {
+      "q": "Quels dhikr puis-je compter sur le widget ?",
+      "a": "<p>Le widget affiche d’abord le dernier dhikr que tu as compté dans l’app, puis six formules du quotidien : SoubhânAllah, Alhamdoulillah, Allahou Akbar, La ilaha illa Llah, Astaghfiroullah et Allahoumma salli ‘ala Muhammad. Touche la formule pour passer à la suivante.</p>"
+     },
+     {
+      "q": "Lunora indique-t-elle d’où vient chaque dhikr ?",
+      "a": "<p>Oui. Chaque entrée de la bibliothèque de dhikr de Lunora indique sa source, par exemple un numéro de hadith chez Bukhari ou Muslim, avec le texte arabe, une translittération et le sens.</p>"
+     },
+     {
+      "q": "Lunora contient-elle les 99 Noms d’Allah (Asmaul Husna) ?",
+      "a": "<p>Oui. Tu peux lire les 99 Noms avec un sens court, les parcourir un par un dans l’ordre en les comptant, et ajouter un widget « Le Nom du jour ». L’app précise que le hadith sur les quatre-vingt-dix-neuf noms d’Allah est sahih, tandis que la liste des noms elle-même a été établie par les savants.</p>"
+     },
+     {
+      "q": "Puis-je continuer mon dhikr pendant mes règles ?",
+      "a": "<p>Oui. Le dhikr et les invocations restent disponibles pendant les jours de règles. Quand le Mode règles est activé, l’écran Dhikr renvoie aussi au guide du Mode règles, qui présente les avis des quatre madhhabs sur la lecture du Coran pendant les menstrues.</p>"
+     },
+     {
+      "q": "Faut-il Lunora+ pour utiliser le dhikr et les widgets ?",
+      "a": "<p>Lunora est disponible sur l’App Store et Google Play, et sans publicité. Lunora+ est un abonnement qui ouvre l’application complète (par exemple le grand widget chapelet), et tu peux le commencer par 7 jours d’essai gratuit.</p>"
+     }
+    ]
+   },
+   "more": {
+    "badge": "Aussi dans Lunora",
+    "h2": "Autres fonctionnalités",
+    "p": "",
+    "cards": [
+     {
+      "href": "/fr/plan-lecture-coran.html",
+      "icon": "📖",
+      "h3": "Plan de lecture du Coran",
+      "p": "Des plans de khatm pour le Ramadan, en 60 jours ou en un an, et des plans que tu crées toi-même."
+     },
+     {
+      "href": "/fr/proteger-ma-priere.html",
+      "icon": "🔒",
+      "h3": "Protéger ma prière",
+      "p": "À l’heure de la prière, les applications que tu choisis attendent que tu marques ta prière."
+     },
+     {
+      "href": "/fr/mode-regles.html",
+      "icon": "🌸",
+      "h3": "Mode règles",
+      "p": "L’adoration pendant tes règles, avec les avis des quatre madhhabs et un compteur de jeûnes à rattraper (qada)."
+     }
+    ],
+    "reading": {
+     "h3": "À lire aussi",
+     "links": [
+      [
+       "/fr/invocations-et-dhikr-du-quotidien.html",
+       "Douas et dhikr du quotidien pour les femmes musulmanes"
+      ],
+      [
+       "/spiritual-self-care-muslim-women.html",
+       "Prendre soin de son âme quand on est une femme musulmane (en anglais)"
+      ],
+      [
+       "/fr/blog.html",
+       "Tous les articles du blog Lunora"
+      ]
+     ]
+    }
+   },
+   "download": {
+    "p": "Sur iPhone et Android, sans publicité, avec 7 jours d’essai gratuit. Une compagne spirituelle conçue avec toute la douceur et la bienveillance que tu mérites."
+   }
+  }
+ }
+}

@@ -1,0 +1,101 @@
+{
+  "lang": "ms",
+  "features": {
+    "protect": {
+      "path": "/ms/lindungi-solat-saya.html",
+      "seo": {
+        "title": "Lindungi Solat Saya: Aplikasi Menunggu Waktu Solat | Lunora",
+        "desc": "Lindungi solat saya menjeda aplikasi pilihan anda apabila masuk waktu solat. Ketik “Sudah solat” dan ia terbuka serta-merta. Berehat sendiri pada hari haid.",
+        "og_title": "Lindungi Solat Saya: aplikasi anda menunggu ketika anda bersolat | Lunora",
+        "og_desc": "Apabila masuk waktu solat, aplikasi yang anda pilih menunggu. Ketik “Sudah solat” dan ia terbuka serta-merta; pada hari haid, ciri ini berehat sendiri."
+      },
+      "badge": "Lindungi Solat Saya",
+      "crumb_last": "Lindungi Solat Saya",
+      "h1": "Lindungi Solat Saya: aplikasi anda menunggu ketika anda bersolat",
+      "summary": [
+        "Lindungi Solat Saya ialah ciri dalam Lunora yang membuatkan aplikasi pilihan anda menunggu apabila masuk waktu solat, selama 15 minit secara lalai (satu bentuk kunci aplikasi waktu solat). Ketik “Sudah solat” dan aplikasi terbuka serta-merta; jika tidak, ia terbuka sendiri apabila tempoh tamat, dan pada hari haid ciri ini berehat dengan sendirinya. Lunora ialah aplikasi Islamik untuk wanita Muslim di iPhone dan Android, dengan percubaan percuma 7 hari."
+      ],
+      "trust": ["iPhone & Android", "Tanpa iklan", "9 bahasa"],
+      "shot": {
+        "alt": "Skrin Lindungi solat saya Lunora pada waktu Asar: “Aplikasi ini boleh tunggu sekejap.” dengan baki 12 minit"
+      },
+      "what": {
+        "badge": "Apa yang ia lakukan",
+        "h2": "Jeda ringkas pada waktu solat, mengikut cara anda",
+        "p": "Bukan larangan dan bukan hukuman: beberapa minit ketika aplikasi yang menarik perhatian anda menunggu anda.",
+        "cards": [
+          {"h3": "Menunggu sekejap", "p": "Aplikasi menunggu 15 minit secara lalai, dikira dari permulaan waktu solat. Pada Android anda boleh memilih 10, 15 atau 20 minit; pada iPhone, 15 atau 20."},
+          {"h3": "“Sudah solat” membukanya", "p": "Tandakan solat anda dan aplikasi terbuka serta-merta. Solat itu juga ditandakan dalam solat hari ini pada skrin Hari Ini."},
+          {"h3": "Anda memilih aplikasinya", "p": "Tiada apa-apa yang menunggu sehingga anda memilihnya. Aplikasi Telefon dan Lunora tidak pernah dibuat menunggu."},
+          {"h3": "Anda memilih waktu solatnya", "p": "Pilih waktu solat yang ingin anda lindungi. Kelima-lima waktu solat tersedia dengan Lunora+."},
+          {"h3": "Berehat pada hari haid", "p": "Semasa Mod Haid dihidupkan, perlindungan berhenti seketika tanpa bertanya dan kembali apabila haid anda tamat. Pilihan anda kekal seperti sedia ada."},
+          {"h3": "Rentetan solat", "p": "Kira hari-hari anda menandakan kelima-lima solat. Menandakan solat yang tertinggal kemudian juga dikira, dan hari haid tidak pernah memutuskan rentetan."}
+        ]
+      },
+      "how": {
+        "badge": "Cara ia berfungsi",
+        "h2": "Sediakan sekali, kemudian biarkan waktu solat menguruskannya",
+        "p": "",
+        "steps": [
+          {"h3": "Pilih aplikasi anda", "p": "Buka Lindungi solat saya dalam Lunora dan pilih aplikasi yang patut menunggu pada waktu solat."},
+          {"h3": "Benarkan kebenaran", "p": "Pada iPhone, Apple meminta kebenaran Screen Time. Pada Android, Lunora memerlukan Akses penggunaan dan kebenaran untuk memaparkan di atas aplikasi lain."},
+          {"h3": "Pilih waktu solat dan tempoh menunggu", "p": "Pilih waktu solat yang hendak dilindungi dan berapa lama aplikasi patut menunggu."},
+          {"h3": "Waktu solat masuk", "p": "Jika anda membuka aplikasi yang dipilih, satu skrin tenang muncul sebagai gantinya: “Aplikasi ini boleh tunggu sekejap.”, dengan baki minit."},
+          {"h3": "Bersolatlah, kemudian ketik “Sudah solat”", "p": "Aplikasi anda terbuka serta-merta dan solat ditandakan. Jika anda terlewat, “Saya akan solat sebentar lagi” membiarkannya terbuka sendiri apabila tempoh tamat."}
+        ]
+      },
+      "details": {
+        "badge": "iPhone & Android",
+        "h2": "Cara ia berfungsi pada setiap telefon",
+        "p": "",
+        "items": [
+          {"h3": "Pada iPhone", "ps": [
+            "Lindungi solat saya menggunakan kebenaran Screen Time Apple dan memerlukan iOS 16 atau lebih baharu. Penyediaan ada dua langkah: kebenaran Screen Time, kemudian memilih aplikasi daripada senarai Apple sendiri, tempat aplikasi dikumpulkan mengikut kategori.",
+            "Kod laluan anda kekal bersama Apple; Lunora tidak pernah melihatnya."
+          ]},
+          {"h3": "Pada Android", "ps": [
+            "Penyediaan ada tiga langkah: pilih aplikasi anda, hidupkan Akses penggunaan, dan benarkan Lunora memaparkan di atas aplikasi lain supaya skrin menunggu boleh muncul.",
+            "Akses penggunaan membolehkan Lunora melihat aplikasi mana yang dibuka: namanya sahaja, tidak pernah kandungannya. Tiada apa-apa keluar daripada peranti anda."
+          ]}
+        ],
+        "note": "Jika anda memerlukan sesuatu aplikasi dengan segera, “Ada kecemasan? Buka sekarang” membuka semuanya sehingga waktu solat seterusnya. Dan jika satu kebenaran dimatikan dalam tetapan telefon anda, Lunora memberitahu anda bahawa perlindungan telah berhenti, bukannya gagal secara senyap. Anda tidak perlu membiarkan Lunora terbuka; membukanya sesekali sudah cukup untuk mengekalkan perlindungan."
+      },
+      "faq": {
+        "badge": "Soalan lazim",
+        "h2": "Soalan yang kerap ditanya",
+        "p": "",
+        "items": [
+          {"q": "Apakah Lindungi Solat Saya?", "a": "<p>Lindungi solat saya ialah ciri dalam aplikasi Lunora. Apabila masuk waktu solat, aplikasi yang anda pilih menunggu seketika, selama 15 minit secara lalai. Apabila anda mengetik “Sudah solat” dalam Lunora, ia terbuka serta-merta, dan solat itu ditandakan dalam catatan solat anda.</p>"},
+          {"q": "Berapa lama aplikasi itu dikunci?", "a": "<p>15 minit secara lalai, dikira dari permulaan waktu solat. Pada Android anda boleh memilih 10, 15 atau 20 minit, dan pada iPhone 15 atau 20. Jika anda mengetik “Sudah solat”, ia terbuka serta-merta; jika tidak, ia terbuka sendiri apabila tempoh tamat.</p>"},
+          {"q": "Bolehkah saya membuka aplikasi ketika kecemasan?", "a": "<p>Boleh. Ketik “Ada kecemasan? Buka sekarang” dan aplikasi terbuka serta-merta; ia dilindungi semula pada waktu solat seterusnya. Aplikasi Telefon dan Lunora tidak pernah dibuat menunggu.</p>"},
+          {"q": "Adakah Lindungi Solat Saya berfungsi pada iPhone?", "a": "<p>Ya. Pada iPhone ia menggunakan kebenaran Screen Time Apple dan memerlukan iOS 16 atau lebih baharu. Pada Android ia menggunakan Akses penggunaan dan kebenaran untuk memaparkan di atas aplikasi lain.</p>"},
+          {"q": "Apa yang berlaku semasa haid saya?", "a": "<p>Lindungi solat saya berehat sendiri semasa Mod Haid dihidupkan dan kembali apabila haid anda tamat. Ia tidak bertanya kepada anda, aplikasi dan waktu solat pilihan anda dikekalkan, dan hari haid tidak memutuskan rentetan solat anda.</p>"},
+          {"q": "Adakah Lindungi Solat Saya percuma?", "a": "<p>Lunora tiada iklan. Lindungi solat saya untuk kelima-lima waktu solat disertakan dengan Lunora+, langganan yang boleh anda mulakan dengan percubaan percuma 7 hari.</p>"}
+        ]
+      },
+      "more": {
+        "badge": "Lagi daripada Lunora",
+        "h2": "Ciri-ciri lain",
+        "p": "",
+        "cards": [
+          {"href": "/ms/widget-zikir.html", "h3": "Widget zikir", "p": "Kira zikir dari skrin utama anda, dengan perpustakaan zikir bersumber dan Asmaul Husna."},
+          {"href": "/ms/pelan-khatam-quran.html", "h3": "Pelan bacaan Al-Quran", "p": "Pelan khatam untuk Ramadan, 60 hari atau setahun, dan pelan yang anda bina sendiri."},
+          {"href": "/ms/mod-haid.html", "h3": "Mod Haid", "p": "Ibadah semasa haid, dengan pandangan empat mazhab dan penghitung puasa qada."}
+        ],
+        "reading": {
+          "h3": "Bacaan berkaitan",
+          "links": [
+            ["/ms/solat-semasa-haid.html", "Bolehkah wanita solat semasa haid?"],
+            ["/ms/blog.html", "Semua artikel di blog Lunora"]
+          ]
+        }
+      },
+      "download": {
+        "badge": "Mulakan perjalanan anda",
+        "h2": "Muat turun Lunora",
+        "p": "Untuk iPhone dan Android, tanpa iklan, dengan percubaan percuma 7 hari. Teman rohani yang dicipta dengan penuh perhatian dan kefahaman yang anda layak terima.",
+        "greeting": "Assalamualaikum, saudari."
+      }
+    }
+  }
+}

@@ -8,7 +8,7 @@ from home_text import T as HT, REVIEWS, FAQ as NEW_FAQ
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 B = os.path.join(ROOT, '_build')
 LIVE = json.load(open(os.path.join(B, 'content', 'live.json')))
-V = '5'  # css/js cache version
+V = '6'  # css/js cache version
 SITE = 'https://mylunora.app'
 APPLE = 'https://apps.apple.com/app/apple-store/id6758765933?pt=128518745&amp;ct=%s&amp;mt=8'
 PLAY = 'https://play.google.com/store/apps/details?id=com.studiolunora.lunora&amp;referrer=utm_source%%3Dmylunora.app%%26utm_medium%%3Dweb%%26utm_campaign%%3D%s'
@@ -17,6 +17,7 @@ LANGS = ['en', 'tr', 'ar', 'de', 'fr', 'id']
 LNAME = {'en': 'English', 'tr': 'Türkçe', 'ar': 'العربية', 'de': 'Deutsch', 'fr': 'Français', 'id': 'Bahasa Indonesia'}
 HOME = {l: '/' if l == 'en' else '/%s/' % l for l in LANGS}
 OGLOC = {'en': 'en_US', 'tr': 'tr_TR', 'ar': 'ar_AR', 'de': 'de_DE', 'fr': 'fr_FR', 'id': 'id_ID'}
+RTL = {'ar', 'ur'}
 FEAT_PATHS = {
     'period': {'en': '/period-mode.html', 'tr': '/tr/donem-modu.html', 'de': '/de/periodenmodus.html', 'fr': '/fr/mode-regles.html'},
     'protect': {'en': '/protect-my-prayer.html', 'tr': '/tr/namazimi-koru.html', 'de': '/de/mein-gebet-schuetzen.html', 'fr': '/fr/proteger-ma-priere.html'},
@@ -82,6 +83,8 @@ def store_btns(l, apple, play, light=False):
 def fonts(l, amiri=False):
     fam = ['Playfair+Display:ital,wght@0,500;0,600;1,500', 'Nunito:wght@400;600;700;800']
     if l == 'ar': fam += ['Amiri:wght@400;700', 'Cairo:wght@400;600;700;800']
+    elif l == 'ur': fam += ['Amiri:wght@400;700', 'Noto+Nastaliq+Urdu:wght@400;600;700']
+    elif l == 'bn': fam += ['Amiri:wght@700', 'Hind+Siliguri:wght@400;500;600;700']
     elif amiri: fam += ['Amiri:wght@700']
     return ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
             '<link href="https://fonts.googleapis.com/css2?%s&amp;display=swap" rel="stylesheet">' % '&amp;'.join('family=' + f for f in fam))
@@ -92,7 +95,7 @@ def fix_tag(t):
     return t
 
 def head(l, title, tags, jsonld=(), amiri=False, preload=None):
-    out = ['<!DOCTYPE html>', '<html lang="%s"%s>' % (l, ' dir="rtl"' if l == 'ar' else ''), '<head>',
+    out = ['<!DOCTYPE html>', '<html lang="%s"%s>' % (l, ' dir="rtl"' if l in RTL else ''), '<head>',
            '<meta charset="UTF-8">', '<meta name="viewport" content="width=device-width, initial-scale=1">',
            '<title>%s</title>' % esc(H.unescape(title)),
            '<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">', '<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">',
@@ -179,6 +182,19 @@ def faq_jsonld(items):
         {'@type': 'Question', 'name': H.unescape(re.sub('<[^>]+>', '', i['q'])), 'acceptedAnswer': {'@type': 'Answer', 'text': H.unescape(re.sub('<[^>]+>', '', i['a'])).strip()}} for i in items]},
         ensure_ascii=False, indent=1)
 
+def loc_graph(j, desc):
+    """Site-wide @graph JSON-LD with the app description in the page's language."""
+    o = json.loads(j)
+    for n in o.get('@graph', []):
+        if n.get('@type') == 'MobileApplication': n['description'] = H.unescape(desc)
+    return json.dumps(o, ensure_ascii=False, indent=1)
+
+def meta_desc(tags):
+    for t in tags:
+        m = re.search(r'name="description" content="([^"]*)"', t)
+        if m: return m.group(1)
+    return ''
+
 def write(path, s):
     # Turkish uppercase turns "iPhone" into "İPHONE" in the caps labels; mark the brand as English there.
     if path.startswith('/tr/'):
@@ -194,6 +210,7 @@ def split_h1(h):
 
 # ---------------------------------------------------------------- home
 AR_DIGITS = '٠١٢٣٤٥٦٧٨٩'
+DIGITS = {'ar': AR_DIGITS}   # overlays may add their own (e.g. ur, bn)
 FAQ_H2 = {'en': 'Frequently asked questions', 'tr': 'Sık sorulan sorular', 'de': 'Häufige Fragen', 'fr': 'Questions fréquentes'}
 def home_page(l):
     t = HT[l]; u = UI[l]; live = LIVE['home'].get(l)
@@ -212,9 +229,9 @@ def home_page(l):
              '<meta property="og:type" content="website">', '<meta property="og:site_name" content="Lunora">', '<meta property="og:locale" content="%s">' % OGLOC[l],
              '<meta name="twitter:card" content="summary">']
     graph = [j for j in LIVE['home']['en']['head']['jsonld'] if '"@graph"' in j][0]
-    jsonld = [faq_jsonld(faq_items), graph]
+    jsonld = [faq_jsonld(faq_items), loc_graph(graph, t['desc'])]
     keys = ['F', 'B5', 'D', 'C', 'A2']   # index order of t['day'] / t['shot_alt']
-    num = AR_DIGITS if l == 'ar' else '0123456789'
+    num = DIGITS.get(l, '0123456789')
     # Hero flow follows the captured screens' own times (emulator, 23 Nov):
     # Fajr verse, Dhuhr Pray Together ("now Dhuhr"), Asr Quran lesson,
     # Maghrib Protect My Prayer (shield shows Maghrib), night Period Mode.
@@ -288,11 +305,11 @@ def home_page(l):
                '<span class="w-sep"></span><div class="w-txt"><span class="eb">%s</span><span class="ar" lang="ar" dir="rtl">سُبْحَانَ اللّٰه</span>%s'
                '<div class="w-btns"><button class="say" type="button" data-add>%s%s</button><button class="reset" type="button" data-reset aria-label="%s">%s</button></div></div></div>'
                '<div class="w-lock"><img class="bg" src="%s" alt="" loading="lazy">'
-               '<div class="w-rect"><small>SUBHANALLAH</small><b><span data-count>%s</span> <small>/ %s</small></b><span class="bar"><i data-bar></i></span></div>'
+               '<div class="w-rect"><small>' + ('سبحان الله' if l in RTL else 'SUBHANALLAH') + '</small><b><span data-count>%s</span> <small>/ %s</small></b><span class="bar"><i data-bar></i></span></div>'
                '<div class="w-circ"><svg width="72" height="72" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="29" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="5" stroke-linecap="round" stroke-dasharray="136.7 182.2"/><circle data-gauge cx="36" cy="36" r="29" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-dasharray="49.7 182.2"/></svg><span data-count>%s</span></div>'
                '</div></div>') % (
         n0, num, img('tesbih-bg-wide'), esc(t['wSay']), fmt(n0), fmt(33), esc(t['wEye']),
-        '' if l == 'ar' else '<span class="nm">%s</span>' % ar_name, ic('plus'), esc(t['wSay']), esc(t['wReset']), ic('x') if False else _reset_icon(),
+        '' if l in RTL else '<span class="nm">%s</span>' % ar_name, ic('plus'), esc(t['wSay']), esc(t['wReset']), ic('x') if False else _reset_icon(),
         img('tesbih-bg'), fmt(n0), fmt(33), fmt(n0))
     sec5 = ('<section class="sec"><div class="wrap wgrid"><div class="wtxt"><span class="kicker">%s</span><h2>%s</h2><p>%s</p>'
             '<a class="link-more" style="color:var(--green);border-color:var(--green)" href="%s">%s %s</a></div>%s</div></section>') % (
@@ -323,6 +340,11 @@ def guides_block(l):
             s = slug_of(p['href']); cat = POST_META[s][0]
             cards += '<a class="post" href="/%s.html"><div class="post-txt"><span class="kicker" style="color:%s">%s</span><h3>%s</h3><p>%s</p></div></a>' % (
                 s, CAT_COL[cat], esc(p['badge']), LIVE['articles'][s]['h1'] if s in LIVE['articles'] else p['h2'], p['p'])
+    elif l in LART:   # this language has its own guides
+        for es, ar_ in list(LART[l].items())[:6]:
+            cat = POST_META[es][0]
+            cards += '<a class="post" href="%s"><div class="post-txt"><span class="kicker" style="color:%s">%s</span><h3>%s</h3><p>%s</p></div></a>' % (
+                ART_ALTS[es][l], CAT_COL[cat], esc(dict(BLOGX[l]['cats'])[cat]), esc(ar_['h1']), esc(ar_['desc']))
     elif l not in BLOG_PATHS:   # no blog in this language: link the feature pages instead
         for k2 in ['period', 'protect', 'quran', 'dhikr']:
             if l not in FEAT_PATHS[k2]: continue
@@ -355,8 +377,10 @@ VIS_ALT = {'A2': 4, 'B5': 1}
 def feature_page(key, l):
     d = LIVE['features'][key][l]; th = THEMES[key]; u = UI[l]
     alts = FEAT_PATHS[key]
-    st = d['stores']
-    crumbs = ''.join('<li><a href="%s">%s</a></li>' % (h, esc(t)) for t, h in d['crumbs']) + '<li aria-current="page">%s</li>' % esc(d['crumb_last'])
+    st = d.get('stores') or {'apple': [APPLE % ('web-%s-%s-%d' % (key, l, i)) for i in (1, 2)],
+                             'play': [PLAY % ('%s_%s_%s' % (key, w, l)) for w in ('hero', 'download')]}
+    cr = d.get('crumbs') or [[u['home'], HOME[l]], [u['nav'][0], HOME[l] + '#features']]
+    crumbs = ''.join('<li><a href="%s">%s</a></li>' % (h, esc(t)) for t, h in cr) + '<li aria-current="page">%s</li>' % esc(d.get('crumb_last') or H.unescape(d['badge']))
     if th['vis'] == 'phone':
         alt = d['shot']['alt'] or HT[l]['shot_alt'][VIS_ALT[th['key']]]
         vis = '<div class="phone"><div class="scr"><img src="%s" alt="%s" width="390" height="800" fetchpriority="high"></div></div>' % (shot(l, th['key']), att(alt))
@@ -376,6 +400,7 @@ def feature_page(key, l):
                '<div class="w-circ"><svg width="72" height="72" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="29" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="5" stroke-linecap="round" stroke-dasharray="136.7 182.2"/><circle data-gauge cx="36" cy="36" r="29" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-dasharray="49.7 182.2"/></svg><span data-count>12</span></div></div>'
                '</div></div>') % (img('tesbih-bg'), num, img('tesbih-bg-wide'), esc(HT[l]['wEye']), 'Sübhânallah' if l == 'tr' else 'Subhanallah',
                                   ic('plus'), esc(HT[l]['wSay']), esc(HT[l]['wReset']), _reset_icon())
+    if l in RTL: vis = vis.replace('<small>SUBHANALLAH</small>', '<small>سبحان الله</small>')
     pill_cls = ('pill ' + th['pill']).strip()
     hero = ('<section class="phero"><img class="bg" src="%s" alt="" style="--pos:%s"><div class="phero-wash"></div>'
             '<div class="wrap phero-grid"><div class="phero-txt"><ol class="crumbs">%s</ol><span class="%s">%s</span><h1>%s</h1>%s%s%s</div>'
@@ -423,7 +448,8 @@ def feature_page(key, l):
     s_dl = ('<section class="sec" id="download" style="padding-top:0"><div class="wrap"><div class="cta %s"><span class="kicker" style="color:rgba(255,255,255,.8)">%s</span><h2>%s</h2><p>%s</p>%s<span class="salam">%s</span></div></div></section>') % (
         th['cta'], esc(dl['badge']), dl['h2'], dl['p'], store_btns(l, st['apple'][1], st['play'][1], light=True), esc(dl['greeting']))
     body = hero + s_what + s_how + s_det + s_faq + s_more + s_dl
-    hh = head(l, d['head']['title'], d['head']['tags'], d['head']['jsonld'], amiri=(key == 'dhikr'))
+    ft, ftags, fjl = feature_head(key, l, d)
+    hh = head(l, ft, ftags, fjl, amiri=(key == 'dhikr'))
     active = {'period': 'period', 'protect': 'protect'}.get(key, 'features')
     return write(alts[l], page(l, hh, body, active, alts))
 
@@ -443,6 +469,12 @@ POST_META = {
     'quran-reading-guide-muslim-women': ('quran', 'kurs-bg'),
     'spiritual-self-care-muslim-women': ('life', 'bg-a-wide'),
     'what-to-do-during-period-in-islam': ('period', 'empty-waiting'),
+}
+# Guides that exist only in other languages (28 Nov): no English page, so no 'en' alternate.
+TOPICS = {
+    'after-prayer-dhikr': ('dhikr', 'tesbih-bg-wide'),
+    'ghusl-guide': ('period', 'bg-a-wide'),
+    'quran-during-period': ('period', 'kurs-bg'),
 }
 CAT_COL = {'period': '#9A5A62', 'prayer': '#3F6B55', 'quran': '#86692A', 'dhikr': '#3F6B55', 'life': '#86692A'}
 CATS = {'en': [('all', 'All'), ('period', 'Period'), ('prayer', 'Prayer'), ('quran', 'Quran'), ('dhikr', 'Duas & dhikr'), ('life', 'Life & faith')],
@@ -520,7 +552,11 @@ def article_page(slug):
     cta = '<section class="acta" id="download"><div class="cta"><h2>%s</h2><p>%s</p>%s</div></section>' % (
         d['cta']['h2'] or 'Download Lunora', d['cta']['p'] or ART_CTA_P, store_btns(l, apple, play, light=True))
     jsonld = d['head']['jsonld'] + d['body_scripts']
-    hh = head(l, d['head']['title'], d['head']['tags'], jsonld)
+    tags = list(d['head']['tags'])
+    if len(ART_ALTS.get(slug, {})) > 1:
+        tags += ['<link rel="alternate" hreflang="%s" href="%s%s">' % (x, SITE, ART_ALTS[slug][x]) for x in LANGS if x in ART_ALTS[slug]]
+        tags.append('<link rel="alternate" hreflang="x-default" href="%s/%s.html">' % (SITE, slug))
+    hh = head(l, d['head']['title'], tags, jsonld)
     return write('/%s.html' % slug, page(l, hh, hero + body + rel + cta, 'blog', {'en': '/%s.html' % slug}))
 
 # ---------------------------------------------------------------- support / privacy / terms
@@ -720,6 +756,163 @@ def tasbih_page(l):
     hh = head(l, t['title'], tags, [app_ld, crumb_ld, faq_jsonld(faq_items)], amiri=True)
     return write(path, page(l, hh, body, 'features', TASBIH))
 
+# ---------------------------------------------------------------- per-language content files (28 Nov)
+# _build/content/lang/<l>.json holds one language's content. It is deep-merged over the
+# built-in dictionaries above (dicts merge, lists and strings replace), so a file can
+# add a whole new language or only fix parts of an existing one. Format: _build/i18n/FORMAT.md
+LART = {}    # {lang: {en_slug: article}}   translated guides
+BLOGX = {}   # {lang: blog index copy}       for languages with their own guides
+ARTUI = {}   # {lang: article page labels}
+ART_ALTS = {}  # {en_slug: {lang: path}}
+
+def _merge(base, over):
+    if isinstance(base, dict) and isinstance(over, dict):
+        out = dict(base)
+        for k, v in over.items(): out[k] = _merge(base.get(k), v) if k in base else v
+        return out
+    return over
+
+def feature_head(key, l, d):
+    alts = FEAT_PATHS[key]; canon = SITE + alts[l]
+    hre = ['<link rel="alternate" hreflang="%s" href="%s%s">' % (x, SITE, alts[x]) for x in LANGS if x in alts]
+    hre.append('<link rel="alternate" hreflang="x-default" href="%s%s">' % (SITE, alts['en']))
+    if 'seo' in d:
+        s = d['seo']
+        ogimg = [t for t in LIVE['features'][key]['en']['head']['tags'] if 'og:image' in t]
+        tags = ['<meta name="description" content="%s">' % att(s['desc']), '<link rel="canonical" href="%s">' % canon] + hre + [
+            '<meta property="og:title" content="%s">' % att(s.get('og_title') or s['title']),
+            '<meta property="og:description" content="%s">' % att(s.get('og_desc') or s['desc']),
+            '<meta property="og:url" content="%s">' % canon] + ogimg + [
+            '<meta property="og:type" content="website">', '<meta property="og:site_name" content="Lunora">',
+            '<meta property="og:locale" content="%s">' % OGLOC[l], '<meta name="twitter:card" content="summary">']
+        crumb = json.dumps({'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
+            {'@type': 'ListItem', 'position': 1, 'name': UI[l]['home'], 'item': SITE + HOME[l]},
+            {'@type': 'ListItem', 'position': 2, 'name': H.unescape(d.get('crumb_last') or d['badge']), 'item': canon}]}, ensure_ascii=False)
+        graph = [j for j in LIVE['home']['en']['head']['jsonld'] if '"@graph"' in j][0]
+        return s['title'], tags, [faq_jsonld(d['faq']['items']), crumb, loc_graph(graph, s['desc'])]
+    tags = [t for t in d['head']['tags'] if 'hreflang=' not in t]
+    i = next(n for n, t in enumerate(tags) if 'rel="canonical"' in t) + 1
+    jl = [loc_graph(j, meta_desc(tags)) if '"@graph"' in j else j for j in d['head']['jsonld']]
+    return d['head']['title'], tags[:i] + hre + tags[i:], jl
+
+def load_overlays():
+    import glob
+    files = glob.glob(os.path.join(B, 'content', 'lang', '*.json')) + glob.glob(os.path.join(B, 'content', 'lang', '*', '*.json'))
+    only = os.environ.get('LUNORA_LANG')   # writers check their own language alone
+    for f in sorted(files):
+        if only and os.path.relpath(f, os.path.join(B, 'content', 'lang')).split(os.sep)[0].split('.')[0] != only: continue
+        o = json.load(open(f)); l = o['lang']
+        if l not in LANGS:
+            LANGS.append(l); HOME[l] = '/%s/' % l
+        if 'name' in o: LNAME[l] = o['name']
+        if 'ogloc' in o: OGLOC[l] = o['ogloc']
+        if o.get('rtl'): RTL.add(l)
+        if 'digits' in o: DIGITS[l] = o['digits']
+        if 'ui' in o: UI[l] = _merge(UI.get(l, {}), o['ui'])
+        if 'rating' in o: RATING[l] = o['rating']
+        if 'rating_short' in o: RATING_SHORT[l] = o['rating_short']
+        if 'home' in o: HT[l] = _merge(HT.get(l, {}), o['home'])
+        if 'reviews' in o: REVIEWS[l] = o['reviews']
+        if 'home_faq' in o:
+            hf = o['home_faq']
+            if l in LIVE['home']:
+                LIVE['home'][l]['faq']['items'] = [{'q': esc(q), 'a': esc(a)} for q, a in hf['items']]
+                if hf.get('h2'): FAQ_H2[l] = hf['h2']
+            else:
+                NEW_FAQ[l] = (hf['h2'], [tuple(x) for x in hf['items']])
+        if 'disclaim' in o: DISCLAIM[l] = o['disclaim']
+        if 'guides' in o: GUIDES[l] = _merge(GUIDES.get(l, {}), o['guides'])
+        if 'tasbih' in o:
+            t = dict(o['tasbih']); path = t.pop('path', None)
+            if 'sets' in t: t['sets'] = [(n, [tuple(x) for x in st]) for n, st in t['sets']]
+            for k2 in ('how', 'faq'):
+                if k2 in t: t[k2] = [tuple(x) for x in t[k2]]
+            TC[l] = _merge(TC.get(l, {}), t)
+            if path: TASBIH[l] = path
+        for k, fd in o.get('features', {}).items():
+            LIVE['features'][k][l] = _merge(LIVE['features'][k].get(l, {}), fd)
+            if 'path' in fd: FEAT_PATHS[k][l] = fd['path']
+        if 'article_ui' in o: ARTUI[l] = o['article_ui']
+        if 'blog' in o:
+            BLOGX[l] = o['blog']; BLOG_PATHS[l] = o['blog']['path']
+        for es, a in o.get('articles', {}).items():
+            assert es in POST_META or es in TOPICS, (f, es)
+            if es in TOPICS: POST_META.setdefault(es, TOPICS[es])
+            LART.setdefault(l, {})[es] = a
+            ART_ALTS.setdefault(es, {} if es in TOPICS else {'en': '/%s.html' % es})[l] = '/%s/%s.html' % (l, a['slug'])
+
+def article_page_l(es, l):
+    """A guide in another language (body written for that market, not a word-for-word translation)."""
+    a = LART[l][es]; au = ARTUI[l]; u = UI[l]; cat, im = POST_META[es]; bx = BLOGX[l]
+    path = ART_ALTS[es][l]; canon = SITE + path
+    cats = dict(bx['cats'])
+    crumbs = '<li><a href="%s">%s</a></li><li><a href="%s">%s</a></li><li aria-current="page">%s</li>' % (
+        HOME[l], esc(u['home']), BLOG_PATHS[l], esc(u['blogLead']), esc(a.get('crumb') or cats[cat]))
+    hero = ('<section class="ahero"><img class="bg" src="%s" alt=""><div class="ahero-wash"></div><div class="wrap"><ol class="crumbs" style="justify-content:center">%s</ol>'
+            '<span class="kicker" style="color:%s">%s</span><h1>%s</h1><p class="meta">%s</p></div></section>') % (
+        img(im), crumbs, CAT_COL[cat], esc(cats[cat]), esc(a['h1']), esc('%s · %s %s' % (a['date_label'], a['minutes'], u['minread'])))
+    faq = a.get('faq') or []
+    faq_html = ('<h2>%s</h2>%s' % (esc(au['faq_h']), ''.join('<div class="faq-item"><h3>%s</h3><p>%s</p></div>' % (esc(q), x) for q, x in faq))) if faq else ''
+    body = '<article class="prose">%s%s</article>' % (a['body'], faq_html)
+    fk = APPBOX[cat][0]; bt, bp = au['appbox'][cat]
+    fhref = FEAT_PATHS[fk].get(l, HOME[l] + '#features') if fk else HOME[l]
+    extra = (' <a href="%s">%s</a>' % (TASBIH[l], esc(GUIDES[l]['tc']))) if fk == 'dhikr' and l in TASBIH and l in GUIDES else ''
+    body += '<aside class="appbox"><span class="kicker" style="color:%s">%s</span><h2><a href="%s">%s</a></h2><p>%s%s</p></aside>' % (
+        CAT_COL[cat], esc(au['in_app']), fhref, esc(bt), esc(bp), extra)
+    others = [(s2, x) for s2, x in LART[l].items() if s2 != es][:3]
+    rel = ('<section class="arel"><h2>%s</h2><div class="posts">%s</div></section>' % (esc(u['reltitle']), ''.join(
+        '<a class="post" href="%s"><div class="post-txt"><span class="kicker" style="color:%s">%s</span><h2>%s</h2><p>%s</p></div></a>' % (
+            ART_ALTS[s2][l], CAT_COL[POST_META[s2][0]], esc(cats[POST_META[s2][0]]), esc(x['h1']), esc(x['desc'])) for s2, x in others))) if others else ''
+    n = list(LART[l]).index(es) + 1
+    apple, play = APPLE % ('web-art-%s-%d' % (l, n)), PLAY % ('article_%s_%d' % (l, n))
+    cta = '<section class="acta" id="download"><div class="cta"><h2>%s</h2><p>%s</p>%s</div></section>' % (esc(au['cta_h']), esc(au['cta_p']), store_btns(l, apple, play, light=True))
+    alts = ART_ALTS[es]
+    tags = ['<meta name="description" content="%s">' % att(a['desc']), '<link rel="canonical" href="%s">' % canon]
+    tags += ['<link rel="alternate" hreflang="%s" href="%s%s">' % (x, SITE, alts[x]) for x in LANGS if x in alts]
+    tags += (['<link rel="alternate" hreflang="x-default" href="%s%s">' % (SITE, alts['en'])] if 'en' in alts else []) + [
+             '<meta property="og:title" content="%s">' % att(a['h1']), '<meta property="og:description" content="%s">' % att(a['desc']),
+             '<meta property="og:url" content="%s">' % canon, '<meta property="og:image" content="%s/img/v1/%s.webp">' % (SITE, im),
+             '<meta property="og:type" content="article">', '<meta property="og:site_name" content="Lunora">', '<meta property="og:locale" content="%s">' % OGLOC[l],
+             '<meta name="twitter:card" content="summary_large_image">']
+    art_ld = json.dumps({'@context': 'https://schema.org', '@type': 'Article', 'headline': a['h1'], 'description': a['desc'], 'inLanguage': l,
+                         'datePublished': a['date'], 'dateModified': a['date'], 'mainEntityOfPage': canon, 'image': '%s/img/v1/%s.webp' % (SITE, im),
+                         'author': {'@type': 'Organization', 'name': 'Lunora', 'url': SITE + '/'},
+                         'publisher': {'@type': 'Organization', 'name': 'Lunora', 'logo': {'@type': 'ImageObject', 'url': SITE + '/icon-192.png'}}}, ensure_ascii=False, indent=1)
+    crumb_ld = json.dumps({'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
+        {'@type': 'ListItem', 'position': 1, 'name': u['home'], 'item': SITE + HOME[l]},
+        {'@type': 'ListItem', 'position': 2, 'name': u['blogLead'], 'item': SITE + BLOG_PATHS[l]},
+        {'@type': 'ListItem', 'position': 3, 'name': a['h1'], 'item': canon}]}, ensure_ascii=False)
+    jl = [art_ld, crumb_ld] + ([faq_jsonld([{'q': esc(q), 'a': x} for q, x in faq])] if faq else [])
+    hh = head(l, a['title'], tags, jl)
+    return write(path, page(l, hh, hero + body + rel + cta, 'blog', alts))
+
+def blog_page_l(l):
+    bx = BLOGX[l]; u = UI[l]; posts = ''
+    for es, a in LART[l].items():
+        cat, im = POST_META[es]
+        posts += ('<a class="post" href="%s" data-cat="%s"><div class="post-img"><img src="%s" alt="" loading="lazy"></div><div class="post-txt">'
+                  '<span class="kicker" style="color:%s">%s</span><h2>%s</h2><p>%s</p><span class="meta"><time datetime="%s">%s</time> · %s %s %s</span></div></a>') % (
+            ART_ALTS[es][l], cat, img(im), CAT_COL[cat], esc(dict(bx['cats'])[cat]), esc(a['h1']), esc(a['desc']), a['date'], esc(a['date_label']), a['minutes'], esc(u['minread']), ic('arrow-right-bold'))
+    used = {POST_META[es][0] for es in LART[l]}
+    chips = ''.join('<button type="button" data-cat="%s" aria-pressed="%s">%s</button>' % (c, 'true' if c == 'all' else 'false', esc(n)) for c, n in bx['cats'] if c == 'all' or c in used)
+    hero = ('<section class="bhero"><img class="bg" src="%s" alt=""><div class="bhero-wash"></div><div class="wrap"><span class="pill">%s</span>'
+            '<h1>%s <em>%s</em></h1><p class="lead">%s</p></div></section>') % (img('guven-bg'), esc(bx['tag']), esc(bx['h1a']), esc(bx['h1b']), esc(bx['lead']))
+    lst = '<section class="sec"><div class="wrap"><h2 class="sr">%s</h2><div class="filters" role="group">%s</div><div class="posts">%s</div></div></section>' % (esc(bx['title']), chips, posts)
+    cta = '<section class="sec" id="download" style="padding-top:0"><div class="wrap"><div class="cta"><h2>%s <em>%s</em></h2><p>%s</p>%s</div></div></section>' % (
+        esc(bx['cta'][0]), esc(bx['cta'][1]), esc(bx['ctaP']), store_btns(l, APPLE % ('web-blog-%s-2' % l), PLAY % ('blog_%s' % l), light=True))
+    canon = SITE + BLOG_PATHS[l]
+    alts = {x: p for x, p in BLOG_PATHS.items()}
+    tags = ['<meta name="description" content="%s">' % att(bx['desc']), '<link rel="canonical" href="%s">' % canon]
+    tags += ['<link rel="alternate" hreflang="%s" href="%s%s">' % (x, SITE, alts[x]) for x in LANGS if x in alts]
+    tags += ['<link rel="alternate" hreflang="x-default" href="%s/blog.html">' % SITE,
+             '<meta property="og:title" content="%s">' % att(bx['title']), '<meta property="og:description" content="%s">' % att(bx['desc']),
+             '<meta property="og:url" content="%s">' % canon, '<meta property="og:image" content="%s/icon-192.png">' % SITE,
+             '<meta property="og:type" content="website">', '<meta property="og:site_name" content="Lunora">', '<meta property="og:locale" content="%s">' % OGLOC[l]]
+    hh = head(l, bx['title'], tags, [])
+    return write(BLOG_PATHS[l], page(l, hh, hero + lst + cta, 'blog', alts))
+
+load_overlays()
+
 # ---------------------------------------------------------------- sitemap
 def sitemap(today):
     urls = []
@@ -728,14 +921,16 @@ def sitemap(today):
         if len(alts) > 1:
             for k in LANGS:
                 if k in alts: x += '    <xhtml:link rel="alternate" hreflang="%s" href="%s%s"/>\n' % (k, SITE, alts[k])
-            x += '    <xhtml:link rel="alternate" hreflang="x-default" href="%s%s"/>\n' % (SITE, alts['en'])
+            if 'en' in alts: x += '    <xhtml:link rel="alternate" hreflang="x-default" href="%s%s"/>\n' % (SITE, alts['en'])
         urls.append(x + '  </url>\n')
     for l in LANGS: add(HOME[l], HOME)
     for k, alts in FEAT_PATHS.items():
         for l in alts: add(alts[l], alts)
     for l in TASBIH: add(TASBIH[l], TASBIH)
     for l in BLOG_PATHS: add(BLOG_PATHS[l], BLOG_PATHS)
-    for s in POST_META: add('/%s.html' % s, {'en': '/%s.html' % s})
+    for s in POST_META:
+        alts = ART_ALTS.get(s, {'en': '/%s.html' % s})
+        for l in alts: add(alts[l], alts)
     for extra in ['/support.html', '/privacy.html', '/terms.html']: add(extra, {'en': extra})
     s = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n%s</urlset>\n' % ''.join(urls)
     return write('/sitemap.xml', s)
@@ -744,8 +939,9 @@ if __name__ == '__main__':
     import datetime
     out = [home_page(l) for l in LANGS]
     out += [feature_page(k, l) for k in FEAT_PATHS for l in FEAT_PATHS[k]]
-    out += [blog_page(l) for l in BLOG_PATHS]
-    out += [article_page(s) for s in POST_META]
+    out += [blog_page_l(l) if l in BLOGX else blog_page(l) for l in BLOG_PATHS]
+    out += [article_page(s) for s in POST_META if s not in TOPICS]
+    out += [article_page_l(es, l) for l in LART for es in LART[l]]
     out += [tasbih_page(l) for l in TASBIH]
     # privacy.html is kept by hand since 26 Nov (2.0.9 policy); live.json holds the old text.
     out += [simple_page(k) for k in ['support', 'terms']]

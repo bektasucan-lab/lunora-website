@@ -1,0 +1,98 @@
+{
+  "lang": "ms",
+  "features": {
+    "dhikr": {
+      "path": "/ms/widget-zikir.html",
+      "seo": {
+        "title": "Widget Zikir & Kaunter Tasbih untuk iPhone, Android | Lunora",
+        "desc": "Kira zikir terus dari skrin utama dengan widget tasbih Lunora, tanpa membuka aplikasi. Perpustakaan zikir bersumber, set zikir sendiri dan Asmaul Husna.",
+        "og_title": "Widget zikir dan kaunter tasbih | Lunora",
+        "og_desc": "Widget tasbih untuk skrin utama iPhone dan Android: ketik untuk mengira, dengan perpustakaan zikir bersumber, set zikir anda sendiri dan 99 Asmaul Husna."
+      },
+      "badge": "Zikir & Tasbih",
+      "crumb_last": "Widget zikir",
+      "h1": "Widget zikir dan kaunter tasbih",
+      "summary": [
+        "Lunora ialah aplikasi Islamik untuk wanita Muslim yang mempunyai widget tasbih untuk skrin utama anda: ketik untuk mengira zikir tanpa membuka aplikasi, dan setiap ketikan ditambah pada kiraan harian yang sama dengan kaunter dalam aplikasi. Dalam aplikasi, anda akan menemui perpustakaan zikir dengan 113 entri lengkap dengan teks Arab, transliterasi, makna dan sumber, bersama set zikir anda sendiri dan 99 Asmaul Husna. Lunora tersedia untuk iPhone dan Android, dengan percubaan percuma 7 hari."
+      ],
+      "trust": ["iPhone & Android", "Tanpa iklan", "9 bahasa"],
+      "shot": {
+        "alt": "Widget Lunora pada skrin utama iPhone, termasuk widget tasbih yang menunjukkan 21 daripada 33"
+      },
+      "what": {
+        "badge": "Apa yang anda dapat",
+        "h2": "Tasbih anda, pada skrin utama dan dalam aplikasi",
+        "p": "Tiga widget zikir, kaunter yang menyimpan pusingan dan set, dan perpustakaan yang memberitahu anda dari mana setiap zikir datang.",
+        "cards": [
+          {"h3": "Mengira dari skrin utama", "p": "Widget “Tasbih dengan kiraan” menunjukkan gelang 33, lafaz yang sedang anda baca dan butang <strong>Kira</strong>. Ketik lafaz untuk beralih kepada yang seterusnya, atau ↺ untuk memulakan pusingan semula."},
+          {"h3": "Gelang yang menunjukkan hari ini", "p": "Widget kecil “Pengira zikir” menunjukkan berapa banyak zikir yang telah anda baca hari ini. Pada iPhone, ia juga boleh diletakkan pada skrin kunci."},
+          {"h3": "Tasbih bermanik", "p": "Widget besar melukis zikir anda sebagai untaian manik, dengan manik yang sudah dikira berwarna (Lunora+)."},
+          {"h3": "Perpustakaan zikir bersumber", "p": "113 entri dalam 16 kategori: selepas solat, pagi dan petang, sebelum tidur, bermusafir, sakit, kesusahan, istighfar, selawat, doa Rabbana dan banyak lagi. Setiap satu menunjukkan teks Arab, transliterasi, makna dan sumbernya, seperti “Muslim 591”."},
+          {"h3": "Zikir dan set anda sendiri", "p": "Tulis zikir anda sendiri atau pilih satu daripada perpustakaan, tetapkan sasaran 33, 99, 100, 1000 atau mana-mana bilangan, dan bina set yang langkahnya bersambung."},
+          {"h3": "99 Asmaul Husna", "p": "Baca Nama-nama Allah yang Indah beserta maknanya, atau kira kesemua 99 mengikut urutan, setiap ketikan membawa nama seterusnya. Widget “Nama hari ini” juga tersedia."}
+        ]
+      },
+      "how": {
+        "badge": "Cara ia berfungsi",
+        "h2": "Dari aplikasi ke skrin utama anda",
+        "p": "",
+        "steps": [
+          {"h3": "Mulakan zikir dalam aplikasi", "p": "Buka Zikir dalam Lunora dan pilih satu zikir daripada perpustakaan, tasbihat selepas solat, zikir pagi atau petang, atau yang anda cipta sendiri."},
+          {"h3": "Ketik untuk mengira", "p": "Ketik di mana-mana pada kaunter. Apabila sasaran dicapai, pusingan ditutup dan kiraan bermula semula; dalam set, langkah seterusnya bermula. Banyak langkah juga ada audio yang boleh anda dengar."},
+          {"h3": "Tambah widget", "p": "Daripada galeri widget telefon anda, tambah “Tasbih dengan kiraan” atau “Pengira zikir”."},
+          {"h3": "Teruskan mengira dari widget", "p": "Widget bermula dengan zikir yang terakhir anda kira dalam aplikasi, kemudian menawarkan enam lafaz harian: SubhanAllah, Alhamdulillah, Allahu Akbar, La ilaha illallah, Astaghfirullah dan selawat. Setiap ketikan terpapar serta-merta pada widget dan ditambah pada kiraan harian anda dalam Lunora."}
+        ]
+      },
+      "details": {
+        "badge": "iPhone & Android",
+        "h2": "Cara widget berfungsi pada setiap telefon",
+        "p": "",
+        "items": [
+          {"h3": "Pada iPhone", "ps": [
+            "Mengira dari widget berfungsi pada iOS 17 dan lebih baharu, pada skrin utama dan skrin kunci. Pada iOS 16, widget masih menunjukkan kiraan anda, dan satu ketikan membuka kaunter dalam aplikasi."
+          ]},
+          {"h3": "Pada Android", "ps": [
+            "Ketik widget untuk mengira, sama seperti pada iPhone. Jubin itu menyimpan ketikan dan Lunora menggabungkannya ke dalam kiraan harian anda, jadi tiada apa-apa dikira dua kali."
+          ]}
+        ],
+        "note": ""
+      },
+      "faq": {
+        "badge": "Soalan lazim",
+        "h2": "Soalan yang kerap ditanya",
+        "p": "",
+        "items": [
+          {"q": "Bolehkah saya mengira zikir dari skrin utama tanpa membuka aplikasi?", "a": "<p>Boleh. Tambah widget “Tasbih dengan kiraan” Lunora dan ketik Kira atau gelangnya. Setiap ketikan dikira pada widget dan ditambah pada kiraan harian anda dalam aplikasi. Pada iPhone, ini memerlukan iOS 17 atau lebih baharu; pada versi lebih awal, satu ketikan membuka kaunter.</p>"},
+          {"q": "Zikir apakah yang boleh saya kira pada widget?", "a": "<p>Widget mula-mula menunjukkan zikir yang terakhir anda kira dalam aplikasi, kemudian enam lafaz harian: SubhanAllah, Alhamdulillah, Allahu Akbar, La ilaha illallah, Astaghfirullah dan Allahumma salli ala Muhammad. Ketik lafaz untuk beralih kepada yang seterusnya.</p>"},
+          {"q": "Adakah Lunora menunjukkan dari mana setiap zikir datang?", "a": "<p>Ya. Setiap entri dalam perpustakaan zikir Lunora menyenaraikan sumbernya, misalnya nombor hadis daripada Bukhari atau Muslim, bersama teks Arab, transliterasi dan maknanya.</p>"},
+          {"q": "Adakah Lunora ada 99 Asmaul Husna?", "a": "<p>Ada. Anda boleh membaca 99 Nama itu dengan makna ringkas, mengira satu demi satu mengikut urutan, dan menambah widget “Nama hari ini”. Aplikasi menyatakan bahawa hadis tentang sembilan puluh sembilan nama Allah itu sahih, manakala senarai nama itu sendiri disusun oleh para ulama.</p>"},
+          {"q": "Bolehkah saya terus berzikir semasa haid?", "a": "<p>Boleh. Zikir dan doa tetap terbuka pada hari haid. Apabila Mod Haid dihidupkan, skrin Zikir juga memaut kepada Panduan Haid, yang menyenaraikan pandangan empat mazhab tentang membaca Al-Quran ketika haid.</p>"},
+          {"q": "Adakah Lunora tersedia untuk iPhone dan Android?", "a": "<p>Ya. Lunora tersedia di App Store dan Google Play, dan tiada iklan. Lunora+ ialah langganan yang membuka aplikasi sepenuhnya, dan anda boleh memulakannya dengan percubaan percuma 7 hari.</p>"}
+        ]
+      },
+      "more": {
+        "badge": "Lagi daripada Lunora",
+        "h2": "Ciri-ciri lain",
+        "p": "",
+        "cards": [
+          {"href": "/ms/pelan-khatam-quran.html", "h3": "Pelan bacaan Al-Quran", "p": "Pelan khatam untuk Ramadan, 60 hari atau setahun, dan pelan yang anda bina sendiri."},
+          {"href": "/ms/lindungi-solat-saya.html", "h3": "Lindungi solat saya", "p": "Pada waktu solat, aplikasi pilihan anda menunggu sehingga anda menandakan solat."},
+          {"href": "/ms/mod-haid.html", "h3": "Mod Haid", "p": "Ibadah semasa haid, dengan pandangan empat mazhab dan penghitung puasa qada."}
+        ],
+        "reading": {
+          "h3": "Bacaan berkaitan",
+          "links": [
+            ["/ms/solat-semasa-haid.html", "Apa yang boleh dilakukan semasa haid menurut Islam"],
+            ["/ms/blog.html", "Semua artikel di blog Lunora"]
+          ]
+        }
+      },
+      "download": {
+        "badge": "Mulakan perjalanan anda",
+        "h2": "Muat turun Lunora",
+        "p": "Untuk iPhone dan Android, tanpa iklan, dengan percubaan percuma 7 hari. Teman rohani yang dicipta dengan penuh perhatian dan kefahaman yang anda layak terima.",
+        "greeting": "Assalamualaikum, saudari."
+      }
+    }
+  }
+}

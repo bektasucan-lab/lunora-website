@@ -1,0 +1,207 @@
+{
+ "lang": "de",
+ "features": {
+  "period": {
+   "h1": "Periodenmodus: Bleib deiner Anbetung auch während deiner Periode nah",
+   "summary": [
+    "Der Periodenmodus ist der Teil von Lunora, der deinen Zyklus neben deinem Gebet, Koran und Dhikr begleitet: Er hält deine Periode fest und schätzt die nächste, schaltet den Adhan-Ton aus, lässt „Mein Gebet schützen“ ruhen und zählt die Ramadan-Fastentage, die du nachholen wirst. Außerdem zeigt er, was die hanafitische, schafiitische, malikitische und hanbalitische Rechtsschule zum Koranlesen während der Menstruation sagen, mit ihren Quellen, und stellt deine eigene Rechtsschule an den Anfang, wenn du eine wählst. Lunora ist eine islamische App für muslimische Frauen für iPhone und Android, mit 7 Tagen kostenlosem Test."
+   ],
+   "what": {
+    "badge": "Was er macht",
+    "h2": "Dein Zyklus und deine Anbetung an einem Ort",
+    "p": "Keine Schuldgefühle und kein Rätselraten: Die App behält den Überblick, erklärt, was sich ändert und was nicht, und überlässt Rechtsauskünfte Gelehrten.",
+    "cards": [
+     {
+      "icon": "🌸",
+      "h3": "Zyklustracking",
+      "p": "Markiere deine Tage auf einem Zyklusring, sieh eine Schätzung deiner nächsten Periode auf Grundlage deines eigenen Durchschnitts und erhalte am geschätzten letzten Tag ein sanftes „Ist deine Periode vorbei?“."
+     },
+     {
+      "icon": "📚",
+      "h3": "Die vier Rechtsschulen",
+      "p": "Der Periodenratgeber legt die hanafitische, schafiitische, malikitische und hanbalitische Ansicht zum Lesen und Berühren des Korans dar und nennt seine Quellen."
+     },
+     {
+      "icon": "🗓️",
+      "h3": "Qada-Fastenzähler",
+      "p": "Der Periodenmodus fragt nach Tagen, die in den Ramadan fielen. Der Bildschirm „Nachholen“ (Qada) zählt erfasste, nachgeholte und verbleibende Fastentage und kann dich am Abend vor dem Tag erinnern, den du wählst."
+     },
+     {
+      "icon": "🤲",
+      "h3": "Anbetung, die weitergeht",
+      "p": "Dua- und Dhikr-Vorschläge passend zu deiner Stimmung, Hadith- und Fiqh-Karten, tröstende Verse und jeden Tag einer der 99 Namen."
+     },
+     {
+      "icon": "💧",
+      "h3": "Ghusl-Leitfaden",
+      "p": "Ghusl Schritt für Schritt und eine einzige Erinnerung, wenn du deine Periode als beendet markierst, für den Moment, in dem du bereit bist."
+     },
+     {
+      "icon": "🔕",
+      "h3": "Ruhiger an diesen Tagen",
+      "p": "Der Adhan-Ton ist aus, „Mein Gebet schützen“ ruht, deine Gebetsserie bleibt erhalten, und du kannst deinen Koran-Leseplan pausieren."
+     },
+     {
+      "icon": "👶",
+      "h3": "Jede Lebensphase",
+      "p": "Stell deine Situation auf schwanger, Wochenbett, stillend oder unregelmäßig, und die Schätzung passt sich an oder tritt zurück. Der Wochenbett-Modus zählt die Tage, bis du markierst, dass deine Blutung aufgehört hat."
+     },
+     {
+      "icon": "📝",
+      "h3": "Symptome, Stimmung und Notizen",
+      "p": "Halte jeden Tag fest, wie du dich fühlst. Mit Lunora+ bekommst du außerdem Zyklus-Auswertungen und ein Dokument deiner Einträge, das du mit deiner Ärztin oder deinem Arzt teilen kannst."
+     },
+     {
+      "icon": "🔒",
+      "h3": "Privat von Grund auf",
+      "p": "Deine Perioden-, Stimmungs- und Symptomeinträge bleiben im sicheren Speicher deines Geräts und werden nie hochgeladen. Du brauchst kein Konto."
+     }
+    ]
+   },
+   "how": {
+    "badge": "So funktioniert’s",
+    "h2": "Vom ersten Tag bis zum Ende deiner Periode",
+    "p": "",
+    "steps": [
+     {
+      "h3": "Markiere den Beginn",
+      "p": "Wenn deine Periode beginnt, markiere sie im Periodenmodus. Ab diesem Moment ist der Adhan-Ton still und „Mein Gebet schützen“ ruht."
+     },
+     {
+      "h3": "Sag Lunora, was für dich gilt",
+      "p": "Wähle auf Wunsch deine Situation und deine Rechtsschule. Du kannst beides offenlassen und jederzeit ändern."
+     },
+     {
+      "h3": "Begleite deine Tage",
+      "p": "Halte Symptome, Stimmung und Notizen fest und erhalte Duas und Dhikr, die zu deinem Befinden passen. Der Ratgeber erklärt, was während der Menstruation entfällt und was nicht."
+     },
+     {
+      "h3": "Markiere das Ende",
+      "p": "Am geschätzten letzten Tag fragt Lunora, ob deine Periode vorbei ist. Sobald du es markierst, kannst du eine Ghusl-Erinnerung für den Moment bekommen, in dem du bereit bist."
+     },
+     {
+      "h3": "Behalte Qada im Blick",
+      "p": "Wenn deine Periode in den Ramadan fiel, fragt der Periodenmodus nach diesen Tagen und fügt sie deinen Qada-Fastentagen hinzu."
+     }
+    ]
+   },
+   "details": {
+    "badge": "Vier Rechtsschulen",
+    "h2": "Was Lunora für jede Rechtsschule zeigt",
+    "p": "Lunora gibt keine Rechtsauskünfte. Die App zeigt, welche Ansicht jeder Rechtsschule (Madhhab, türkisch Mezhep) zugeschrieben wird, nennt, woher das stammt, und empfiehlt, für deine eigene Situation eine Gelehrte oder einen Gelehrten deines Vertrauens zu fragen.",
+    "items": [
+     {
+      "h3": "Koranlesen während der Menstruation",
+      "ps": [
+       "Der Periodenratgeber führt für jede der vier Rechtsschulen die Ansicht zum Berühren des Mushafs, zum Rezitieren, zum Lesen von Versen mit der Absicht von Dua oder Dhikr und zum Zuhören auf."
+      ]
+     },
+     {
+      "h3": "Deine Rechtsschule, nur wenn du es sagst",
+      "ps": [
+       "Wenn du in den Einstellungen des Periodenmodus deine Rechtsschule wählst, wird ihre Ansicht zuerst gezeigt. Du kannst auch „Ich möchte es nicht angeben“ wählen.",
+       "Lunora leitet deine Rechtsschule nie aus deinem Land ab. Ohne gewählte Rechtsschule zeigt die App keine schulspezifischen Zahlen."
+      ]
+     },
+     {
+      "h3": "Wenn die Blutung länger dauert",
+      "ps": [
+       "Wenn du eine Rechtsschule gewählt hast und deine Blutung eine Weile anhält, zeigt eine Karte die Höchstdauer der Menstruation, die diese Rechtsschule nach verbreiteter Angabe anerkennt.",
+       "Die Karte sagt klar: „Dies ist kein Rechtsspruch. Wende dich für deine Lage an sachkundige Gelehrte.“"
+      ]
+     },
+     {
+      "h3": "Gebet, Fasten und Qada",
+      "ps": [
+       "Der Abschnitt „Was entfällt, und was nicht“ erklärt, dass die Gebete der Menstruationstage nicht nachgeholt werden, versäumte Fastentage dagegen schon.",
+       "Der Qada-Zähler zählt nur die Tage: „Wann und wie man sie nachholt, unterscheidet sich je nach Rechtsschule; frag dazu eine kundige Person.“"
+      ]
+     }
+    ],
+    "note": ""
+   },
+   "faq": {
+    "badge": "Häufige Fragen",
+    "h2": "Häufig gestellte Fragen",
+    "p": "",
+    "items": [
+     {
+      "q": "Was ist der Periodenmodus in Lunora?",
+      "a": "<p>Der Periodenmodus ist der Teil der App Lunora, der deinen Menstruationszyklus neben deinem Gebet, Koran und Dhikr begleitet. Er verfolgt deinen Zyklus und schätzt die nächste Periode, erklärt, was sich während der Menstruation bei der Anbetung ändert, bietet Duas und Dhikr passend zu deiner Stimmung an und zählt Qada-Fastentage. Lunora gibt es für iPhone und Android, und du kannst es 7 Tage kostenlos testen.</p>"
+     },
+     {
+      "q": "Folgt Lunora den vier Rechtsschulen?",
+      "a": "<p>Lunora zeigt die Ansichten der hanafitischen, schafiitischen, malikitischen und hanbalitischen Rechtsschule statt einer einzigen Antwort. Der Periodenratgeber führt die Ansicht jeder Rechtsschule zum Koranlesen während der Menstruation samt Quelle auf und zeigt deine Rechtsschule zuerst, wenn du eine gewählt hast. Die App gibt keine Rechtsauskünfte und empfiehlt, für deine eigene Situation eine Gelehrte oder einen Gelehrten deines Vertrauens zu fragen.</p>"
+     },
+     {
+      "q": "Kann Lunora die Fastentage festhalten, die ich nach meiner Periode nachholen muss?",
+      "a": "<p>Ja. Der Periodenmodus fragt nach Periodentagen, die in den Ramadan fielen, und der Bildschirm „Nachholen“ (Qada) zeigt, wie viele Fastentage erfasst, nachgeholt und noch offen sind. Du kannst einen Tag für dein nächstes Qada-Fasten wählen und am Abend davor eine Erinnerung bekommen. Lunora zählt nur die Tage; wann und wie du sie nachholst, hängt von deiner Rechtsschule ab.</p>"
+     },
+     {
+      "q": "Was passiert während meiner Periode mit dem Adhan und mit „Mein Gebet schützen“?",
+      "a": "<p>Solange der Periodenmodus an ist, ist der Adhan-Ton ausgeschaltet und „Mein Gebet schützen“ ruht, ohne zu fragen. Beides kehrt von selbst zurück, wenn deine Periode endet, und Periodentage unterbrechen deine Gebetsserie nicht.</p>"
+     },
+     {
+      "q": "Bleiben meine Periodendaten privat?",
+      "a": "<p>Ja. Deine Perioden-, Stimmungs-, Symptom- und Tagebucheinträge bleiben im sicheren Speicher deines Geräts und werden nicht auf die Server von Lunora hochgeladen. Du brauchst kein Konto, und es gibt keine Werbung.</p>"
+     },
+     {
+      "q": "Funktioniert der Periodenmodus in der Schwangerschaft oder nach der Geburt?",
+      "a": "<p>Ja. Du kannst deine Situation auf schwanger, Wochenbett, stillend oder unregelmäßig stellen. Die Schätzung passt sich entsprechend an oder pausiert, und der Wochenbett-Modus zählt die Tage, bis du markierst, dass deine Blutung aufgehört hat.</p>"
+     }
+    ]
+   },
+   "more": {
+    "badge": "Mehr von Lunora",
+    "h2": "Weitere Funktionen",
+    "p": "",
+    "cards": [
+     {
+      "href": "/de/dhikr-widget.html",
+      "icon": "📿",
+      "h3": "Dhikr-Widget",
+      "p": "Zähle Dhikr auf deinem Startbildschirm, mit einer Dhikr-Bibliothek samt Quellen und den 99 Namen."
+     },
+     {
+      "href": "/de/koran-leseplan.html",
+      "icon": "📖",
+      "h3": "Koran-Leseplan",
+      "p": "Khatm-Pläne für den Ramadan, 60 Tage oder ein Jahr, und Pläne, die du selbst erstellst."
+     },
+     {
+      "href": "/de/mein-gebet-schuetzen.html",
+      "icon": "🔒",
+      "h3": "Mein Gebet schützen",
+      "p": "Zur Gebetszeit warten die Apps deiner Wahl, bis du dein Gebet markierst."
+     }
+    ],
+    "reading": {
+     "h3": "Weiterlesen",
+     "links": [
+      [
+       "/de/periode-im-islam.html",
+       "Periode im Islam: Darf ich beten, fasten und den Koran lesen?"
+      ],
+      [
+       "/de/blog.html",
+       "Alle Artikel im Lunora-Blog"
+      ]
+     ]
+    }
+   },
+   "download": {
+    "badge": "Beginne deinen Weg",
+    "h2": "Lunora herunterladen",
+    "p": "Für iPhone und Android, ohne Werbung, mit 7 Tagen kostenlosem Test. Eine spirituelle Begleiterin, gestaltet mit der Fürsorge und dem Verständnis, die du verdienst.",
+    "greeting": "As-salamu alaykum, liebe Schwester."
+   },
+   "seo": {
+    "title": "Periodenmodus: Anbetung in der Periode & Qada | Lunora",
+    "desc": "Der Periodenmodus von Lunora: Zyklus, Gebet, Koran, Dhikr, vier Rechtsschulen, Qada-Zähler und Ghusl-Leitfaden. Daten nur auf dem Gerät. 7 Tage kostenlos testen.",
+    "og_title": "Lunora-Periodenmodus: Anbetung in deiner Periode",
+    "og_desc": "Zyklustracking mit den Ansichten der hanafitischen, schafiitischen, malikitischen und hanbalitischen Rechtsschule, ein Qada-Fastenzähler und ein Ghusl-Leitfaden."
+   },
+   "crumb_last": "Periodenmodus"
+  }
+ }
+}

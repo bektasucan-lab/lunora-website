@@ -10,6 +10,8 @@
   --shadow:0 20px 50px -30px rgba(31,42,36,.35);
 }
 [lang=ar]{--serif:'Amiri','Playfair Display',serif;--sans:'Cairo','Nunito',sans-serif;--ls:0}
+[lang=ur]{--serif:'Noto Nastaliq Urdu','Amiri',serif;--sans:'Noto Nastaliq Urdu','Cairo',sans-serif;--ls:0}
+[lang=bn]{--serif:'Hind Siliguri','Playfair Display',serif;--sans:'Hind Siliguri','Nunito',sans-serif;--ls:0}
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-padding-top:84px}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
@@ -19,7 +21,7 @@ a{color:var(--green)}a:hover{color:var(--green-d)}
 h1,h2,h3{margin:0;font-family:var(--serif);font-weight:600;text-wrap:balance}
 p{margin:0;text-wrap:pretty}
 em{font-weight:500}
-[lang=ar] em{font-style:normal}
+[lang=ar] em,[lang=ur] em,[lang=bn] em,[lang=ur] i,[lang=bn] i{font-style:normal}
 .ic{width:1em;height:1em;flex:none;fill:currentColor;vertical-align:-.125em}
 .wrap{max-width:calc(var(--max) + 2*var(--side));margin:0 auto;padding-inline:var(--side)}
 .sec{padding-block:var(--sec)}
@@ -494,3 +496,14 @@ a.feat:hover{border-color:rgba(196,163,90,.55);color:inherit}
 .appbox h2{font-size:24px;margin:6px 0 6px}.appbox h2 a{color:var(--ink);text-decoration:none}.appbox h2 a:hover{color:var(--green)}.appbox p{color:var(--ink-2)}
 @media (max-width:1023px){.appbox{margin-inline:var(--side)}}
 .guides .post h3{font-size:20px;margin:6px 0}
+
+/* Urdu (Nastaliq) and Bengali, 28 Nov: no italics or tracking; Nastaliq needs tall lines. */
+[lang=ur] .and,[lang=bn] .and,[lang=ur] .cta .salam,[lang=bn] .cta .salam{font-style:normal}
+[lang=ur] .rail .t,[lang=ur] .cover small,[lang=bn] .rail .t,[lang=bn] .cover small{letter-spacing:0}
+[lang=ur] body,[lang=ur]{line-height:2}
+[lang=ur] p,[lang=ur] li,[lang=ur] .lead{line-height:2.15}
+[lang=ur] h1,[lang=ur] h2,[lang=ur] h3{line-height:1.9;font-weight:700}
+[lang=ur] .hero h1{line-height:1.8}
+[lang=ur] summary{line-height:2}
+[lang=bn] h1,[lang=bn] h2{line-height:1.35}
+[lang=ur] .beads .n b{font:700 34px/1 'Nunito',sans-serif}

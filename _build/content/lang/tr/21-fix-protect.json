@@ -1,0 +1,85 @@
+{
+ "lang": "tr",
+ "features": {
+  "protect": {
+   "summary": [
+    "Namazımı Koru, Lunora’da namaz vakti girince seçtiğiniz uygulamaları kısa bir süre, varsayılan olarak 15 dakika bekleten özelliktir. “Kıldım” dediğinizde uygulamalar hemen açılır, demezseniz süre dolunca kendiliğinden açılır; âdet günlerinizde ise koruma kendiliğinden dinlenir. Lunora, Müslüman kadınlar için bir İslami uygulamadır; iPhone ve Android’de 7 gün ücretsiz deneyebilirsiniz."
+   ],
+   "download": {
+    "p": "iPhone ve Android’de 7 gün ücretsiz deneyin; reklam yoktur. Hak ettiğiniz özen ve anlayışla tasarlanmış manevi bir yol arkadaşı."
+   },
+   "more": {
+    "reading": {
+     "links": [
+      [
+       "/tr/blog.html",
+       "Lunora Yazıları"
+      ],
+      [
+       "/tr/adet-doneminde-ne-yapilir.html",
+       "Adet döneminde ne yapılır?"
+      ],
+      [
+       "/muslim-women-prayer-times-salah-guide.html",
+       "Namaz vakitleri ve namaz rehberi (İngilizce)"
+      ]
+     ]
+    }
+   },
+   "what": {
+    "p": "Ne yasak ne ceza: sizi namazdan alıkoyan uygulamalar yalnızca birkaç dakika bekler."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Namazımı Koru nedir?",
+      "a": "<p>Namazımı Koru, Lunora uygulamasındaki bir özelliktir. Namaz vakti girince seçtiğiniz uygulamalar kısa bir süre, varsayılan olarak 15 dakika bekler. Lunora’da “Kıldım”a dokunduğunuzda hemen açılırlar ve namaz, namaz takibinizde işaretlenir.</p>"
+     },
+     {
+      "q": "Uygulamalar ne kadar bekler?",
+      "a": "<p>Varsayılan olarak vaktin girişinden itibaren 15 dakika. Android’de 10, 15 ya da 20 dakika, iPhone’da 15 ya da 20 dakika seçebilirsiniz. “Kıldım” derseniz hemen açılırlar; demezseniz süre dolunca kendiliğinden açılırlar.</p>"
+     },
+     {
+      "q": "Acil bir durumda uygulamayı açabilir miyim?",
+      "a": "<p>Evet. “Acil bir durum mu? Şimdi kaldır”a dokunduğunuzda uygulamalar hemen açılır ve bir sonraki vakitte yeniden korunur. Telefon uygulaması ve Lunora hiçbir zaman beklemez.</p>"
+     },
+     {
+      "q": "Namazımı Koru iPhone’da çalışıyor mu?",
+      "a": "<p>Evet. iPhone’da Apple’ın Ekran Süresi iznini kullanır ve iOS 16 veya sonrasını gerektirir. Android’de Kullanım erişimi ile diğer uygulamaların üzerinde gösterme iznini kullanır.</p>"
+     },
+     {
+      "q": "Âdet günlerimde ne olur?",
+      "a": "<p>Dönem Modu açıkken Namazımı Koru kendiliğinden dinlenir ve dönem bitince geri döner. Size sormaz; seçtiğiniz uygulamalar ve vakitler yerinde kalır, dönem günleri namaz serinizi de bozmaz.</p>"
+     },
+     {
+      "q": "Namazımı Koru ücretsiz mi?",
+      "a": "<p>Namazımı Koru, Lunora+ aboneliğiyle gelir; 7 gün ücretsiz deneyerek başlayabilirsiniz. Lunora iPhone ve Android’de reklamsız çalışır.</p>"
+     }
+    ]
+   },
+   "head": {
+    "tags": [
+     "<meta name=\"description\" content=\"Namazımı Koru, vakit girince seçtiğiniz uygulamaları bekletir; “Kıldım” deyince hemen açılır. Âdet günlerinde kendiliğinden dinlenir. 7 gün ücretsiz deneyin.\">",
+     "<link rel=\"canonical\" href=\"https://mylunora.app/tr/namazimi-koru.html\">",
+     "<link rel=\"alternate\" hreflang=\"en\" href=\"https://mylunora.app/protect-my-prayer.html\">",
+     "<link rel=\"alternate\" hreflang=\"tr\" href=\"https://mylunora.app/tr/namazimi-koru.html\">",
+     "<link rel=\"alternate\" hreflang=\"fr\" href=\"https://mylunora.app/fr/proteger-ma-priere.html\">",
+     "<link rel=\"alternate\" hreflang=\"de\" href=\"https://mylunora.app/de/mein-gebet-schuetzen.html\">",
+     "<link rel=\"alternate\" hreflang=\"x-default\" href=\"https://mylunora.app/protect-my-prayer.html\">",
+     "<meta property=\"og:title\" content=\"Namazımı Koru: namaz vaktinde uygulamalarınız bekler\">",
+     "<meta property=\"og:description\" content=\"Vakit girince seçtiğiniz uygulamalar birkaç dakika bekler. Namazınızı Lunora’da işaretleyin, hemen açılsınlar.\">",
+     "<meta property=\"og:url\" content=\"https://mylunora.app/tr/namazimi-koru.html\">",
+     "<meta property=\"og:image\" content=\"https://mylunora.app/img/features/tr-namazimi-koru.webp\">",
+     "<meta property=\"og:type\" content=\"website\">",
+     "<meta property=\"og:site_name\" content=\"Lunora\">",
+     "<meta property=\"og:locale\" content=\"tr_TR\">",
+     "<meta name=\"twitter:card\" content=\"summary\">"
+    ],
+    "jsonld": [
+     "{\n \"@context\": \"https://schema.org\",\n \"@type\": \"FAQPage\",\n \"mainEntity\": [\n  {\n   \"@type\": \"Question\",\n   \"name\": \"Namazımı Koru nedir?\",\n   \"acceptedAnswer\": {\n    \"@type\": \"Answer\",\n    \"text\": \"Namazımı Koru, Lunora uygulamasındaki bir özelliktir. Namaz vakti girince seçtiğiniz uygulamalar kısa bir süre, varsayılan olarak 15 dakika bekler. Lunora’da “Kıldım”a dokunduğunuzda hemen açılırlar ve namaz, namaz takibinizde işaretlenir.\"\n   }\n  },\n  {\n   \"@type\": \"Question\",\n   \"name\": \"Uygulamalar ne kadar bekler?\",\n   \"acceptedAnswer\": {\n    \"@type\": \"Answer\",\n    \"text\": \"Varsayılan olarak vaktin girişinden itibaren 15 dakika. Android’de 10, 15 ya da 20 dakika, iPhone’da 15 ya da 20 dakika seçebilirsiniz. “Kıldım” derseniz hemen açılırlar; demezseniz süre dolunca kendiliğinden açılırlar.\"\n   }\n  },\n  {\n   \"@type\": \"Question\",\n   \"name\": \"Acil bir durumda uygulamayı açabilir miyim?\",\n   \"acceptedAnswer\": {\n    \"@type\": \"Answer\",\n    \"text\": \"Evet. “Acil bir durum mu? Şimdi kaldır”a dokunduğunuzda uygulamalar hemen açılır ve bir sonraki vakitte yeniden korunur. Telefon uygulaması ve Lunora hiçbir zaman beklemez.\"\n   }\n  },\n  {\n   \"@type\": \"Question\",\n   \"name\": \"Namazımı Koru iPhone’da çalışıyor mu?\",\n   \"acceptedAnswer\": {\n    \"@type\": \"Answer\",\n    \"text\": \"Evet. iPhone’da Apple’ın Ekran Süresi iznini kullanır ve iOS 16 veya sonrasını gerektirir. Android’de Kullanım erişimi ile diğer uygulamaların üzerinde gösterme iznini kullanır.\"\n   }\n  },\n  {\n   \"@type\": \"Question\",\n   \"name\": \"Âdet günlerimde ne olur?\",\n   \"acceptedAnswer\": {\n    \"@type\": \"Answer\",\n    \"text\": \"Dönem Modu açıkken Namazımı Koru kendiliğinden dinlenir ve dönem bitince geri döner. Size sormaz; seçtiğiniz uygulamalar ve vakitler yerinde kalır, dönem günleri namaz serinizi de bozmaz.\"\n   }\n  },\n  {\n   \"@type\": \"Question\",\n   \"name\": \"Namazımı Koru ücretsiz mi?\",\n   \"acceptedAnswer\": {\n    \"@type\": \"Answer\",\n    \"text\": \"Namazımı Koru, Lunora+ aboneliğiyle gelir; 7 gün ücretsiz deneyerek başlayabilirsiniz. Lunora iPhone ve Android’de reklamsız çalışır.\"\n   }\n  }\n ]\n}",
+     "{\n \"@context\": \"https://schema.org\",\n \"@graph\": [\n  {\n   \"@type\": \"Organization\",\n   \"@id\": \"https://mylunora.app/#org\",\n   \"name\": \"Studio Lunora\",\n   \"url\": \"https://mylunora.app/\",\n   \"logo\": \"https://mylunora.app/icon-192.png\",\n   \"sameAs\": [\n    \"https://instagram.com/mylunora.app\"\n   ]\n  },\n  {\n   \"@type\": \"MobileApplication\",\n   \"@id\": \"https://mylunora.app/#app\",\n   \"name\": \"Lunora - Muslim Women\",\n   \"alternateName\": \"Lunora\",\n   \"operatingSystem\": \"iOS, Android\",\n   \"applicationCategory\": \"LifestyleApplication\",\n   \"description\": \"An Islamic app for Muslim women: prayer times, Quran, duas, dhikr and a Period Mode with fiqh guidance from the four madhhabs. Works offline, no ads, no account.\",\n   \"inLanguage\": [\n    \"en\",\n    \"tr\",\n    \"ar\",\n    \"fr\",\n    \"de\",\n    \"id\",\n    \"ms\",\n    \"ur\",\n    \"bn\"\n   ],\n   \"offers\": {\n    \"@type\": \"Offer\",\n    \"price\": \"0\",\n    \"priceCurrency\": \"USD\"\n   },\n   \"publisher\": {\n    \"@id\": \"https://mylunora.app/#org\"\n   },\n   \"sameAs\": [\n    \"https://apps.apple.com/us/app/lunora-muslim-women/id6758765933\",\n    \"https://play.google.com/store/apps/details?id=com.studiolunora.lunora\"\n   ]\n  },\n  {\n   \"@type\": \"WebPage\",\n   \"@id\": \"https://mylunora.app/tr/namazimi-koru.html#webpage\",\n   \"url\": \"https://mylunora.app/tr/namazimi-koru.html\",\n   \"name\": \"Namazımı Koru: Namaz Vaktinde Uygulamalar Bekler | Lunora\",\n   \"description\": \"Namazımı Koru, vakit girince seçtiğiniz uygulamaları bekletir; “Kıldım” deyince hemen açılır. Âdet günlerinde kendiliğinden dinlenir. 7 gün ücretsiz deneyin.\",\n   \"inLanguage\": \"tr\",\n   \"about\": {\n    \"@id\": \"https://mylunora.app/#app\"\n   },\n   \"primaryImageOfPage\": \"https://mylunora.app/img/features/tr-namazimi-koru.webp\",\n   \"breadcrumb\": {\n    \"@id\": \"https://mylunora.app/tr/namazimi-koru.html#breadcrumb\"\n   }\n  },\n  {\n   \"@type\": \"BreadcrumbList\",\n   \"@id\": \"https://mylunora.app/tr/namazimi-koru.html#breadcrumb\",\n   \"itemListElement\": [\n    {\n     \"@type\": \"ListItem\",\n     \"position\": 1,\n     \"name\": \"Ana sayfa\",\n     \"item\": \"https://mylunora.app/tr/\"\n    },\n    {\n     \"@type\": \"ListItem\",\n     \"position\": 2,\n     \"name\": \"Namazımı Koru\",\n     \"item\": \"https://mylunora.app/tr/namazimi-koru.html\"\n    }\n   ]\n  }\n ]\n}"
+    ]
+   }
+  }
+ }
+}

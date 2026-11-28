@@ -1,0 +1,147 @@
+{
+ "lang": "ms",
+ "tasbih": {
+  "path": "/ms/tasbih-digital.html",
+  "crumb": "Tasbih digital",
+  "title": "Tasbih Digital: Kaunter Zikir Dalam Talian Percuma | Lunora",
+  "desc": "Tasbih digital percuma dalam talian. Ketik atau tekan bar ruang untuk mengira zikir: wirid selepas solat, tasbih Fatimah sebelum tidur, istighfar dan selawat.",
+  "pill": "Percuma · tanpa pendaftaran",
+  "h1": "Tasbih digital dalam talian",
+  "lead": "Kaunter tasbih percuma dalam pelayar anda. Ketik bulatan atau tekan bar ruang untuk mengira, dan pilih set zikir di bawah, seperti wirid selepas solat. Kiraan anda kekal pada peranti ini.",
+  "tap": "Ketik untuk mengira",
+  "reset": "Set semula",
+  "done": "Selesai. Semoga Allah menerimanya.",
+  "today": "Hari ini pada peranti ini",
+  "of": "daripada",
+  "next": "Seterusnya",
+  "sets": [
+   [
+    "Selepas solat",
+    [
+     [
+      "سُبْحَانَ اللّٰهِ",
+      "SubhanAllah",
+      "Maha Suci Allah",
+      33
+     ],
+     [
+      "الْحَمْدُ لِلّٰهِ",
+      "Alhamdulillah",
+      "Segala puji bagi Allah",
+      33
+     ],
+     [
+      "اللّٰهُ أَكْبَرُ",
+      "Allahu Akbar",
+      "Allah Maha Besar",
+      33
+     ],
+     [
+      "لَا إِلٰهَ إِلَّا اللّٰهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+      "La ilaha illallah wahdahu la sharika lah…",
+      "Tiada tuhan yang berhak disembah selain Allah yang Esa, tiada sekutu bagi-Nya; bagi-Nya segala kerajaan dan segala puji, dan Dia Maha Berkuasa atas tiap-tiap sesuatu",
+      1
+     ]
+    ]
+   ],
+   [
+    "Sebelum tidur",
+    [
+     [
+      "سُبْحَانَ اللّٰهِ",
+      "SubhanAllah",
+      "Maha Suci Allah",
+      33
+     ],
+     [
+      "الْحَمْدُ لِلّٰهِ",
+      "Alhamdulillah",
+      "Segala puji bagi Allah",
+      33
+     ],
+     [
+      "اللّٰهُ أَكْبَرُ",
+      "Allahu Akbar",
+      "Allah Maha Besar",
+      34
+     ]
+    ]
+   ],
+   [
+    "Istighfar",
+    [
+     [
+      "أَسْتَغْفِرُ اللّٰهَ",
+      "Astaghfirullah",
+      "Aku memohon ampun kepada Allah",
+      100
+     ]
+    ]
+   ],
+   [
+    "Selawat",
+    [
+     [
+      "اللّٰهُمَّ صَلِّ عَلَى مُحَمَّدٍ",
+      "Allahumma salli ‘ala Muhammad",
+      "Ya Allah, limpahkanlah selawat ke atas Nabi Muhammad",
+      100
+     ]
+    ]
+   ],
+   [
+    "Kiraan bebas",
+    [
+     [
+      "لَا إِلٰهَ إِلَّا اللّٰهُ",
+      "La ilaha illallah",
+      "Tiada tuhan selain Allah",
+      0
+     ]
+    ]
+   ]
+  ],
+  "how_h": "Cara menggunakannya",
+  "how": [
+   [
+    "Pilih satu set",
+    "Selepas solat, sebelum tidur, istighfar, selawat, atau kiraan bebas tanpa sasaran."
+   ],
+   [
+    "Ketik atau tekan bar ruang",
+    "Setiap ketikan menambah satu. Gelang terisi sambil anda mengira dan beralih sendiri kepada lafaz seterusnya."
+   ],
+   [
+    "Selesai dan set semula",
+    "Di hujung set anda melihat jumlah anda hari ini. Set semula memulakan set itu sekali lagi."
+   ]
+  ],
+  "src_h": "Dari mana bilangan ini datang",
+  "src": [
+   "<b>Selepas setiap solat:</b> Nabi ﷺ mengajar agar membaca SubhanAllah 33 kali, Alhamdulillah 33 kali dan Allahu Akbar 33 kali, kemudian menggenapkan seratus dengan “La ilaha illallah wahdahu la sharika lah, lahul-mulku wa lahul-hamdu wa huwa ‘ala kulli shay’in qadir”. (<a href=\"https://sunnah.com/muslim:597\" rel=\"noopener\">Sahih Muslim 597</a>)",
+   "<b>Sebelum tidur:</b> baginda mengajar Ali dan Fatimah supaya membaca SubhanAllah 33 kali, Alhamdulillah 33 kali dan Allahu Akbar 34 kali ketika hendak tidur, dan bersabda bahawa itu lebih baik bagi mereka daripada seorang pembantu. (<a href=\"https://sunnah.com/bukhari:3113\" rel=\"noopener\">Sahih al-Bukhari 3113</a>, <a href=\"https://sunnah.com/muslim:2727\" rel=\"noopener\">Sahih Muslim 2727</a>)"
+  ],
+  "faq_h": "Soalan",
+  "faq": [
+   [
+    "Bolehkah mengira zikir dengan kaunter digital?",
+    "Mengira dengan jari ialah sunnah, dan Nabi ﷺ menggalakkannya. Ramai ulama melihat biji tasbih atau kaunter sebagai alat yang harus untuk membantu mengira. Jika anda ragu-ragu, tanyalah ustaz atau ustazah yang anda percayai."
+   ],
+   [
+    "Adakah kaunter ini menyimpan kiraan saya?",
+    "Ya, pada peranti ini sahaja. Kiraan anda dan jumlah hari ini disimpan dalam pelayar anda. Tiada apa-apa dihantar kepada kami, dan tiada akaun."
+   ],
+   [
+    "Bolehkah saya menggunakannya semasa haid?",
+    "Boleh. Zikir, doa dan selawat terbuka untuk anda semasa haid; kaunter ini ialah teman yang baik pada hari-hari itu."
+   ],
+   [
+    "Adakah ada tasbih untuk skrin utama telefon saya?",
+    "Lunora mempunyai widget tasbih untuk skrin utama iPhone dan Android, dengan perpustakaan zikir bersumber, supaya anda boleh mengira tanpa membuka aplikasi."
+   ]
+  ],
+  "cta_h": "Letakkan tasbih anda pada skrin utama",
+  "cta_p": "Widget zikir Lunora mengira terus dari skrin utama anda, bersama waktu solat, Al-Quran dan Mod Haid. Tanpa iklan, dalam 9 bahasa.",
+  "widget": "Lihat widget zikir"
+ }
+}
