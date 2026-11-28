@@ -913,6 +913,45 @@ def blog_page_l(l):
 
 load_overlays()
 
+# ---------------------------------------------------------------- llms.txt (28 Nov)
+# Plain-text map of the site for AI assistants and agents (llmstxt.org format).
+# Facts only, as the English pages state them; regenerated with every build.
+def page_title(path):
+    f = os.path.join(ROOT, path.lstrip('/') + ('index.html' if path.endswith('/') else ''))
+    m = re.search(r'<title>(.*?)</title>', open(f).read())
+    return re.sub(r' (?:[—|-] Lunora(?: Blog)?|Blog)$', '', H.unescape(m.group(1)).replace(' | Lunora', '')).strip() if m else path
+
+def llms_txt():
+    L = ['# Lunora', '',
+         '> Lunora is an Islamic app for Muslim women on iPhone and Android: prayer times, the whole Quran, duas and dhikr with widgets, '
+         'and Period Mode, which follows the cycle alongside worship with the views of the four madhhabs (Hanafi, Shafi\'i, Maliki, Hanbali). '
+         'No ads. 9 languages. Lunora+ subscription with a 7-day free trial.', '',
+         '- Publisher: Studio Lunora. Website: https://mylunora.app/',
+         '- App Store: https://apps.apple.com/app/id6758765933',
+         '- Google Play: https://play.google.com/store/apps/details?id=com.studiolunora.lunora',
+         '- Languages (app and site): ' + ', '.join('%s (%s)' % (LNAME[l], l) for l in LANGS),
+         '- Rating: ' + RATING['en'],
+         '- Religious content presents scholarly views with sources; the app and site do not issue rulings.',
+         '- Free web tool: an online tasbih (dhikr) counter, in every language below.', '']
+    L += ['## Main pages (English)', '']
+    for path in ['/', FEAT_PATHS['period']['en'], FEAT_PATHS['protect']['en'], FEAT_PATHS['quran']['en'], FEAT_PATHS['dhikr']['en'], TASBIH['en'], '/blog.html', '/support.html', '/privacy.html']:
+        L.append('- [%s](%s%s)' % (page_title(path), SITE, path))
+    L += ['', '## Guides (English)', '']
+    for s in POST_META:
+        if s in TOPICS: continue
+        L.append('- [%s](%s/%s.html)' % (page_title('/%s.html' % s), SITE, s))
+    for l in LANGS:
+        if l == 'en': continue
+        L += ['', '## %s (%s)' % (LNAME[l], l), '']
+        paths = [HOME[l]] + [FEAT_PATHS[k][l] for k in FEAT_PATHS if l in FEAT_PATHS[k]]
+        if l in TASBIH: paths.append(TASBIH[l])
+        if l in BLOG_PATHS: paths.append(BLOG_PATHS[l])
+        paths += [ART_ALTS[es][l] for es in LART.get(l, {})]
+        L += ['- [%s](%s%s)' % (page_title(p), SITE, p) for p in paths]
+    L += ['', '## Optional', '', '- [Sitemap with language alternates](%s/sitemap.xml)' % SITE, '- [Terms](%s/terms.html)' % SITE, '']
+    full = os.path.join(ROOT, 'llms.txt'); open(full, 'w').write('\n'.join(L))
+    return '/llms.txt'
+
 # ---------------------------------------------------------------- sitemap
 def sitemap(today):
     urls = []
@@ -947,4 +986,5 @@ if __name__ == '__main__':
     out += [simple_page(k) for k in ['support', 'terms']]
     out += [retired_page(s, r['to']) for s, r in LIVE.get('retired', {}).items()]
     out.append(sitemap(datetime.date.today().isoformat()))
+    out.append(llms_txt())
     print(len(out), 'files'); print('\n'.join(out))

@@ -1,0 +1,122 @@
+# Lunora
+
+> Lunora is an Islamic app for Muslim women on iPhone and Android: prayer times, the whole Quran, duas and dhikr with widgets, and Period Mode, which follows the cycle alongside worship with the views of the four madhhabs (Hanafi, Shafi'i, Maliki, Hanbali). No ads. 9 languages. Lunora+ subscription with a 7-day free trial.
+
+- Publisher: Studio Lunora. Website: https://mylunora.app/
+- App Store: https://apps.apple.com/app/id6758765933
+- Google Play: https://play.google.com/store/apps/details?id=com.studiolunora.lunora
+- Languages (app and site): English (en), Türkçe (tr), العربية (ar), Deutsch (de), Français (fr), Bahasa Indonesia (id), বাংলা (bn), Bahasa Melayu (ms), اردو (ur)
+- Rating: 4.7 · 650+ reviews on the App Store and Google Play
+- Religious content presents scholarly views with sources; the app and site do not issue rulings.
+- Free web tool: an online tasbih (dhikr) counter, in every language below.
+
+## Main pages (English)
+
+- [Lunora — Islamic App for Muslim Women | iPhone & Android](https://mylunora.app/)
+- [Period Mode: Worship During Menstruation, Four Madhhabs & Qada Tracker](https://mylunora.app/period-mode.html)
+- [Protect My Prayer: Apps Wait Until You Pray for iPhone & Android](https://mylunora.app/protect-my-prayer.html)
+- [Quran Reading Plan & Khatam Tracker for Muslim Women](https://mylunora.app/quran-reading-plan.html)
+- [Dhikr Widget & Tasbih Counter for iPhone and Android](https://mylunora.app/dhikr-widget.html)
+- [Online Tasbih Counter: Free Digital Dhikr Counter](https://mylunora.app/tasbih-counter.html)
+- [Lunora Blog — Spiritual Guidance for Muslim Women](https://mylunora.app/blog.html)
+- [Support](https://mylunora.app/support.html)
+- [Privacy Policy](https://mylunora.app/privacy.html)
+
+## Guides (English)
+
+- [Muslim Women's Spiritual Guide to Marriage](https://mylunora.app/muslim-women-marriage-spiritual-guide.html)
+- [Muslim Women Mental Health: Beyond "Just Pray More"](https://mylunora.app/muslim-women-mental-health-faith.html)
+- [Daily Duas & Dhikr for Muslim Women: Complete Guide (2026)](https://mylunora.app/daily-duas-dhikr-muslim-women-guide.html)
+- [Muslim Women's Complete Prayer Times & Salah Guide [2026]](https://mylunora.app/muslim-women-prayer-times-salah-guide.html)
+- [Quran Reading Guide for Muslim Women - Tips, Schedules & More](https://mylunora.app/quran-reading-guide-muslim-women.html)
+- [Spiritual Self-Care for Muslim Women | IWD 2026 Guide](https://mylunora.app/spiritual-self-care-muslim-women.html)
+- [Can Muslim Women Pray on Their Period? What to Do Instead](https://mylunora.app/what-to-do-during-period-in-islam.html)
+
+## Türkçe (tr)
+
+- [Lunora: Müslüman Kadınlar İçin İslami Uygulama](https://mylunora.app/tr/)
+- [Dönem Modu: Âdet Günlerinde İbadet ve Kaza Takibi](https://mylunora.app/tr/donem-modu.html)
+- [Namazımı Koru: Namaz Vaktinde Uygulamalar Bekler](https://mylunora.app/tr/namazimi-koru.html)
+- [Kur’an Okuma Planı ve Hatim Takibi](https://mylunora.app/tr/kuran-okuma-plani.html)
+- [Zikirmatik Widget’ı ve Tesbih Sayacı](https://mylunora.app/tr/zikir-widget.html)
+- [Online Zikirmatik: Ücretsiz Dijital Tesbih Sayacı](https://mylunora.app/tr/zikirmatik.html)
+- [Lunora Yazıları: Adet, Namaz, Kur’an ve Zikir Rehberleri](https://mylunora.app/tr/blog.html)
+- [Adet Döneminde Ne Yapılır? Namaz, Kur’an, Zikir](https://mylunora.app/tr/adet-doneminde-ne-yapilir.html)
+- [Adet Döneminde Kur’an Okunur mu? Dört Mezhep](https://mylunora.app/tr/adet-doneminde-kuran-okunur-mu.html)
+- [Gusül Abdesti Nasıl Alınır? Adım Adım Rehber](https://mylunora.app/tr/gusul-abdesti-nasil-alinir.html)
+
+## العربية (ar)
+
+- [لونورا (Lunora) — تطبيق إسلامي للمرأة | iPhone وAndroid](https://mylunora.app/ar/)
+- [وضع الدورة: العبادة في أيام الحيض والقضاء](https://mylunora.app/ar/wad-al-dawra.html)
+- [احمي صلاتي: تطبيقاتكِ تنتظر حتى تصلّي](https://mylunora.app/ar/ihmi-salati.html)
+- [خطة ختم القرآن: ختمة رمضان أو ٦٠ يومًا أو سنة](https://mylunora.app/ar/khatta-khatm-al-quran.html)
+- [أداة الذكر: مسبحة على شاشتكِ الرئيسية](https://mylunora.app/ar/widget-al-dhikr.html)
+- [مسبحة إلكترونية: عدّاد تسبيح وأذكار بعد الصلاة](https://mylunora.app/ar/masbaha-electroniya.html)
+- [مدوّنة لونورا: مقالات للمرأة المسلمة](https://mylunora.app/ar/blog.html)
+- [أذكار بعد الصلاة: الترتيب والأعداد ومصادرها](https://mylunora.app/ar/adhkar-baad-al-salat.html)
+- [ما الذي يجوز للمرأة في أيام الحيض؟ المذاهب الأربعة](https://mylunora.app/ar/ma-yajuz-lil-haid.html)
+
+## Deutsch (de)
+
+- [Lunora: Islamische App für Frauen mit Gebetszeiten & Koran](https://mylunora.app/de/)
+- [Periodenmodus: Anbetung in der Periode & Qada](https://mylunora.app/de/periodenmodus.html)
+- [Mein Gebet schützen: Apps warten, bis du betest](https://mylunora.app/de/mein-gebet-schuetzen.html)
+- [Koran-Leseplan & Khatm-Tracker (Hatim) für Frauen](https://mylunora.app/de/koran-leseplan.html)
+- [Dhikr-Widget & Tasbih-Zähler für iPhone & Android](https://mylunora.app/de/dhikr-widget.html)
+- [Tasbih-Zähler online: Kostenloser Dhikr-Zähler](https://mylunora.app/de/tasbih-zaehler.html)
+- [Lunora-Blog: Gebet, Periode, Koran und Dhikr](https://mylunora.app/de/blog.html)
+- [Periode im Islam: Beten, Fasten & Koran lesen](https://mylunora.app/de/periode-im-islam.html)
+
+## Français (fr)
+
+- [Lunora : application islamique pour femmes musulmanes](https://mylunora.app/fr/)
+- [Mode règles : prier et adorer pendant ses règles](https://mylunora.app/fr/mode-regles.html)
+- [Protéger ma prière : tes applis attendent ta prière](https://mylunora.app/fr/proteger-ma-priere.html)
+- [Plan de lecture du Coran et khatma pour musulmanes](https://mylunora.app/fr/plan-lecture-coran.html)
+- [Widget dhikr et compteur de tasbih pour iPhone](https://mylunora.app/fr/widget-dhikr.html)
+- [Tasbih en ligne : compteur de dhikr gratuit](https://mylunora.app/fr/compteur-tasbih.html)
+- [Le blog Lunora : guides pour les musulmanes](https://mylunora.app/fr/blog.html)
+- [Prier pendant les règles en islam : le guide](https://mylunora.app/fr/prier-pendant-les-regles-en-islam.html)
+- [Douas et dhikr du quotidien pour la musulmane](https://mylunora.app/fr/invocations-et-dhikr-du-quotidien.html)
+
+## Bahasa Indonesia (id)
+
+- [Lunora: Aplikasi Muslimah, Jadwal Sholat & Mode Haid](https://mylunora.app/id/)
+- [Mode Haid: Ibadah Saat Haid & Pelacak Qadha Puasa](https://mylunora.app/id/mode-haid.html)
+- [Jaga Salatku: Aplikasi Menunggu Sampai Kamu Salat](https://mylunora.app/id/jaga-salatku.html)
+- [Rencana Bacaan Al-Qur’an & Pelacak Khatam](https://mylunora.app/id/rencana-bacaan-quran.html)
+- [Widget Zikir & Penghitung Tasbih iPhone dan Android](https://mylunora.app/id/widget-zikir.html)
+- [Tasbih Digital Online: Penghitung Dzikir Gratis](https://mylunora.app/id/tasbih-digital.html)
+- [Blog Lunora: Panduan Islami untuk Muslimah](https://mylunora.app/id/blog.html)
+- [Haid dalam Islam: Yang Boleh & Tidak Boleh](https://mylunora.app/id/haid-dalam-islam-apa-yang-boleh-dilakukan.html)
+- [Niat & Cara Mandi Wajib Setelah Haid (Syafi’i)](https://mylunora.app/id/cara-mandi-wajib-setelah-haid-niat-dan-tata-cara.html)
+- [Dzikir Setelah Sholat: Arab, Latin & Artinya](https://mylunora.app/id/dzikir-setelah-sholat-latin-arti.html)
+
+## বাংলা (bn)
+
+- [Lunora: মুসলিম নারীদের ইসলামিক অ্যাপ | iPhone ও Android](https://mylunora.app/bn/)
+- [মাসিক মোড: মাসিকের সময় ইবাদত ও কাজা রোজার হিসাব](https://mylunora.app/bn/masik-mod.html)
+- [অনলাইন তাসবিহ কাউন্টার: বিনামূল্যে ডিজিটাল জিকির](https://mylunora.app/bn/online-tasbih.html)
+
+## Bahasa Melayu (ms)
+
+- [Lunora: Aplikasi Islamik Wanita Muslim | iPhone & Android](https://mylunora.app/ms/)
+- [Mod Haid: Ibadah Semasa Haid & Qada Puasa](https://mylunora.app/ms/mod-haid.html)
+- [Lindungi Solat Saya: Aplikasi Menunggu Waktu Solat](https://mylunora.app/ms/lindungi-solat-saya.html)
+- [Pelan Khatam Al-Quran: 30 Hari, 60 Hari, Setahun](https://mylunora.app/ms/pelan-khatam-quran.html)
+- [Widget Zikir & Kaunter Tasbih untuk iPhone, Android](https://mylunora.app/ms/widget-zikir.html)
+- [Tasbih Digital: Kaunter Zikir Dalam Talian Percuma](https://mylunora.app/ms/tasbih-digital.html)
+- [Blog Lunora: Panduan Haid, Solat, Al-Quran dan Zikir](https://mylunora.app/ms/blog.html)
+- [Bolehkah Wanita Solat Semasa Haid? Panduan Syafie](https://mylunora.app/ms/solat-semasa-haid.html)
+
+## اردو (ur)
+
+- [Lunora — مسلمان خواتین کی اسلامی ایپ | iPhone اور Android](https://mylunora.app/ur/)
+- [ایام موڈ: ماہواری میں نماز، قرآن اور قضا روزے](https://mylunora.app/ur/ayyam-mode.html)
+- [آن لائن تسبیح کاؤنٹر (Tasbeeh Counter)](https://mylunora.app/ur/tasbeeh-counter.html)
+
+## Optional
+
+- [Sitemap with language alternates](https://mylunora.app/sitemap.xml)
+- [Terms](https://mylunora.app/terms.html)
